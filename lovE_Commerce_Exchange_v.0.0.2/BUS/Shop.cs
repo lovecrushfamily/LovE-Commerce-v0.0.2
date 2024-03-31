@@ -6,19 +6,19 @@ using System.Threading.Tasks;
 
 namespace BUS
 {
-    public class Shop
+    public class Shop: DLL.Shop_
     {
 
         public Shop() { }
 
-        public string ShopId;
-        public string ShopName;
-        public string Description;
-        public string Address;
-        public string PhoneNumber;
-        public string Date;
-        public string Image;
-        public string ShopOwner;
+        //public string ShopId;
+        //public string ShopName;
+        //public string Description;
+        //public string Address;
+        //public string PhoneNumber;
+        //public string Date;
+        //public string Image;
+        //public string ShopOwner;
 
         public void Add()
         {

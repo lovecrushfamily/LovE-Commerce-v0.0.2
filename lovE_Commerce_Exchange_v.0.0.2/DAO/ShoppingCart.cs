@@ -11,14 +11,17 @@ namespace DAO
     {
         public static void Add(ShoppingCart_ shoppingCart_)
         {
-
-        }
-        public static void Update(ShoppingCart_ shoppingCart_)
-        {
+            MyConnection.ExecuteNonQuery($"sp_insertShoppingCart {shoppingCart_.CustomerId}, " +
+                                                                $"{shoppingCart_.ProducID}");
 
         }
         public static void Delete(ShoppingCart_ shoppingCart_)
         {
+
+        }
+        public static ShoppingCart_[] Select()
+        {
+            return new ShoppingCart_[0] { };
 
         }
     }

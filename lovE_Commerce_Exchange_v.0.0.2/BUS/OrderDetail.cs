@@ -6,20 +6,19 @@ using System.Threading.Tasks;
 
 namespace BUS
 {
-    public class OrderDetail
+    public class OrderDetail  : DLL.OrderDetail_
     {
         public OrderDetail() { }
 
-        public string OrderDetailId;
-        public string OrderId;
-        public string ProductId;
-        public string Quantity;
-        public string UnitPrice;
-        public string OrderDetailConfirmState;
-        public string Discount;
-        public string VoucherID;
+        //public string OrderDetailId;
+        //public string OrderId;
+        //public string ProductId;
+        //public string Quantity;
+        //public string UnitPrice;
+        //public string OrderDetailConfirmState;
+        //public string Discount;
+        //public string VoucherID;
                       
-
         public void Add()
         {
 

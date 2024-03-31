@@ -9,6 +9,6 @@ namespace DLL
     public class ShoppingCart_
     {
         public string CustomerId;
-        public Product_ Product;
+        public string ProducID;
     }
 }

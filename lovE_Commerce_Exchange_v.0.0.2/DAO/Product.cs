@@ -11,6 +11,16 @@ namespace DAO
     {
         public static void Add(Product_ product_)
         {
+            MyConnection.ExecuteNonQuery($"sp_insertProduct {product_.ProductId}," +
+                                                            $"'{product_.ProductName}'," +
+                                                            $"'{product_.Description}'," +
+                                                            $"'{product_.Price}'," +
+                                                            $"{product_.Quantity}," +
+                                                            $"'{product_.AttributeList}'," +
+                                                            $"'{product_.MainImage}'," +
+                                                            $"'{product_.ExtraImageList}'," +
+                                                            $"{product_.CategoryID}," +
+                                                            $"{product_.ShopID}");
 
         }
         public static void Update(Product_ product_)

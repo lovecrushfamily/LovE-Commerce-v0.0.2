@@ -10,6 +10,12 @@ namespace DAO
     {
         public static void Add(OrderDetail_ orderDetail_)
         {
+            MyConnection.ExecuteNonQuery($"sp_insertOrderDetail {orderDetail_.OrderId}," +
+                                                                $"{orderDetail_.ProductId}," +
+                                                                $"{orderDetail_.Quantity}," +
+                                                                $"'{orderDetail_.UnitPrice}'," +
+                                                                $"'{orderDetail_.Discount}'" +
+                                                                $"{orderDetail_.VoucherID}");
 
         }
         public static void Update(OrderDetail_ orderDetail_)

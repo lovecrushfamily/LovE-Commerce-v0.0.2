@@ -12,9 +12,9 @@ namespace DLL
         public string ProductId;
         public string CustomerId;
         public int Star;
-        public string CommentText;
+        public string Content;
         public string Date;
-        public string ResponseComment;
+        public bool ResponseComment;
 
     }
 }

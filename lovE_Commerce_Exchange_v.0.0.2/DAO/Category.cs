@@ -11,6 +11,9 @@ namespace DAO
     {
         public static void Add(Category_ category_)
         {
+            MyConnection.ExecuteNonQuery($"sp_insertCategory '{category_.CategoryName}'," +
+                                                            $"{category_.AncestorId},  " +
+                                                            $"'{category_.AttributeList}'");
 
         }
         public static void Update(Category_ category_)

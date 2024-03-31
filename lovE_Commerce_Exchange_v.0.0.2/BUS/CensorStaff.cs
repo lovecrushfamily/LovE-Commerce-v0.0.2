@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace BUS
 {
-    public class CensorStaff
+    public class CensorStaff  : DLL.CensorStaff_
     {
 
         public CensorStaff() { }
 
-        public string StaffID;
-        public string StaffName;
-        public string PhoneNumber;
-        public string Image;
-        public string DateOfBirth;
-        public string Gender;
+        //public string StaffID;
+        //public string StaffName;
+        //public string PhoneNumber;
+        //public string Image;
+        //public string DateOfBirth;
+        //public string Gender;
 
 
         public void UpdatePersonalInformation()

@@ -9,12 +9,13 @@ namespace DLL
 {
     public class Customer_
     {
-        public string CommentId;
-        public string ProductId;
         public string CustomerId;
-        public int Star;
-        public string CommentText;
-        public string Date;
-        public string ResponseComment;
+        public string CustomerName;
+        public string Gender;
+        public string PhoneNumber;
+        public string Image;
+        public bool ShopOwner;
+        public string DateOfBirth;
+        public string Address;
     }
 }

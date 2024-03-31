@@ -11,6 +11,9 @@ namespace DAO
     {
         public static void Add(Notification_ notification_)
         {
+            MyConnection.ExecuteNonQuery($"sp_insertNotification {notification_.ReceivedID}," +
+                                                                $"'{notification_.Tittle}'," +
+                                                                $"'{notification_.Content}'");
 
         }
         public static void Update(Notification_ notification_)

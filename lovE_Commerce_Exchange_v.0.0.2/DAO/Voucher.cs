@@ -11,6 +11,16 @@ namespace DAO
     {
         public static void Add(Voucher_ voucher_)
         {
+            MyConnection.ExecuteNonQuery($"sp_insertVoucher '{voucher_.VoucherName}'," +
+                                                            $"{voucher_.VoucherType}," +
+                                                            $"'{voucher_.FixedAmount}'," +
+                                                            $"'{voucher_.MinAmount}'," +
+                                                            $"'{voucher_.Percentage}'," +
+                                                            $"'{voucher_.MaxAmount}'," +
+                                                            $"{voucher_.Quantity}," +
+                                                            $"'{voucher_.StartedDate}'," +
+                                                            $"'{voucher_.ExpiredDate}'," +
+                                                            $"{voucher_.ShopId}");
 
         }
         public static void Update(Voucher_ voucher_)

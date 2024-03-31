@@ -12,7 +12,8 @@ namespace DLL
         public string SenderId;
         public string ReceivedId;
         public string Content;
-        public bool Time;
+        public string Date;
+        public string Time;
         public bool SeenState;
         public bool IsRecall;
 

@@ -11,7 +11,12 @@ namespace DAO
     {
         public static void Add(Shop_ shop_)
         {
-
+            MyConnection.ExecuteNonQuery($"sp_insertShop '{shop_.ShopName}'," +
+                                                        $"'{shop_.Description}'," +
+                                                        $"'{shop_.Address}'," +
+                                                        $"'{shop_.PhoneNumber}'," +
+                                                        $"'{shop_.Image}'," +
+                                                        $"{shop_.ShopOwner}");
         }
         public static void Update(Shop_ shop_)
         {

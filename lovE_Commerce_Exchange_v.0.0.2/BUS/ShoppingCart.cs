@@ -6,21 +6,26 @@ using System.Threading.Tasks;
 
 namespace BUS
 {
-    public class ShoppingCart
+    public class ShoppingCart: DLL.ShoppingCart_
     {
-        public ShoppingCart() { }
+        public ShoppingCart() : base() { }
 
-        public string CustomerId;
-        public Product[] ProductList;
+        //public string CustomerId;
+        //public string ProducID;
 
         public void AddProduct(Product product)
         {
-
+            DAO.ShoppingCart.Add(this);
         }
 
         public void RemoveProduct()
         {
 
+        }
+
+        public static ShoppingCart[] Select()
+        {
+            return DAO.ShoppingCart.Select() as ShoppingCart[]; 
         }
     }
 }

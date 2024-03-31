@@ -8,8 +8,10 @@ namespace DAO
 {
     public class Order
     {
-        public static void Add(Order_ order_)
+        public static int Add(Order_ order_)
         {
+            return MyConnection.ExcuteScalar($"sp_insertOrder {order_.CustomerID}," +
+                                                            $"'{order_.TotalAmount}'");
 
         }
         public static void Update(Order_ order_)

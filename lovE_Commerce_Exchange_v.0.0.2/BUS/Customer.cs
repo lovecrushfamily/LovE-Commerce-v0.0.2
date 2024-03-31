@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace BUS
 {
-    public class Customer
+    public class Customer  : DLL.Customer_
     {
-        public string CustomerId;
-        public string CustomerName;
-        public string Gender;
-        public string PhoneNumber;
-        public string Image;
-        public bool ShopOwner;
-        public string DateOfBirth;
-        public string Address;
+        //public string CustomerId;
+        //public string CustomerName;
+        //public string Gender;
+        //public string PhoneNumber;
+        //public string Image;
+        //public bool ShopOwner;
+        //public string DateOfBirth;
+        //public string Address;
 
         public Customer() { }   
 

@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace BUS
 {
-    public class Message
+    public class Message : DLL.Message_
     {
         public Message() { }
 
-        public string MessageId;
-        public string SenderId;
-        public string ReceivedId;
-        public string Content;
-        public bool Time;
-        public bool SeenState;
-        public bool IsRecall;
+        //public string MessageId;
+        //public string SenderId;
+        //public string ReceivedId;
+        //public string Content;
+        //public bool Time;
+        //public bool SeenState;
+        //public bool IsRecall;
 
         public void  Add()
         {

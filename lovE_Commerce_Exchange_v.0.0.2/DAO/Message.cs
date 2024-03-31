@@ -11,7 +11,10 @@ namespace DAO
     {
         public static void Add(Message_ message_)
         {
-
+            MyConnection.ExecuteNonQuery($"sp_insertMessage {message_.SenderId}," +
+                                                            $"{message_.ReceivedId}," +
+                                                            $"'{message_.Content}'");
+                                                     
         }
         public static void Update(Message_ message_)
         {

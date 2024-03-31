@@ -11,7 +11,11 @@ namespace DAO
     {
         public static void Add(Comment_ comment_)
         {
-
+            MyConnection.ExecuteNonQuery($"sp_insertComment {comment_.ProductId}, " +
+                                                            $"{comment_.CustomerId}, " +
+                                                            $"{comment_.Star}," +
+                                                            $"'{comment_.Content}'," +
+                                                            $"{comment_.ResponseComment}");
         }
         public static void Update(Comment_ comment_)
         {

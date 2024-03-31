@@ -7,15 +7,15 @@ using System.Threading.Tasks;
 
 namespace BUS
 {
-    public class Order
+    public class Order  : DLL.Order_
     {
-        public string OrderId;
-        public string CustomerID;
-        public string TotalAmount;
-        public string Date;
-        public bool CustomerOrderState;
-        public bool OrderConfirmState;
-        public bool ReceivedState;
+        //public string OrderId;
+        //public string CustomerID;
+        //public string TotalAmount;
+        //public string Date;
+        //public bool CustomerOrderState;
+        //public bool OrderConfirmState;
+        //public bool ReceivedState;
 
         public Order() { }
 
