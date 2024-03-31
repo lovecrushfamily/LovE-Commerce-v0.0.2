@@ -1,0 +1,58 @@
+Some requirements about the new project;
+Name: lovE_Commerce Exchange
+Feature Requirements:
+- Able to Custom theme and font, color size,background, default
+- Search Engine Algorithm
+- Bigger data set than the last version => crawl
+- xml storage about  product discription, xml process.
+- Recommendation system, based content
+- new layout, simple to use
+- as less form as possible
+- able to deploy on orther divice have sql sever, just using some trick
+- Responsive Form
+- Optimal diagram
+- Able to COnfigure Sql Connection 
+- Smooth transition
+- Databinding,new data manipulation technique
+- Design partern, sigleton, 
+- Bot Chat, Customer supported, Shop customer chating
+- Shop view
+- Encrypt password
+- rate, comment, star
+- Filter price, type, category, 
+- Statistic
+- Shop profit and E-Commerce profit
+- Advance C#
+- Using OOP more
+- check delivery progess
+- Product History, buy, 
+- Load multiple forms
+
+C#- requirements
+ling
+
+
+
+
+Mô tả chức năng và yêu cầu của hệ thống quản lý sàn thương mại điện tử LovE-Commerce
+- Xem danh sách hàng hóa,
+- Tìm kiếm hàng hóa,
+- thuật toán đề xuất based-content
+- lưu trữ giỏ hàng
+- Xem được thông tin vận chuyển
+- Phân loại được hàng hóa
+- xem được gian hàng của chủ shop
+- lọc được các thông tin về đơn hàng
+- Chủ cửa hàng có thể thống kê về gian hàng được (dashboard)
+- email
+- nhắn tin với chủ shop
+- thêm sản phẩm 
+
+
+
+
+- Key point mới này
+h lớp Bus sẽ kế thừa từ lớp DLL và tất cả dữ liệu cộng với phương thức của lớp đó.
+không cần phải quan tâm đến vấn đề về chuyển class vs object nữa
+- Lớp DAL vẫn hoạt động theo lối cũ chỉ thêm sửa và xóa
+- Lớp GUI quản lý lớp BUS, các phương thức lấy ra toàn bộ dữ liệu đổi về static hết

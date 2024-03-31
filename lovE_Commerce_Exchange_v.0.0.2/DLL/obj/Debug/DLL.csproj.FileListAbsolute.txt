@@ -1,0 +1,14 @@
+D:\Documents\project\lovE_Commerce_Exchange_v.0.0.2\DLL\bin\Debug\DLL.exe.config
+D:\Documents\project\lovE_Commerce_Exchange_v.0.0.2\DLL\bin\Debug\DLL.exe
+D:\Documents\project\lovE_Commerce_Exchange_v.0.0.2\DLL\bin\Debug\DLL.pdb
+D:\Documents\project\lovE_Commerce_Exchange_v.0.0.2\DLL\obj\Debug\DLL.csproj.AssemblyReference.cache
+D:\Documents\project\lovE_Commerce_Exchange_v.0.0.2\DLL\obj\Debug\DLL.csproj.CoreCompileInputs.cache
+D:\Documents\project\lovE_Commerce_Exchange_v.0.0.2\DLL\obj\Debug\DLL.exe
+D:\Documents\project\lovE_Commerce_Exchange_v.0.0.2\DLL\obj\Debug\DLL.pdb
+D:\Documents\project\lovE_Commerce_Exchange\lovE_Commerce_Exchange_v.0.0.2\DLL\bin\Debug\DLL.exe.config
+D:\Documents\project\lovE_Commerce_Exchange\lovE_Commerce_Exchange_v.0.0.2\DLL\bin\Debug\DLL.exe
+D:\Documents\project\lovE_Commerce_Exchange\lovE_Commerce_Exchange_v.0.0.2\DLL\bin\Debug\DLL.pdb
+D:\Documents\project\lovE_Commerce_Exchange\lovE_Commerce_Exchange_v.0.0.2\DLL\obj\Debug\DLL.csproj.AssemblyReference.cache
+D:\Documents\project\lovE_Commerce_Exchange\lovE_Commerce_Exchange_v.0.0.2\DLL\obj\Debug\DLL.csproj.CoreCompileInputs.cache
+D:\Documents\project\lovE_Commerce_Exchange\lovE_Commerce_Exchange_v.0.0.2\DLL\obj\Debug\DLL.exe
+D:\Documents\project\lovE_Commerce_Exchange\lovE_Commerce_Exchange_v.0.0.2\DLL\obj\Debug\DLL.pdb
