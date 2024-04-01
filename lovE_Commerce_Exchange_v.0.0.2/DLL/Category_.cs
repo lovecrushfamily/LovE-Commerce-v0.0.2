@@ -10,7 +10,7 @@ namespace DLL
     {
         public string CategoryId;
         public string CategoryName;
-        public string AncestorId;
+        public string AncestorId;           
         public string AttributeList;
     }
 }

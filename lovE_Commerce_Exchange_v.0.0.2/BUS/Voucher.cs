@@ -19,5 +19,9 @@ namespace BUS
         {
 
         }
+        public static Voucher[] GetVouchers()
+        {
+            return DAO.Voucher.Select() as Voucher[];
+        }
     }
 }

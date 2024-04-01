@@ -23,5 +23,10 @@ namespace BUS
         {
 
         }
+
+        public static Customer[] GetCustomers()
+        {
+            return DAO.Customer.Select() as Customer[];
+        }
     }
 }

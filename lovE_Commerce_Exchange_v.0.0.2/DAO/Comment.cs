@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,15 +20,31 @@ namespace DAO
         }
         public static void Update(Comment_ comment_)
         {
-
+               //comment cannot be updated
         }
         public static void Delete(Comment_ comment_)
         {
+            MyConnection.ExecuteNonQuery($"sp_deleteComment {comment_.CommentId}");
 
         }
-        public static Comment_[] Select()
+        public static IEnumerable<Comment_> Select()
         {
-            return new Comment_[] { };
+            
+            foreach (DataRow row in MyConnection.ExecuteDataTable($"sp_selectComment").Rows)
+            {
+                yield return new Comment_()
+                {
+                    CommentId = row["CommentID"].ToString(),
+                    ProductId = row["ProductID"].ToString(),
+                    CustomerId = row["CustomerID"].ToString(),
+                    Star = row["Star"].ToString().ToInt(),
+                    Content = row["Content"].ToString(),
+                    Date = row["DateOfComment"].ToString(),
+                    ResponseComment = row["ResponseComment"].ToString().ToBool()
+
+                };
+
+            }
         }
     }
 }

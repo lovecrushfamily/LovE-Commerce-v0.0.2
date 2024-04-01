@@ -33,7 +33,7 @@ namespace BUS
 
         }
 
-        public static Comment[] Select()
+        public static Comment[] GetComments()
         {
             return DAO.Comment.Select() as Comment[];
 

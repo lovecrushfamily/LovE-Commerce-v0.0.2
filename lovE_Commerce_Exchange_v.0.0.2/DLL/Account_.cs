@@ -8,13 +8,13 @@ namespace DLL
 {
     public class Account_
     {
-        public string AccountID;
+        public string AccountID;        // necessary
         public string UserName;
-        public string Password;
-        public string AuthenticatedEmail;
+        public string Password;          // updatable
+        public string AuthenticatedEmail; // updatable
         public string Role;
         public string DateOfRegister;
-        public bool RememberLogin;
-        public bool Online;
+        public bool RememberLogin;           // updateable
+        public bool Online;                 // updatable
     }
 }

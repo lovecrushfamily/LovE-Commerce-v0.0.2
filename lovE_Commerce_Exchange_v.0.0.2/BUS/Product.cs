@@ -53,6 +53,11 @@ namespace BUS
 
         }
 
+        public static Product[] GetProducts()
+        {
+            return DAO.Product.Select() as Product[];
+        }
+
 
 
 

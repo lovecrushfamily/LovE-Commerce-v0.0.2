@@ -29,6 +29,11 @@ namespace BUS
 
         }
 
+        public static CensorStaff[] GetCensorStaff()
+        {
+            return DAO.CensorStaff.Select() as CensorStaff[];
+        }
+
 
     }
 }

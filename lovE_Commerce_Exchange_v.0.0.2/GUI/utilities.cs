@@ -3,22 +3,33 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GUI
 {
-    internal class utilities
+
+    class Encryption
     {
-        Color highcontrastcolor = Color.FromArgb(31, 30, 68);
-
-
-        
+        internal static string EncryptPassword(string password)
+        {
+            MD5 md5 = MD5.Create();
+            byte[] inputBytes = Encoding.ASCII.GetBytes(password);
+            byte[] hash = md5.ComputeHash(inputBytes);
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < hash.Length; i++)
+            {
+                sb.Append(hash[i].ToString("x2")); 
+            }
+            return sb.ToString();
+        }
     }
 
-    
 
+
+    #region GUI Control
     class RoundedButton : Button
     {
         private int rdus = 100;
@@ -97,6 +108,5 @@ namespace GUI
 
 
     }
-
-   
+    #endregion
 }

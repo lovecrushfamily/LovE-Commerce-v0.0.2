@@ -35,5 +35,10 @@ namespace BUS
 
         }
 
+        public static Shop[] GetShops()
+        {
+            return DAO.Shop.Select() as Shop[];
+        }
+
     }
 }

@@ -2,11 +2,8 @@ D:\Documents\project\lovE_Commerce_Exchange\lovE_Commerce_Exchange_v.0.0.2\GUI\b
 D:\Documents\project\lovE_Commerce_Exchange\lovE_Commerce_Exchange_v.0.0.2\GUI\bin\Debug\GUI.exe
 D:\Documents\project\lovE_Commerce_Exchange\lovE_Commerce_Exchange_v.0.0.2\GUI\bin\Debug\GUI.pdb
 D:\Documents\project\lovE_Commerce_Exchange\lovE_Commerce_Exchange_v.0.0.2\GUI\bin\Debug\BUS.exe
-D:\Documents\project\lovE_Commerce_Exchange\lovE_Commerce_Exchange_v.0.0.2\GUI\bin\Debug\DLL.exe
 D:\Documents\project\lovE_Commerce_Exchange\lovE_Commerce_Exchange_v.0.0.2\GUI\bin\Debug\BUS.pdb
 D:\Documents\project\lovE_Commerce_Exchange\lovE_Commerce_Exchange_v.0.0.2\GUI\bin\Debug\BUS.exe.config
-D:\Documents\project\lovE_Commerce_Exchange\lovE_Commerce_Exchange_v.0.0.2\GUI\bin\Debug\DLL.pdb
-D:\Documents\project\lovE_Commerce_Exchange\lovE_Commerce_Exchange_v.0.0.2\GUI\bin\Debug\DLL.exe.config
 D:\Documents\project\lovE_Commerce_Exchange\lovE_Commerce_Exchange_v.0.0.2\GUI\obj\Debug\GUI.csproj.AssemblyReference.cache
 D:\Documents\project\lovE_Commerce_Exchange\lovE_Commerce_Exchange_v.0.0.2\GUI\obj\Debug\GUI.Properties.Resources.resources
 D:\Documents\project\lovE_Commerce_Exchange\lovE_Commerce_Exchange_v.0.0.2\GUI\obj\Debug\GUI.WorkSpaceCustomer.resources

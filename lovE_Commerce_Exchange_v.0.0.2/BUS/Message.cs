@@ -28,5 +28,10 @@ namespace BUS
 
         }
 
+        public static Message[] GetMessages()
+        {
+            return DAO.Message.Select() as Message[];
+        }
+
     }
 }

@@ -28,5 +28,10 @@ namespace BUS
 
         }
 
+        public static OrderDetail[] GetOrderDetails()
+        {
+            return DAO.OrderDetail.Select() as OrderDetail[];
+        }
+
     }
 }

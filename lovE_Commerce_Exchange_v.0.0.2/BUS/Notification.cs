@@ -28,5 +28,10 @@ namespace BUS
 
         }
 
+        public static Notification[] GetNotifications()
+        {
+            return DAO.Notification.Select()  as Notification[];
+        }
+
     }
 }

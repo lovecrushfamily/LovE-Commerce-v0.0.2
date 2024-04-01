@@ -11,11 +11,11 @@ namespace DLL
         public string VoucherId;
         public string VoucherName;
         public string VoucherType;
-        public int FixedAmount;
-        public int MinAmount;
-        public int Percentage;
-        public int MaxAmount;
-        public int Quantity;
+        public string FixedAmount;
+        public string MinAmount;
+        public string Percentage;
+        public string MaxAmount;
+        public string Quantity;
         public string StartedDate;
         public string ExpiredDate;
         public string ShopId;

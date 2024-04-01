@@ -19,17 +19,22 @@ namespace BUS
 
         public void Add()
         {
-
+            DAO.Category.Add(this);
         }
 
         public void Update()
         {
-
+             DAO.Category.Update(this);
         }
 
         public void Delete()
         {
+            DAO.Category.Delete(this);
 
+        }
+        public static Category[] GetCategories()
+        {
+            return DAO.Category.Select() as Category[];
         }
     }
 }

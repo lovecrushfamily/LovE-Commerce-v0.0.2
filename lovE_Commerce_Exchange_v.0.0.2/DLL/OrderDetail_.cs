@@ -13,7 +13,7 @@ namespace DLL
         public string ProductId;
         public string Quantity;
         public string UnitPrice;
-        public string OrderDetailConfirmState;
+        public bool OrderDetailConfirmState;
         public string Discount;
         public string VoucherID;
     }

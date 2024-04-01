@@ -44,5 +44,10 @@ namespace BUS
         {
 
         }
+
+        public static Order[] GetOrders()
+        {
+            return DAO.Order.Select() as Order[];
+        }
     }
 }

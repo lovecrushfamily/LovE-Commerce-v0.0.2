@@ -13,13 +13,13 @@ namespace DLL
         public string Description;
         public string Price;
         public string CreatedDate;
-        public int Quantity;
+        public string Quantity;
         public string[] AttributeList;
         public string MainImage;
         public string[] ExtraImageList;
         public bool BannedState;
         public bool ReviewState;
-        public bool CategoryID;
+        public string CategoryID;
         public string ShopID;
     }
 }

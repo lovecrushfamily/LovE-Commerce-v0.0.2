@@ -9,6 +9,7 @@
 ----*/
 
  --insert into Account and return the inserted row ID
+ --1
 create proc sp_insertAccount(
 @Username varchar(255),
 @Password_ varchar(255),
@@ -22,6 +23,9 @@ end
 
 
 
+
+
+--2
 -- insert into Customer using accountID
 create proc sp_insertCustomer(
 @CustomerID int, --AccountID
@@ -37,7 +41,12 @@ begin
 	(@CustomerID, @CustomerName, @Gender, @PhoneNumber, @Image_, @DateOfBirth, @Address_)
 end	
 
+
+
+
+
 -- insert into Staff using AccountID
+--3
 create proc sp_insertStaff(
 @StaffID int, --AccountID
 @StaffName varchar(255) ,
@@ -52,6 +61,10 @@ begin
 end	  
 
 
+
+
+
+--4
 -- insert into Category
 create proc sp_insertCategory(
 @CategoryName varchar(255),
@@ -64,6 +77,9 @@ begin
 end
 
 
+
+
+--5
 --create shop
 create proc sp_insertShop(
 @ShopName varchar(255),
@@ -78,6 +94,12 @@ begin
 	(@ShopName, @Description_, @Address_, @PhoneNumber,Cast(getdate() as date), @Image_, @OwnerID);
 end
 
+
+
+
+
+
+--6
 -- create product
 create proc sp_insertProduct(
 @ProductID int ,
@@ -96,6 +118,11 @@ begin
 	values (@Productname, @Description_, @Price, Cast(getdate() as date), @Quantity, @AttributeList, @MainImage, @ExtraImageList, @CategoryID, @ShopID);
 end
 
+
+
+
+
+--7
 -- insertinto Voucher
 create proc sp_insertVoucher(
 @VoucherName varchar(255) ,
@@ -114,6 +141,10 @@ begin
 	(@VoucherName, @VoucherType, @FixedAmount, @MinAmount, @PercentageDiscount, @MaxAmount, @Quanity, @StartedDay, @EndedDay, @ShopID)
 end
 
+
+
+
+--8
  --insert into Order and return orderdetailID
 create proc sp_insertOrder(
 @CustomerID int,
@@ -127,6 +158,8 @@ end
 
 
 
+
+--9
 --insert into OrderDetail
 create proc sp_insertOrderDetail(
 @OrderID int,
@@ -142,6 +175,9 @@ begin
 end
 
 
+
+
+--10
 -- insert into Notification
 create proc sp_insertNotification (
 @ReceiverID int,
@@ -156,7 +192,7 @@ end
 
 
 
-
+--11
 -- insert messgae
 create proc sp_insertMessage(
 @SenderID int ,
@@ -169,7 +205,7 @@ begin
 end
 
 
-
+--12
 -- insert into Comment
 create proc sp_insertComment(
 @ProductID int,
@@ -184,6 +220,10 @@ begin
 end
 
 
+
+
+
+--13
 -- insert into ShoppingCart
 create proc sp_insertShoppingCart(
 @CustomerID int ,

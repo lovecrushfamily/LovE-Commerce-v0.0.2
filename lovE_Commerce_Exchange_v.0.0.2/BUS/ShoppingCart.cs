@@ -23,7 +23,7 @@ namespace BUS
 
         }
 
-        public static ShoppingCart[] Select()
+        public static ShoppingCart[] GetShoppingCarts()
         {
             return DAO.ShoppingCart.Select() as ShoppingCart[]; 
         }

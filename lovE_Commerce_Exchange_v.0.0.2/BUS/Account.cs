@@ -20,6 +20,7 @@ namespace BUS
 
         public void Create()
         {
+            DAO.Account.Add(this);
 
         }
 
@@ -30,7 +31,7 @@ namespace BUS
 
         public void Delete()
         {
-
+            DAO.Account.Delete(this);
         }
 
         public void RecoveryPassword()
@@ -47,6 +48,10 @@ namespace BUS
         {
             return false;
 
+        }
+        public static Account[] GetAccounts()
+        {
+            return DAO.Account.Select() as Account[];
         }
 
     }
