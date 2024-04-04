@@ -320,6 +320,7 @@
             this.rjButton1.Text = "rjButton1";
             this.rjButton1.TextColor = System.Drawing.SystemColors.WindowText;
             this.rjButton1.UseVisualStyleBackColor = false;
+            this.rjButton1.Click += new System.EventHandler(this.RjButton1_Click);
             // 
             // toggleButton1
             // 

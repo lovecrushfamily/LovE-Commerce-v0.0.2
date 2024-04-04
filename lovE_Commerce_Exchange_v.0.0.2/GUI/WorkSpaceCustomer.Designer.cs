@@ -37,13 +37,13 @@
             this.iconButton_orders = new FontAwesome.Sharp.IconButton();
             this.iconButton_account = new FontAwesome.Sharp.IconButton();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.rjCircularPictureBox1 = new RJCircularPictureBox();
             this.label_customer_name = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel_customer_workspace_body = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label_current_tab_name = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.rjCircularPictureBox1 = new RJCircularPictureBox();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox1)).BeginInit();
@@ -239,6 +239,21 @@
             this.panel3.Size = new System.Drawing.Size(321, 120);
             this.panel3.TabIndex = 0;
             // 
+            // rjCircularPictureBox1
+            // 
+            this.rjCircularPictureBox1.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            this.rjCircularPictureBox1.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.rjCircularPictureBox1.BorderColor2 = System.Drawing.Color.HotPink;
+            this.rjCircularPictureBox1.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            this.rjCircularPictureBox1.BorderSize = 2;
+            this.rjCircularPictureBox1.GradientAngle = 50F;
+            this.rjCircularPictureBox1.Location = new System.Drawing.Point(18, 5);
+            this.rjCircularPictureBox1.Name = "rjCircularPictureBox1";
+            this.rjCircularPictureBox1.Size = new System.Drawing.Size(100, 100);
+            this.rjCircularPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.rjCircularPictureBox1.TabIndex = 1;
+            this.rjCircularPictureBox1.TabStop = false;
+            // 
             // label_customer_name
             // 
             this.label_customer_name.AutoSize = true;
@@ -277,7 +292,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Sans Serif Collection", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.DimGray;
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label2.Location = new System.Drawing.Point(13, 13);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(105, 29);
@@ -288,7 +303,7 @@
             // 
             this.label_current_tab_name.AutoSize = true;
             this.label_current_tab_name.Font = new System.Drawing.Font("Sans Serif Collection", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_current_tab_name.ForeColor = System.Drawing.Color.DimGray;
+            this.label_current_tab_name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label_current_tab_name.Location = new System.Drawing.Point(124, 13);
             this.label_current_tab_name.Name = "label_current_tab_name";
             this.label_current_tab_name.Size = new System.Drawing.Size(78, 29);
@@ -306,21 +321,6 @@
             this.label3.TabIndex = 3;
             this.label3.Text = ">";
             // 
-            // rjCircularPictureBox1
-            // 
-            this.rjCircularPictureBox1.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
-            this.rjCircularPictureBox1.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.rjCircularPictureBox1.BorderColor2 = System.Drawing.Color.HotPink;
-            this.rjCircularPictureBox1.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            this.rjCircularPictureBox1.BorderSize = 2;
-            this.rjCircularPictureBox1.GradientAngle = 50F;
-            this.rjCircularPictureBox1.Location = new System.Drawing.Point(18, 5);
-            this.rjCircularPictureBox1.Name = "rjCircularPictureBox1";
-            this.rjCircularPictureBox1.Size = new System.Drawing.Size(100, 100);
-            this.rjCircularPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.rjCircularPictureBox1.TabIndex = 1;
-            this.rjCircularPictureBox1.TabStop = false;
-            // 
             // WorkSpaceCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -333,6 +333,8 @@
             this.Controls.Add(this.panel2);
             this.Name = "WorkSpaceCustomer";
             this.Text = "CustomerWorkSpace";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.WorkSpaceCustomer_FormClosed);
+            this.Load += new System.EventHandler(this.WorkSpaceCustomer_Load);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();

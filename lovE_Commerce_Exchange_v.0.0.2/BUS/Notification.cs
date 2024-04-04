@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace BUS
 {
-    public class Notification : DLL.Notification_
+    public class Notification : DLL.Notification_, Entity
     {
-        public Notification() { }
-
-        //public string NotificationID;
-        //public string ReceivedID;
-        //public bool SeenState;
-        //public string Tittle;
-        //public string Time;
-        //public string Content;
-
+        public Notification(DLL.Notification_ notification_)
+        {
+            NotificationID  = notification_.NotificationID;
+            ReceivedID =    notification_.ReceivedID;
+            SeenState = notification_.SeenState;
+            Tittle = notification_.Tittle;
+            Time = notification_.Time;
+            Content = notification_.Content;
+        }
 
         public void Add()
         {
@@ -30,7 +30,7 @@ namespace BUS
 
         public static Notification[] GetNotifications()
         {
-            return DAO.Notification.Select()  as Notification[];
+            return DAO.Notification.Select().Select(c => new Notification(c)).ToArray();
         }
 
     }

@@ -7,18 +7,19 @@ using DLL;
 
 namespace BUS
 {
-    public class Comment : Comment_
+    public class Comment : Comment_, Entity
     {
-        public Comment() { }
-
-        //public string CommentId;
-        //public string ProductId;
-        //public string CustomerId;
-        //public int Star;
-        //public string CommentText;
-        //public string Date;
-        //public string ResponseComment;
-                                               
+        public Comment(Comment_ comment_)
+        {
+            CommentId = comment_.CommentId;
+            ProductId = comment_.ProductId;
+            CustomerId = comment_.CustomerId;
+            Star = comment_.Star;
+            Content = comment_.Content;
+            Date = comment_.Date;
+            ResponseComment = comment_.ResponseComment;
+        }
+ 
         public void Add()
         {
             DAO.Comment.Add(this);
@@ -35,7 +36,7 @@ namespace BUS
 
         public static Comment[] GetComments()
         {
-            return DAO.Comment.Select() as Comment[];
+            return DAO.Comment.Select().Select(c => new Comment(c)).ToArray();
 
         }
 

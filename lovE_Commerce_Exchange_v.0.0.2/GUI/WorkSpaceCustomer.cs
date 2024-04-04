@@ -1,4 +1,5 @@
-﻿using FontAwesome.Sharp;
+﻿using BUS;
+using FontAwesome.Sharp;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,16 +13,33 @@ using System.Windows.Media;
 
 namespace GUI
 {
+    
     public partial class WorkSpaceCustomer : Form
     {
         private IconButton currentButton;
         private Form currentChildForm;
+        public string subviewkey;
+        private Shop shop;
+
+        #region Delegate
+        // Defines a delegate. Sender is the object that is being returned to the other form.
+        public delegate void ObjectExternalLink(Entity entity);
+        // Declare a new instance of the delegate (null)
+        public ObjectExternalLink objectExternalLink;
+        #endregion
+
+        #region Using System.EventHandler
+        //This's enough, perfect, shortest wat to deal with event => navigator form
+        public event EventHandler EventExternalLink;
+        #endregion
 
         public WorkSpaceCustomer()
         {
             InitializeComponent();
+            //SubViewNavigator();
         }
 
+        #region GUI Control Effect
         private void ActivateButton(object sender)
         {
             if(sender != null)
@@ -31,7 +49,7 @@ namespace GUI
 
                 // style button
                 currentButton = sender as IconButton;
-                currentButton.BackColor = SystemColors.ControlLight;
+                currentButton.BackColor = System.Drawing.Color.MediumPurple;
                 currentButton.ForeColor = System.Drawing.Color.Black;
                 currentButton.TextAlign = ContentAlignment.MiddleCenter;
 
@@ -49,8 +67,21 @@ namespace GUI
             }
 
         }
+        #endregion
+
+        private void SubViewNavigator()
+        {
+            if(subviewkey == "accountInfor")
+                OpenCustomerAccount();
+            else if (subviewkey == "order")
+                IconButton_orders_Click(null,null);
+            else if(subviewkey == "messenger")
+                IconButton_messenger_Click(null,null);  
+
+        }
 
 
+        #region Open Sub Form 
         void OpenChildForm(Form childForm)
         {
             if (currentChildForm != null)
@@ -73,6 +104,11 @@ namespace GUI
         private void IconButton_account_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
+            OpenCustomerAccount();
+            
+        }
+        private void OpenCustomerAccount()
+        {
             OpenChildForm(new SubViewCustomerAccount());
         }
 
@@ -104,6 +140,19 @@ namespace GUI
         {
             ActivateButton(sender);
 
+            //using User-define event
+            //externalLinkChanged("shop");
+
+            //using delegate
+            //Signature = "shop";
+            //// If the delegate was instantiated, then call it
+            //if (externalLink != null)
+            //    externalLink(Signature);
+            //else
+            //    MessageBox.Show("Object external null");
+
+            //using System.eventhandle
+            EventExternalLink(this, new EventArgs());
         }
 
         private void IconButton_messenger_Click(object sender, EventArgs e)
@@ -112,6 +161,21 @@ namespace GUI
             OpenChildForm(new SubViewCustomerMessenger());
 
 
+        }
+
+
+
+
+        #endregion
+
+        private void WorkSpaceCustomer_Load(object sender, EventArgs e)
+        {
+            SubViewNavigator();
+        }
+
+        private void WorkSpaceCustomer_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            subviewkey = string.Empty;
         }
     }
 }

@@ -77,6 +77,7 @@ create proc sp_updateCustomer
 @Gender bit,
 @PhoneNumber varchar(255),
 @Image varchar(255),
+@ShopOwner bit,
 @DateOfBirth varchar(255),
 @Address varchar(255))
 as begin
@@ -85,10 +86,12 @@ as begin
 	Gender = @Gender,
 	PhoneNumber = @PhoneNumber,
 	Image_ = @Image,
+	ShopOwner = @ShopOwner,
 	DateOfBirth = @DateOfBirth,
 	Address_ = @Address
 	where CustomerID = @CustomerID
 end
+
 
 --6
 Create proc sp_updateMessage(

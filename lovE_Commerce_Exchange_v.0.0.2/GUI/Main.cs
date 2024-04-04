@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BUS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,42 +9,199 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Input;
 
 namespace GUI
 {
     public partial class Main : Form
     {
-        private Size formSize; //Keep form size when it is minimized and restored.Since the form is resized because it takes into account the size of the title bar and borders.
+        Form currentChildForm;
+        Account accounts;
+        Customer customer;
 
         public Main()
         {
             InitializeComponent();
-            //CreateRoundedSearchbutton();
+            InitializeDatasets();
+            InitializeController();
+            IconButton_home_Click(null, null);
         }
 
-        private void Panel3_Paint(object sender, PaintEventArgs e)
+        private void InitializeDatasets()
         {
 
         }
-        private void CreateRoundedSearchbutton()
-        {
-            RoundedButtonIcon roundedButtonIcon = new RoundedButtonIcon();
-            roundedButtonIcon.Location = new System.Drawing.Point(880, 15);
-            roundedButtonIcon.FlatAppearance.BorderSize = 0;
-            roundedButtonIcon.FlatStyle = FlatStyle.Flat;
-            roundedButtonIcon.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            roundedButtonIcon.Size = new System.Drawing.Size(40, 40);
-            panel_header.Controls.Add(roundedButtonIcon);
-            //roundedButtonIcon.rdus = 40;
-            roundedButtonIcon.IconSize = 30;
 
-        }
+        #region Panel Dragable Code, Ignore it
         //Code for drag form using panel not controlbox
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
 
+        private void Panel_controlbox_MouseDown(object sender, System.Windows.Forms.MouseEventArgs e)
+        {
+             //code for drag form
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+        #endregion
+
+        #region Controler
+        private ViewProductDetail viewProductDetail;        
+        private ViewShop viewShop;
+        private ViewHomePage viewHomePage;
+        private ViewProductSearch viewProductSearch;
+        private ViewCategory viewCategory;
+        private ViewShoppingCart viewShoppingCart;
+
+        private WorkSpaceCustomer workSpaceCustomer;
+        private WorkSpaceShopOwner workSpaceShopOwner;
+
+
+        private void InitializeController()
+        {
+            viewProductDetail = new ViewProductDetail();
+            //viewProductDetail.EventExternalLink += ViewProductDetail_EventExternalLink;
+            viewProductDetail.objectExternalLink += OpenExternalProductDetail;
+
+            viewShop = new ViewShop();
+            //viewShop.EventExternalLink += ViewShop_EventExternalLink;
+            viewShop.objectExternalLink += OpenExternalLinkViewShop;
+            
+            viewHomePage = new ViewHomePage();
+            //viewHomePage.EventExternalLink += ViewHomePage_EventExternalLink;
+            viewHomePage.objectExternalLink += OpenExternalLinkViewHomePage;
+
+            viewShoppingCart = new ViewShoppingCart();
+            //viewShoppingCart.EventExternalLink += ViewShoppingCart_EventExternalLink;
+            viewShoppingCart.objectExternalLink += OpenExternalLinkViewShoppingCart;
+
+            viewProductSearch = new ViewProductSearch();
+            //viewProductSearch.EventExternalLink += ViewProductSearch_EventExternalLink;
+            viewProductDetail.objectExternalLink += OpenExternalLinkViewProductDetail;
+
+            viewCategory = new ViewCategory();
+            //viewCategory.EventExternalLink += ViewCategory_EventExternalLink;
+            viewCategory.objectExternalLink += OpenExternalLinkViewCategory;
+
+            workSpaceCustomer = new WorkSpaceCustomer();
+            //workSpaceCustomer.EventExternalLink += WorkSpaceCustomer_EventExternalLink;
+            workSpaceCustomer.objectExternalLink += OpenExternalLinkCustomerWorkspace;
+
+            workSpaceShopOwner = new WorkSpaceShopOwner();
+            //workSpaceShopOwner.EventExternalLink += WorkSpaceShopOwner_EventExternalLink; 
+            workSpaceShopOwner.objectExternalLink += OpenExternalLinkShopOwnerWorkspace;
+        }
+
+        private void OpenExternalLinkViewHomePage(Entity entity)
+        {
+            if(entity is Product)
+            {
+                viewProductDetail.SetProduct((Product)entity);
+                OpenChildForm(viewProductDetail);
+            }
+        }
+
+        private void OpenExternalLinkShopOwnerWorkspace(Entity entity)
+        {
+
+        }
+
+        private void OpenExternalLinkCustomerWorkspace(Entity entity)
+        {
+
+        }
+
+        private void OpenExternalLinkViewCategory(Entity entity)
+        {
+
+        }
+
+        private void OpenExternalLinkViewProductDetail(Entity entity)
+        {
+
+        }
+
+        private void OpenExternalLinkViewShoppingCart(Entity entity)
+        {
+
+        }
+
+
+        private void OpenExternalLinkViewShop(Entity entity)
+        {
+
+        }
+
+       
+        private void OpenExternalProductDetail(Entity entity)
+        {
+            if(entity is Shop)
+            {
+                viewShop.SetShop((Shop) entity);
+                OpenChildForm(viewShop);
+            }
+        }
+        #endregion
+
+
+        void OpenChildForm(Form childForm)
+        {
+            //If  uncomment this check, got error cannot access disposed childform
+            //be carefull
+            //if (currentChildForm != null)
+            //{
+            //    currentChildForm.Close();
+            //}
+            currentChildForm = childForm;
+            currentChildForm.TopLevel = false;
+            currentChildForm.FormBorderStyle = FormBorderStyle.None;
+            currentChildForm.Dock = DockStyle.Fill;
+
+
+            panel_body.Controls.Add(currentChildForm);
+            panel_body.Tag = currentChildForm;
+            currentChildForm.BringToFront();
+            currentChildForm.Show();
+        }
+        private void IconButton_shoppingcart_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(viewShoppingCart);
+        }
+
+        private void IconButton_account_centre_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(workSpaceCustomer);
+        }
+
+        private void IconButton_home_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(viewHomePage);
+        }
+        
+        private void IconButton_search_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(viewProductSearch);
+        }
+        //private event 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
 
         private void Button_exit_Click(object sender, EventArgs e)
         {
@@ -67,7 +225,7 @@ namespace GUI
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void Panel_cotrol_MouseDown(object sender, MouseEventArgs e)
+        private void Panel_cotrol_MouseDown(object sender, System.Windows.Forms.MouseEventArgs e)
         {
             
 
@@ -93,117 +251,18 @@ namespace GUI
                    
         }
 
-       
-        
-
         private void Button2_Click(object sender, EventArgs e)
         {
 
         }
-
-        private void Panel_controlbox_MouseDown(object sender, MouseEventArgs e)
+        private void Panel3_Paint(object sender, PaintEventArgs e)
         {
-             //code for drag form
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
+
         }
+        
+        private void GradientLabel3_Click(object sender, EventArgs e)
+        {
 
-
-
-        // fill  the form to the screen
-        //Overridden methods
-        //protected override void WndProc(ref Message m)
-        //{
-        //    const int WM_NCCALCSIZE = 0x0083;//Standar Title Bar - Snap Window
-        //    const int WM_SYSCOMMAND = 0x0112;
-        //    const int SC_MINIMIZE = 0xF020; //Minimize form (Before)
-        //    const int SC_RESTORE = 0xF120; //Restore form (Before)
-        //    const int WM_NCHITTEST = 0x0084;//Win32, Mouse Input Notification: Determine what part of the window corresponds to a point, allows to resize the form.
-        //    const int resizeAreaSize = 10;
-
-        //    #region Form Resize
-        //    // Resize/WM_NCHITTEST values
-        //    const int HTCLIENT = 1; //Represents the client area of the window
-        //    const int HTLEFT = 10;  //Left border of a window, allows resize horizontally to the left
-        //    const int HTRIGHT = 11; //Right border of a window, allows resize horizontally to the right
-        //    const int HTTOP = 12;   //Upper-horizontal border of a window, allows resize vertically up
-        //    const int HTTOPLEFT = 13;//Upper-left corner of a window border, allows resize diagonally to the left
-        //    const int HTTOPRIGHT = 14;//Upper-right corner of a window border, allows resize diagonally to the right
-        //    const int HTBOTTOM = 15; //Lower-horizontal border of a window, allows resize vertically down
-        //    const int HTBOTTOMLEFT = 16;//Lower-left corner of a window border, allows resize diagonally to the left
-        //    const int HTBOTTOMRIGHT = 17;//Lower-right corner of a window border, allows resize diagonally to the right
-
-        //    ///<Doc> More Information: https://docs.microsoft.com/en-us/windows/win32/inputdev/wm-nchittest </Doc>
-
-        //    if (m.Msg == WM_NCHITTEST)
-        //    { //If the windows m is WM_NCHITTEST
-        //        base.WndProc(ref m);
-        //        if (this.WindowState == FormWindowState.Normal)//Resize the form if it is in normal state
-        //        {
-        //            if ((int)m.Result == HTCLIENT)//If the result of the m (mouse pointer) is in the client area of the window
-        //            {
-        //                Point screenPoint = new Point(m.LParam.ToInt32()); //Gets screen point coordinates(X and Y coordinate of the pointer)                           
-        //                Point clientPoint = this.PointToClient(screenPoint); //Computes the location of the screen point into client coordinates                          
-
-        //                if (clientPoint.Y <= resizeAreaSize)//If the pointer is at the top of the form (within the resize area- X coordinate)
-        //                {
-        //                    if (clientPoint.X <= resizeAreaSize) //If the pointer is at the coordinate X=0 or less than the resizing area(X=10) in 
-        //                        m.Result = (IntPtr)HTTOPLEFT; //Resize diagonally to the left
-        //                    else if (clientPoint.X < (this.Size.Width - resizeAreaSize))//If the pointer is at the coordinate X=11 or less than the width of the form(X=Form.Width-resizeArea)
-        //                        m.Result = (IntPtr)HTTOP; //Resize vertically up
-        //                    else //Resize diagonally to the right
-        //                        m.Result = (IntPtr)HTTOPRIGHT;
-        //                }
-        //                else if (clientPoint.Y <= (this.Size.Height - resizeAreaSize)) //If the pointer is inside the form at the Y coordinate(discounting the resize area size)
-        //                {
-        //                    if (clientPoint.X <= resizeAreaSize)//Resize horizontally to the left
-        //                        m.Result = (IntPtr)HTLEFT;
-        //                    else if (clientPoint.X > (this.Width - resizeAreaSize))//Resize horizontally to the right
-        //                        m.Result = (IntPtr)HTRIGHT;
-        //                }
-        //                else
-        //                {
-        //                    if (clientPoint.X <= resizeAreaSize)//Resize diagonally to the left
-        //                        m.Result = (IntPtr)HTBOTTOMLEFT;
-        //                    else if (clientPoint.X < (this.Size.Width - resizeAreaSize)) //Resize vertically down
-        //                        m.Result = (IntPtr)HTBOTTOM;
-        //                    else //Resize diagonally to the right
-        //                        m.Result = (IntPtr)HTBOTTOMRIGHT;
-        //                }
-        //            }
-        //        }
-        //        return;
-        //    }
-        //    #endregion
-
-        //    //Remove border and keep snap window
-        //    if (m.Msg == WM_NCCALCSIZE && m.WParam.ToInt32() == 1)
-        //    {
-        //        return;
-        //    }
-
-        //    //Keep form size when it is minimized and restored. Since the form is resized because it takes into account the size of the title bar and borders.
-        //    if (m.Msg == WM_SYSCOMMAND)
-        //    {
-        //        /// <see cref="https://docs.microsoft.com/en-us/windows/win32/menurc/wm-syscommand"/>
-        //        /// Quote:
-        //        /// In WM_SYSCOMMAND messages, the four low - order bits of the wParam parameter 
-        //        /// are used internally by the system.To obtain the correct result when testing 
-        //        /// the value of wParam, an application must combine the value 0xFFF0 with the 
-        //        /// wParam value by using the bitwise AND operator.
-        //        int wParam = (m.WParam.ToInt32() & 0xFFF0);
-
-        //        if (wParam == SC_MINIMIZE)  //Before
-        //            formSize = this.ClientSize;
-        //        if (wParam == SC_RESTORE)// Restored form(Before)
-        //            this.Size = formSize;
-        //    }
-        //    base.WndProc(ref m);
-        //}
-        //private void Main_Load(object sender, EventArgs e)
-        //{
-        //    formSize = this.ClientSize;
-        //}
-
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BUS;
+using System;
 using System.Windows.Forms;
 
 namespace GUI
@@ -9,11 +10,11 @@ namespace GUI
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
-        private static void Main()
+        internal static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ViewShoppingCart());
+            Application.Run(new Main());
                                     
         }
     }

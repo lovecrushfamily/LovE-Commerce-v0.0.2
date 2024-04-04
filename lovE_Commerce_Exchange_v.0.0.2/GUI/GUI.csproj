@@ -40,6 +40,8 @@
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL" />
+    <Reference Include="System.Text.Json, Version=7.0.0.3, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -53,6 +55,9 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomControl\MyNumericUpDown.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="CustomControl\GradientLabel.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -105,6 +110,12 @@
     </Compile>
     <Compile Include="Popup.Designer.cs">
       <DependentUpon>Popup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopupDragPicture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopupDragPicture.Designer.cs">
+      <DependentUpon>PopupDragPicture.cs</DependentUpon>
     </Compile>
     <Compile Include="SubViewCustomerAccount.cs">
       <SubType>Form</SubType>
@@ -301,11 +312,20 @@
     <EmbeddedResource Include="Popup.resx">
       <DependentUpon>Popup.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PopupDragPicture.resx">
+      <DependentUpon>PopupDragPicture.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SubViewAdministrator.resx">
       <DependentUpon>SubViewAdministrator.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SubViewCustomerAccount.resx">
+      <DependentUpon>SubViewCustomerAccount.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SubViewCustomerComment.resx">
       <DependentUpon>SubViewCustomerComment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubViewCustomerMessenger.resx">
+      <DependentUpon>SubViewCustomerMessenger.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SubViewCustormerOrders.resx">
       <DependentUpon>SubViewCustormerOrders.cs</DependentUpon>
@@ -315,6 +335,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SubViewStaffAccount.resx">
       <DependentUpon>SubViewStaffAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewProductDetail.resx">
+      <DependentUpon>ViewProductDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewProductSearch.resx">
+      <DependentUpon>ViewProductSearch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewShop.resx">
       <DependentUpon>ViewShop.cs</DependentUpon>
@@ -373,6 +399,10 @@
     <ProjectReference Include="..\BUS\BUS.csproj">
       <Project>{7083181b-992c-4872-a02a-3d473d841e49}</Project>
       <Name>BUS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DLL\DLL.csproj">
+      <Project>{e35d69b6-5db6-42b9-a15a-a9d66976d117}</Project>
+      <Name>DLL</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

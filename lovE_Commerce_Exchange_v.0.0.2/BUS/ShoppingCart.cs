@@ -3,15 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DLL;
 
 namespace BUS
 {
-    public class ShoppingCart: DLL.ShoppingCart_
+    public class ShoppingCart: ShoppingCart_ , Entity
     {
-        public ShoppingCart() : base() { }
-
-        //public string CustomerId;
-        //public string ProducID;
+        public ShoppingCart(ShoppingCart_ shoppingCart_)
+        {
+            CustomerId = shoppingCart_.CustomerId;
+            ProducID = shoppingCart_.ProducID;
+        }
 
         public void AddProduct(Product product)
         {
@@ -25,7 +27,7 @@ namespace BUS
 
         public static ShoppingCart[] GetShoppingCarts()
         {
-            return DAO.ShoppingCart.Select() as ShoppingCart[]; 
+            return DAO.ShoppingCart.Select().Select(c => new ShoppingCart(c)).ToArray(); 
         }
     }
 }

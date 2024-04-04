@@ -17,4 +17,6 @@ namespace DLL
         public bool RememberLogin;           // updateable
         public bool Online;                 // updatable
     }
+
+
 }

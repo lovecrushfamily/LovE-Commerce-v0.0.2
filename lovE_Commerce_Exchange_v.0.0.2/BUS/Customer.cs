@@ -6,27 +6,30 @@ using System.Threading.Tasks;
 
 namespace BUS
 {
-    public class Customer  : DLL.Customer_
+    public class Customer : DLL.Customer_, Entity
     {
-        //public string CustomerId;
-        //public string CustomerName;
-        //public string Gender;
-        //public string PhoneNumber;
-        //public string Image;
-        //public bool ShopOwner;
-        //public string DateOfBirth;
-        //public string Address;
 
-        public Customer() { }   
+        public Customer(DLL.Customer_ customer_)
+        {
+            CustomerId = customer_.CustomerId;    
+            CustomerName = customer_.CustomerName;
+            Gender  = customer_.Gender;
+            PhoneNumber = customer_.PhoneNumber;
+            Image = customer_.Image;
+            ShopOwner = customer_.ShopOwner;
+            DateOfBirth = customer_.DateOfBirth;    
+            Address = customer_.Address;
+        }
 
         public void Update()
         {
+            DAO.Customer.Update(this);
 
         }
 
         public static Customer[] GetCustomers()
         {
-            return DAO.Customer.Select() as Customer[];
+            return DAO.Customer.Select().Select(c => new Customer(c)).ToArray();
         }
     }
 }

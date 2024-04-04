@@ -7,17 +7,19 @@ using System.Threading.Tasks;
 
 namespace BUS
 {
-    public class Order  : DLL.Order_
+    public class Order  : DLL.Order_, Entity
     {
-        //public string OrderId;
-        //public string CustomerID;
-        //public string TotalAmount;
-        //public string Date;
-        //public bool CustomerOrderState;
-        //public bool OrderConfirmState;
-        //public bool ReceivedState;
 
-        public Order() { }
+        public Order(DLL.Order_ order_)
+        {
+            OrderId = order_.OrderId;
+            CustomerID = order_.CustomerID;
+            TotalAmount = order_.TotalAmount;
+            Date = order_.Date;
+            CustomerOrderState = order_.CustomerOrderState;
+            OrderConfirmState = order_.OrderConfirmState;
+            ReceivedState = order_.ReceivedState;           
+        }
 
 
         public void Add()
@@ -47,7 +49,7 @@ namespace BUS
 
         public static Order[] GetOrders()
         {
-            return DAO.Order.Select() as Order[];
+            return DAO.Order.Select().Select(c => new Order(c)).ToArray();
         }
     }
 }

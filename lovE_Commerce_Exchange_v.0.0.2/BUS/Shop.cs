@@ -3,22 +3,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DLL;
 
 namespace BUS
 {
-    public class Shop: DLL.Shop_
+    public class Shop : Shop_, Entity
     {
 
-        public Shop() { }
-
-        //public string ShopId;
-        //public string ShopName;
-        //public string Description;
-        //public string Address;
-        //public string PhoneNumber;
-        //public string Date;
-        //public string Image;
-        //public string ShopOwner;
+        public Shop(Shop_ shop_)
+        {
+            ShopId = shop_.ShopId;
+            ShopName = shop_.ShopName;
+            Description = shop_.Description;
+            Address = shop_.Address;
+            PhoneNumber = shop_.PhoneNumber;
+            Date = shop_.Date;
+            Image = shop_.Image;
+            ShopOwner = shop_.ShopOwner;
+        }
 
         public void Add()
         {
@@ -37,7 +39,7 @@ namespace BUS
 
         public static Shop[] GetShops()
         {
-            return DAO.Shop.Select() as Shop[];
+            return DAO.Shop.Select().Select(c => new Shop(c)).ToArray();
         }
 
     }

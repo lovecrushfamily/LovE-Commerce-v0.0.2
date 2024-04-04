@@ -6,19 +6,20 @@ using System.Threading.Tasks;
 
 namespace BUS
 {
-    public class OrderDetail  : DLL.OrderDetail_
+    public class OrderDetail  : DLL.OrderDetail_, Entity
     {
-        public OrderDetail() { }
+        public OrderDetail(DLL.OrderDetail_ orderDetail_)
+        {
+            OrderDetailId = orderDetail_.OrderDetailId;
+            OrderId = orderDetail_.OrderId;
+            ProductId = orderDetail_.ProductId;
+            Quantity = orderDetail_.Quantity;
+            UnitPrice = orderDetail_.UnitPrice;
+            OrderDetailConfirmState = orderDetail_.OrderDetailConfirmState;
+            Discount = orderDetail_.Discount;
+            VoucherID = orderDetail_.VoucherID;
+        }
 
-        //public string OrderDetailId;
-        //public string OrderId;
-        //public string ProductId;
-        //public string Quantity;
-        //public string UnitPrice;
-        //public string OrderDetailConfirmState;
-        //public string Discount;
-        //public string VoucherID;
-                      
         public void Add()
         {
 
@@ -30,7 +31,7 @@ namespace BUS
 
         public static OrderDetail[] GetOrderDetails()
         {
-            return DAO.OrderDetail.Select() as OrderDetail[];
+            return DAO.OrderDetail.Select().Select(c => new OrderDetail(c)).ToArray();
         }
 
     }

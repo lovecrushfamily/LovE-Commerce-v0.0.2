@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DAO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,17 +7,18 @@ using System.Threading.Tasks;
 
 namespace BUS
 {
-    public class Message : DLL.Message_
+    public class Message : DLL.Message_, Entity
     {
-        public Message() { }
-
-        //public string MessageId;
-        //public string SenderId;
-        //public string ReceivedId;
-        //public string Content;
-        //public bool Time;
-        //public bool SeenState;
-        //public bool IsRecall;
+        public Message(DLL.Message_ message)
+        {
+            MessageId = message.MessageId;
+            SenderId = message.SenderId;
+            ReceivedId = message.ReceivedId;
+            Content = message.Content;
+            Time = message.Time;
+            SeenState = message.SeenState;
+            IsRecall = message.IsRecall;
+        }
 
         public void  Add()
         {
@@ -30,7 +32,7 @@ namespace BUS
 
         public static Message[] GetMessages()
         {
-            return DAO.Message.Select() as Message[];
+            return DAO.Message.Select().Select(c => new Message(c)).ToArray();
         }
 
     }

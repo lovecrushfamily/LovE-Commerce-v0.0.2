@@ -9,6 +9,15 @@ using System.Threading.Tasks;
 
 namespace BUS
 {
+    public interface Entity
+    {
+        //By using this interface you can achive navigating forms effect 
+        //passing object through forms, and navigating form  base on object comparison
+        //that's why this interface's properties dosen't matter
+        //symbolizing every entities in BUS layer and use it to pass though event in GUI layer
+
+    }
+
     public static class Ultilities
     {
         public static T Clone<T>(T source)

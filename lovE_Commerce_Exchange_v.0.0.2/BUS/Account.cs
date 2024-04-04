@@ -7,28 +7,32 @@ using DLL;
 
 namespace BUS
 {
-    public class Account : Account_
+    public class Account : Account_ , Entity
     {
-        //public string AccountID;
-        //public string UserName;
-        //public string Password;
-        //public string AuthenticatedEmail;
-        //public string Role;
-        //public string DateOfRegister;
-        //public bool RememberLogin;
-        //public bool Online;
+        
+        public  Account(Account_ account)
+        {
+            AccountID = account.AccountID;
+            UserName = account.UserName;
+            Password = account.Password;
+            AuthenticatedEmail = account.AuthenticatedEmail;
+            Role = account.Role;
+            DateOfRegister = account.DateOfRegister;
+            RememberLogin = account.RememberLogin;
+            Online = account.Online;           
+        }
 
         public void Create()
         {
             DAO.Account.Add(this);
-
         }
 
-        public void UpdateEmail()
+        public void Update()
         {
-
+            DAO.Account.Update(this);
         }
 
+      
         public void Delete()
         {
             DAO.Account.Delete(this);
@@ -44,14 +48,14 @@ namespace BUS
 
         }
 
-        public bool ChangePassword(string newPassword, string oldPassword)
+        public bool ChangePassword()
         {
             return false;
 
         }
         public static Account[] GetAccounts()
         {
-            return DAO.Account.Select() as Account[];
+            return DAO.Account.Select().Select(a => new Account(a)).ToArray();
         }
 
     }

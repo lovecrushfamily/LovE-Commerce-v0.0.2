@@ -7,15 +7,15 @@ using DLL;
 
 namespace BUS
 {
-    public class Category :  Category_
+    public class Category :  Category_  , Entity
     {
-        public Category() { }
-
-        //public string CategoryId;
-        //public string CategoryName;
-        //public string AncestorId;
-        //public string AttributeList;
-
+        public Category(Category_ parent)
+        {
+            CategoryId = parent.CategoryId;
+            CategoryName = parent.CategoryName;
+            AncestorId = parent.AncestorId;
+            AttributeList = parent.AttributeList;
+        }
 
         public void Add()
         {
@@ -34,7 +34,7 @@ namespace BUS
         }
         public static Category[] GetCategories()
         {
-            return DAO.Category.Select() as Category[];
+            return DAO.Category.Select().Select(c => new Category(c)).ToArray();
         }
     }
 }

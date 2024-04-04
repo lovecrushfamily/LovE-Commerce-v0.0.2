@@ -16,5 +16,10 @@ namespace GUI
         {
             InitializeComponent();
         }
+
+        private void RjButton1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BUS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,5 +17,17 @@ namespace GUI
         {
             InitializeComponent();
         }
+
+        #region Delegate
+        // Defines a delegate. Sender is the object that is being returned to the other form.
+        public delegate void ObjectExternalLink(Entity entity);
+        // Declare a new instance of the delegate (null)
+        public ObjectExternalLink objectExternalLink;
+        #endregion
+
+        #region Using System.EventHandler
+        //This's enough, perfect, shortest wat to deal with event => navigator form
+        public event EventHandler EventExternalLink;
+        #endregion
     }
 }

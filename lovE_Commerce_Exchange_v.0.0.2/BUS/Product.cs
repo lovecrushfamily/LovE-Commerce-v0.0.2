@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BUS
 {
-    public class Product : Product_
+    public class Product : Product_, Entity
     {
         //public string ProductId;
         //public string ProductName;
@@ -24,7 +24,22 @@ namespace BUS
         //public string ShopID;
 
 
-        public Product() : base() { }
+        public Product(Product_ product_)
+        {
+            ProductId = product_.ProductId;
+            ProductName = product_.ProductName;
+            Description = product_.Description;
+            Price = product_.Price;
+            CreatedDate = product_.CreatedDate;
+            Quantity = product_.Quantity;
+            AttributeList = product_.AttributeList;
+            MainImage = product_.MainImage;
+            ExtraImageList = product_.ExtraImageList;
+            BannedState = product_.BannedState;
+            ReviewState = product_.ReviewState;
+            CategoryID = product_.CategoryID;
+            ShopID = product_.ShopID;
+        }
 
         public void Add()
         {
@@ -55,7 +70,7 @@ namespace BUS
 
         public static Product[] GetProducts()
         {
-            return DAO.Product.Select() as Product[];
+            return DAO.Product.Select().Select(c => new Product(c)).ToArray();
         }
 
 

@@ -20,7 +20,7 @@ namespace DAO
         //private string ConnectionString ;
 
         //Alternatives connection string
-        private static string ConnectionString = @"Data Source = LOVECRUSH; Initial Catalog = LovE_Commerce_v2; User ID = sa; Pwd = lovecrush; Application Name = Windows Forms Application";
+        private static string ConnectionString = @"Data Source = LOVECRUSH; Initial Catalog = LovE_Commerce_v2; Integrated Security=true; Application Name = Windows Forms Application";
         //private string AlternativeString = @"Data Source = LOVECRUSH; Initial Catalog = BikeStores; Integrated Security=true; Application Name = Windows Forms Application";
         public static MyConnection Instance
         {

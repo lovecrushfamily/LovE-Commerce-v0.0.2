@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-03-31T14:35:44.141Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="qT6CERAU45fcgKG84xPF" version="24.2.1" type="device" pages="7">
+<mxfile host="app.diagrams.net" modified="2024-04-04T09:24:59.693Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="o_Ba_vv35UYzn0ZDlfzU" version="24.2.2" type="device" pages="7">
   <diagram name="usecase" id="AkrvAjtsgT3PUjKPflpT">
-    <mxGraphModel dx="2015" dy="2075" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1450" dy="1769" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -3997,15 +3997,15 @@
             <mxRectangle width="150" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="EEH-90GTXRwtCyI2rcQ--1" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="3Qwj5x_44Sohx2C3fadG-96">
+        <mxCell id="EEH-90GTXRwtCyI2rcQ--1" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="3Qwj5x_44Sohx2C3fadG-96" vertex="1">
           <mxGeometry y="150" width="180" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="EEH-90GTXRwtCyI2rcQ--2" value="" style="shape=partialRectangle;connectable=1;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;locked=0;" vertex="1" parent="EEH-90GTXRwtCyI2rcQ--1">
+        <mxCell id="EEH-90GTXRwtCyI2rcQ--2" value="" style="shape=partialRectangle;connectable=1;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;locked=0;" parent="EEH-90GTXRwtCyI2rcQ--1" vertex="1">
           <mxGeometry width="30" height="30" as="geometry">
             <mxRectangle width="30" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="EEH-90GTXRwtCyI2rcQ--3" value="Date" style="shape=partialRectangle;connectable=1;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;" vertex="1" parent="EEH-90GTXRwtCyI2rcQ--1">
+        <mxCell id="EEH-90GTXRwtCyI2rcQ--3" value="Date" style="shape=partialRectangle;connectable=1;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;" parent="EEH-90GTXRwtCyI2rcQ--1" vertex="1">
           <mxGeometry x="30" width="150" height="30" as="geometry">
             <mxRectangle width="150" height="30" as="alternateBounds" />
           </mxGeometry>
@@ -4901,74 +4901,74 @@
     </mxGraphModel>
   </diagram>
   <diagram id="_zRS3XpP9-lBKQnG3aw2" name="form">
-    <mxGraphModel dx="2900" dy="1138" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="5400" dy="1476" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="hQQuKOkSrCvZkHmknnuY-2" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.071;exitY=0;exitDx=0;exitDy=0;dashed=1;endArrow=classic;endFill=1;startArrow=block;startFill=1;exitPerimeter=0;" parent="1" source="PYIbK_rdNEaveFqPFHMF-5" target="PYIbK_rdNEaveFqPFHMF-10" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="552" y="378" as="sourcePoint" />
-            <mxPoint x="174" y="298" as="targetPoint" />
+            <mxPoint x="302" y="1325" as="sourcePoint" />
+            <mxPoint x="-76" y="1245" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="PYIbK_rdNEaveFqPFHMF-1" value="Notification&lt;div&gt;- all notification&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="607" y="211" width="120" height="60" as="geometry" />
+          <mxGeometry x="357" y="1158" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="PYIbK_rdNEaveFqPFHMF-2" value="Personal information&lt;div&gt;- all infors&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="679" y="598" width="120" height="60" as="geometry" />
+          <mxGeometry x="429" y="1545" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="hQQuKOkSrCvZkHmknnuY-1" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;dashed=1;endArrow=classic;endFill=1;startArrow=block;startFill=1;" parent="1" source="PYIbK_rdNEaveFqPFHMF-3" target="PYIbK_rdNEaveFqPFHMF-10" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="PYIbK_rdNEaveFqPFHMF-3" value="Order (particular customer)&lt;div style=&quot;text-align: left;&quot;&gt;- all order belongs to customer&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;- all comment&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;- all received Order&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;- refer order&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;- waiting order&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="542" y="342" width="223" height="102" as="geometry" />
+          <mxGeometry x="292" y="1289" width="223" height="102" as="geometry" />
         </mxCell>
         <mxCell id="PYIbK_rdNEaveFqPFHMF-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="PYIbK_rdNEaveFqPFHMF-4" target="PYIbK_rdNEaveFqPFHMF-3" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="569.2000122070312" y="473" as="targetPoint" />
+            <mxPoint x="319.20001220703125" y="1420" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="512" y="442" />
-              <mxPoint x="512" y="393" />
+              <mxPoint x="262" y="1389" />
+              <mxPoint x="262" y="1340" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="PYIbK_rdNEaveFqPFHMF-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="PYIbK_rdNEaveFqPFHMF-4" target="PYIbK_rdNEaveFqPFHMF-5" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="578" y="532" />
+              <mxPoint x="328" y="1479" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="PYIbK_rdNEaveFqPFHMF-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="PYIbK_rdNEaveFqPFHMF-4" target="PYIbK_rdNEaveFqPFHMF-6" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="276" y="828" />
+              <mxPoint x="26" y="1775" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="PYIbK_rdNEaveFqPFHMF-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;" parent="1" source="PYIbK_rdNEaveFqPFHMF-4" target="PYIbK_rdNEaveFqPFHMF-9" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="233" y="439" />
-              <mxPoint x="233" y="759" />
-              <mxPoint x="761" y="759" />
+              <mxPoint x="-17" y="1386" />
+              <mxPoint x="-17" y="1706" />
+              <mxPoint x="511" y="1706" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="QV8FpY9xr447cSYh61z5-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.508;entryY=0.978;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="PYIbK_rdNEaveFqPFHMF-4" target="PYIbK_rdNEaveFqPFHMF-10" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="325" y="326" />
-              <mxPoint x="93" y="326" />
-              <mxPoint x="93" y="324" />
-              <mxPoint x="-41" y="324" />
+              <mxPoint x="75" y="1273" />
+              <mxPoint x="-157" y="1273" />
+              <mxPoint x="-157" y="1271" />
+              <mxPoint x="-291" y="1271" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="QV8FpY9xr447cSYh61z5-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;" parent="1" source="PYIbK_rdNEaveFqPFHMF-4" target="QV8FpY9xr447cSYh61z5-2" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="394" y="257" />
+              <mxPoint x="144" y="1204" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -4982,67 +4982,206 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="PYIbK_rdNEaveFqPFHMF-4" value="HomePage: and search and category&lt;div style=&quot;text-align: left;&quot;&gt;- all product&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;- all shop&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;- all comment&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;- personal information&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;- all notification&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;- all category&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;- all order&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="200" y="397" width="259" height="168" as="geometry" />
+          <mxGeometry x="-50" y="1344" width="259" height="168" as="geometry" />
         </mxCell>
         <mxCell id="PYIbK_rdNEaveFqPFHMF-5" value="Messenger (specific sender = customer)&lt;div&gt;- all&amp;nbsp; message&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="414" y="646" width="226" height="90" as="geometry" />
+          <mxGeometry x="164" y="1593" width="226" height="90" as="geometry" />
         </mxCell>
         <mxCell id="PYIbK_rdNEaveFqPFHMF-6" value="Shopping cart&lt;div&gt;- all shopping cart product&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="364" y="780" width="250" height="96" as="geometry" />
+          <mxGeometry x="114" y="1727" width="250" height="96" as="geometry" />
         </mxCell>
         <mxCell id="PYIbK_rdNEaveFqPFHMF-7" value="Staff form&lt;div&gt;- all product&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="-284" y="624" width="120" height="60" as="geometry" />
+          <mxGeometry x="-534" y="1571" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="PYIbK_rdNEaveFqPFHMF-8" value="Manager form&lt;div&gt;- all information&lt;/div&gt;&lt;div&gt;- statistic&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="-284" y="472" width="120" height="60" as="geometry" />
+          <mxGeometry x="-534" y="1419" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="PYIbK_rdNEaveFqPFHMF-9" value="Shop manager&lt;div&gt;- all product&lt;/div&gt;&lt;div&gt;- all waiting product&lt;/div&gt;&lt;div&gt;- statistic dashboard&lt;/div&gt;&lt;div&gt;- all order belongs to shop&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="710" y="699" width="218" height="126" as="geometry" />
+          <mxGeometry x="460" y="1646" width="218" height="126" as="geometry" />
         </mxCell>
         <mxCell id="PYIbK_rdNEaveFqPFHMF-10" value="View Shop&lt;div&gt;- all shop&#39;s product&lt;/div&gt;&lt;div&gt;- all category shop have&lt;/div&gt;&lt;div&gt;- best seller product&lt;/div&gt;&lt;div&gt;- all order product&lt;/div&gt;&lt;div&gt;- all comment shop&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="-82" y="316" width="177" height="91" as="geometry" />
+          <mxGeometry x="-332" y="1263" width="177" height="91" as="geometry" />
         </mxCell>
         <mxCell id="QV8FpY9xr447cSYh61z5-2" value="Login" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="139" y="208" width="120" height="60" as="geometry" />
+          <mxGeometry x="-111" y="1155" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="a0eMRU_JIEm3bGvaLL-V-1" value="Product Detail&lt;div&gt;- all product information&lt;/div&gt;&lt;div&gt;- 1 shop&lt;/div&gt;&lt;div&gt;- comment&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="-85" y="527" width="259" height="168" as="geometry" />
+          <mxGeometry x="-335" y="1474" width="259" height="168" as="geometry" />
         </mxCell>
-        <mxCell id="a0eMRU_JIEm3bGvaLL-V-2" value="Home Page" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="-215" y="1117" width="532" height="197" as="geometry" />
+        <mxCell id="YFjELZrdgv1WBZGH6LBT-1" value="&lt;font style=&quot;font-size: 50px;&quot;&gt;Main&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-194" y="2946" width="385" height="152" as="geometry" />
         </mxCell>
-        <mxCell id="a0eMRU_JIEm3bGvaLL-V-3" value="Search" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="-2" y="1037" width="120" height="60" as="geometry" />
+        <mxCell id="f5H5NvAcWB9cveZq4yXs-3" value="&lt;font style=&quot;font-size: 30px;&quot;&gt;Controler&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="63" y="1445" width="141" height="48" as="geometry" />
         </mxCell>
-        <mxCell id="a0eMRU_JIEm3bGvaLL-V-4" value="Category" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="-16" y="1236" width="120" height="60" as="geometry" />
+        <mxCell id="3BKXT1EfyeB2dXWphh_J-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="3BKXT1EfyeB2dXWphh_J-1" target="YFjELZrdgv1WBZGH6LBT-1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-318" y="3151" />
+              <mxPoint x="-2" y="3151" />
+            </Array>
+          </mxGeometry>
         </mxCell>
-        <mxCell id="a0eMRU_JIEm3bGvaLL-V-5" value="All product" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="111" y="1176" width="120" height="60" as="geometry" />
+        <mxCell id="3BKXT1EfyeB2dXWphh_J-1" value="&lt;font style=&quot;font-size: 50px;&quot;&gt;View&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-511" y="3208" width="385" height="152" as="geometry" />
         </mxCell>
-        <mxCell id="a0eMRU_JIEm3bGvaLL-V-8" value="Product Detail" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="-179" y="1037" width="120" height="60" as="geometry" />
+        <mxCell id="3BKXT1EfyeB2dXWphh_J-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="3BKXT1EfyeB2dXWphh_J-2" target="YFjELZrdgv1WBZGH6LBT-1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="a0eMRU_JIEm3bGvaLL-V-9" value="ShopView" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="174" y="1037" width="120" height="60" as="geometry" />
+        <mxCell id="3BKXT1EfyeB2dXWphh_J-2" value="&lt;font style=&quot;font-size: 50px;&quot;&gt;Workspace&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="139" y="3204" width="385" height="152" as="geometry" />
         </mxCell>
-        <mxCell id="YFjELZrdgv1WBZGH6LBT-1" value="customer workspace" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="252" y="1439" width="532" height="197" as="geometry" />
+        <mxCell id="3BKXT1EfyeB2dXWphh_J-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="3BKXT1EfyeB2dXWphh_J-3" target="3BKXT1EfyeB2dXWphh_J-2" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="89" y="3447" />
+              <mxPoint x="331" y="3447" />
+            </Array>
+          </mxGeometry>
         </mxCell>
-        <mxCell id="YFjELZrdgv1WBZGH6LBT-2" value="Shopowner workspace" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="-611" y="1436" width="532" height="197" as="geometry" />
+        <mxCell id="3BKXT1EfyeB2dXWphh_J-3" value="&lt;font style=&quot;font-size: 50px;&quot;&gt;Subview&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-104" y="3539" width="385" height="152" as="geometry" />
         </mxCell>
-        <mxCell id="YFjELZrdgv1WBZGH6LBT-3" value="shoppping cart" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="95" y="1348" width="120" height="60" as="geometry" />
+        <mxCell id="3BKXT1EfyeB2dXWphh_J-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="3BKXT1EfyeB2dXWphh_J-5" target="3BKXT1EfyeB2dXWphh_J-2" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="338.7143205915181" y="3350.7142421177455" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="637" y="3447" />
+              <mxPoint x="331" y="3447" />
+            </Array>
+          </mxGeometry>
         </mxCell>
-        <mxCell id="YFjELZrdgv1WBZGH6LBT-4" value="Order" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="-102" y="1348" width="120" height="60" as="geometry" />
+        <mxCell id="3BKXT1EfyeB2dXWphh_J-5" value="&lt;font style=&quot;font-size: 50px;&quot;&gt;Subview&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="444" y="3542" width="385" height="152" as="geometry" />
         </mxCell>
-        <mxCell id="YFjELZrdgv1WBZGH6LBT-5" value="Staff workspace" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="-548" y="1779" width="532" height="197" as="geometry" />
+        <mxCell id="3BKXT1EfyeB2dXWphh_J-11" value="&lt;font style=&quot;font-size: 50px;&quot;&gt;View&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-1001" y="3204" width="385" height="152" as="geometry" />
         </mxCell>
-        <mxCell id="YFjELZrdgv1WBZGH6LBT-6" value="ManagerOwner" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="163" y="1779" width="532" height="197" as="geometry" />
+        <mxCell id="3BKXT1EfyeB2dXWphh_J-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="3BKXT1EfyeB2dXWphh_J-11" target="YFjELZrdgv1WBZGH6LBT-1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-808" y="3151" />
+              <mxPoint x="-2" y="3151" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3BKXT1EfyeB2dXWphh_J-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="3BKXT1EfyeB2dXWphh_J-13" target="YFjELZrdgv1WBZGH6LBT-1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1323" y="3150" />
+              <mxPoint x="-1" y="3150" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3BKXT1EfyeB2dXWphh_J-13" value="&lt;font style=&quot;font-size: 50px;&quot;&gt;Workspace&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1118" y="3205" width="385" height="152" as="geometry" />
+        </mxCell>
+        <mxCell id="3BKXT1EfyeB2dXWphh_J-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="3BKXT1EfyeB2dXWphh_J-15" target="3BKXT1EfyeB2dXWphh_J-13" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1068" y="3448" />
+              <mxPoint x="1310" y="3448" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3BKXT1EfyeB2dXWphh_J-15" value="&lt;font style=&quot;font-size: 50px;&quot;&gt;Subview&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="875" y="3540" width="385" height="152" as="geometry" />
+        </mxCell>
+        <mxCell id="3BKXT1EfyeB2dXWphh_J-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="3BKXT1EfyeB2dXWphh_J-17" target="3BKXT1EfyeB2dXWphh_J-13" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1317.7143205915181" y="3351.7142421177455" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1616" y="3448" />
+              <mxPoint x="1310" y="3448" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3BKXT1EfyeB2dXWphh_J-17" value="&lt;font style=&quot;font-size: 50px;&quot;&gt;Subview&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1423" y="3543" width="385" height="152" as="geometry" />
+        </mxCell>
+        <mxCell id="3BKXT1EfyeB2dXWphh_J-19" value="&lt;span style=&quot;font-size: 50px;&quot;&gt;Mối quan hệ như sau:&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-size: 50px;&quot;&gt;ở đây là có 4 đối tượng form chính như sau :&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 50px;&quot;&gt;- Main : đây là form chính, khi mới mắt đầu vào sẽ mở form này lên, trong form này có các view và workspace&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 50px;&quot;&gt;- View : là 1 form to lồng trong form Main, có thể gọi là form cấp 2, không chứa thêm bất kì form nào bên trong nó&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 50px;&quot;&gt;- Workspace : nơi quản lý dữ liệu của khác hàng và nhân viên, chủ cửa hàng, có khả năng lồng form&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 50px;&quot;&gt;- Subview : form cấp 3, cái mà lồng trong workspace&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 50px;&quot;&gt;- Popup : mấy cái form mà sẽ nhẩy lên màn hình để thực hiện 1 tác vụ nào đó rồi sẽ biến mất.&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="-1034" y="2170" width="2527" height="432" as="geometry" />
+        </mxCell>
+        <mxCell id="3BKXT1EfyeB2dXWphh_J-20" value="&lt;span style=&quot;font-size: 50px;&quot;&gt;Popup&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-772" y="3542" width="385" height="152" as="geometry" />
+        </mxCell>
+        <mxCell id="3BKXT1EfyeB2dXWphh_J-21" value="&lt;span style=&quot;font-size: 50px;&quot;&gt;Thì&amp;nbsp; cái vấn đề ở đây là làm sao để tạo đc hiểu ứng chuyển form đa dạng như trên các webpage,&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-size: 50px;&quot;&gt;Nghe căng ấy, vấn đề ở đây là như này nhá, nó có 2 cái option mà code sẽ chạy:1 là hiển thị form rồi đợi sau khi form đóng&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 50px;&quot;&gt;rồi chạy&amp;nbsp; code bên dưới, 2 là hiển thị form và sau khi hiển thị tiếp tục chạy code bên dưới mà không quan tâm form đóng hay không&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="-1086" y="4052" width="2930" height="192" as="geometry" />
+        </mxCell>
+        <mxCell id="D_bThCKc7AcxyaAQ86C8-1" value="&lt;span style=&quot;font-size: 50px;&quot;&gt;1,Cách 1 là chạy code bên dưới sau khi form đóng chính là&amp;nbsp; khi mà dùng ShowDialog ấy, thì những cái code của mình ở dưới cái câu showdialog ấy á nó sẽ&amp;nbsp;&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-size: 50px;&quot;&gt;phải đợi đến khi cái form đó close hay dispose rồi mới chạy được, và nếu dùng cách đi code này&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 50px;&quot;&gt;mà vẫn muốn tạo đươc hiệu ứng chuyển form như thật thì phải đặt ra tất cả các khả năng của form đó sẽ đi ra đâu ở bến dưới cái form đó&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 50px;&quot;&gt;, kiểu như form a muốn đi xang form b thì ban đầu sẽ showdialog form a rồi trong form a check điều kiện các thứ&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 50px;&quot;&gt;làm sao để xang được form b, sau khi có được key rồi, ta sẽ dispose hoặc close form a, bên dưới form a sẽ check&amp;nbsp; cái key đó&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 50px;&quot;&gt;xem nó&amp;nbsp; muốn chỏ đi đâu, sau khi biết được rồi thì&amp;nbsp; sẽ lại showdialog form b lên, và chỉ cần như vậy là ta đã tạo được hiệu ứng&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 50px;&quot;&gt;chuyển cảnh như phim holywood, nghe thì có&amp;nbsp; vẻ đẹp nhưng mà em nó ko dùng được trong trường hợp này nhe, đừng dại mà dùng ,&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 50px;&quot;&gt;tại sao, vì khi mà làm như vậy ấy thì cái hiệu ứng này chỉ đạt được trên 2 form thôi, a xang b hoặc b xang a thôi, nó không dynamic đâu, thử rồi biết.&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 50px;&quot;&gt;Thế h muốn từ a -&amp;gt;b-&amp;gt;c-&amp;gt;d-&amp;gt; a thì làm thế nào, lại cứ mở form này lên rồi bên dưới lại dùng code để check hết lượt á, không được làm thế thì không đạt được&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 50px;&quot;&gt;hiệu ứng như mong muốn đâu, với lại lm thế thì gần như là cái luồng đi của nó được fix rồi, không dynamic&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="-1086" y="4357" width="3546" height="612" as="geometry" />
+        </mxCell>
+        <mxCell id="jMjOwlb8djnUgqQoueX--1" value="&lt;span style=&quot;font-size: 50px;&quot;&gt;2, Solution 2 nè, cái này là khi mà hiển thị form lên rồi á nhưng mà sau khi show thì các câu lệnh bên dưới sẽ tiếp tục được chạy mặc cho form đó đóng hay không,&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-size: 50px;&quot;&gt;Cách này thì nghe cái đã thấy đau đầu r, nếu mà lm thế thì check bằng niềm tin à, đúng thật nếu làm như này thì bố nó cũng không check được( mới đầu tôi cũng nghĩ vậy)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 50px;&quot;&gt;Thì không có việc gì khó chỉ sợ việc đấy chưa đứa nào làm được, để tạo được hiệu ứng chuyển form này thì&amp;nbsp; ta sẽ dùng delegate hay còn gọi là event, function pointer, con trỏ hàm.,&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 50px;&quot;&gt;Thì ý&amp;nbsp; tưởng ở đây là như này tại vì cái form đấy nó show rồi&amp;nbsp; chạy luôn mấy câu lệnh bên dưới đúng không, do đó không thể dùng cách 1 được, nên h mình sẽ chuyển qua dùng event (gọi cho quen)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 50px;&quot;&gt;tức là mình sẽ chuyển form bằng cách sử dụng các event, trên form a xảy ra event gì đó, nó sẽ gọi đến form main, form main sẽ điều hướng xang 1 form khác. và khi và sử dụng em nó thì&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 50px;&quot;&gt;gần như đạt được hiệu ứng chuyển form dynamic a-&amp;gt;b-&amp;gt;c-&amp;gt; d-&amp;gt; e-&amp;gt; a-&amp;gt;c-&amp;gt;e-&amp;gt;c, không đùa nhé đã và đang làm rồi nè,&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 50px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 50px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="-1054" y="5123" width="4422" height="492" as="geometry" />
+        </mxCell>
+        <mxCell id="FofU3M67HJjSHIphNtXb-1" value="&lt;font style=&quot;font-size: 50px;&quot;&gt;Main&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="758.5" y="6426" width="407" height="214" as="geometry" />
+        </mxCell>
+        <mxCell id="FofU3M67HJjSHIphNtXb-2" value="&lt;span style=&quot;font-size: 50px;&quot;&gt;View&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1599.5" y="5929" width="375" height="222" as="geometry" />
+        </mxCell>
+        <mxCell id="FofU3M67HJjSHIphNtXb-5" value="&lt;span style=&quot;font-size: 50px;&quot;&gt;View&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="32.5" y="6007" width="360" height="177" as="geometry" />
+        </mxCell>
+        <mxCell id="FofU3M67HJjSHIphNtXb-6" value="&lt;span style=&quot;font-size: 50px;&quot;&gt;workspace&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="744.5" y="5739" width="392" height="173" as="geometry" />
+        </mxCell>
+        <mxCell id="FofU3M67HJjSHIphNtXb-8" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="1188.5" y="6404" as="sourcePoint" />
+            <mxPoint x="1555.5" y="6166" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FofU3M67HJjSHIphNtXb-10" value="&lt;span style=&quot;font-size: 50px;&quot;&gt;View&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1575.5" y="6801" width="375" height="222" as="geometry" />
+        </mxCell>
+        <mxCell id="FofU3M67HJjSHIphNtXb-11" value="&lt;span style=&quot;font-size: 50px;&quot;&gt;View&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="753" y="7037" width="375" height="222" as="geometry" />
+        </mxCell>
+        <mxCell id="FofU3M67HJjSHIphNtXb-12" value="&lt;span style=&quot;font-size: 50px;&quot;&gt;workspace&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-69.5" y="6892" width="375" height="222" as="geometry" />
+        </mxCell>
+        <mxCell id="FofU3M67HJjSHIphNtXb-13" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="340.5" y="6900" as="sourcePoint" />
+            <mxPoint x="707.5" y="6662" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FofU3M67HJjSHIphNtXb-14" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="933.5" y="6399" as="sourcePoint" />
+            <mxPoint x="946.5" y="5984" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FofU3M67HJjSHIphNtXb-15" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="686.5" y="6438" as="sourcePoint" />
+            <mxPoint x="405.5" y="6204" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FofU3M67HJjSHIphNtXb-16" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="914.5" y="6994" as="sourcePoint" />
+            <mxPoint x="942.5" y="6676" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FofU3M67HJjSHIphNtXb-17" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="1516.5" y="6789" as="sourcePoint" />
+            <mxPoint x="1205.5" y="6640" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FofU3M67HJjSHIphNtXb-18" value="&lt;font style=&quot;font-size: 50px;&quot;&gt;Thì cái cách triển khai của nó là như này, thì mình sẽ dùng event như bên trên đã nói, nhưng bản chất là dùng delegate, thì delegate là gì, bản chất nó là con trỏ hàm, tức là ,&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 50px;&quot;&gt;ban đầu ở 1 cái form này nó sẽ&amp;nbsp; định nghĩa 1 hàm với tham số như này như kia, kiểu như nó là 1 cái hàm mang kiểu dữ liệu delegate, thì sau khi định nghĩa xong ấy thì tại 1 nơi&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 50px;&quot;&gt;khác,1 cái form nào đấy, nó sẽ khởi tạo 1 instance của cái con trỏ hàm đấy, Khởi tạo được đối tượng của hàm thật mà, ko đùa, và cái instance đấy nó sẽ lấy tham số là 1 hàm khác ,,&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 50px;&quot;&gt;cái hàm đấy&amp;nbsp; sẽ là cái hàm mà được gọi khi mà cái hàm ở chỗ kia nó&amp;nbsp; kích hoạt, haiz nói thế chả biết hiểu không nữa nhưng mà thật á, chắc phải demo thôi&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 50px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="-1046" y="7678" width="4041" height="326" as="geometry" />
+        </mxCell>
+        <mxCell id="wYEyAmfcRvlmzpw__tS4-1" value="&lt;font style=&quot;font-size: 50px;&quot;&gt;Thì cái cách triển khai của nó là như này, thì mình sẽ dùng event như bên trên đã nói, nhưng bản chất là dùng delegate, thì delegate là gì, bản chất nó là con trỏ hàm, tức là ,&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 50px;&quot;&gt;ban đầu ở 1 cái form này nó sẽ&amp;nbsp; định nghĩa 1 hàm với tham số như này như kia, kiểu như nó là 1 cái hàm mang kiểu dữ liệu delegate, thì sau khi định nghĩa xong ấy thì tại 1 nơi&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 50px;&quot;&gt;khác,1 cái form nào đấy, nó sẽ khởi tạo 1 instance của cái con trỏ hàm đấy, Khởi tạo được đối tượng của hàm thật mà, ko đùa, và cái instance đấy nó sẽ lấy tham số là 1 hàm khác ,,&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 50px;&quot;&gt;cái hàm đấy&amp;nbsp; sẽ là cái hàm mà được gọi khi mà cái hàm ở chỗ kia nó&amp;nbsp; kích hoạt, haiz nói thế chả biết hiểu không nữa nhưng mà thật á, chắc phải demo thôi&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 50px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="-1068" y="8161" width="4041" height="326" as="geometry" />
+        </mxCell>
+        <mxCell id="frCVg6hL5PwVdkuWguqH-2" value="&lt;div&gt;&lt;span style=&quot;font-size: 50px;&quot;&gt;Túc là ban đầu sẽ có&amp;nbsp; 1 cái form trong cái form đấy nó sẽ đinhj nghĩa 1 cái con trỏ hàm, khi mà main gọi hàm đấy lên thì đồng thời sẽ khởi tạo luôn&amp;nbsp; 1 instance của cái con trỏ đấy,&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 50px;&quot;&gt;khi khởi tạo con trỏ đấy thì đồng thời cũng gim luôn vào 1&amp;nbsp; cái hàm nào đấy, cái hàm đấy sẽ sử lý tất cả&amp;nbsp; các khả năng có thể điều hướng của form ban đầu, đi đâu cũng được,&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 50px;&quot;&gt;thì đấy là cách mà nó chạy. đơn giản thôi nhờ&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 50px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 50px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="-1094" y="8693" width="3963" height="312" as="geometry" />
+        </mxCell>
+        <mxCell id="dvfXnaXJTraaEScOQnzA-1" value="&lt;span style=&quot;font-size: 50px;&quot;&gt;Có 2 cách để đạt được hiệu ứng này là dùng delegate&amp;nbsp; thuần hoặc dùng event đã được tinh chế từ delegate, cách nào thì cũng như nhau thôi, dùng event thì cũng lại có 2 cách,&amp;nbsp;&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-size: 50px;&quot;&gt;dùng event của .Net hoặc dùng event tự định nghĩa, cái nào cũng như nhau cả mà&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-1068" y="9098" width="3945" height="132" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
@@ -5580,14 +5719,14 @@
         <mxCell id="YRDA_bnuiFKItF3AL001-36" value="(1,n)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="1512.5" y="956" width="43" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="IKEy5VkRkxj6frVP10Hs-1" value="&lt;font style=&quot;font-size: 50px;&quot;&gt;Ignore this please&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+        <mxCell id="IKEy5VkRkxj6frVP10Hs-1" value="&lt;font style=&quot;font-size: 50px;&quot;&gt;Ignore this please&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="925" y="113" width="413" height="72" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram id="_-lPcVtymahZeee2wpxT" name="three-layer">
-    <mxGraphModel dx="1900" dy="1213" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1567" dy="1032" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -5621,6 +5760,14 @@
             <mxPoint x="-1" as="offset" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="Jw3psUl-7ZQDYwJcMES8-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;dashed=1;" parent="1" source="gT3G6oDcGtcSiZG1pvWb-3" target="gT3G6oDcGtcSiZG1pvWb-4" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="320" y="268" />
+              <mxPoint x="1154" y="268" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
         <mxCell id="gT3G6oDcGtcSiZG1pvWb-3" value="GUI" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="260" y="288" width="120" height="60" as="geometry" />
         </mxCell>
@@ -5634,7 +5781,7 @@
           <mxGeometry x="-136" y="288" width="30" height="60" as="geometry" />
         </mxCell>
         <mxCell id="mWmpKELuyPp-YayWnLKQ-1" value="&lt;font style=&quot;font-size: 40px;&quot;&gt;Three Layer Relationships Insight (POV)&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#dedace;fillColor=#fff2cc;rounded=1;fontColor=#a18787;" parent="1" vertex="1">
-          <mxGeometry x="90" y="-147" width="736" height="60" as="geometry" />
+          <mxGeometry x="386" y="-171" width="736" height="60" as="geometry" />
         </mxCell>
         <mxCell id="mWmpKELuyPp-YayWnLKQ-2" value="User sẽ thương tác với Gui là chủ yếu&lt;div&gt;và người dùng cũng chỉ giao tiếp được với GUI mà thôi&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="-266" y="400" width="312" height="41" as="geometry" />
@@ -5645,8 +5792,8 @@
         <mxCell id="mWmpKELuyPp-YayWnLKQ-5" value="&amp;nbsp;- Gui chỉ quan tâm đến các thao&amp;nbsp; tác với BUS mà thôi,&lt;div&gt;&amp;nbsp;nó không cần biết các lớp bên dưới làm cái gì&lt;/div&gt;&lt;div&gt;&amp;nbsp;- Ví dụ như muốn đăng nhập thì chỉ cần lấy danh sách tất cả các&lt;/div&gt;&lt;div&gt;&amp;nbsp;Account trong hệ thống lên và đi so sánh với cái Account vừa tạo là được&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="139" y="471" width="411" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="mWmpKELuyPp-YayWnLKQ-6" value="- Quan hệ giữa hai Layer này là Associate,&lt;div&gt;tức là GUI chỉ việc khởi tạo đối tượng rồi sử dụng các phương thức thôi&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="129" y="581" width="400" height="41" as="geometry" />
+        <mxCell id="mWmpKELuyPp-YayWnLKQ-6" value="- Quan hệ giữa hai Layer này là Associate,&lt;div&gt;tức là GUI chỉ việc khởi tạo đối tượng rồi sử dụng các phương thức thôi&lt;/div&gt;&lt;div&gt;Nhưng vẫn phải tham chiếu đến DLL như bth nhé, nếu không thì sẽ ko lấy đc property đâu&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="80" y="574" width="499" height="55" as="geometry" />
         </mxCell>
         <mxCell id="mWmpKELuyPp-YayWnLKQ-9" value="DLL, Data Linked Layer&lt;div&gt;- Có nhiều cách để hiểu về chức năng của lớp này,&lt;/div&gt;&lt;div&gt;&amp;nbsp;nhưng nó chủ yếu để liên kết dữ liệu giữa 2 lớp BUS và DAO tới DATABASE&lt;/div&gt;&lt;div&gt;-Lớp này để đồng bộ dữ liệu trên hệ thống với dữ liệu trên các&amp;nbsp;&lt;/div&gt;&lt;div&gt;bảng trong cơ sở dữ liệu nên em nó khá quan trọng&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- Lớp BUS sẽ kế thừa từ lớp này để lấy dữ liệu, phục vụ cho business logic&lt;/div&gt;&lt;div&gt;- Lớp DAO thì lại sử dụng lớp này như 1 cây cầu giúp việc vận chuyển&lt;/div&gt;&lt;div&gt;dữ liệu từ sever lên trên BUS ăn khớp với nhau&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="1288" y="239" width="430" height="142" as="geometry" />
@@ -5655,10 +5802,10 @@
           <mxGeometry x="478" y="682" width="622" height="113" as="geometry" />
         </mxCell>
         <mxCell id="mWmpKELuyPp-YayWnLKQ-11" value="Lớp BUS sẽ là con hàng đau đầu nhất trong cái slide này luôn&lt;div&gt;- DLL chỉ chỉ ngồi chứa dữ liệu,&lt;/div&gt;&lt;div&gt;-DAO thì quanh đi quẩn lại chỉ insert với update, rồi select&lt;/div&gt;&lt;div&gt;- GUI thì cũng làm nhiều thứ thật, nhưng nhỉ ở phần UI thôi, chứ bên dưới chỉ việc&lt;/div&gt;&lt;div&gt;gọi hàm bên BUS ra check .&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="544" y="2" width="455" height="84" as="geometry" />
+          <mxGeometry x="557" y="-6" width="455" height="84" as="geometry" />
         </mxCell>
         <mxCell id="mWmpKELuyPp-YayWnLKQ-12" value="Việc của em nó đây&lt;div&gt;- kế thừa từ DLL để lấy dữ liệu, chứa các phương thức với độ cụ thể và tùy biến cao,&lt;/div&gt;&lt;div&gt;tất cả các chức năng nghe ảo ma cũng đều do BUS biến tấu từ DAO mà ra thôi á.&lt;/div&gt;&lt;div&gt;- Chứa logic nghiệp vụ, nhiều cái test tủng các thứ&lt;/div&gt;&lt;div&gt;- là chất bô trơn cho hệ thống hoạt động, tự định nghĩa các logic nghiệp vụ.&lt;/div&gt;&lt;div&gt;- vừa phải dùng bản thân để mang đi các phương thức cho GUI layer&amp;nbsp; rồi còn&lt;/div&gt;&lt;div&gt;phải&amp;nbsp; chuyển mấy đứa em trong DLL xuống cho DAO làm việc&lt;/div&gt;&lt;div&gt;Đúng là breadwinner&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;horizontal=1;" parent="1" vertex="1">
-          <mxGeometry x="547" y="126" width="470" height="142" as="geometry" />
+          <mxGeometry x="549.5" y="119" width="470" height="142" as="geometry" />
         </mxCell>
         <mxCell id="mWmpKELuyPp-YayWnLKQ-17" value="Database" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="1100" y="832" width="120" height="60" as="geometry" />
