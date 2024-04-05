@@ -1,6 +1,0 @@
-for (lặp qua cái mảng category)
-1, đầu tiên là chỉnh cái sample trước (dùng 1 phương thức lấy vào category_ và fill cho sample class), dựa theo tên của control thôi
-2, dùng cái cha hay chính nó , kiểu j cũng được => duplicate cái sample lên
-
-tiếp theo đấy là lại cập nhật cho cái sample, cứ thế đến hết, cứ cập nhật rồi duplicate
-3, cuối cùng xóa sample đi là xong

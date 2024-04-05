@@ -84,6 +84,10 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label13 = new System.Windows.Forms.Label();
             this.rjButton_purcharse = new CustomControls.RJControls.RJButton();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
             this.panel_product_tittle.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel_product.SuspendLayout();
@@ -98,7 +102,7 @@
             // 
             this.panel_product_tittle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel_product_tittle.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel_product_tittle.BackColor = System.Drawing.SystemColors.Control;
             this.panel_product_tittle.Controls.Add(this.iconButton_delete_products);
             this.panel_product_tittle.Controls.Add(this.label5);
             this.panel_product_tittle.Controls.Add(this.label4);
@@ -350,7 +354,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel_product.AutoScroll = true;
-            this.panel_product.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel_product.BackColor = System.Drawing.SystemColors.Control;
             this.panel_product.Controls.Add(this.groupBox_shoppingcart_product);
             this.panel_product.Location = new System.Drawing.Point(12, 108);
             this.panel_product.Name = "panel_product";
@@ -359,7 +363,11 @@
             // 
             // groupBox_shoppingcart_product
             // 
-            this.groupBox_shoppingcart_product.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.groupBox_shoppingcart_product.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox_shoppingcart_product.Controls.Add(this.label17);
+            this.groupBox_shoppingcart_product.Controls.Add(this.label16);
+            this.groupBox_shoppingcart_product.Controls.Add(this.label15);
+            this.groupBox_shoppingcart_product.Controls.Add(this.label7);
             this.groupBox_shoppingcart_product.Controls.Add(this.iconButton_quantityDown);
             this.groupBox_shoppingcart_product.Controls.Add(this.iconButton_quantityUp);
             this.groupBox_shoppingcart_product.Controls.Add(this.myNumericUpDown_quantity);
@@ -390,6 +398,7 @@
             // 
             this.iconButton_quantityDown.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconButton_quantityDown.BackColor = System.Drawing.SystemColors.Control;
             this.iconButton_quantityDown.ForeColor = System.Drawing.Color.DimGray;
             this.iconButton_quantityDown.IconChar = FontAwesome.Sharp.IconChar.Minus;
             this.iconButton_quantityDown.IconColor = System.Drawing.Color.Black;
@@ -400,13 +409,14 @@
             this.iconButton_quantityDown.Padding = new System.Windows.Forms.Padding(2, 5, 0, 0);
             this.iconButton_quantityDown.Size = new System.Drawing.Size(40, 40);
             this.iconButton_quantityDown.TabIndex = 20;
-            this.iconButton_quantityDown.UseVisualStyleBackColor = true;
+            this.iconButton_quantityDown.UseVisualStyleBackColor = false;
             this.iconButton_quantityDown.Click += new System.EventHandler(this.IconButton_quantityDown_Click);
             // 
             // iconButton_quantityUp
             // 
             this.iconButton_quantityUp.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconButton_quantityUp.BackColor = System.Drawing.SystemColors.Control;
             this.iconButton_quantityUp.ForeColor = System.Drawing.Color.DimGray;
             this.iconButton_quantityUp.IconChar = FontAwesome.Sharp.IconChar.PlusMinus;
             this.iconButton_quantityUp.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -418,18 +428,25 @@
             this.iconButton_quantityUp.Padding = new System.Windows.Forms.Padding(1, 6, 0, 0);
             this.iconButton_quantityUp.Size = new System.Drawing.Size(40, 40);
             this.iconButton_quantityUp.TabIndex = 19;
-            this.iconButton_quantityUp.UseVisualStyleBackColor = true;
+            this.iconButton_quantityUp.UseVisualStyleBackColor = false;
             this.iconButton_quantityUp.Click += new System.EventHandler(this.IconButton_quantityUp_Click);
             // 
             // myNumericUpDown_quantity
             // 
             this.myNumericUpDown_quantity.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.myNumericUpDown_quantity.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.myNumericUpDown_quantity.BackColor = System.Drawing.SystemColors.Control;
             this.myNumericUpDown_quantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.myNumericUpDown_quantity.ForeColor = System.Drawing.Color.DimGray;
             this.myNumericUpDown_quantity.Location = new System.Drawing.Point(473, 80);
+            this.myNumericUpDown_quantity.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
             this.myNumericUpDown_quantity.Name = "myNumericUpDown_quantity";
+            this.myNumericUpDown_quantity.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.myNumericUpDown_quantity.PlaceholderText = "";
             this.myNumericUpDown_quantity.Size = new System.Drawing.Size(53, 45);
             this.myNumericUpDown_quantity.TabIndex = 18;
             this.myNumericUpDown_quantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -506,6 +523,7 @@
             // 
             // comboBox_shopvoucher
             // 
+            this.comboBox_shopvoucher.BackColor = System.Drawing.SystemColors.Control;
             this.comboBox_shopvoucher.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox_shopvoucher.Font = new System.Drawing.Font("Sans Serif Collection", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox_shopvoucher.ForeColor = System.Drawing.Color.DimGray;
@@ -534,7 +552,7 @@
             this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label12.AutoSize = true;
             this.label12.ForeColor = System.Drawing.Color.SandyBrown;
-            this.label12.Location = new System.Drawing.Point(429, 123);
+            this.label12.Location = new System.Drawing.Point(429, 136);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(143, 16);
             this.label12.TabIndex = 5;
@@ -757,6 +775,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(0, 0);
             this.groupBox2.Name = "groupBox2";
@@ -793,6 +812,42 @@
             this.rjButton_purcharse.Text = "Purchase";
             this.rjButton_purcharse.TextColor = System.Drawing.Color.White;
             this.rjButton_purcharse.UseVisualStyleBackColor = false;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.Location = new System.Drawing.Point(473, 123);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(53, 10);
+            this.label7.TabIndex = 21;
+            // 
+            // label15
+            // 
+            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label15.Location = new System.Drawing.Point(473, 73);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(53, 10);
+            this.label15.TabIndex = 21;
+            // 
+            // label16
+            // 
+            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label16.Location = new System.Drawing.Point(519, 80);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(10, 45);
+            this.label16.TabIndex = 21;
+            // 
+            // label17
+            // 
+            this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label17.Location = new System.Drawing.Point(470, 80);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(10, 45);
+            this.label17.TabIndex = 21;
             // 
             // ViewShoppingCart
             // 
@@ -888,5 +943,9 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
     }
 }

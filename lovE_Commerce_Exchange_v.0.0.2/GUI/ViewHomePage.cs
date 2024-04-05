@@ -87,7 +87,10 @@ namespace GUI
             button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             button.UseVisualStyleBackColor = true;
             button.Click += new System.EventHandler(IconButton1_Click);
+            button.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonHighlight;
             return button;
+
+           
         }
         private GroupBox GenerateProduct(Product product)
         {
@@ -96,7 +99,8 @@ namespace GUI
             return GroupBox;
         }
         
-        private void PictureBox3_Click(object sender, EventArgs e)
+      
+        private void Label3_Click_1(object sender, EventArgs e)
         {
             // If the delegate was instantiated, then call it
             if (objectExternalLink != null)
@@ -108,14 +112,10 @@ namespace GUI
 
         private void IconButton1_Click(object sender, EventArgs e)
         {
-            ////create method here
-            //Signature = "category";
-            //// If the delegate was instantiated, then call it
-            //if (externalLink != null)
-            //    externalLink(Signature);
-            //else
-            //    MessageBox.Show("Object external null");
-            
+            if (objectExternalLink != null)
+                objectExternalLink(new Category(new DLL.Category_() { }));
+            else
+                MessageBox.Show("Object product external null");
 
         }
        
@@ -223,6 +223,11 @@ namespace GUI
             //        panel.Width = flowLayoutPanel_allFather.Width - 30;
             //    }
             //}
+        }
+
+        private void Label6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

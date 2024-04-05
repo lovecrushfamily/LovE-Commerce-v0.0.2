@@ -86,7 +86,8 @@ create table production.Product (ProductID int identity primary key,
 								ReviewState bit default 0 not null,
 								CategoryID int default 0 references system_.Category(CategoryID) on update cascade,
 								ShopID int references production.Shop(ShopID) 
-								on delete cascade on update cascade);
+								on delete cascade on update cascade,
+								RatingStar tinyint not null default 0);
 
 
 create table production.Voucher (VoucherID int identity(1,1) primary key,

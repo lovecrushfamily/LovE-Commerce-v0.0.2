@@ -39,6 +39,7 @@ namespace BUS
             ReviewState = product_.ReviewState;
             CategoryID = product_.CategoryID;
             ShopID = product_.ShopID;
+            RatingStar = product_.RatingStar;
         }
 
         public void Add()

@@ -49,13 +49,7 @@ namespace GUI
 
         private void FlowLayoutPanel_allFather_SizeChanged(object sender, EventArgs e)
         {
-            foreach(Panel panel in flowLayoutPanel_allFather.Controls)
-            {
-                if (panel != null && panel is Panel)
-                {
-                    panel.Width = flowLayoutPanel_allFather.Width - 30;
-                }
-            }
+            
         }
 
         private void FlowLayoutPanel_allFather_Scroll(object sender, ScrollEventArgs e)
@@ -84,9 +78,15 @@ namespace GUI
 
         }
 
+   
+        private void PictureBox2_MouseLeave(object sender, EventArgs e)
+        {
+            //Image.FromFile("");/
+        }
+ 
         private void PictureBox2_MouseHover(object sender, EventArgs e)
         {
-            // code event hover, show in main picture box
+
         }
 
         private void RjCircularPictureBox_shopImage_Click(object sender, EventArgs e)
@@ -123,6 +123,46 @@ namespace GUI
 
         }
 
-        
+        private void FlowLayoutPanel_allFather_Resize(object sender, EventArgs e)
+        {
+            foreach (Panel panel in flowLayoutPanel_allFather.Controls)
+            {
+                if (panel != null && panel is Panel)
+                {
+                    panel.Width = flowLayoutPanel_allFather.Width - 30;
+                }
+            }
+
+        }
+
+        private void Label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label21_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Label30_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

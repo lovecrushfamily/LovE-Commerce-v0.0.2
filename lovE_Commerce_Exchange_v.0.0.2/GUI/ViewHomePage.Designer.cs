@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewHomePage));
             this.flowLayoutPanel_categories = new System.Windows.Forms.FlowLayoutPanel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.iconButton_category_sample = new FontAwesome.Sharp.IconButton();
             this.flowLayoutPanel_allFather = new System.Windows.Forms.FlowLayoutPanel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -46,9 +45,13 @@
             this.iconButton5 = new FontAwesome.Sharp.IconButton();
             this.iconButton6 = new FontAwesome.Sharp.IconButton();
             this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.iconButton_category_sample = new FontAwesome.Sharp.IconButton();
             this.gradientLabel3 = new GUI.CustomControl.GradientLabel();
             this.gradientLabel2 = new GUI.CustomControl.GradientLabel();
             this.gradientLabel1 = new GUI.CustomControl.GradientLabel();
+            this.rjButton1 = new CustomControls.RJControls.RJButton();
             this.flowLayoutPanel_categories.SuspendLayout();
             this.panel5.SuspendLayout();
             this.flowLayoutPanel_allFather.SuspendLayout();
@@ -60,19 +63,20 @@
             // 
             this.flowLayoutPanel_categories.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.flowLayoutPanel_categories.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.flowLayoutPanel_categories.AutoScroll = true;
+            this.flowLayoutPanel_categories.BackColor = System.Drawing.SystemColors.Control;
             this.flowLayoutPanel_categories.Controls.Add(this.panel5);
             this.flowLayoutPanel_categories.Controls.Add(this.iconButton_category_sample);
             this.flowLayoutPanel_categories.Location = new System.Drawing.Point(12, 12);
             this.flowLayoutPanel_categories.Name = "flowLayoutPanel_categories";
             this.flowLayoutPanel_categories.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.flowLayoutPanel_categories.Size = new System.Drawing.Size(324, 579);
+            this.flowLayoutPanel_categories.Size = new System.Drawing.Size(324, 586);
             this.flowLayoutPanel_categories.TabIndex = 5;
             this.flowLayoutPanel_categories.Paint += new System.Windows.Forms.PaintEventHandler(this.FlowLayoutPanel2_Paint);
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel5.BackColor = System.Drawing.SystemColors.Control;
             this.panel5.Controls.Add(this.gradientLabel1);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Font = new System.Drawing.Font("Montserrat", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -83,45 +87,21 @@
             this.panel5.Size = new System.Drawing.Size(320, 60);
             this.panel5.TabIndex = 1;
             // 
-            // iconButton_category_sample
-            // 
-            this.iconButton_category_sample.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton_category_sample.FlatAppearance.BorderSize = 0;
-            this.iconButton_category_sample.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton_category_sample.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
-            this.iconButton_category_sample.Font = new System.Drawing.Font("Montserrat", 10F);
-            this.iconButton_category_sample.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.iconButton_category_sample.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton_category_sample.IconColor = System.Drawing.Color.IndianRed;
-            this.iconButton_category_sample.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton_category_sample.IconSize = 40;
-            this.iconButton_category_sample.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton_category_sample.Location = new System.Drawing.Point(3, 69);
-            this.iconButton_category_sample.Name = "iconButton_category_sample";
-            this.iconButton_category_sample.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.iconButton_category_sample.Size = new System.Drawing.Size(320, 60);
-            this.iconButton_category_sample.TabIndex = 0;
-            this.iconButton_category_sample.Tag = "sample";
-            this.iconButton_category_sample.Text = "Category Name";
-            this.iconButton_category_sample.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton_category_sample.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton_category_sample.UseVisualStyleBackColor = true;
-            this.iconButton_category_sample.Click += new System.EventHandler(this.IconButton1_Click);
-            // 
             // flowLayoutPanel_allFather
             // 
             this.flowLayoutPanel_allFather.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanel_allFather.AutoScroll = true;
-            this.flowLayoutPanel_allFather.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.flowLayoutPanel_allFather.BackColor = System.Drawing.SystemColors.Control;
             this.flowLayoutPanel_allFather.Controls.Add(this.groupBox1);
+            this.flowLayoutPanel_allFather.Controls.Add(this.rjButton1);
             this.flowLayoutPanel_allFather.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.flowLayoutPanel_allFather.Location = new System.Drawing.Point(342, 58);
             this.flowLayoutPanel_allFather.Name = "flowLayoutPanel_allFather";
             this.flowLayoutPanel_allFather.Padding = new System.Windows.Forms.Padding(10, 0, 10, 10);
             this.flowLayoutPanel_allFather.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.flowLayoutPanel_allFather.Size = new System.Drawing.Size(709, 533);
+            this.flowLayoutPanel_allFather.Size = new System.Drawing.Size(709, 537);
             this.flowLayoutPanel_allFather.TabIndex = 6;
             // 
             // groupBox1
@@ -157,6 +137,7 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Điện thoại Apple iPhone 15 128GBwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww" +
     "wwwwwwwwwwwww\r\nwwww\r\nwwww\r\n";
+            this.label1.Click += new System.EventHandler(this.Label3_Click_1);
             // 
             // iconButton1
             // 
@@ -177,6 +158,7 @@
             this.iconButton1.Text = "Verification";
             this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton1.UseVisualStyleBackColor = true;
+            this.iconButton1.Click += new System.EventHandler(this.Label3_Click_1);
             // 
             // label2
             // 
@@ -188,6 +170,7 @@
             this.label2.Size = new System.Drawing.Size(94, 32);
             this.label2.TabIndex = 1;
             this.label2.Text = "Sponsor";
+            this.label2.Click += new System.EventHandler(this.Label3_Click_1);
             // 
             // label3
             // 
@@ -198,6 +181,7 @@
             this.label3.Size = new System.Drawing.Size(87, 20);
             this.label3.TabIndex = 1;
             this.label3.Text = "Nha Trang";
+            this.label3.Click += new System.EventHandler(this.Label3_Click_1);
             // 
             // label4
             // 
@@ -210,6 +194,7 @@
             this.label4.TabIndex = 1;
             this.label4.Text = "20.000.000 đ";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label4.Click += new System.EventHandler(this.Label3_Click_1);
             // 
             // pictureBox1
             // 
@@ -221,6 +206,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.Label3_Click_1);
             // 
             // iconButton2
             // 
@@ -236,6 +222,7 @@
             this.iconButton2.Size = new System.Drawing.Size(30, 30);
             this.iconButton2.TabIndex = 2;
             this.iconButton2.UseVisualStyleBackColor = true;
+            this.iconButton2.Click += new System.EventHandler(this.Label3_Click_1);
             // 
             // iconButton3
             // 
@@ -251,6 +238,7 @@
             this.iconButton3.Size = new System.Drawing.Size(30, 30);
             this.iconButton3.TabIndex = 2;
             this.iconButton3.UseVisualStyleBackColor = true;
+            this.iconButton3.Click += new System.EventHandler(this.Label3_Click_1);
             // 
             // iconButton4
             // 
@@ -266,6 +254,7 @@
             this.iconButton4.Size = new System.Drawing.Size(30, 30);
             this.iconButton4.TabIndex = 2;
             this.iconButton4.UseVisualStyleBackColor = true;
+            this.iconButton4.Click += new System.EventHandler(this.Label3_Click_1);
             // 
             // iconButton5
             // 
@@ -281,6 +270,7 @@
             this.iconButton5.Size = new System.Drawing.Size(30, 30);
             this.iconButton5.TabIndex = 2;
             this.iconButton5.UseVisualStyleBackColor = true;
+            this.iconButton5.Click += new System.EventHandler(this.Label3_Click_1);
             // 
             // iconButton6
             // 
@@ -296,16 +286,64 @@
             this.iconButton6.Size = new System.Drawing.Size(30, 30);
             this.iconButton6.TabIndex = 2;
             this.iconButton6.UseVisualStyleBackColor = true;
+            this.iconButton6.Click += new System.EventHandler(this.Label3_Click_1);
             // 
             // label5
             // 
-            this.label5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label5.BackColor = System.Drawing.SystemColors.Control;
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label5.Location = new System.Drawing.Point(15, 18);
             this.label5.Name = "label5";
             this.label5.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
             this.label5.Size = new System.Drawing.Size(215, 430);
             this.label5.TabIndex = 3;
+            this.label5.Click += new System.EventHandler(this.Label3_Click_1);
+            // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label6.Location = new System.Drawing.Point(306, 12);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(30, 586);
+            this.label6.TabIndex = 10;
+            this.label6.Click += new System.EventHandler(this.Label6_Click);
+            // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label7.BackColor = System.Drawing.SystemColors.Control;
+            this.label7.Location = new System.Drawing.Point(13, 578);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(336, 20);
+            this.label7.TabIndex = 10;
+            this.label7.Click += new System.EventHandler(this.Label6_Click);
+            // 
+            // iconButton_category_sample
+            // 
+            this.iconButton_category_sample.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButton_category_sample.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.iconButton_category_sample.FlatAppearance.BorderSize = 0;
+            this.iconButton_category_sample.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton_category_sample.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
+            this.iconButton_category_sample.Font = new System.Drawing.Font("Montserrat", 10F);
+            this.iconButton_category_sample.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.iconButton_category_sample.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconButton_category_sample.IconColor = System.Drawing.Color.IndianRed;
+            this.iconButton_category_sample.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton_category_sample.IconSize = 40;
+            this.iconButton_category_sample.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton_category_sample.Location = new System.Drawing.Point(3, 69);
+            this.iconButton_category_sample.Name = "iconButton_category_sample";
+            this.iconButton_category_sample.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.iconButton_category_sample.Size = new System.Drawing.Size(320, 60);
+            this.iconButton_category_sample.TabIndex = 0;
+            this.iconButton_category_sample.Tag = "sample";
+            this.iconButton_category_sample.Text = "Category Name";
+            this.iconButton_category_sample.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton_category_sample.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton_category_sample.UseVisualStyleBackColor = true;
+            this.iconButton_category_sample.Click += new System.EventHandler(this.IconButton1_Click);
             // 
             // gradientLabel3
             // 
@@ -341,10 +379,11 @@
             // gradientLabel1
             // 
             this.gradientLabel1.AutoSize = true;
-            this.gradientLabel1.BeginColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.gradientLabel1.BackColor = System.Drawing.SystemColors.Control;
+            this.gradientLabel1.BeginColor = System.Drawing.SystemColors.Control;
             this.gradientLabel1.Direction = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
             this.gradientLabel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.gradientLabel1.EndColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.gradientLabel1.EndColor = System.Drawing.SystemColors.Control;
             this.gradientLabel1.Font = new System.Drawing.Font("Sans Serif Collection", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gradientLabel1.Location = new System.Drawing.Point(10, 0);
             this.gradientLabel1.Name = "gradientLabel1";
@@ -354,14 +393,34 @@
             this.gradientLabel1.TextColorBegin = System.Drawing.Color.Orchid;
             this.gradientLabel1.TextColorEnd = System.Drawing.Color.MediumSlateBlue;
             // 
+            // rjButton1
+            // 
+            this.rjButton1.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.rjButton1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.rjButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rjButton1.BorderRadius = 0;
+            this.rjButton1.BorderSize = 0;
+            this.rjButton1.FlatAppearance.BorderSize = 0;
+            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton1.ForeColor = System.Drawing.Color.White;
+            this.rjButton1.Location = new System.Drawing.Point(268, 3);
+            this.rjButton1.Name = "rjButton1";
+            this.rjButton1.Size = new System.Drawing.Size(8, 8);
+            this.rjButton1.TabIndex = 6;
+            this.rjButton1.Text = "rjButton1";
+            this.rjButton1.TextColor = System.Drawing.Color.White;
+            this.rjButton1.UseVisualStyleBackColor = false;
+            // 
             // ViewHomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1063, 603);
+            this.ClientSize = new System.Drawing.Size(1063, 610);
+            this.Controls.Add(this.flowLayoutPanel_allFather);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.gradientLabel3);
             this.Controls.Add(this.gradientLabel2);
-            this.Controls.Add(this.flowLayoutPanel_allFather);
             this.Controls.Add(this.flowLayoutPanel_categories);
             this.DoubleBuffered = true;
             this.MinimumSize = new System.Drawing.Size(1000, 600);
@@ -380,7 +439,6 @@
 
         #endregion
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel_categories;
-        private FontAwesome.Sharp.IconButton iconButton_category_sample;
         private System.Windows.Forms.Panel panel5;
         private CustomControl.GradientLabel gradientLabel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel_allFather;
@@ -399,6 +457,10 @@
         private FontAwesome.Sharp.IconButton iconButton5;
         private FontAwesome.Sharp.IconButton iconButton6;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private FontAwesome.Sharp.IconButton iconButton_category_sample;
+        private CustomControls.RJControls.RJButton rjButton1;
     }
 }
 

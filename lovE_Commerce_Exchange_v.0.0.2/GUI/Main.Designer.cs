@@ -61,7 +61,7 @@
             this.panel_controlbox.Location = new System.Drawing.Point(0, 0);
             this.panel_controlbox.Name = "panel_controlbox";
             this.panel_controlbox.Padding = new System.Windows.Forms.Padding(0, 0, 9, 0);
-            this.panel_controlbox.Size = new System.Drawing.Size(1282, 50);
+            this.panel_controlbox.Size = new System.Drawing.Size(1632, 50);
             this.panel_controlbox.TabIndex = 2;
             // 
             // button_minimize
@@ -72,7 +72,7 @@
             this.button_minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_minimize.Font = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_minimize.ForeColor = System.Drawing.Color.Lime;
-            this.button_minimize.Location = new System.Drawing.Point(1153, 0);
+            this.button_minimize.Location = new System.Drawing.Point(1503, 0);
             this.button_minimize.Name = "button_minimize";
             this.button_minimize.Size = new System.Drawing.Size(40, 50);
             this.button_minimize.TabIndex = 2;
@@ -89,7 +89,7 @@
             this.button_maximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_maximize.Font = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_maximize.ForeColor = System.Drawing.Color.Yellow;
-            this.button_maximize.Location = new System.Drawing.Point(1193, 0);
+            this.button_maximize.Location = new System.Drawing.Point(1543, 0);
             this.button_maximize.Name = "button_maximize";
             this.button_maximize.Size = new System.Drawing.Size(40, 50);
             this.button_maximize.TabIndex = 1;
@@ -106,7 +106,7 @@
             this.button_exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_exit.Font = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_exit.ForeColor = System.Drawing.Color.OrangeRed;
-            this.button_exit.Location = new System.Drawing.Point(1233, 0);
+            this.button_exit.Location = new System.Drawing.Point(1583, 0);
             this.button_exit.Name = "button_exit";
             this.button_exit.Size = new System.Drawing.Size(40, 50);
             this.button_exit.TabIndex = 0;
@@ -123,7 +123,7 @@
             this.gradientLabel2.EndColor = System.Drawing.Color.Pink;
             this.gradientLabel2.Location = new System.Drawing.Point(0, 0);
             this.gradientLabel2.Name = "gradientLabel2";
-            this.gradientLabel2.Size = new System.Drawing.Size(1273, 50);
+            this.gradientLabel2.Size = new System.Drawing.Size(1623, 50);
             this.gradientLabel2.TabIndex = 12;
             this.gradientLabel2.TextColorBegin = System.Drawing.SystemColors.Control;
             this.gradientLabel2.TextColorEnd = System.Drawing.SystemColors.Control;
@@ -142,7 +142,7 @@
             this.panel_header.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_header.Location = new System.Drawing.Point(0, 50);
             this.panel_header.Name = "panel_header";
-            this.panel_header.Size = new System.Drawing.Size(1282, 94);
+            this.panel_header.Size = new System.Drawing.Size(1632, 94);
             this.panel_header.TabIndex = 3;
             // 
             // iconButton_account_centre
@@ -156,7 +156,7 @@
             this.iconButton_account_centre.IconColor = System.Drawing.Color.DimGray;
             this.iconButton_account_centre.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton_account_centre.IconSize = 40;
-            this.iconButton_account_centre.Location = new System.Drawing.Point(949, 11);
+            this.iconButton_account_centre.Location = new System.Drawing.Point(1299, 11);
             this.iconButton_account_centre.Name = "iconButton_account_centre";
             this.iconButton_account_centre.Size = new System.Drawing.Size(130, 45);
             this.iconButton_account_centre.TabIndex = 11;
@@ -178,7 +178,7 @@
             this.iconButton_home.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton_home.IconSize = 40;
             this.iconButton_home.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton_home.Location = new System.Drawing.Point(813, 11);
+            this.iconButton_home.Location = new System.Drawing.Point(1163, 11);
             this.iconButton_home.Name = "iconButton_home";
             this.iconButton_home.Size = new System.Drawing.Size(130, 45);
             this.iconButton_home.TabIndex = 11;
@@ -197,7 +197,7 @@
             this.iconButton_shoppingcart.IconChar = FontAwesome.Sharp.IconChar.ShoppingCart;
             this.iconButton_shoppingcart.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(127)))), ((int)(((byte)(255)))));
             this.iconButton_shoppingcart.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton_shoppingcart.Location = new System.Drawing.Point(1085, 9);
+            this.iconButton_shoppingcart.Location = new System.Drawing.Point(1435, 9);
             this.iconButton_shoppingcart.Name = "iconButton_shoppingcart";
             this.iconButton_shoppingcart.Size = new System.Drawing.Size(50, 50);
             this.iconButton_shoppingcart.TabIndex = 10;
@@ -215,7 +215,7 @@
             this.iconButton_search.IconColor = System.Drawing.Color.MediumSlateBlue;
             this.iconButton_search.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton_search.IconSize = 30;
-            this.iconButton_search.Location = new System.Drawing.Point(669, 12);
+            this.iconButton_search.Location = new System.Drawing.Point(1019, 12);
             this.iconButton_search.Name = "iconButton_search";
             this.iconButton_search.Size = new System.Drawing.Size(40, 40);
             this.iconButton_search.TabIndex = 9;
@@ -259,7 +259,7 @@
             this.textBox_search.Location = new System.Drawing.Point(256, 11);
             this.textBox_search.Name = "textBox_search";
             this.textBox_search.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.textBox_search.Size = new System.Drawing.Size(407, 44);
+            this.textBox_search.Size = new System.Drawing.Size(757, 44);
             this.textBox_search.TabIndex = 2;
             // 
             // panel_body
@@ -271,7 +271,7 @@
             this.panel_body.Location = new System.Drawing.Point(126, 149);
             this.panel_body.Margin = new System.Windows.Forms.Padding(3, 20, 3, 3);
             this.panel_body.Name = "panel_body";
-            this.panel_body.Size = new System.Drawing.Size(1030, 491);
+            this.panel_body.Size = new System.Drawing.Size(1380, 791);
             this.panel_body.TabIndex = 0;
             // 
             // gradientLabel1
@@ -284,7 +284,7 @@
             this.gradientLabel1.EndColor = System.Drawing.Color.MediumSlateBlue;
             this.gradientLabel1.Location = new System.Drawing.Point(3, 147);
             this.gradientLabel1.Name = "gradientLabel1";
-            this.gradientLabel1.Size = new System.Drawing.Size(668, 497);
+            this.gradientLabel1.Size = new System.Drawing.Size(1018, 797);
             this.gradientLabel1.TabIndex = 4;
             this.gradientLabel1.TextColorBegin = System.Drawing.SystemColors.Control;
             this.gradientLabel1.TextColorEnd = System.Drawing.SystemColors.Control;
@@ -296,9 +296,9 @@
             this.gradientLabel3.BeginColor = System.Drawing.Color.MediumSlateBlue;
             this.gradientLabel3.Direction = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
             this.gradientLabel3.EndColor = System.Drawing.Color.Thistle;
-            this.gradientLabel3.Location = new System.Drawing.Point(669, 147);
+            this.gradientLabel3.Location = new System.Drawing.Point(1019, 147);
             this.gradientLabel3.Name = "gradientLabel3";
-            this.gradientLabel3.Size = new System.Drawing.Size(613, 497);
+            this.gradientLabel3.Size = new System.Drawing.Size(613, 797);
             this.gradientLabel3.TabIndex = 4;
             this.gradientLabel3.TextColorBegin = System.Drawing.SystemColors.Control;
             this.gradientLabel3.TextColorEnd = System.Drawing.SystemColors.Control;
@@ -309,7 +309,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(1282, 653);
+            this.ClientSize = new System.Drawing.Size(1632, 953);
             this.Controls.Add(this.panel_header);
             this.Controls.Add(this.panel_controlbox);
             this.Controls.Add(this.panel_body);

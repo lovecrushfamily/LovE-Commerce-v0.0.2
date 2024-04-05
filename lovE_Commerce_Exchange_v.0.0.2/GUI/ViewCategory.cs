@@ -13,6 +13,7 @@ namespace GUI
 {
     public partial class ViewCategory : Form
     {
+            Category category;
         public ViewCategory()
         {
             InitializeComponent();
@@ -29,5 +30,11 @@ namespace GUI
         //This's enough, perfect, shortest wat to deal with event => navigator form
         public event EventHandler EventExternalLink;
         #endregion
+
+        public void SetCategory(Category category)
+        {
+            this.category = category;
+
+        }
     }
 }

@@ -16,6 +16,7 @@ namespace GUI
         public ViewProductSearch()
         {
             InitializeComponent();
+            label12.BringToFront();
         }
 
         #region Delegate
@@ -33,7 +34,25 @@ namespace GUI
         {
 
         }
-        
-        
+
+        private void ViewProductSearch_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void IconButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label11_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

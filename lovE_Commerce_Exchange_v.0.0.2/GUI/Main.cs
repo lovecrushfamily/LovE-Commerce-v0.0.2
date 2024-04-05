@@ -100,7 +100,11 @@ namespace GUI
             {
                 viewProductDetail.SetProduct((Product)entity);
                 OpenChildForm(viewProductDetail);
-            }
+            } else if (entity is Category)
+            {
+                viewCategory.SetCategory((Category)entity);
+                OpenChildForm(viewCategory);
+            }    
         }
 
         private void OpenExternalLinkShopOwnerWorkspace(Entity entity)

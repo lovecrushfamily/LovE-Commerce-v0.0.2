@@ -71,14 +71,14 @@ namespace GUI
 
         private void IconButton_quantityUp_Click(object sender, EventArgs e)
         {
-            if (myNumericUpDown_quantity.Value < 99)
+            if (myNumericUpDown_quantity.Value <99)
                 myNumericUpDown_quantity.Value += 1;
         }
 
         private void IconButton_quantityDown_Click(object sender, EventArgs e)
         {
-            if (myNumericUpDown_quantity.Value < 99)
-                myNumericUpDown_quantity.Value += 1;
+            if (myNumericUpDown_quantity.Value > 0)
+                myNumericUpDown_quantity.Value -= 1;
         }
 
         private void Panel6_Paint(object sender, PaintEventArgs e)

@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-04-04T09:24:59.693Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="o_Ba_vv35UYzn0ZDlfzU" version="24.2.2" type="device" pages="7">
+<mxfile host="app.diagrams.net" modified="2024-04-05T15:35:18.946Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="usFXgEMp7rC_B5u8GC9y" version="24.2.2" type="device" pages="7">
   <diagram name="usecase" id="AkrvAjtsgT3PUjKPflpT">
     <mxGraphModel dx="1450" dy="1769" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
@@ -3613,8 +3613,8 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="3Qwj5x_44Sohx2C3fadG-43" value="Product(11)" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" parent="1" vertex="1">
-          <mxGeometry x="-859" y="-413" width="180" height="419.05261230468756" as="geometry" />
+        <mxCell id="3Qwj5x_44Sohx2C3fadG-43" value="Product(11)" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="1" vertex="1">
+          <mxGeometry x="-859" y="-413" width="180" height="449.05261230468756" as="geometry" />
         </mxCell>
         <mxCell id="3Qwj5x_44Sohx2C3fadG-44" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" parent="3Qwj5x_44Sohx2C3fadG-43" vertex="1">
           <mxGeometry y="30" width="180" height="30" as="geometry" />
@@ -3733,15 +3733,15 @@
             <mxRectangle width="150" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="5hWKAWWKQXGBvEsVJ9hQ-14" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" parent="3Qwj5x_44Sohx2C3fadG-43" vertex="1">
+        <mxCell id="5hWKAWWKQXGBvEsVJ9hQ-14" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="3Qwj5x_44Sohx2C3fadG-43" vertex="1">
           <mxGeometry y="300" width="180" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="5hWKAWWKQXGBvEsVJ9hQ-15" value="" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=0;overflow=hidden;whiteSpace=wrap;html=1;movable=0;resizable=0;rotatable=0;deletable=0;locked=1;" parent="5hWKAWWKQXGBvEsVJ9hQ-14" vertex="1">
+        <mxCell id="5hWKAWWKQXGBvEsVJ9hQ-15" value="" style="shape=partialRectangle;connectable=1;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;locked=0;" parent="5hWKAWWKQXGBvEsVJ9hQ-14" vertex="1">
           <mxGeometry width="30" height="30" as="geometry">
             <mxRectangle width="30" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="5hWKAWWKQXGBvEsVJ9hQ-16" value="BannedState" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;whiteSpace=wrap;html=1;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;" parent="5hWKAWWKQXGBvEsVJ9hQ-14" vertex="1">
+        <mxCell id="5hWKAWWKQXGBvEsVJ9hQ-16" value="BannedState" style="shape=partialRectangle;connectable=1;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;" parent="5hWKAWWKQXGBvEsVJ9hQ-14" vertex="1">
           <mxGeometry x="30" width="150" height="30" as="geometry">
             <mxRectangle width="150" height="30" as="alternateBounds" />
           </mxGeometry>
@@ -3772,17 +3772,30 @@
             <mxRectangle width="150" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="3Qwj5x_44Sohx2C3fadG-65" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" parent="3Qwj5x_44Sohx2C3fadG-43" vertex="1">
+        <mxCell id="3Qwj5x_44Sohx2C3fadG-65" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="3Qwj5x_44Sohx2C3fadG-43" vertex="1">
           <mxGeometry y="390" width="180" height="29" as="geometry" />
         </mxCell>
-        <mxCell id="3Qwj5x_44Sohx2C3fadG-66" value="&lt;span&gt;FK&lt;/span&gt;" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=0;overflow=hidden;whiteSpace=wrap;html=1;movable=0;resizable=0;rotatable=0;deletable=0;locked=1;fontStyle=0" parent="3Qwj5x_44Sohx2C3fadG-65" vertex="1">
+        <mxCell id="3Qwj5x_44Sohx2C3fadG-66" value="&lt;span&gt;FK&lt;/span&gt;" style="shape=partialRectangle;connectable=1;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;locked=0;fontStyle=0" parent="3Qwj5x_44Sohx2C3fadG-65" vertex="1">
           <mxGeometry width="30" height="29" as="geometry">
             <mxRectangle width="30" height="29" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="3Qwj5x_44Sohx2C3fadG-67" value="ShopID" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;whiteSpace=wrap;html=1;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;" parent="3Qwj5x_44Sohx2C3fadG-65" vertex="1">
+        <mxCell id="3Qwj5x_44Sohx2C3fadG-67" value="ShopID" style="shape=partialRectangle;connectable=1;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;" parent="3Qwj5x_44Sohx2C3fadG-65" vertex="1">
           <mxGeometry x="30" width="150" height="29" as="geometry">
             <mxRectangle width="150" height="29" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="poNXeb5W9zJIlkBjSZiK-4" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="3Qwj5x_44Sohx2C3fadG-43">
+          <mxGeometry y="419" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="poNXeb5W9zJIlkBjSZiK-5" value="" style="shape=partialRectangle;connectable=1;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;locked=0;" vertex="1" parent="poNXeb5W9zJIlkBjSZiK-4">
+          <mxGeometry width="30" height="30" as="geometry">
+            <mxRectangle width="30" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="poNXeb5W9zJIlkBjSZiK-6" value="RatingStar" style="shape=partialRectangle;connectable=1;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;" vertex="1" parent="poNXeb5W9zJIlkBjSZiK-4">
+          <mxGeometry x="30" width="150" height="30" as="geometry">
+            <mxRectangle width="150" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="jGgnICJjJMz5tXtxIMbj-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.318;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" parent="1" source="3Qwj5x_44Sohx2C3fadG-71" target="3Qwj5x_44Sohx2C3fadG-78" edge="1">
@@ -4901,7 +4914,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="_zRS3XpP9-lBKQnG3aw2" name="form">
-    <mxGraphModel dx="5400" dy="1476" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="3300" dy="338" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -5180,14 +5193,62 @@
         <mxCell id="frCVg6hL5PwVdkuWguqH-2" value="&lt;div&gt;&lt;span style=&quot;font-size: 50px;&quot;&gt;Túc là ban đầu sẽ có&amp;nbsp; 1 cái form trong cái form đấy nó sẽ đinhj nghĩa 1 cái con trỏ hàm, khi mà main gọi hàm đấy lên thì đồng thời sẽ khởi tạo luôn&amp;nbsp; 1 instance của cái con trỏ đấy,&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 50px;&quot;&gt;khi khởi tạo con trỏ đấy thì đồng thời cũng gim luôn vào 1&amp;nbsp; cái hàm nào đấy, cái hàm đấy sẽ sử lý tất cả&amp;nbsp; các khả năng có thể điều hướng của form ban đầu, đi đâu cũng được,&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 50px;&quot;&gt;thì đấy là cách mà nó chạy. đơn giản thôi nhờ&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 50px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 50px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="-1094" y="8693" width="3963" height="312" as="geometry" />
         </mxCell>
-        <mxCell id="dvfXnaXJTraaEScOQnzA-1" value="&lt;span style=&quot;font-size: 50px;&quot;&gt;Có 2 cách để đạt được hiệu ứng này là dùng delegate&amp;nbsp; thuần hoặc dùng event đã được tinh chế từ delegate, cách nào thì cũng như nhau thôi, dùng event thì cũng lại có 2 cách,&amp;nbsp;&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-size: 50px;&quot;&gt;dùng event của .Net hoặc dùng event tự định nghĩa, cái nào cũng như nhau cả mà&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+        <mxCell id="dvfXnaXJTraaEScOQnzA-1" value="&lt;span style=&quot;font-size: 50px;&quot;&gt;Có 2 cách để đạt được hiệu ứng này là dùng delegate&amp;nbsp; thuần hoặc dùng event đã được tinh chế từ delegate, cách nào thì cũng như nhau thôi, dùng event thì cũng lại có 2 cách,&amp;nbsp;&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-size: 50px;&quot;&gt;dùng event của .Net hoặc dùng event tự định nghĩa, cái nào cũng như nhau cả mà&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="-1068" y="9098" width="3945" height="132" as="geometry" />
+        </mxCell>
+        <mxCell id="yCeUT4_3QfKmO9Hh2YeY-3" value="Panel all father&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="2038" y="1014" width="785" height="1048" as="geometry" />
+        </mxCell>
+        <mxCell id="yCeUT4_3QfKmO9Hh2YeY-4" value="Flow layout&lt;div&gt;- dock : top&lt;/div&gt;&lt;div&gt;- auto size : true&lt;/div&gt;&lt;div&gt;- dùng cái này đẻ gen đc ra control ko bị đè lên nhau&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="2058" y="1087" width="746" height="565" as="geometry" />
+        </mxCell>
+        <mxCell id="yCeUT4_3QfKmO9Hh2YeY-5" value="Flow layout&lt;div&gt;- dock : top&lt;/div&gt;&lt;div&gt;- auto size : true&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="2058" y="1701" width="746" height="337" as="geometry" />
+        </mxCell>
+        <mxCell id="yCeUT4_3QfKmO9Hh2YeY-6" value="Panel : dùng cái này để giữ control" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="2085" y="1170" width="694" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="yCeUT4_3QfKmO9Hh2YeY-8" value="Button : dùng button để tạo border cho background" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="2108" y="1213" width="655" height="104" as="geometry" />
+        </mxCell>
+        <mxCell id="yCeUT4_3QfKmO9Hh2YeY-9" value="label" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2125" y="1203" width="92" height="39" as="geometry" />
+        </mxCell>
+        <mxCell id="yCeUT4_3QfKmO9Hh2YeY-10" value="Check box" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2181" y="1254" width="92" height="39" as="geometry" />
+        </mxCell>
+        <mxCell id="yCeUT4_3QfKmO9Hh2YeY-13" value="Button" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2310" y="1293" width="92" height="39" as="geometry" />
+        </mxCell>
+        <mxCell id="yCeUT4_3QfKmO9Hh2YeY-16" value="Các&amp;nbsp; control điều kiển thật" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2466" y="1289" width="92" height="39" as="geometry" />
+        </mxCell>
+        <mxCell id="yCeUT4_3QfKmO9Hh2YeY-17" value="&lt;span style=&quot;font-size: 50px;&quot;&gt;Dùng cái mô hình lồng control này để tấu dynamic layout&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1699" y="886" width="1277" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="yCeUT4_3QfKmO9Hh2YeY-19" value="Panel : dùng cái này để giữ control" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="2083.5" y="1396" width="694" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="yCeUT4_3QfKmO9Hh2YeY-20" value="Button : dùng button để tạo border cho background" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="2106.5" y="1439" width="655" height="104" as="geometry" />
+        </mxCell>
+        <mxCell id="yCeUT4_3QfKmO9Hh2YeY-21" value="label" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2123.5" y="1429" width="92" height="39" as="geometry" />
+        </mxCell>
+        <mxCell id="yCeUT4_3QfKmO9Hh2YeY-22" value="Check box" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2179.5" y="1480" width="92" height="39" as="geometry" />
+        </mxCell>
+        <mxCell id="yCeUT4_3QfKmO9Hh2YeY-23" value="Button" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2308.5" y="1519" width="92" height="39" as="geometry" />
+        </mxCell>
+        <mxCell id="yCeUT4_3QfKmO9Hh2YeY-24" value="Các&amp;nbsp; control điều kiển thật" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2464.5" y="1515" width="92" height="39" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram id="1MXLyX_L-buqhEmuXkpk" name="er diagram">
-    <mxGraphModel dx="2625" dy="1423" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1050" dy="569" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />

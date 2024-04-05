@@ -29,7 +29,7 @@ namespace DAO
     public static class DataRowExtensionMethod
     {
         public static int ToInt(this DataColumn dataRow)
-        {
+        {                                                              
             return int.Parse(dataRow.ToString());
         }
 

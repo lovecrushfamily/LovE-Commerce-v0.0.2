@@ -21,5 +21,6 @@ namespace DLL
         public bool ReviewState;
         public string CategoryID;
         public string ShopID;
+        public string RatingStar;
     }
 }
