@@ -15,6 +15,22 @@ namespace GUI
         public SubViewShopVoucher()
         {
             InitializeComponent();
+            panel_optionContainer.BringToFront();
+        }
+
+        private void RjButton_voucherDetail_Click(object sender, EventArgs e)
+        {
+            tabControl_vouchers.SelectedTab = tabPage_addVoucher;
+        }
+
+        private void IconButton_expireVouchers_Click(object sender, EventArgs e)
+        {
+            tabControl_vouchers.SelectedTab = tabPage_expireVoucher;
+        }
+
+        private void IconButton_vouchers_Click(object sender, EventArgs e)
+        {
+            tabControl_vouchers.SelectedTab = tabPage_myVoucher;
         }
     }
 }

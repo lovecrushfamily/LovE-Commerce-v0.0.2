@@ -59,9 +59,31 @@
             this.ddsadasdToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dasdasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dasdsadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dasdasToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.dsaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dsadaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rjDropdownMenu1 = new GUI.CustomControl.RJDropdownMenu(this.components);
+            this.rjDropdownMenu2 = new GUI.CustomControl.RJDropdownMenu(this.components);
+            this.dsfdsfToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fsdfsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fdsfdsfToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fdsfToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fdsfsdToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fsdfsdToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fdsfsdToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.fsdToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fdsfToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.rjButton2 = new CustomControls.RJControls.RJButton();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.asdasdasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dasdasdsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dasdsaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dasdsaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.dasdasToolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox1)).BeginInit();
             this.rjDropdownMenu1.SuspendLayout();
+            this.rjDropdownMenu2.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // comboBox1
@@ -313,7 +335,7 @@
             this.rjButton1.FlatAppearance.BorderSize = 0;
             this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton1.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.rjButton1.Location = new System.Drawing.Point(554, 67);
+            this.rjButton1.Location = new System.Drawing.Point(542, 67);
             this.rjButton1.Name = "rjButton1";
             this.rjButton1.Size = new System.Drawing.Size(100, 100);
             this.rjButton1.TabIndex = 23;
@@ -402,7 +424,9 @@
             // 
             this.ddsadasdToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.dasdasToolStripMenuItem,
-            this.dasdsadToolStripMenuItem});
+            this.dasdsadToolStripMenuItem,
+            this.dsaToolStripMenuItem,
+            this.dsadaToolStripMenuItem});
             this.ddsadasdToolStripMenuItem.Name = "ddsadasdToolStripMenuItem";
             this.ddsadasdToolStripMenuItem.Size = new System.Drawing.Size(142, 24);
             this.ddsadasdToolStripMenuItem.Text = "ddsadasd";
@@ -418,16 +442,35 @@
             this.sadasdasToolStripMenuItem,
             this.sdasdasToolStripMenuItem});
             this.dasdasToolStripMenuItem.Name = "dasdasToolStripMenuItem";
-            this.dasdasToolStripMenuItem.Size = new System.Drawing.Size(147, 26);
+            this.dasdasToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
             this.dasdasToolStripMenuItem.Text = "dasdas";
             // 
             // dasdsadToolStripMenuItem
             // 
             this.dasdsadToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.dasdasToolStripMenuItem1});
+            this.dasdasToolStripMenuItem1,
+            this.dasdasToolStripMenuItem4});
             this.dasdsadToolStripMenuItem.Name = "dasdsadToolStripMenuItem";
-            this.dasdsadToolStripMenuItem.Size = new System.Drawing.Size(147, 26);
-            this.dasdsadToolStripMenuItem.Text = "dasdsad";
+            this.dasdsadToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
+            this.dasdsadToolStripMenuItem.Text = "dasdsaddsad";
+            // 
+            // dasdasToolStripMenuItem4
+            // 
+            this.dasdasToolStripMenuItem4.Name = "dasdasToolStripMenuItem4";
+            this.dasdasToolStripMenuItem4.Size = new System.Drawing.Size(138, 26);
+            this.dasdasToolStripMenuItem4.Text = "dasdas";
+            // 
+            // dsaToolStripMenuItem
+            // 
+            this.dsaToolStripMenuItem.Name = "dsaToolStripMenuItem";
+            this.dsaToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
+            this.dsaToolStripMenuItem.Text = "dsa";
+            // 
+            // dsadaToolStripMenuItem
+            // 
+            this.dsadaToolStripMenuItem.Name = "dsadaToolStripMenuItem";
+            this.dsadaToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
+            this.dsadaToolStripMenuItem.Text = "dsada";
             // 
             // rjDropdownMenu1
             // 
@@ -441,11 +484,152 @@
             this.rjDropdownMenu1.PrimaryColor = System.Drawing.Color.Empty;
             this.rjDropdownMenu1.Size = new System.Drawing.Size(143, 28);
             // 
+            // rjDropdownMenu2
+            // 
+            this.rjDropdownMenu2.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.rjDropdownMenu2.IsMainMenu = false;
+            this.rjDropdownMenu2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dsfdsfToolStripMenuItem,
+            this.fsdfsToolStripMenuItem,
+            this.fdsfdsfToolStripMenuItem,
+            this.fdsfToolStripMenuItem});
+            this.rjDropdownMenu2.MenuItemHeight = 25;
+            this.rjDropdownMenu2.MenuItemTextColor = System.Drawing.Color.Empty;
+            this.rjDropdownMenu2.Name = "rjDropdownMenu2";
+            this.rjDropdownMenu2.PrimaryColor = System.Drawing.Color.Empty;
+            this.rjDropdownMenu2.Size = new System.Drawing.Size(124, 100);
+            // 
+            // dsfdsfToolStripMenuItem
+            // 
+            this.dsfdsfToolStripMenuItem.Name = "dsfdsfToolStripMenuItem";
+            this.dsfdsfToolStripMenuItem.Size = new System.Drawing.Size(123, 24);
+            this.dsfdsfToolStripMenuItem.Text = "dsfdsf";
+            // 
+            // fsdfsToolStripMenuItem
+            // 
+            this.fsdfsToolStripMenuItem.Name = "fsdfsToolStripMenuItem";
+            this.fsdfsToolStripMenuItem.Size = new System.Drawing.Size(123, 24);
+            this.fsdfsToolStripMenuItem.Text = "fsdfs";
+            // 
+            // fdsfdsfToolStripMenuItem
+            // 
+            this.fdsfdsfToolStripMenuItem.Name = "fdsfdsfToolStripMenuItem";
+            this.fdsfdsfToolStripMenuItem.Size = new System.Drawing.Size(123, 24);
+            this.fdsfdsfToolStripMenuItem.Text = "fdsfdsf";
+            // 
+            // fdsfToolStripMenuItem
+            // 
+            this.fdsfToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fdsfsdToolStripMenuItem,
+            this.fdsfsdToolStripMenuItem1,
+            this.fsdToolStripMenuItem});
+            this.fdsfToolStripMenuItem.Name = "fdsfToolStripMenuItem";
+            this.fdsfToolStripMenuItem.Size = new System.Drawing.Size(123, 24);
+            this.fdsfToolStripMenuItem.Text = "fdsf";
+            // 
+            // fdsfsdToolStripMenuItem
+            // 
+            this.fdsfsdToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fsdfsdToolStripMenuItem});
+            this.fdsfsdToolStripMenuItem.Name = "fdsfsdToolStripMenuItem";
+            this.fdsfsdToolStripMenuItem.Size = new System.Drawing.Size(132, 26);
+            this.fdsfsdToolStripMenuItem.Text = "fdsfsd";
+            // 
+            // fsdfsdToolStripMenuItem
+            // 
+            this.fsdfsdToolStripMenuItem.Name = "fsdfsdToolStripMenuItem";
+            this.fsdfsdToolStripMenuItem.Size = new System.Drawing.Size(132, 26);
+            this.fsdfsdToolStripMenuItem.Text = "fsdfsd";
+            // 
+            // fdsfsdToolStripMenuItem1
+            // 
+            this.fdsfsdToolStripMenuItem1.Name = "fdsfsdToolStripMenuItem1";
+            this.fdsfsdToolStripMenuItem1.Size = new System.Drawing.Size(132, 26);
+            this.fdsfsdToolStripMenuItem1.Text = "fdsfsd";
+            // 
+            // fsdToolStripMenuItem
+            // 
+            this.fsdToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fdsfToolStripMenuItem1});
+            this.fsdToolStripMenuItem.Name = "fsdToolStripMenuItem";
+            this.fsdToolStripMenuItem.Size = new System.Drawing.Size(132, 26);
+            this.fsdToolStripMenuItem.Text = "fsd";
+            // 
+            // fdsfToolStripMenuItem1
+            // 
+            this.fdsfToolStripMenuItem1.Name = "fdsfToolStripMenuItem1";
+            this.fdsfToolStripMenuItem1.Size = new System.Drawing.Size(117, 26);
+            this.fdsfToolStripMenuItem1.Text = "fdsf";
+            // 
+            // rjButton2
+            // 
+            this.rjButton2.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.rjButton2.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.rjButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rjButton2.BorderRadius = 0;
+            this.rjButton2.BorderSize = 0;
+            this.rjButton2.FlatAppearance.BorderSize = 0;
+            this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton2.ForeColor = System.Drawing.Color.White;
+            this.rjButton2.Location = new System.Drawing.Point(738, 211);
+            this.rjButton2.Name = "rjButton2";
+            this.rjButton2.Size = new System.Drawing.Size(150, 40);
+            this.rjButton2.TabIndex = 39;
+            this.rjButton2.Text = "rjButton2";
+            this.rjButton2.TextColor = System.Drawing.Color.White;
+            this.rjButton2.UseVisualStyleBackColor = false;
+            this.rjButton2.Click += new System.EventHandler(this.RjButton2_Click);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.asdasdasToolStripMenuItem,
+            this.dasdasdsToolStripMenuItem,
+            this.dasdsaToolStripMenuItem1});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(140, 76);
+            // 
+            // asdasdasToolStripMenuItem
+            // 
+            this.asdasdasToolStripMenuItem.Name = "asdasdasToolStripMenuItem";
+            this.asdasdasToolStripMenuItem.Size = new System.Drawing.Size(139, 24);
+            this.asdasdasToolStripMenuItem.Text = "asdasdas";
+            // 
+            // dasdasdsToolStripMenuItem
+            // 
+            this.dasdasdsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dasdsaToolStripMenuItem});
+            this.dasdasdsToolStripMenuItem.Name = "dasdasdsToolStripMenuItem";
+            this.dasdasdsToolStripMenuItem.Size = new System.Drawing.Size(139, 24);
+            this.dasdasdsToolStripMenuItem.Text = "dasdasds";
+            // 
+            // dasdsaToolStripMenuItem
+            // 
+            this.dasdsaToolStripMenuItem.Name = "dasdsaToolStripMenuItem";
+            this.dasdsaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.dasdsaToolStripMenuItem.Text = "dasdsa";
+            // 
+            // dasdsaToolStripMenuItem1
+            // 
+            this.dasdsaToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dasdasToolStripMenuItem5});
+            this.dasdsaToolStripMenuItem1.Name = "dasdsaToolStripMenuItem1";
+            this.dasdsaToolStripMenuItem1.Size = new System.Drawing.Size(139, 24);
+            this.dasdsaToolStripMenuItem1.Text = "dasdsa";
+            // 
+            // dasdasToolStripMenuItem5
+            // 
+            this.dasdasToolStripMenuItem5.Name = "dasdasToolStripMenuItem5";
+            this.dasdasToolStripMenuItem5.Size = new System.Drawing.Size(224, 26);
+            this.dasdasToolStripMenuItem5.Text = "dasdas";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(884, 505);
+            this.ClientSize = new System.Drawing.Size(999, 544);
+            this.Controls.Add(this.rjButton2);
             this.Controls.Add(this.gradientLabel1);
             this.Controls.Add(this.rjCircularPictureBox1);
             this.Controls.Add(this.rjProgressBar1);
@@ -468,6 +652,8 @@
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox1)).EndInit();
             this.rjDropdownMenu1.ResumeLayout(false);
+            this.rjDropdownMenu2.ResumeLayout(false);
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -506,5 +692,25 @@
         private System.Windows.Forms.Timer timer1;
         private RoundedButtonIcon roundedButtonIcon1;
         private CustomControl.GradientLabel gradientLabel1;
+        private System.Windows.Forms.ToolStripMenuItem dasdasToolStripMenuItem4;
+        private System.Windows.Forms.ToolStripMenuItem dsaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dsadaToolStripMenuItem;
+        private CustomControl.RJDropdownMenu rjDropdownMenu2;
+        private System.Windows.Forms.ToolStripMenuItem dsfdsfToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem fsdfsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem fdsfdsfToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem fdsfToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem fdsfsdToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem fsdfsdToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem fdsfsdToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem fsdToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem fdsfToolStripMenuItem1;
+        private CustomControls.RJControls.RJButton rjButton2;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem asdasdasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dasdasdsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dasdsaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dasdsaToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem dasdasToolStripMenuItem5;
     }
 }

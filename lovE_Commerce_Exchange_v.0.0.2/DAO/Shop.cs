@@ -25,7 +25,7 @@ namespace DAO
                                                         $"'{shop_.ShopName}'," +
                                                         $"'{shop_.Description}'," +
                                                         $"'{shop_.Address}'," +
-                                                        $"{shop_.Image}");
+                                                        $"'{shop_.Image}'");
         }
         public static void Delete(Shop_ shop_)
         {
@@ -43,7 +43,9 @@ namespace DAO
                     Address = row["Address_"].ToString(),
                     PhoneNumber = row["PhoneNumber"].ToString(),
                     Date = row["Date_"].ToString(),
-                    Image = row["Image_"].ToString()
+                    Image = row["Image_"].ToString(),
+                    ShopOwner  = row["OwnerID"].ToString()
+                    
                 };
             }
         }

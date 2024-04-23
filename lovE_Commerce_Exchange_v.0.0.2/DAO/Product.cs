@@ -9,34 +9,39 @@ using DLL;
 namespace DAO
 {
     public class Product
+
+        //.Replace('\'', '’')
     {
         public static void Add(Product_ product_)
         {
-            MyConnection.ExecuteNonQuery($"sp_insertProduct {product_.ProductId}," +
+            MyConnection.ExecuteNonQuery($"sp_insertProduct "+
                                                             $"'{product_.ProductName}'," +
-                                                            $"'{product_.Description}'," +
+                                                            $"'{product_.Description.Replace('\'', '’')}'," +
                                                             $"'{product_.Price}'," +
                                                             $"{product_.Quantity}," +
-                                                            $"'{product_.AttributeList}'," +
+                                                            $"'{string.Join(",", product_.AttributeList)}'," +
                                                             $"'{product_.MainImage}'," +
-                                                            $"'{product_.ExtraImageList}'," +
+                                                            $"'{string.Join(",",product_.ExtraImageList)}'," +
                                                             $"{product_.CategoryID}," +
                                                             $"{product_.ShopID}");
 
         }
         public static void Update(Product_ product_)
         {
+            int altBanState = product_.BannedState? 1: 0;
+            int altReviewState = product_.ReviewState ? 1 : 0;
             MyConnection.ExecuteNonQuery($"sp_updateProduct {product_.ProductId}," +
                                                             $"'{product_.ProductName}'," +
                                                             $"'{product_.Description}'," +
                                                             $"'{product_.Price}'," +
                                                             $"{product_.Quantity}," +
-                                                            $"'{product_.AttributeList}'," +
+                                                            $"'{string.Join(",", product_.AttributeList)}'," +
                                                             $"'{product_.MainImage}'," +
-                                                            $"'{product_.ExtraImageList}'," +
-                                                            $"{product_.BannedState}," +
-                                                            $"{product_.ReviewState}" +
-                                                            $"{product_.CategoryID}");
+                                                            $"'{string.Join(",", product_.ExtraImageList)}'," +
+                                                            $"{altBanState}," +
+                                                            $"{altReviewState}," +
+                                                            $"{product_.CategoryID}," +
+                                                            $"{product_.RatingStar}");
         }
         public static void Delete(Product_ product_)
         {
@@ -60,7 +65,8 @@ namespace DAO
                     BannedState = row["BannedState"].ToString().ToBool(),
                     ReviewState = row["ReviewState"].ToString().ToBool(),
                     CategoryID = row["CategoryID"].ToString(),
-                    ShopID = row["ShopID"].ToString() 
+                    ShopID = row["ShopID"].ToString(),
+                    RatingStar = row["RatingStar"].ToString(),
                 };
             }
         }

@@ -126,9 +126,10 @@ create table system_.Notification_ (NotificationID int identity(1,1) primary key
 									ReceiverID int references user_.Customer(CustomerID) 
 									on delete cascade on update cascade,
 									Tittle varchar(255) not null,
-									SeenState bit default 0 not null,
+									NotificationType varchar(255) not null,
 									Time_ date not null,
 									Content varchar(255) not null);
+
 
 create table system_.Message_ (MessageID int identity(1,1) primary key,
 								SenderID int references user_.Customer(CustomerID),

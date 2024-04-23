@@ -44,6 +44,7 @@
             this.iconButton_user = new FontAwesome.Sharp.IconButton();
             this.panel_manager_workspace_body = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.gradientLabel3 = new GUI.CustomControl.GradientLabel();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -130,7 +131,7 @@
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Location = new System.Drawing.Point(0, 50);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(321, 580);
+            this.panel2.Size = new System.Drawing.Size(321, 747);
             this.panel2.TabIndex = 4;
             // 
             // iconButton_administrator
@@ -154,6 +155,7 @@
             this.iconButton_administrator.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton_administrator.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton_administrator.UseVisualStyleBackColor = true;
+            this.iconButton_administrator.Click += new System.EventHandler(this.IconButton_administrator_Click);
             // 
             // iconButton_logout
             // 
@@ -167,7 +169,7 @@
             this.iconButton_logout.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton_logout.IconSize = 40;
             this.iconButton_logout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton_logout.Location = new System.Drawing.Point(0, 527);
+            this.iconButton_logout.Location = new System.Drawing.Point(0, 694);
             this.iconButton_logout.Name = "iconButton_logout";
             this.iconButton_logout.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.iconButton_logout.Size = new System.Drawing.Size(321, 53);
@@ -221,6 +223,7 @@
             this.iconButton_category.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton_category.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton_category.UseVisualStyleBackColor = true;
+            this.iconButton_category.Click += new System.EventHandler(this.IconButton_category_Click);
             // 
             // iconButton_product
             // 
@@ -287,6 +290,7 @@
             this.iconButton_user.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton_user.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton_user.UseVisualStyleBackColor = true;
+            this.iconButton_user.Click += new System.EventHandler(this.IconButton_user_Click);
             // 
             // panel_manager_workspace_body
             // 
@@ -296,7 +300,7 @@
             this.panel_manager_workspace_body.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel_manager_workspace_body.Location = new System.Drawing.Point(327, 50);
             this.panel_manager_workspace_body.Name = "panel_manager_workspace_body";
-            this.panel_manager_workspace_body.Size = new System.Drawing.Size(612, 580);
+            this.panel_manager_workspace_body.Size = new System.Drawing.Size(907, 747);
             this.panel_manager_workspace_body.TabIndex = 5;
             // 
             // label2
@@ -310,16 +314,33 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "Manager WorkSpace";
             // 
+            // gradientLabel3
+            // 
+            this.gradientLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.gradientLabel3.BeginColor = System.Drawing.Color.Plum;
+            this.gradientLabel3.Direction = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.gradientLabel3.EndColor = System.Drawing.Color.MediumSlateBlue;
+            this.gradientLabel3.Location = new System.Drawing.Point(317, 50);
+            this.gradientLabel3.Name = "gradientLabel3";
+            this.gradientLabel3.Size = new System.Drawing.Size(10, 747);
+            this.gradientLabel3.TabIndex = 7;
+            this.gradientLabel3.TextColorBegin = System.Drawing.SystemColors.Control;
+            this.gradientLabel3.TextColorEnd = System.Drawing.SystemColors.Control;
+            // 
             // WorkSpaceManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(939, 630);
-            this.Controls.Add(this.label2);
+            this.ClientSize = new System.Drawing.Size(1234, 797);
             this.Controls.Add(this.panel2);
+            this.Controls.Add(this.gradientLabel3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.panel_manager_workspace_body);
             this.Name = "WorkSpaceManager";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "WorkSpaceManager";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.WorkSpaceManager_FormClosing);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -346,5 +367,6 @@
         private FontAwesome.Sharp.IconButton iconButton_administrator;
         private System.Windows.Forms.Label label_role;
         private System.Windows.Forms.Label label_manager_name;
+        private CustomControl.GradientLabel gradientLabel3;
     }
 }

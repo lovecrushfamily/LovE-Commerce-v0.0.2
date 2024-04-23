@@ -44,11 +44,12 @@ namespace BUS
 
         public void Add()
         {
-
+            DAO.Product.Add(this);
         }
 
         public void Update()
         {
+            DAO.Product.Update(this);
 
         }
 
@@ -74,9 +75,11 @@ namespace BUS
             return DAO.Product.Select().Select(c => new Product(c)).ToArray();
         }
 
+        public void Verify()
+        {
 
-
-
-
+            ReviewState = true;
+            Update();
+        }
     }
 }

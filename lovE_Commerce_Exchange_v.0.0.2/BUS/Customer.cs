@@ -21,6 +21,11 @@ namespace BUS
             Address = customer_.Address;
         }
 
+        public void Add()
+        {
+            DAO.Customer.Add(this);
+        }
+
         public void Update()
         {
             DAO.Customer.Update(this);
@@ -30,6 +35,12 @@ namespace BUS
         public static Customer[] GetCustomers()
         {
             return DAO.Customer.Select().Select(c => new Customer(c)).ToArray();
+        }
+
+        public Customer SetShopOwnerOn()
+        {
+            ShopOwner = true;
+            return this;
         }
     }
 }

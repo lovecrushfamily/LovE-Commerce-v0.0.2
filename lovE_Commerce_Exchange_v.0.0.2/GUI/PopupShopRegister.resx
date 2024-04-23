@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Shop Registration Policy and Terms
+
+Effective Date: today
+
+Thank you for your interest in registering as a shop on our e-commerce platform! By completing the registration process, you agree to comply with and be bound by the following terms and conditions. Please read these carefully before registering your shop.
+
+1. Eligibility
+
+To register as a shop on our platform, you must meet the following eligibility criteria:
+
+a. You must be at least 18 years old or the legal age of majority in your jurisdiction.
+
+b. You must have the legal authority to enter into contracts and sell goods or services.
+
+c. You must provide accurate and complete information about yourself and your shop during the registration process.
+
+2. Shop Setup
+
+a. You are responsible for creating and maintaining your shop profile, including adding accurate and appealing descriptions, photos, and pricing for your products or services.
+
+b. You agree to comply with any guidelines or requirements set forth by our platform regarding shop setup and product listings.
+
+c. We reserve the right to review and approve all shop registrations before they are published on the platform. We may reject or remove any shop that violates our policies or fails to meet our standards.
+
+3. Product Listings
+
+a. You are solely responsible for the accuracy and legality of the products or services you list for sale on our platform.
+
+b. You agree to provide clear and honest descriptions of your products or services, including any relevant details such as size, color, materials, and pricing.
+
+c. You must not list prohibited items or engage in any deceptive or fraudulent practices when creating product listings.
+
+4. Transactions and Sales
+
+a. You agree to fulfill orders promptly and professionally, including shipping products to buyers in a timely manner and providing accurate tracking information.
+
+b. You are responsible for resolving any disputes or issues that may arise with buyers, including processing refunds or returns according to our platform's policies.
+
+c. You agree to comply with any applicable laws and regulations regarding sales tax, shipping fees, and other financial transactions.
+
+5. Fees and Payments
+
+a. Our platform may charge fees for shop registration, listing products, or completing sales. These fees will be clearly outlined during the registration process and in your shop dashboard.
+
+b. You agree to pay any applicable fees in a timely manner and to keep your payment information up to date.
+
+c. We reserve the right to change our fee structure at any time, with advance notice to registered shops.
+
+6. Intellectual Property
+
+a. You retain ownership of the intellectual property rights to your shop name, logo, and product images, but grant us a license to use this content for the purpose of promoting your shop on our platform.
+
+b. You agree not to infringe upon the intellectual property rights of others when creating your shop profile or product listings.
+
+7. Termination
+
+a. We reserve the right to suspend or terminate your shop registration if we suspect that you have violated any of these terms or engaged in fraudulent activity.
+
+b. You may request to terminate your shop registration at any time by contacting our support team.
+
+8. Modification of Terms
+
+We reserve the right to modify these Shop Registration Policy and Terms at any time without prior notice. By continuing to use your shop on our platform after such modifications are made, you agree to be bound by the updated terms.
+
+9. Governing Law
+
+These Shop Registration Policy and Terms shall be governed by and construed in accordance with the laws of [Jurisdiction], without regard to its conflict of law provisions.
+
+10. Contact Us
+
+If you have any questions or concerns about these Shop Registration Policy and Terms, please contact us at vuquangphuc55@gmail.com
+
+Feel free to adapt this template to suit the specific needs and requirements of your e-commerce platform and shop registration process.</value>
+  </data>
+</root>

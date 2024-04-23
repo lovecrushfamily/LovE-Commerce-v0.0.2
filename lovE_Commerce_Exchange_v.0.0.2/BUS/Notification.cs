@@ -12,7 +12,7 @@ namespace BUS
         {
             NotificationID  = notification_.NotificationID;
             ReceivedID =    notification_.ReceivedID;
-            SeenState = notification_.SeenState;
+            NotificationType = notification_.NotificationType;
             Tittle = notification_.Tittle;
             Time = notification_.Time;
             Content = notification_.Content;

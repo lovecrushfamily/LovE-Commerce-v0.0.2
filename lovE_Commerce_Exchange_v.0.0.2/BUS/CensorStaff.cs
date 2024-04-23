@@ -27,7 +27,7 @@ namespace BUS
 
         public void Add()
         {
-
+            DAO.CensorStaff.Add(this);
         }
 
         public static CensorStaff[] GetCensorStaff()

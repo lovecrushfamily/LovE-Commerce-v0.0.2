@@ -48,6 +48,8 @@
     <Compile Include="CensorStaff.cs" />
     <Compile Include="Comment.cs" />
     <Compile Include="Customer.cs" />
+    <Compile Include="dbMail.cs" />
+    <Compile Include="Manager.cs" />
     <Compile Include="Message.cs" />
     <Compile Include="MyConnection.cs" />
     <Compile Include="Notification.cs" />

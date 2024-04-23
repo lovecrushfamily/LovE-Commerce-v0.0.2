@@ -19,7 +19,7 @@ namespace DAO
         }
         public static void Update(Notification_ notification_)
         {
-            MyConnection.ExecuteNonQuery($"sp_updateNotification {notification_.NotificationID}, {notification_.SeenState}");
+            MyConnection.ExecuteNonQuery($"sp_updateNotification {notification_.NotificationID}, {notification_.NotificationType}");
         }
         public static void Delete(Notification_ notification_)
         {
@@ -34,7 +34,7 @@ namespace DAO
                     NotificationID = row["NotificationID"].ToString(),
                     ReceivedID = row["ReceiverID"].ToString(),
                     Tittle = row["Tittle"].ToString(),
-                    SeenState = row["SeenState"].ToString().ToBool(),
+                    NotificationType = row["NotificationType"].ToString().ToBool(),
                     Time = row["Time_"].ToString(),
                     Content = row["Content"].ToString()
                 };

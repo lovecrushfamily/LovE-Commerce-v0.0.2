@@ -24,7 +24,7 @@ namespace BUS
 
         public void Add()
         {
-
+            OrderId =  DAO.Order.Add(this).ToString();            
         }
 
         public void Remove()

@@ -32,7 +32,7 @@
             this.iconButton_delete_products = new FontAwesome.Sharp.IconButton();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.label_productQuantityChoosen = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -51,6 +51,10 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel_product = new System.Windows.Forms.Panel();
             this.groupBox_shoppingcart_product = new System.Windows.Forms.GroupBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.iconButton_quantityDown = new FontAwesome.Sharp.IconButton();
             this.iconButton_quantityUp = new FontAwesome.Sharp.IconButton();
             this.myNumericUpDown_quantity = new GUI.CustomControl.MyNumericUpDown();
@@ -84,10 +88,6 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label13 = new System.Windows.Forms.Label();
             this.rjButton_purcharse = new CustomControls.RJControls.RJButton();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
             this.panel_product_tittle.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel_product.SuspendLayout();
@@ -106,7 +106,7 @@
             this.panel_product_tittle.Controls.Add(this.iconButton_delete_products);
             this.panel_product_tittle.Controls.Add(this.label5);
             this.panel_product_tittle.Controls.Add(this.label4);
-            this.panel_product_tittle.Controls.Add(this.label11);
+            this.panel_product_tittle.Controls.Add(this.label_productQuantityChoosen);
             this.panel_product_tittle.Controls.Add(this.label10);
             this.panel_product_tittle.Controls.Add(this.label9);
             this.panel_product_tittle.Controls.Add(this.label3);
@@ -137,10 +137,10 @@
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Sans Serif Collection", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(671, 9);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(675, 14);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(54, 29);
+            this.label5.Size = new System.Drawing.Size(48, 20);
             this.label5.TabIndex = 1;
             this.label5.Text = "Price";
             // 
@@ -149,28 +149,28 @@
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Sans Serif Collection", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(460, 9);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(464, 14);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 29);
+            this.label4.Size = new System.Drawing.Size(71, 20);
             this.label4.TabIndex = 1;
             this.label4.Text = "Quantity";
             // 
-            // label11
+            // label_productQuantityChoosen
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Sans Serif Collection", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(154, 7);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(23, 29);
-            this.label11.TabIndex = 1;
-            this.label11.Text = "2";
+            this.label_productQuantityChoosen.AutoSize = true;
+            this.label_productQuantityChoosen.Font = new System.Drawing.Font("Sans Serif Collection", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_productQuantityChoosen.Location = new System.Drawing.Point(154, 11);
+            this.label_productQuantityChoosen.Name = "label_productQuantityChoosen";
+            this.label_productQuantityChoosen.Size = new System.Drawing.Size(23, 29);
+            this.label_productQuantityChoosen.TabIndex = 1;
+            this.label_productQuantityChoosen.Text = "2";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(173, 8);
+            this.label10.Location = new System.Drawing.Point(173, 12);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(15, 20);
             this.label10.TabIndex = 1;
@@ -180,7 +180,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(143, 7);
+            this.label9.Location = new System.Drawing.Point(143, 11);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(15, 20);
             this.label9.TabIndex = 1;
@@ -191,10 +191,10 @@
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Sans Serif Collection", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(228, 9);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(232, 14);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(109, 29);
+            this.label3.Size = new System.Drawing.Size(101, 20);
             this.label3.TabIndex = 1;
             this.label3.Text = "Unit Amount";
             // 
@@ -202,12 +202,12 @@
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.checkBox1.Font = new System.Drawing.Font("Sans Serif Collection", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox1.Location = new System.Drawing.Point(25, 5);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(127, 38);
+            this.checkBox1.Size = new System.Drawing.Size(210, 38);
             this.checkBox1.TabIndex = 0;
-            this.checkBox1.Text = "All products";
+            this.checkBox1.Text = "All productsCommented";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // panel6
@@ -227,7 +227,7 @@
             this.panel6.Controls.Add(this.groupBox1);
             this.panel6.Font = new System.Drawing.Font("Sans Serif Collection", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel6.ForeColor = System.Drawing.Color.DimGray;
-            this.panel6.Location = new System.Drawing.Point(906, 308);
+            this.panel6.Location = new System.Drawing.Point(906, 292);
             this.panel6.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
             this.panel6.Name = "panel6";
             this.panel6.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
@@ -394,6 +394,42 @@
             this.groupBox_shoppingcart_product.TabStop = false;
             this.groupBox_shoppingcart_product.Enter += new System.EventHandler(this.GroupBox1_Enter);
             // 
+            // label17
+            // 
+            this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label17.Location = new System.Drawing.Point(470, 80);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(10, 45);
+            this.label17.TabIndex = 21;
+            // 
+            // label16
+            // 
+            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label16.Location = new System.Drawing.Point(519, 80);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(10, 45);
+            this.label16.TabIndex = 21;
+            // 
+            // label15
+            // 
+            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label15.Location = new System.Drawing.Point(473, 73);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(53, 10);
+            this.label15.TabIndex = 21;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.Location = new System.Drawing.Point(473, 123);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(53, 10);
+            this.label7.TabIndex = 21;
+            // 
             // iconButton_quantityDown
             // 
             this.iconButton_quantityDown.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -460,6 +496,7 @@
             this.button_product_image.Size = new System.Drawing.Size(91, 89);
             this.button_product_image.TabIndex = 0;
             this.button_product_image.UseVisualStyleBackColor = true;
+            this.button_product_image.Click += new System.EventHandler(this.Label_product_name_Click);
             // 
             // panel10
             // 
@@ -474,14 +511,19 @@
             // 
             // button_shop_name
             // 
+            this.button_shop_name.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
             this.button_shop_name.FlatAppearance.BorderSize = 0;
+            this.button_shop_name.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
+            this.button_shop_name.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.button_shop_name.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_shop_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_shop_name.Location = new System.Drawing.Point(51, 1);
             this.button_shop_name.Name = "button_shop_name";
             this.button_shop_name.Size = new System.Drawing.Size(138, 35);
             this.button_shop_name.TabIndex = 4;
             this.button_shop_name.Text = "Shop name >";
             this.button_shop_name.UseVisualStyleBackColor = true;
+            this.button_shop_name.Click += new System.EventHandler(this.Button_shop_name_Click);
             // 
             // iconButton4
             // 
@@ -543,29 +585,31 @@
             this.label14.ForeColor = System.Drawing.Color.DimGray;
             this.label14.Location = new System.Drawing.Point(164, 10);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(170, 29);
+            this.label14.Size = new System.Drawing.Size(228, 29);
             this.label14.TabIndex = 5;
-            this.label14.Text = "Choose product first";
+            this.label14.Text = "Choose currentProduct first";
             // 
             // label12
             // 
             this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.SandyBrown;
             this.label12.Location = new System.Drawing.Point(429, 136);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(143, 16);
+            this.label12.Size = new System.Drawing.Size(231, 17);
             this.label12.TabIndex = 5;
-            this.label12.Text = "There\'re 5 products left";
+            this.label12.Text = "There\'re 5 productsCommented left";
             this.label12.Visible = false;
             this.label12.Click += new System.EventHandler(this.Label7_Click);
             // 
             // label_productAdress
             // 
             this.label_productAdress.AutoSize = true;
+            this.label_productAdress.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_productAdress.Location = new System.Drawing.Point(217, 136);
             this.label_productAdress.Name = "label_productAdress";
-            this.label_productAdress.Size = new System.Drawing.Size(49, 16);
+            this.label_productAdress.Size = new System.Drawing.Size(51, 17);
             this.label_productAdress.TabIndex = 5;
             this.label_productAdress.Text = "Ha Noi";
             this.label_productAdress.Click += new System.EventHandler(this.Label7_Click);
@@ -573,9 +617,10 @@
             // label_shop_address
             // 
             this.label_shop_address.AutoSize = true;
+            this.label_shop_address.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_shop_address.Location = new System.Drawing.Point(147, 136);
             this.label_shop_address.Name = "label_shop_address";
-            this.label_shop_address.Size = new System.Drawing.Size(64, 16);
+            this.label_shop_address.Size = new System.Drawing.Size(68, 17);
             this.label_shop_address.TabIndex = 5;
             this.label_shop_address.Text = "Address :";
             this.label_shop_address.Click += new System.EventHandler(this.Label7_Click);
@@ -585,7 +630,7 @@
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Sans Serif Collection", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.IndianRed;
+            this.label6.ForeColor = System.Drawing.Color.LightCoral;
             this.label6.Location = new System.Drawing.Point(748, 86);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(23, 29);
@@ -638,6 +683,7 @@
             this.label_product_name.Size = new System.Drawing.Size(70, 73);
             this.label_product_name.TabIndex = 5;
             this.label_product_name.Text = "ProductName wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww";
+            this.label_product_name.Click += new System.EventHandler(this.Label_product_name_Click);
             // 
             // iconButton_delete_product
             // 
@@ -694,7 +740,7 @@
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
-            this.panel1.Size = new System.Drawing.Size(385, 259);
+            this.panel1.Size = new System.Drawing.Size(385, 232);
             this.panel1.TabIndex = 7;
             // 
             // label_customerAddress
@@ -703,7 +749,7 @@
             this.label_customerAddress.ForeColor = System.Drawing.Color.DimGray;
             this.label_customerAddress.Location = new System.Drawing.Point(170, 112);
             this.label_customerAddress.Name = "label_customerAddress";
-            this.label_customerAddress.Size = new System.Drawing.Size(182, 134);
+            this.label_customerAddress.Size = new System.Drawing.Size(182, 112);
             this.label_customerAddress.TabIndex = 0;
             this.label_customerAddress.Text = "LamSon, Thanh Mien Hai Duong";
             // 
@@ -779,7 +825,7 @@
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(0, 0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(365, 259);
+            this.groupBox2.Size = new System.Drawing.Size(365, 232);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             // 
@@ -805,49 +851,14 @@
             this.rjButton_purcharse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton_purcharse.Font = new System.Drawing.Font("Sans Serif Collection", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButton_purcharse.ForeColor = System.Drawing.Color.White;
-            this.rjButton_purcharse.Location = new System.Drawing.Point(906, 525);
+            this.rjButton_purcharse.Location = new System.Drawing.Point(906, 502);
             this.rjButton_purcharse.Name = "rjButton_purcharse";
             this.rjButton_purcharse.Size = new System.Drawing.Size(365, 51);
             this.rjButton_purcharse.TabIndex = 2;
             this.rjButton_purcharse.Text = "Purchase";
             this.rjButton_purcharse.TextColor = System.Drawing.Color.White;
             this.rjButton_purcharse.UseVisualStyleBackColor = false;
-            // 
-            // label7
-            // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.Location = new System.Drawing.Point(473, 123);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(53, 10);
-            this.label7.TabIndex = 21;
-            // 
-            // label15
-            // 
-            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label15.Location = new System.Drawing.Point(473, 73);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(53, 10);
-            this.label15.TabIndex = 21;
-            // 
-            // label16
-            // 
-            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label16.Location = new System.Drawing.Point(519, 80);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(10, 45);
-            this.label16.TabIndex = 21;
-            // 
-            // label17
-            // 
-            this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label17.Location = new System.Drawing.Point(470, 80);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(10, 45);
-            this.label17.TabIndex = 21;
+            this.rjButton_purcharse.Click += new System.EventHandler(this.RjButton_purcharse_Click);
             // 
             // ViewShoppingCart
             // 
@@ -865,6 +876,7 @@
             this.Name = "ViewShoppingCart";
             this.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
             this.Text = "ShoppingCart";
+            this.Load += new System.EventHandler(this.ViewShoppingCart_Load);
             this.Resize += new System.EventHandler(this.ShoppingCart_Resize);
             this.panel_product_tittle.ResumeLayout(false);
             this.panel_product_tittle.PerformLayout();
@@ -930,7 +942,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button_product_image;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label_productQuantityChoosen;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label12;

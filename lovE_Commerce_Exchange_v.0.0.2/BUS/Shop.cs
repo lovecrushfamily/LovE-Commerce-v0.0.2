@@ -24,16 +24,20 @@ namespace BUS
 
         public void Add()
         {
+            DAO.Shop.Add(this);
 
         }
 
         public void Update()
         {
+            DAO.Shop.Update(this);
+
 
         }
 
         public void Delete()
         {
+            DAO.Shop.Delete(this);
 
         }
 

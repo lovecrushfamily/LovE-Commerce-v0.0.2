@@ -48,6 +48,7 @@
     <Compile Include="CensorStaff.cs" />
     <Compile Include="Comment.cs" />
     <Compile Include="Customer.cs" />
+    <Compile Include="Manager.cs" />
     <Compile Include="Message.cs" />
     <Compile Include="Notification.cs" />
     <Compile Include="Order.cs" />

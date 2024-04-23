@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Aspose.Imaging, Version=24.4.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <HintPath>..\packages\Aspose.Imaging.24.4.0\lib\net40\Aspose.Imaging.dll</HintPath>
+    </Reference>
     <Reference Include="FontAwesome.Sharp, Version=6.3.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.6.3.0\lib\net48\FontAwesome.Sharp.dll</HintPath>
     </Reference>
@@ -40,6 +43,7 @@
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL" />
     <Reference Include="System.Text.Json, Version=7.0.0.3, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL" />
     <Reference Include="System.Xaml" />
@@ -66,6 +70,7 @@
     </Compile>
     <Compile Include="CustomControl\MenuColorTable.cs" />
     <Compile Include="CustomControl\MenuRenderer.cs" />
+    <Compile Include="CustomControl\ReadonlyTextBox.cs" />
     <Compile Include="CustomControl\RJButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -93,11 +98,11 @@
     <Compile Include="CustomControl\ToggleButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="ForgetPassword.cs">
+    <Compile Include="PopupForgetPassword.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ForgetPassword.Designer.cs">
-      <DependentUpon>ForgetPassword.cs</DependentUpon>
+    <Compile Include="PopupForgetPassword.Designer.cs">
+      <DependentUpon>PopupForgetPassword.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -105,17 +110,23 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Popup.cs">
+    <Compile Include="ChangePassword.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Popup.Designer.cs">
-      <DependentUpon>Popup.cs</DependentUpon>
+    <Compile Include="ChangePassword.Designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
     </Compile>
     <Compile Include="PopupDragPicture.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PopupDragPicture.Designer.cs">
       <DependentUpon>PopupDragPicture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopupShopRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopupShopRegister.Designer.cs">
+      <DependentUpon>PopupShopRegister.cs</DependentUpon>
     </Compile>
     <Compile Include="SubViewCustomerAccount.cs">
       <SubType>Form</SubType>
@@ -183,6 +194,12 @@
     <Compile Include="SubViewShopDashBoard.Designer.cs">
       <DependentUpon>SubViewShopDashBoard.cs</DependentUpon>
     </Compile>
+    <Compile Include="SubViewShopInfor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubViewShopInfor.Designer.cs">
+      <DependentUpon>SubViewShopInfor.cs</DependentUpon>
+    </Compile>
     <Compile Include="SubViewShopOrders.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -194,12 +211,6 @@
     </Compile>
     <Compile Include="SubViewShopProducts.Designer.cs">
       <DependentUpon>SubViewShopProducts.cs</DependentUpon>
-    </Compile>
-    <Compile Include="SubViewShopProductUpdate.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SubViewShopProductUpdate.Designer.cs">
-      <DependentUpon>SubViewShopProductUpdate.cs</DependentUpon>
     </Compile>
     <Compile Include="SubViewShopVoucher.cs">
       <SubType>Form</SubType>
@@ -225,6 +236,12 @@
     <Compile Include="ViewCategory.Designer.cs">
       <DependentUpon>ViewCategory.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewOrder.Designer.cs">
+      <DependentUpon>ViewOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewProductSearch.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -237,11 +254,11 @@
     <Compile Include="ViewShoppingCart.Designer.cs">
       <DependentUpon>ViewShoppingCart.cs</DependentUpon>
     </Compile>
-    <Compile Include="SignIn.cs">
+    <Compile Include="PopupSignIn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SignIn.Designer.cs">
-      <DependentUpon>SignIn.cs</DependentUpon>
+    <Compile Include="PopupSignIn.Designer.cs">
+      <DependentUpon>PopupSignIn.cs</DependentUpon>
     </Compile>
     <Compile Include="utilities.cs" />
     <Compile Include="WorkSpaceCustomer.cs">
@@ -268,11 +285,11 @@
     <Compile Include="ViewShop.Designer.cs">
       <DependentUpon>ViewShop.cs</DependentUpon>
     </Compile>
-    <Compile Include="SignUp.cs">
+    <Compile Include="PopupSignUp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SignUp.Designer.cs">
-      <DependentUpon>SignUp.cs</DependentUpon>
+    <Compile Include="PopupSignUp.Designer.cs">
+      <DependentUpon>PopupSignUp.cs</DependentUpon>
     </Compile>
     <Compile Include="ViewHomePage.cs">
       <SubType>Form</SubType>
@@ -303,17 +320,20 @@
     <EmbeddedResource Include="CustomControl\RJTextBox.resx">
       <DependentUpon>RJTextBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ForgetPassword.resx">
-      <DependentUpon>ForgetPassword.cs</DependentUpon>
+    <EmbeddedResource Include="PopupForgetPassword.resx">
+      <DependentUpon>PopupForgetPassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Popup.resx">
-      <DependentUpon>Popup.cs</DependentUpon>
+    <EmbeddedResource Include="ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PopupDragPicture.resx">
       <DependentUpon>PopupDragPicture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopupShopRegister.resx">
+      <DependentUpon>PopupShopRegister.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SubViewAdministrator.resx">
       <DependentUpon>SubViewAdministrator.cs</DependentUpon>
@@ -330,11 +350,47 @@
     <EmbeddedResource Include="SubViewCustormerOrders.resx">
       <DependentUpon>SubViewCustormerOrders.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SubViewManageCategory.resx">
+      <DependentUpon>SubViewManageCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubViewManageUser.resx">
+      <DependentUpon>SubViewManageUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubViewNotifications.resx">
+      <DependentUpon>SubViewNotifications.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubViewShopChat.resx">
+      <DependentUpon>SubViewShopChat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SubViewShopComment.resx">
       <DependentUpon>SubViewShopComment.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SubViewShopDashBoard.resx">
+      <DependentUpon>SubViewShopDashBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubViewShopInfor.resx">
+      <DependentUpon>SubViewShopInfor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubViewShopOrders.resx">
+      <DependentUpon>SubViewShopOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubViewShopProducts.resx">
+      <DependentUpon>SubViewShopProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubViewShopVoucher.resx">
+      <DependentUpon>SubViewShopVoucher.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SubViewStaffAccount.resx">
       <DependentUpon>SubViewStaffAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubViewStaffProduct.resx">
+      <DependentUpon>SubViewStaffProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewCategory.resx">
+      <DependentUpon>ViewCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewOrder.resx">
+      <DependentUpon>ViewOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewProductDetail.resx">
       <DependentUpon>ViewProductDetail.cs</DependentUpon>
@@ -351,11 +407,11 @@
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SignIn.resx">
-      <DependentUpon>SignIn.cs</DependentUpon>
+    <EmbeddedResource Include="PopupSignIn.resx">
+      <DependentUpon>PopupSignIn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SignUp.resx">
-      <DependentUpon>SignUp.cs</DependentUpon>
+    <EmbeddedResource Include="PopupSignUp.resx">
+      <DependentUpon>PopupSignUp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewHomePage.resx">
       <DependentUpon>ViewHomePage.cs</DependentUpon>
@@ -368,6 +424,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="WorkSpaceCustomer.resx">
       <DependentUpon>WorkSpaceCustomer.cs</DependentUpon>
@@ -404,6 +461,15 @@
       <Project>{e35d69b6-5db6-42b9-a15a-a9d66976d117}</Project>
       <Name>DLL</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2246813_add photo_add_plus_upload.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

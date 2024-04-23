@@ -21,6 +21,11 @@ namespace BUS
         {
             DAO.Category.Add(this);
         }
+        public Category ClearAttribute()
+        {
+            AttributeList = string.Empty;
+            return this;
+        }
 
         public void Update()
         {

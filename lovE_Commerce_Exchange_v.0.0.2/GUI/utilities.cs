@@ -1,19 +1,24 @@
 ﻿using FontAwesome.Sharp;
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
+using System.IO;
+using System.Linq;
 using System.Reflection;
+using System.Runtime.InteropServices;
 using System.Security.Cryptography;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 
 namespace GUI
 {
-    internal class Encryption
+    internal static class Encryption
     {
-        internal static string EncryptPassword(string password)
+        internal static string EncryptPassword(this string password)
         {
             MD5 md5 = MD5.Create();
             byte[] inputBytes = Encoding.ASCII.GetBytes(password);
@@ -69,6 +74,207 @@ namespace GUI
             }
 
             return instance;
+        }
+    }
+
+    public class FileDialog
+    {
+        OpenFileDialog openFile = new OpenFileDialog();
+        
+
+    }
+
+    public static class FilePathProcessing
+    {
+       
+        public static string GetProductImagePath(this string productImagePath)
+        {
+            //string currentDictectoryPath = Directory.GetCurrentDirectory();
+
+            string currentDirectory = @Directory.GetCurrentDirectory().Substring(1, Directory.GetCurrentDirectory().Length - 14);
+            string ProductImagepath = "D" + @currentDirectory + @"Media\productImage\" + productImagePath;
+            return ProductImagepath.Replace("\\", "/");
+
+        }
+        public static string GetShopImagePath(this string shopImagePath)
+        {
+            string currentDirectory = @Directory.GetCurrentDirectory().Substring(1, Directory.GetCurrentDirectory().Length - 14);
+            string ShopImagepath = "D" + @currentDirectory + @"Media\shopImage\" + shopImagePath;
+            return ShopImagepath.Replace("\\","/");
+
+        }
+        public static string GetStaffImagePath(this string staffImagePath)
+        {
+            string currentDirectory = @Directory.GetCurrentDirectory().Substring(1, Directory.GetCurrentDirectory().Length - 14);
+            string StaffImagepath = "D" + @currentDirectory + @"Media\staffImage\" + staffImagePath;
+            return StaffImagepath.Replace("\\", "/");
+
+        }
+        public static string GetCustomerImagePath(this string customerImagePath)
+        {
+            string currentDirectory = @Directory.GetCurrentDirectory().Substring(1, Directory.GetCurrentDirectory().Length - 14);
+            string CustomerImagepath = "D" + @currentDirectory + @"Media\customerImage\" + customerImagePath;
+            return CustomerImagepath.Replace("\\","/");
+        }
+        public static string GetIcons(this string iconsPath)
+        {
+            string currentDirectory = @Directory.GetCurrentDirectory().Substring(1, Directory.GetCurrentDirectory().Length - 14);
+            string IconImagepath = "D" + @currentDirectory + @"Media\icons\" + iconsPath;
+            return IconImagepath.Replace("\\", "/");
+        }
+        public static string GetIamgeIcons(this string ImageiconsPath)
+        {
+            string currentDirectory = @Directory.GetCurrentDirectory().Substring(1, Directory.GetCurrentDirectory().Length - 14);
+            string ImageIconImagepath = "D" + @currentDirectory + @"Media\icons\" + ImageiconsPath;
+            return ImageIconImagepath.Replace("\\", "/");
+        }
+        public static string GetIamgeLogo(this string ImageLogoPath)
+        {
+            string currentDirectory = @Directory.GetCurrentDirectory().Substring(1, Directory.GetCurrentDirectory().Length - 14);
+            string ImageLogopath = "D" + @currentDirectory + @"Media\icons\" + ImageLogoPath;
+            return ImageLogopath.Replace("\\", "/");
+        }
+
+
+
+
+
+        public static string  GetDefaultCustomer()
+        {
+            string currentDirectory = @Directory.GetCurrentDirectory().Substring(1, Directory.GetCurrentDirectory().Length - 14);
+            string CustomerImagepath = "D" + @currentDirectory + @"Media\customerImage\" + "default.png";
+            return CustomerImagepath.Replace("\\", "/");
+        }
+        public static string GetDefaultProduct()
+        {
+            string currentDirectory = @Directory.GetCurrentDirectory().Substring(1, Directory.GetCurrentDirectory().Length - 14);
+            string CustomerImagepath = "D" + @currentDirectory + @"Media\productImage\" + "download.png";
+            return CustomerImagepath.Replace("\\", "/");
+        }
+        public static string GetDefaultShop()
+        {
+            string currentDirectory = @Directory.GetCurrentDirectory().Substring(1, Directory.GetCurrentDirectory().Length - 14);
+            string CustomerImagepath = "D" + @currentDirectory + @"Media\shopImage\" + "default.png";
+            return CustomerImagepath.Replace("\\", "/");
+        }
+
+        public static string GetAdminFilePath()
+        {
+            string currentDirectory = @Directory.GetCurrentDirectory().Substring(1, Directory.GetCurrentDirectory().Length - 14);
+            return ("D" + @currentDirectory + "Manager\\administrator.txt").Replace("\\", "/");
+        }
+
+        public static string ReadAdminFileData()
+        {
+            return File.ReadAllText(GetAdminFilePath());
+        }
+
+        public static void WriteAdminFileData(string data)
+        {
+            File.WriteAllText(GetAdminFilePath(), data);
+        }
+
+
+
+
+
+        public static Image TurnToCustomerImage(this string Imagepath)
+        {
+            if (File.Exists(Imagepath))
+                return Image.FromFile(Imagepath);
+            else
+                return Image.FromFile(GetDefaultCustomer());
+        }
+
+
+        public static Image TurnToProductImage(this string Imagepath)
+        {
+            if (File.Exists(Imagepath))
+                return Image.FromFile(Imagepath);
+            else
+                return Image.FromFile(GetDefaultProduct());
+        }
+
+
+
+
+        public static Image TurnToShopImage(this string Imagepath)
+        {
+            if (File.Exists(Imagepath))
+                return Image.FromFile(Imagepath);
+            else
+                return Image.FromFile(GetDefaultShop());
+        }
+
+
+        public static Image TurnToStaffImage(this string Imagepath)
+        {
+            if (File.Exists(Imagepath))
+                return Image.FromFile(Imagepath);
+            else
+                return Image.FromFile(GetDefaultCustomer());
+        }
+
+        public static string GetProductImageDirectory()
+        {
+            string currentDirectory = @Directory.GetCurrentDirectory().Substring(1, Directory.GetCurrentDirectory().Length - 14);
+            string ProductImagepath = "D" + @currentDirectory + @"Media\productImage\";
+            return ProductImagepath.Replace("\\", "/");
+
+        }
+        public static string GetStaffImageDirectory()
+        {
+            string currentDirectory = @Directory.GetCurrentDirectory().Substring(1, Directory.GetCurrentDirectory().Length - 14);
+            string ProductImagepath = "D" + @currentDirectory + @"Media\staffImage\";
+            return ProductImagepath.Replace("\\", "/");
+
+        }
+        public static string GetCustomerImageDirectory()
+        {
+            string currentDirectory = @Directory.GetCurrentDirectory().Substring(1, Directory.GetCurrentDirectory().Length - 14);
+            string CustomerImagepath = "D" + @currentDirectory + @"Media\customerImage\";
+            return CustomerImagepath.Replace("\\", "/");
+
+        }
+        public static string GetShopImageDirectory()
+        {
+            string currentDirectory = @Directory.GetCurrentDirectory().Substring(1, Directory.GetCurrentDirectory().Length - 14);
+            string CustomerImagepath = "D" + @currentDirectory + @"Media\shopImage\";
+            return CustomerImagepath.Replace("\\", "/");
+
+        }
+        public static void RenameFile(this string imagePath, string newName)
+        {
+
+        }
+        public static void DeleteFile(this string path)
+        {
+
+        } 
+        public static void CopyToProductImage(this string imagePath)
+        {
+            string currentDirectory = @Directory.GetCurrentDirectory().Substring(1, Directory.GetCurrentDirectory().Length - 14);
+            string ProductImagepath = "D" + @currentDirectory + @"Media\productImage\";
+            File.Copy(imagePath, ProductImagepath);
+        }
+
+    }
+
+    public static class ImageConverter
+    {
+
+        public static string ConvertImageToByte(Image imageIn)
+        {
+            MemoryStream ms = new MemoryStream();
+            imageIn.Save(ms, System.Drawing.Imaging.ImageFormat.Gif);
+            return string.Join("",ms.ToArray());
+
+        }
+        public static Image ConvertByteToImage(string byteAsArray)
+        {
+            MemoryStream ms = new MemoryStream((byte[])byteAsArray.Split(' ').Cast<byte>());
+            Image returnImage = Image.FromStream(ms);
+            return returnImage;
         }
     }
 
@@ -173,9 +379,233 @@ namespace GUI
         public MyEventArgs() { }
     }
     
+    internal static class MyDispose
+    {
+        internal static void RecursivelyDispose(this Control parent)
+        {
+            if(parent.Controls.Count > 0)
+            {
+                parent.Controls[0].Dispose();
+                RecursivelyDispose(parent);
+            }              
+        }
 
+    }
+
+    public static class StringExtensionMethod
+    {
+        //code was copied in the stackoverflow,
+        // but who cares, just take advantage of it
+        public static int ToInt(this string Str)
+        {
+            if(Str == "False")
+            {
+                return 0;
+            }
+            else if(Str == "True")
+            {
+                return 1;
+            }
+            return int.Parse(Str);
+        }
+
+        public static bool ToBool(this string Str)
+        {
+            return Convert.ToBoolean(Str);
+        }
+
+        public static bool FilterKeyWord(this string Str, string keyword)
+        {
+            return LevenshtienDistance.findSimilarity(Str, keyword) > 0.2 ? true : false;
+        }
+        public static float ToFloat(this string Str)
+        {
+            return Convert.ToSingle(Str);
+
+        }
+    }
+
+    public static  class LevenshtienDistance
+    {
+        public static int getEditDistance(string X, string Y)
+        {
+            int m = X.Length;
+            int n = Y.Length;
+
+            int[][] T = new int[m + 1][];
+            for (int i = 0; i < m + 1; ++i)
+            {
+                T[i] = new int[n + 1];
+            }
+
+            for (int i = 1; i <= m; i++)
+            {
+                T[i][0] = i;
+            }
+            for (int j = 1; j <= n; j++)
+            {
+                T[0][j] = j;
+            }
+
+            int cost;
+            for (int i = 1; i <= m; i++)
+            {
+                for (int j = 1; j <= n; j++)
+                {
+                    cost = X[i - 1] == Y[j - 1] ? 0 : 1;
+                    T[i][j] = Math.Min(Math.Min(T[i - 1][j] + 1, T[i][j - 1] + 1),
+                            T[i - 1][j - 1] + cost);
+                }
+            }
+
+            return T[m][n];
+        }
+
+        public static double findSimilarity(string x, string y)
+        {
+            if (x == null || y == null)
+            {
+                throw new ArgumentException("Strings must not be null");
+            }
+
+            double maxLength = Math.Max(x.Length, y.Length);
+            if (maxLength > 0)
+            {
+                // optionally ignore case if needed
+                return (maxLength - getEditDistance(x, y)) / maxLength;
+            }
+            return 1.0;
+        }
+    }
+    public static class SimilarityPercentage
+    {
+        public static bool SimilarPercentage(this string Str, string Str1)
+        {
+            return CompareStrings(Str, Str1) > 0.4 ? true : false;
+        }
+        public static double CompareStrings(string str1, string str2)
+        {
+            List<string> pairs1 = WordLetterPairs(str1.ToUpper());
+            List<string> pairs2 = WordLetterPairs(str2.ToUpper());
+
+            int intersection = 0;
+            int union = pairs1.Count + pairs2.Count;
+
+            for (int i = 0; i < pairs1.Count; i++)
+            {
+                for (int j = 0; j < pairs2.Count; j++)
+                {
+                    if (pairs1[i] == pairs2[j])
+                    {
+                        intersection++;
+                        pairs2.RemoveAt(j);//Must remove the match to prevent "AAAA" from appearing to match "AA" with 100% success
+                        break;
+                    }
+                }
+            }
+
+            return (2.0 * intersection * 100) / union; //returns in percentage
+                                                       //return (2.0 * intersection) / union; //returns in score from 0 to 1
+        }
+        // Gets all letter pairs for each
+        private static List<string> WordLetterPairs(string str)
+        {
+            List<string> AllPairs = new List<string>();
+
+            // Tokenize the string and put the tokens/words into an array
+            string[] Words = Regex.Split(str, @"\s");
+
+            // For each word
+            for (int w = 0; w < Words.Length; w++)
+            {
+                if (!string.IsNullOrEmpty(Words[w]))
+                {
+                    // Find the pairs of characters
+                    String[] PairsInWord = LetterPairs(Words[w]);
+
+                    for (int p = 0; p < PairsInWord.Length; p++)
+                    {
+                        AllPairs.Add(PairsInWord[p]);
+                    }
+                }
+            }
+            return AllPairs;
+        }
+
+        // Generates an array containing every two consecutive letters in the input string
+        private static string[] LetterPairs(string str)
+        {
+            int numPairs = str.Length - 1;
+            string[] pairs = new string[numPairs];
+
+            for (int i = 0; i < numPairs; i++)
+            {
+                pairs[i] = str.Substring(i, 2);
+            }
+            return pairs;
+        }
+    }
+
+
+    public static class AsposoImaging
+    {
+        //Aspose.Imaging.Image
+        public static string ConvertWebpToJpgn(this string OriginalFileName, string defaultProductDiretory)
+        {
+            //string templatesFolder = @"c:\Users\USER\Downloads\templates\";
+
+            // Load the webp file in an instance of Image
+            using (var image = Aspose.Imaging.Image.Load(Path.Combine(defaultProductDiretory, OriginalFileName)))
+            {
+                // Create an instance of JpegOptions
+                var exportOptions = new Aspose.Imaging.ImageOptions.JpegOptions();
+
+                // Save webp to jpg
+                string newPath = (Path.Combine(defaultProductDiretory, $"{OriginalFileName}.jpg"));
+                image.Save(newPath, exportOptions);
+                File.Delete(newPath);
+                return newPath;
+            }
+        }
+        public static string ConvertWebpToPng(this string OriginalFileName, string defaultProductDiretory)
+        {
+            //You can get all image templates from https://github.com/aspose-imaging/Aspose.Imaging-for-.NET/blob/master/Examples/Data/Templates.zip
+            //After download archive please unpack it and replace templatesFolder variable path with your path to unpacked archive folder
+            //string templatesFolder = @"c:\Users\USER\Downloads\templates\";
+            // Load the webp file in an instance of Image
+            using (var image = Aspose.Imaging.Image.Load(Path.Combine(OriginalFileName)))
+            {
+                // Create an instance of PngOptions
+                var exportOptions = new Aspose.Imaging.ImageOptions.PngOptions() { ColorType = Aspose.Imaging.FileFormats.Png.PngColorType.TruecolorWithAlpha };
+
+                // Save webp to png
+                string newPath = (Path.Combine(defaultProductDiretory, OriginalFileName.Substring(0,OriginalFileName.Length-8).Split('\\').Last()));
+                image.Save(newPath.Replace('\\','/') + ".png", exportOptions);
+                File.Delete(newPath);
+                return newPath;
+            }
+        }
+
+        
+
+    }
 
     #region GUI Control
+    public static class ReadonytextBox
+    {
+        [DllImport("user32.dll")]
+        static extern bool HideCaret(IntPtr hWnd);
+
+        public static void HideCursor(this TextBox textBox)
+        {
+            textBox.GotFocus += (s1, e1) => {
+                HideCaret(textBox.Handle);
+            };
+            textBox.Cursor = Cursors.Arrow;
+        }
+
+    }
+
     internal class RoundedButton : Button
     {
         private int rdus = 100;

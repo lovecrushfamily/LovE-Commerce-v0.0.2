@@ -15,7 +15,7 @@ namespace BUS
             ProducID = shoppingCart_.ProducID;
         }
 
-        public void AddProduct(Product product)
+        public void AddProduct()
         {
             DAO.ShoppingCart.Add(this);
         }

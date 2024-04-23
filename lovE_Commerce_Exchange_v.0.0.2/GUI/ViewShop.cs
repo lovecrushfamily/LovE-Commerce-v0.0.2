@@ -17,9 +17,10 @@ namespace GUI
         public ViewShop()
         {
             InitializeComponent();
+            label21.BringToFront();
         }
 
-        public void SetShop(Shop shop)
+        public void SetExternalObject(Shop shop)
         {
             this.shop = shop;
 
@@ -39,7 +40,12 @@ namespace GUI
 
         private void ViewShop_Load(object sender, EventArgs e)
         {
-            label1.Text = shop.ShopName;
+            label_shopName.Text = shop.ShopName;
+        }
+
+        private void PictureBox1_Click(object sender, EventArgs e)
+        {
+            objectExternalLink(new Product(new DLL.Product_() { }));
         }
     }
 }

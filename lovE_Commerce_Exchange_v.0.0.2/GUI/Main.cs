@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -16,20 +17,19 @@ namespace GUI
     public partial class Main : Form
     {
         Form currentChildForm;
-        Account accounts;
-        Customer customer;
+        Account account;
+        //Customer customer;
 
         public Main()
         {
             InitializeComponent();
-            InitializeDatasets();
             InitializeController();
             IconButton_home_Click(null, null);
         }
 
-        private void InitializeDatasets()
+        public void InitializeDatasets(Account account)
         {
-
+            this.account= account;
         }
 
         #region Panel Dragable Code, Ignore it
@@ -54,13 +54,23 @@ namespace GUI
         private ViewProductSearch viewProductSearch;
         private ViewCategory viewCategory;
         private ViewShoppingCart viewShoppingCart;
+        private ViewOrder viewOrder;
 
         private WorkSpaceCustomer workSpaceCustomer;
         private WorkSpaceShopOwner workSpaceShopOwner;
 
+        private PopupSignIn SignIn;
+        private PopupSignUp SignUp;
+
 
         private void InitializeController()
         {
+            SignUp = new PopupSignUp();
+            SignUp.objectExternalLink += OpenExternalSignUp;
+
+            SignIn = new PopupSignIn();
+            SignIn.objectExternalLink += OpenExternalSignIn;
+
             viewProductDetail = new ViewProductDetail();
             //viewProductDetail.EventExternalLink += ViewProductDetail_EventExternalLink;
             viewProductDetail.objectExternalLink += OpenExternalProductDetail;
@@ -79,11 +89,14 @@ namespace GUI
 
             viewProductSearch = new ViewProductSearch();
             //viewProductSearch.EventExternalLink += ViewProductSearch_EventExternalLink;
-            viewProductDetail.objectExternalLink += OpenExternalLinkViewProductDetail;
+            viewProductSearch.objectExternalLink += OpenExternalLinkViewProductSearch;
 
             viewCategory = new ViewCategory();
             //viewCategory.EventExternalLink += ViewCategory_EventExternalLink;
             viewCategory.objectExternalLink += OpenExternalLinkViewCategory;
+
+            viewOrder = new ViewOrder();
+            viewOrder.objectExternalLink += OpenExternalLinkViewOrder;
 
             workSpaceCustomer = new WorkSpaceCustomer();
             //workSpaceCustomer.EventExternalLink += WorkSpaceCustomer_EventExternalLink;
@@ -94,15 +107,86 @@ namespace GUI
             workSpaceShopOwner.objectExternalLink += OpenExternalLinkShopOwnerWorkspace;
         }
 
+        private void OpenExternalForgetPassword(Entity entity)
+        {
+
+        }
+
+        private void OpenExternalSignIn(Entity entity)
+        {
+            if(entity is Account)
+            {
+                InitializeDatasets((Account)entity);
+                viewShoppingCart.SetAccount((Account)entity);
+            }
+            if(entity is CensorStaff)
+            {
+                SignIn.Hide();
+                (new WorkSpaceStaff((CensorStaff)entity)).ShowDialog();
+
+            } if(entity is Manager)
+            {
+                SignIn.Hide();
+                new WorkSpaceManager((Manager)entity).ShowDialog(); ;
+            } if(entity is Customer)
+            {
+                workSpaceCustomer.SetCustomer((Customer)entity);
+                //OpenChildForm(workSpaceCustomer);
+            }
+            if(entity is Category)
+            {
+                SignIn.Close();
+                new PopupSignUp().ShowDialog();
+            }
+            if(entity is Comment)
+            {
+                SignIn.Close();
+                new PopupForgetPassword().ShowDialog();
+            }
+
+        }
+
+        private void OpenExternalSignUp(Entity entity)
+        {
+            //if(entity is ShoppingCart)
+            //{
+            //    SignIn.Close();
+            //    SignUp.ShowDialog();
+
+            //}
+
+        }
+
+        private void OpenExternalLinkViewOrder(Entity entity)
+        {
+            if( entity is ShoppingCart)
+            {
+                OpenChildForm(viewShoppingCart);
+            } else if( entity is Product)
+            {
+                OpenChildForm(viewProductDetail);
+            }
+            
+        }
+
+        private void OpenExternalLinkViewProductSearch(Entity entity)
+        {
+            if (entity is Product)
+            {
+                viewProductDetail.SetExternalObject((Product)entity);
+                OpenChildForm(viewProductDetail);
+            }
+        }
+
         private void OpenExternalLinkViewHomePage(Entity entity)
         {
             if(entity is Product)
             {
-                viewProductDetail.SetProduct((Product)entity);
+                viewProductDetail.SetExternalObject((Product)entity);
                 OpenChildForm(viewProductDetail);
             } else if (entity is Category)
             {
-                viewCategory.SetCategory((Category)entity);
+                viewCategory.SetExternalObject((Category)entity);
                 OpenChildForm(viewCategory);
             }    
         }
@@ -114,28 +198,76 @@ namespace GUI
 
         private void OpenExternalLinkCustomerWorkspace(Entity entity)
         {
+            if(entity is Shop)
+            {
+                workSpaceShopOwner.SetExternalObject((Shop)entity);
+                OpenChildForm(workSpaceShopOwner);
+            }
+            if(entity is Account)
+            {
+                workSpaceCustomer = new WorkSpaceCustomer();
+                //workSpaceCustomer.EventExternalLink += WorkSpaceCustomer_EventExternalLink;
+                workSpaceCustomer.objectExternalLink += OpenExternalLinkCustomerWorkspace;
+                account = null;
+                OpenChildForm(viewHomePage);
+            }
 
         }
 
         private void OpenExternalLinkViewCategory(Entity entity)
         {
-
-        }
-
-        private void OpenExternalLinkViewProductDetail(Entity entity)
-        {
+            if (entity is Product)
+            {
+                viewProductDetail.SetExternalObject((Product)entity);
+                OpenChildForm(viewProductDetail);
+            } else if(entity is Category)
+            {
+                viewCategory.SetExternalObject((Category)entity);
+                OpenChildForm(viewCategory);
+            }       else if( entity is ShoppingCart)
+            {
+                OpenChildForm(viewHomePage);
+            }
+            
 
         }
 
         private void OpenExternalLinkViewShoppingCart(Entity entity)
         {
+            if(entity is Product)
+            {
+                viewProductDetail.SetExternalObject((Product)entity);
+                OpenChildForm(viewProductDetail);
+            }
+            else if( entity is Shop)
+            {
 
+                viewShop.SetExternalObject((Shop)entity);
+                OpenChildForm(viewShop);
+            }
+            //open ViewOrder
+            else if (entity is Order)
+            {
+                viewOrder.SetExternalObject((Order)entity);
+            }
+            else if (entity is OrderDetail)
+            {
+                viewOrder.SetExternalObject((OrderDetail)entity);
+            }
+            else if (entity is Customer)
+            {
+                viewOrder.SetExternalObject((Customer)entity);
+                OpenChildForm(viewOrder);
+            }
         }
-
 
         private void OpenExternalLinkViewShop(Entity entity)
         {
-
+            if (entity is Product)
+            {
+                viewProductDetail.SetExternalObject((Product)entity);
+                OpenChildForm(viewProductDetail);
+            }
         }
 
        
@@ -143,12 +275,41 @@ namespace GUI
         {
             if(entity is Shop)
             {
-                viewShop.SetShop((Shop) entity);
+                viewShop.SetExternalObject((Shop) entity);
                 OpenChildForm(viewShop);
+            } else if (entity is BUS.Message)
+            {
+                OpenChildForm(workSpaceCustomer);
+            } 
+            //open ViewOrder
+            else if (entity is Order)
+            {
+                viewOrder.SetExternalObject((Order)entity);
             }
+            else if (entity is OrderDetail)
+            {
+                viewOrder.SetExternalObject((OrderDetail)entity);
+            } else if( entity is Customer)
+            {
+                viewOrder.SetExternalObject((Customer)entity);
+                OpenChildForm(viewOrder);
+            }
+            else if( entity is Product)
+            {
+                // add to product
+            } else if(entity is Category)
+            {
+                viewCategory.SetExternalObject((Category)entity);
+                OpenChildForm(viewCategory);
+            }
+            if(entity is ShoppingCart)
+            {
+                //using it to navogate to homepage
+                OpenChildForm(viewHomePage);
+            }
+
         }
         #endregion
-
 
         void OpenChildForm(Form childForm)
         {
@@ -169,14 +330,32 @@ namespace GUI
             currentChildForm.BringToFront();
             currentChildForm.Show();
         }
+        
+
         private void IconButton_shoppingcart_Click(object sender, EventArgs e)
         {
-            OpenChildForm(viewShoppingCart);
+            if (account != null)
+            {
+                viewShoppingCart.SetAccount(account);
+                OpenChildForm(viewShoppingCart);
+            }
+            else
+            {
+                SignIn.ShowDialog();
+            }
         }
 
         private void IconButton_account_centre_Click(object sender, EventArgs e)
         {
-            OpenChildForm(workSpaceCustomer);
+            if(account != null)
+            {
+                workSpaceCustomer.SetAccount(account);
+                OpenChildForm(workSpaceCustomer);
+            }else
+            {
+                SignIn.ShowDialog();
+            }
+
         }
 
         private void IconButton_home_Click(object sender, EventArgs e)
@@ -186,12 +365,9 @@ namespace GUI
         
         private void IconButton_search_Click(object sender, EventArgs e)
         {
+            viewProductSearch.SearchKeyWord(textBox_search.Text);
             OpenChildForm(viewProductSearch);
         }
-        //private event 
-
-
-
 
 
 
@@ -228,6 +404,98 @@ namespace GUI
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+
+        private void PictureBox_logo_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new WorkSpaceManager(new Manager(new DLL.Manager_())));
+        }
+
+        private void GradientLabel1_Click(object sender, EventArgs e)
+        {
+            //OpenChildForm(new WorkSpaceStaff();
+        }
+
+
+        private void Label_Click(object sender, EventArgs e)
+        {
+            textBox_search.Text = (sender as Label).Text;
+            IconButton_search_Click(null, null);
+        }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+           
+            
+        }
+
+
+
+
+
+
+
+
+
+        #region Suggest and recommend product Name
+        string[] productName = Product.GetProducts().Select(pro => pro.ProductName).ToArray();
+
+
+
+
+        #endregion
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         private void Panel_cotrol_MouseDown(object sender, System.Windows.Forms.MouseEventArgs e)
         {

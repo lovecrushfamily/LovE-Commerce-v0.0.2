@@ -37,25 +37,26 @@ namespace DAO
             }
         }
 
-        public SqlDataReader ExecuteQuery(string sqlcommand, bool AutoCloseConnection = true)
-        {
-            //MyConnection.Instance.ExecuteQuery();
-            SqlDataReader data;
-            using (SqlConnection SqlConnection = new SqlConnection(ConnectionString))
-            {
+        //public SqlDataReader ExecuteQuery(string sqlcommand, bool AutoCloseConnection = true)
+        //{
+        //    //MyConnection.Instance.ExecuteQuery();
+        //    SqlDataReader data;
+        //    using (SqlConnection SqlConnection = new SqlConnection(ConnectionString))
+        //    {
 
-                SqlConnection.Open();
-                SqlCommand sqlCommand = new SqlCommand(sqlcommand, SqlConnection);
-                data = sqlCommand.ExecuteReader();
+        //        SqlConnection.Open();
+        //        SqlCommand sqlCommand = new SqlCommand(sqlcommand, SqlConnection);
+        //        data = sqlCommand.ExecuteReader();
              
 
-                if (AutoCloseConnection)
-                {
-                    SqlConnection.Close();
-                }
-            }
-            return data;
-        }
+        //        if (AutoCloseConnection)
+        //        {
+        //            SqlConnection.Close();
+        //        }
+        //    }
+        //    return data;
+        //}
+
         public static void ExecuteNonQuery(string command)
         {
             int rowReturn;
@@ -68,21 +69,22 @@ namespace DAO
                 sqlCommand.Dispose();
             }
         }
-        public DataSet ExecuteDataset(string sqlcommand)
-        {
-            DataSet dataset;
-            using (SqlConnection SqlConnection = new SqlConnection(ConnectionString))
-            {
-                SqlConnection.Open();
-                SqlDataAdapter dataadapter = new SqlDataAdapter(sqlcommand, SqlConnection);
-                dataset = new DataSet();
-                dataadapter.Fill(dataset);
-                SqlConnection.Close();
-                dataadapter.Dispose();
+        //public DataSet ExecuteDataset(string sqlcommand)
+        //{
+        //    DataSet dataset;
+        //    using (SqlConnection SqlConnection = new SqlConnection(ConnectionString))
+        //    {
+        //        SqlConnection.Open();
+        //        SqlDataAdapter dataadapter = new SqlDataAdapter(sqlcommand, SqlConnection);
+        //        dataset = new DataSet();
+        //        dataadapter.Fill(dataset);
+        //        SqlConnection.Close();
+        //        dataadapter.Dispose();
 
-            }
-            return dataset;
-        }
+        //    }
+        //    return dataset;
+        //}
+
         public static DataTable ExecuteDataTable(string sqlcommand)
         {
             DataTable datatable = new DataTable();
@@ -104,7 +106,8 @@ namespace DAO
                 SqlConnection.Open();
                 SqlDataAdapter datatableadapter = new SqlDataAdapter(sqlcommand, SqlConnection);
                 SqlCommand sqlCommand = new SqlCommand(sqlcommand, SqlConnection);
-                int keyID = sqlCommand.ExecuteNonQuery();
+                int keyID = (int)sqlCommand.ExecuteScalar();
+                //sqlCommand.ExecuteScalar();
                 SqlConnection.Close();
                 sqlCommand.Dispose();
                 return keyID;

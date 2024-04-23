@@ -40,7 +40,7 @@ namespace DAO
                     Content = row["Content"].ToString(),
                     Date = row["Date_"].ToString(),
                     Time = row["Time_"].ToString(),
-                    SeenState = row["SeenState"].ToString().ToBool(),
+                    SeenState = row["NotificationType"].ToString().ToBool(),
                     IsRecall = row["IsRecall"].ToString().ToBool()
                 };
             }

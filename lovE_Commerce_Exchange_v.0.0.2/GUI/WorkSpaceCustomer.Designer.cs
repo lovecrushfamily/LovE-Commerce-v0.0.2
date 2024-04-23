@@ -44,6 +44,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label_current_tab_name = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.gradientLabel3 = new GUI.CustomControl.GradientLabel();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox1)).BeginInit();
@@ -70,6 +71,7 @@
             // iconButton_logout
             // 
             this.iconButton_logout.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.iconButton_logout.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
             this.iconButton_logout.FlatAppearance.BorderSize = 0;
             this.iconButton_logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton_logout.Font = new System.Drawing.Font("Sans Serif Collection", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -88,10 +90,12 @@
             this.iconButton_logout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton_logout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton_logout.UseVisualStyleBackColor = true;
+            this.iconButton_logout.Click += new System.EventHandler(this.IconButton_logout_Click);
             // 
             // iconButton_messenger
             // 
             this.iconButton_messenger.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButton_messenger.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
             this.iconButton_messenger.FlatAppearance.BorderSize = 0;
             this.iconButton_messenger.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton_messenger.Font = new System.Drawing.Font("Sans Serif Collection", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -115,6 +119,7 @@
             // iconButton_shop
             // 
             this.iconButton_shop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButton_shop.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
             this.iconButton_shop.FlatAppearance.BorderSize = 0;
             this.iconButton_shop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton_shop.Font = new System.Drawing.Font("Sans Serif Collection", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -138,6 +143,7 @@
             // iconButton_notification
             // 
             this.iconButton_notification.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButton_notification.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
             this.iconButton_notification.FlatAppearance.BorderSize = 0;
             this.iconButton_notification.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton_notification.Font = new System.Drawing.Font("Sans Serif Collection", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -162,6 +168,7 @@
             // 
             this.iconButton_comment.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.iconButton_comment.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButton_comment.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
             this.iconButton_comment.FlatAppearance.BorderSize = 0;
             this.iconButton_comment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton_comment.Font = new System.Drawing.Font("Sans Serif Collection", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -185,6 +192,7 @@
             // iconButton_orders
             // 
             this.iconButton_orders.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButton_orders.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
             this.iconButton_orders.FlatAppearance.BorderSize = 0;
             this.iconButton_orders.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton_orders.Font = new System.Drawing.Font("Sans Serif Collection", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -208,6 +216,7 @@
             // iconButton_account
             // 
             this.iconButton_account.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButton_account.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
             this.iconButton_account.FlatAppearance.BorderSize = 0;
             this.iconButton_account.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton_account.Font = new System.Drawing.Font("Sans Serif Collection", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -321,16 +330,31 @@
             this.label3.TabIndex = 3;
             this.label3.Text = ">";
             // 
+            // gradientLabel3
+            // 
+            this.gradientLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.gradientLabel3.BeginColor = System.Drawing.Color.Plum;
+            this.gradientLabel3.Direction = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.gradientLabel3.EndColor = System.Drawing.Color.MediumSlateBlue;
+            this.gradientLabel3.Location = new System.Drawing.Point(318, 50);
+            this.gradientLabel3.Name = "gradientLabel3";
+            this.gradientLabel3.Size = new System.Drawing.Size(10, 552);
+            this.gradientLabel3.TabIndex = 4;
+            this.gradientLabel3.TextColorBegin = System.Drawing.SystemColors.Control;
+            this.gradientLabel3.TextColorEnd = System.Drawing.SystemColors.Control;
+            // 
             // WorkSpaceCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1042, 602);
+            this.Controls.Add(this.panel_customer_workspace_body);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.gradientLabel3);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label_current_tab_name);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.panel_customer_workspace_body);
-            this.Controls.Add(this.panel2);
             this.Name = "WorkSpaceCustomer";
             this.Text = "CustomerWorkSpace";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.WorkSpaceCustomer_FormClosed);
@@ -361,5 +385,6 @@
         private System.Windows.Forms.Label label_current_tab_name;
         private System.Windows.Forms.Label label3;
         private RJCircularPictureBox rjCircularPictureBox1;
+        private CustomControl.GradientLabel gradientLabel3;
     }
 }

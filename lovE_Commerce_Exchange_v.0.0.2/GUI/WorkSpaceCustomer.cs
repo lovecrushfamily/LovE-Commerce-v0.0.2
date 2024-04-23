@@ -19,7 +19,9 @@ namespace GUI
         private IconButton currentButton;
         private Form currentChildForm;
         public string subviewkey;
-        private Shop shop;
+        private Shop currentShop;
+        private Account currentAccount;
+        private Customer currentCustomer;
 
         #region Delegate
         // Defines a delegate. Sender is the object that is being returned to the other form.
@@ -38,6 +40,18 @@ namespace GUI
             InitializeComponent();
             //SubViewNavigator();
         }
+        public void SetAccount(Account account)
+        {
+            this.currentAccount = null;
+            this.currentAccount = account;
+        }
+        internal void SetCustomer(Customer customer)
+        {
+            this.currentCustomer = null;
+            this.currentCustomer = customer;
+
+        }
+
 
         #region GUI Control Effect
         private void ActivateButton(object sender)
@@ -109,7 +123,7 @@ namespace GUI
         }
         private void OpenCustomerAccount()
         {
-            OpenChildForm(new SubViewCustomerAccount());
+            OpenChildForm(new SubViewCustomerAccount(account: currentAccount, customer: currentCustomer));
         }
 
         private void IconButton_orders_Click(object sender, EventArgs e)
@@ -140,19 +154,19 @@ namespace GUI
         {
             ActivateButton(sender);
 
-            //using User-define event
-            //externalLinkChanged("shop");
-
-            //using delegate
-            //Signature = "shop";
-            //// If the delegate was instantiated, then call it
-            //if (externalLink != null)
-            //    externalLink(Signature);
-            //else
-            //    MessageBox.Show("Object external null");
-
-            //using System.eventhandle
-            EventExternalLink(this, new EventArgs());
+            if (currentCustomer.ShopOwner)
+            {
+                objectExternalLink(Shop.GetShops().SingleOrDefault(shop => shop.ShopOwner == currentCustomer.CustomerId));
+                //return;
+            }
+            if (!currentCustomer.ShopOwner &&
+                MessageBox.Show("You do not have any shop currently,\nWould you like to create your owner shop?","Create your own shop", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            {
+                new PopupShopRegister(currentCustomer).ShowDialog();
+                currentCustomer.SetShopOwnerOn().Update();
+                SetCustomer(Customer.GetCustomers().SingleOrDefault(cus => cus.CustomerId == currentCustomer.CustomerId));
+            }
+            
         }
 
         private void IconButton_messenger_Click(object sender, EventArgs e)
@@ -176,6 +190,16 @@ namespace GUI
         private void WorkSpaceCustomer_FormClosed(object sender, FormClosedEventArgs e)
         {
             subviewkey = string.Empty;
+        }
+
+        private void IconButton_logout_Click(object sender, EventArgs e)
+        {
+            if(MessageBox.Show("You want log out, are you sure","Notice",MessageBoxButtons.OKCancel) == DialogResult.OK)
+            {
+                objectExternalLink(currentAccount);
+
+            }
+
         }
     }
 }

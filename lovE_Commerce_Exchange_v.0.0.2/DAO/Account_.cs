@@ -15,7 +15,7 @@ namespace DAO
         {
             return MyConnection.ExcuteScalar($"sp_insertAccount '{account.UserName}', " +
                                                                 $"'{account.Password}', " +
-                                                                $"'{account.AuthenticatedEmail}'" +
+                                                                $" '{account.AuthenticatedEmail}', " +
                                                                 $"{account.Role}");
         }
         public static void Update(Account_ account)

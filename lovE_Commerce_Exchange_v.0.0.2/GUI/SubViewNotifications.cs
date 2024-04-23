@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BUS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,9 @@ namespace GUI
 {
     public partial class SubViewNotifications : Form
     {
+
+        Notification[] notifications;
+
         public SubViewNotifications()
         {
             InitializeComponent();

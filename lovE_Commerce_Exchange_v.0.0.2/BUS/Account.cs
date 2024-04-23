@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DAO;
 using DLL;
 
 namespace BUS
@@ -22,9 +23,10 @@ namespace BUS
             Online = account.Online;           
         }
 
-        public void Create()
+        public void Add()
         {
-            DAO.Account.Add(this);
+            Password = Password.EncryptPassword();
+            AccountID = DAO.Account.Add(this).ToString();
         }
 
         public void Update()
@@ -40,13 +42,22 @@ namespace BUS
 
         public void RecoveryPassword()
         {
-
+            string randomPassword = dbMail.CreatePassword(10);
+            string[] content = dbMail.ReadRecoveryPassword().Split('?');
+            dbMail.SendMail(AuthenticatedEmail, "Your verify code", htmlCode: content[0] + randomPassword + content[1])
+                ;
+            Password = SendEmailCode(email: AuthenticatedEmail).EncryptPassword();
+            DAO.Account.Update(this);
         }
 
-        public void SendEmailCode()
+        public static string SendEmailCode(string email)
         {
-
+            string verifyCode = dbMail.RandomVerifyCodeGenerator();
+            string[] content = dbMail.ReadVerifyCodeMail().Split('?');
+            dbMail.SendMail(email,"Your verify code", htmlCode: content[0] + verifyCode + content[1]);
+            return verifyCode;
         }
+        
 
         public bool ChangePassword()
         {
@@ -56,6 +67,31 @@ namespace BUS
         public static Account[] GetAccounts()
         {
             return DAO.Account.Select().Select(a => new Account(a)).ToArray();
+        }
+
+        
+
+        public bool VerifyExisted()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Account SetRememberLoginOn()
+        {
+            RememberLogin = true;
+            return this;
+        }
+        public Account SetRememberLoginOff()
+        {
+            RememberLogin = false;
+            return this;
+        }
+    }
+    public static class  SupportedFunctionAccount
+    {
+        public static Account GetStaffAccount(this Account[] accounts, CensorStaff staff)
+        {
+            return accounts.Single(account => account.AccountID == staff.StaffID);
         }
 
     }

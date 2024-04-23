@@ -1,0 +1,4 @@
+UserName/LoveCrushAdmin
+PassWord/lovecrushforever
+ManagerName/VuQuangPhuc
+Role/Manager

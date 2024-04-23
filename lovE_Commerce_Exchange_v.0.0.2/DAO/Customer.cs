@@ -14,11 +14,11 @@ namespace DAO
         {
             MyConnection.ExecuteNonQuery($"sp_insertCustomer {customer_.CustomerId}," +
                                                             $"'{customer_.CustomerName}'," +
-                                                            $"{customer_.Gender}," +
+                                                            $"{customer_.Gender.ToInt()}," +
                                                             $"'{customer_.PhoneNumber}'," +
-                                                            $"'{customer_.Image}'," +
-                                                            $"'{customer_.DateOfBirth}'," +
-                                                            $"'{customer_.Address}'");
+                                                            $"'default.png'," +
+                                                            $"'2000-1-1'," +
+                                                            $"'updating'");
         }
         public static void Update(Customer_ customer_)
         {
