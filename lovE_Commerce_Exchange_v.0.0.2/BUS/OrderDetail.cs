@@ -22,7 +22,7 @@ namespace BUS
 
         public void Add()
         {
-
+            DAO.OrderDetail.Add(this);
         }
         public void UpdateShopConfirmation()
         {

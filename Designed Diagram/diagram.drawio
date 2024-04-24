@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-04-20T16:09:27.448Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="a_ywjFGjdgzB6EM5osPW" version="24.2.7" type="device" pages="9">
+<mxfile host="app.diagrams.net" modified="2024-04-24T07:35:17.257Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="mtwXG6LSQ-L1gJM_Redb" version="24.2.8" type="device" pages="9">
   <diagram name="usecase" id="AkrvAjtsgT3PUjKPflpT">
     <mxGraphModel dx="1450" dy="1769" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
@@ -4921,7 +4921,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="_zRS3XpP9-lBKQnG3aw2" name="form">
-    <mxGraphModel dx="2815" dy="75" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="5400" dy="1476" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -5254,28 +5254,28 @@
         <mxCell id="iU5WTS4yxNg-sgiZBfVx-1" value="&lt;span style=&quot;font-size: 50px;&quot;&gt;Góc nhìn của shopOwner và customer về order&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-size: 50px;&quot;&gt;- shopOwner và Customer đều có workspace riêng cho việc quản lý Their order,&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 50px;&quot;&gt;từ phía ShopOwner trước thì khi shopOwner bán thì sẽ bán cho các đối tượng nhỏ lẻ hay nói&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 50px;&quot;&gt;khác là bán cho từng khách hàng 1, không cần biết cái đơn hàng của khách như thế nào mà&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 50px;&quot;&gt;chỉ quan tâm xem khách có mua hàng quán mình không, nếu có&amp;nbsp; thì xác nhận, thế là xong,&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 50px;&quot;&gt;vì thế nên ở phía giao diện không cần quan tâm quá nhiều về Order, nên là OrderDetail và khách hàng,&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 50px;&quot;&gt;Vậy nên chỉ cần 2 cái tab chính, chờ kiểm duyệt- đã kiểm duyệt - đã từ chối&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 50px;&quot;&gt;lúc kiểm duyệt có thể chấp nhân hoặc từ chối, đã kiểm duyệt tab với đã từ chối thì coi như là log luôn,&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 50px;&quot;&gt;khi khách hàng từ chối, đơn sẽ được đưa và tab đã từ chối&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 50px;&quot;&gt;bao gồm cả shop từ chối lẫn khách hàng từ chối&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="5378" y="1168" width="2305" height="612" as="geometry" />
         </mxCell>
-        <mxCell id="RqvzgdB_qYEF7M7Giet8-1" value="DropDownMenu" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="RqvzgdB_qYEF7M7Giet8-1" value="DropDownMenu" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="993" y="1168" width="279" height="45" as="geometry" />
         </mxCell>
-        <mxCell id="RqvzgdB_qYEF7M7Giet8-2" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="RqvzgdB_qYEF7M7Giet8-2" value="" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="990.5" y="1269" width="585" height="503" as="geometry" />
         </mxCell>
-        <mxCell id="RqvzgdB_qYEF7M7Giet8-3" value="Item.AddRange()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+        <mxCell id="RqvzgdB_qYEF7M7Giet8-3" value="Item.AddRange()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="1242" y="1230" width="109" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="RqvzgdB_qYEF7M7Giet8-4" value="TollstripMenuItem : ToolStripItem" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="1">
+        <mxCell id="RqvzgdB_qYEF7M7Giet8-4" value="TollstripMenuItem : ToolStripItem" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" parent="1" vertex="1">
           <mxGeometry x="1033" y="1325" width="506" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="RqvzgdB_qYEF7M7Giet8-9" value="TollstripMenuItem : ToolStripItem" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="1">
+        <mxCell id="RqvzgdB_qYEF7M7Giet8-9" value="TollstripMenuItem : ToolStripItem" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" parent="1" vertex="1">
           <mxGeometry x="1030" y="1458" width="506" height="114" as="geometry" />
         </mxCell>
-        <mxCell id="RqvzgdB_qYEF7M7Giet8-10" value="TollstripMenuItem : ToolStripItem" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="1">
+        <mxCell id="RqvzgdB_qYEF7M7Giet8-10" value="TollstripMenuItem : ToolStripItem" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" parent="1" vertex="1">
           <mxGeometry x="1038" y="1612" width="506" height="115" as="geometry" />
         </mxCell>
-        <mxCell id="RqvzgdB_qYEF7M7Giet8-12" value="TollstripMenuItem : ToolStripItem" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="1">
+        <mxCell id="RqvzgdB_qYEF7M7Giet8-12" value="TollstripMenuItem : ToolStripItem" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" parent="1" vertex="1">
           <mxGeometry x="1639" y="1380" width="506" height="106" as="geometry" />
         </mxCell>
-        <mxCell id="RqvzgdB_qYEF7M7Giet8-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1.001;entryY=0.405;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="RqvzgdB_qYEF7M7Giet8-12" target="RqvzgdB_qYEF7M7Giet8-4">
+        <mxCell id="RqvzgdB_qYEF7M7Giet8-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1.001;entryY=0.405;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="RqvzgdB_qYEF7M7Giet8-12" target="RqvzgdB_qYEF7M7Giet8-4" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="1616" y="1407" />
@@ -5283,7 +5283,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="RqvzgdB_qYEF7M7Giet8-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="RqvzgdB_qYEF7M7Giet8-14" target="RqvzgdB_qYEF7M7Giet8-4">
+        <mxCell id="RqvzgdB_qYEF7M7Giet8-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="RqvzgdB_qYEF7M7Giet8-14" target="RqvzgdB_qYEF7M7Giet8-4" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="1602" y="1571" />
@@ -5291,22 +5291,22 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="RqvzgdB_qYEF7M7Giet8-14" value="TollstripMenuItem : ToolStripItem" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="1">
+        <mxCell id="RqvzgdB_qYEF7M7Giet8-14" value="TollstripMenuItem : ToolStripItem" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" parent="1" vertex="1">
           <mxGeometry x="1645" y="1518" width="506" height="106" as="geometry" />
         </mxCell>
-        <mxCell id="RqvzgdB_qYEF7M7Giet8-18" value="DropDownItem.AddRange()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+        <mxCell id="RqvzgdB_qYEF7M7Giet8-18" value="DropDownItem.AddRange()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="2385" y="1479" width="166" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="RqvzgdB_qYEF7M7Giet8-19" value="TollstripMenuItem : ToolStripItem" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="1">
+        <mxCell id="RqvzgdB_qYEF7M7Giet8-19" value="TollstripMenuItem : ToolStripItem" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" parent="1" vertex="1">
           <mxGeometry x="2217" y="1540" width="506" height="106" as="geometry" />
         </mxCell>
-        <mxCell id="RqvzgdB_qYEF7M7Giet8-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="RqvzgdB_qYEF7M7Giet8-20" target="RqvzgdB_qYEF7M7Giet8-14">
+        <mxCell id="RqvzgdB_qYEF7M7Giet8-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="RqvzgdB_qYEF7M7Giet8-20" target="RqvzgdB_qYEF7M7Giet8-14" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="RqvzgdB_qYEF7M7Giet8-20" value="TollstripMenuItem : ToolStripItem" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="1">
+        <mxCell id="RqvzgdB_qYEF7M7Giet8-20" value="TollstripMenuItem : ToolStripItem" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" parent="1" vertex="1">
           <mxGeometry x="2220" y="1664" width="506" height="106" as="geometry" />
         </mxCell>
-        <mxCell id="RqvzgdB_qYEF7M7Giet8-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1.001;entryY=0.126;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="RqvzgdB_qYEF7M7Giet8-19" target="RqvzgdB_qYEF7M7Giet8-14">
+        <mxCell id="RqvzgdB_qYEF7M7Giet8-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1.001;entryY=0.126;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="RqvzgdB_qYEF7M7Giet8-19" target="RqvzgdB_qYEF7M7Giet8-14" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="2200" y="1593" />
@@ -5314,8 +5314,11 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="RqvzgdB_qYEF7M7Giet8-22" value="DropDownItem.AddRange()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+        <mxCell id="RqvzgdB_qYEF7M7Giet8-22" value="DropDownItem.AddRange()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="1815" y="1328" width="166" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="CsQXy09sC71UxrQagN_4-1" value="&lt;span style=&quot;font-size: 50px;&quot;&gt;Những cái cần lưu ý về cái&amp;nbsp; winform ảo ma,&amp;nbsp;&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-size: 50px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 50px;&quot;&gt;1, thứ tự thêm control rất quan trọng, nếu không đúng thứ tự,&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 50px;&quot;&gt;cái nào thêm sau thi xuống dưới còn cái nao thêm trước thì lại nổi lên, thế ms ảo chứ fdfdfd&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 50px;&quot;&gt;Cần phải để ý cái đấy không lỗi layout,&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 50px;&quot;&gt;2 là cái autosizemode của mấy cái font, kiểu nó là cái thiết lập khi mà&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 50px;&quot;&gt;&amp;nbsp;mình muốn co dãnn form ấy, nó sẽ chỉnh theo font size hay dpi, nên dùng dpi, font hay vỡ trang&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&#39;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="5456" y="2379" width="2143" height="490" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

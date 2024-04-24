@@ -162,10 +162,21 @@ namespace GUI
             if( entity is ShoppingCart)
             {
                 OpenChildForm(viewShoppingCart);
-            } else if( entity is Product)
+            }
+            else if( entity is Product)
             {
                 OpenChildForm(viewProductDetail);
+            }      else if(entity is Account)
+            {
+                workSpaceCustomer.HeadingtoWaitingOrder();
+                OpenChildForm(workSpaceCustomer);
             }
+                  
+            else if(entity is Customer)
+            {
+                OpenChildForm(viewHomePage);
+            }
+           
             
         }
 
@@ -246,18 +257,20 @@ namespace GUI
                 OpenChildForm(viewShop);
             }
             //open ViewOrder
-            else if (entity is Order)
-            {
-                viewOrder.SetExternalObject((Order)entity);
-            }
+
             else if (entity is OrderDetail)
             {
                 viewOrder.SetExternalObject((OrderDetail)entity);
             }
             else if (entity is Customer)
             {
-                viewOrder.SetExternalObject((Customer)entity);
+                viewOrder.SetExternalObject(account);
+                viewOrder.rjButton_changeToCart.Enabled = true;
                 OpenChildForm(viewOrder);
+            } 
+            else if (entity is ShoppingCart)
+            {
+                viewOrder.SetExternalObject((ShoppingCart)entity);
             }
         }
 
@@ -268,48 +281,86 @@ namespace GUI
                 viewProductDetail.SetExternalObject((Product)entity);
                 OpenChildForm(viewProductDetail);
             }
+            if (entity is BUS.Message)
+            {
+                workSpaceCustomer.HeadingtoMessage((BUS.Message)entity);
+                OpenChildForm(workSpaceCustomer);
+            }
         }
 
        
+
+
+
+
+
+
         private void OpenExternalProductDetail(Entity entity)
         {
             if(entity is Shop)
             {
                 viewShop.SetExternalObject((Shop) entity);
                 OpenChildForm(viewShop);
-            } else if (entity is BUS.Message)
+            }
+            
+            if (entity is BUS.Message)
             {
+                workSpaceCustomer.HeadingtoMessage((BUS.Message)entity);
                 OpenChildForm(workSpaceCustomer);
             } 
-            //open ViewOrder
-            else if (entity is Order)
+
+
+            if(entity is ShoppingCart)
             {
-                viewOrder.SetExternalObject((Order)entity);
+                //using it to clear the orderdetail list before
+                viewOrder.SetExternalObject((ShoppingCart)entity);
             }
-            else if (entity is OrderDetail)
+            //open ViewOrder
+             if (entity is OrderDetail)
             {
                 viewOrder.SetExternalObject((OrderDetail)entity);
-            } else if( entity is Customer)
+            }  if( entity is Customer)
             {
-                viewOrder.SetExternalObject((Customer)entity);
+                if (account is null)
+                {
+                    SignIn.ShowDialog();
+                    return;
+                }
+                viewOrder.SetExternalObject(account);
+                viewOrder.rjButton_changeToCart.Enabled = false;
                 OpenChildForm(viewOrder);
             }
-            else if( entity is Product)
+
+
+
+             if( entity is Product)
             {
-                // add to product
-            } else if(entity is Category)
+                if(account is null)
+                {
+                    SignIn.ShowDialog();
+                    return;
+                }
+                viewShoppingCart.SetAccount(account);
+                viewShoppingCart.SetExternalObject((Product)entity);
+            }
+
+
+
+             if(entity is Category)
             {
                 viewCategory.SetExternalObject((Category)entity);
                 OpenChildForm(viewCategory);
             }
-            if(entity is ShoppingCart)
+
+            if (entity is Comment)
             {
                 //using it to navogate to homepage
                 OpenChildForm(viewHomePage);
             }
 
         }
-        #endregion
+
+
 
         void OpenChildForm(Form childForm)
         {
@@ -326,6 +377,7 @@ namespace GUI
 
 
             panel_body.Controls.Add(currentChildForm);
+            //currentChildForm.AutoScaleMode = AutoScaleMode.Dpi;
             panel_body.Tag = currentChildForm;
             currentChildForm.BringToFront();
             currentChildForm.Show();
@@ -334,15 +386,13 @@ namespace GUI
 
         private void IconButton_shoppingcart_Click(object sender, EventArgs e)
         {
-            if (account != null)
-            {
-                viewShoppingCart.SetAccount(account);
-                OpenChildForm(viewShoppingCart);
-            }
-            else
+            if (account is null)
             {
                 SignIn.ShowDialog();
+                return;
             }
+            viewShoppingCart.SetAccount(account);
+            OpenChildForm(viewShoppingCart);
         }
 
         private void IconButton_account_centre_Click(object sender, EventArgs e)
@@ -370,6 +420,10 @@ namespace GUI
         }
 
 
+
+
+
+        #endregion
 
 
 
@@ -437,17 +491,26 @@ namespace GUI
 
 
 
-        #region Suggest and recommend product Name
+
+
+
+
+
+
+
+        #region Suggest and recommend product Name (Dangerous area, be carefull)
         string[] productName = Product.GetProducts().Select(pro => pro.ProductName).ToArray();
 
 
 
 
+
+
+
+
+
+
         #endregion
-
-
-
-
 
 
 
@@ -535,6 +598,11 @@ namespace GUI
         private void GradientLabel3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void GradientLabel4_logo_Click(object sender, EventArgs e)
+        {
+            //MessageBox.Show(this.Size.ToString());
         }
     }
 }

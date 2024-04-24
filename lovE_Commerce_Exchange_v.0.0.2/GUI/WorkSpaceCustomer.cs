@@ -51,6 +51,17 @@ namespace GUI
             this.currentCustomer = customer;
 
         }
+        public void HeadingtoMessage(BUS.Message message)
+        {
+            //navigate here
+            //using this message object to check, and navigate to the message GUI, little hard
+            //especially using message.ReceivedId to check the one who you're heading for.
+
+        }
+        public void HeadingtoWaitingOrder()
+        {
+            //open waiting order;
+        }
 
 
         #region GUI Control Effect

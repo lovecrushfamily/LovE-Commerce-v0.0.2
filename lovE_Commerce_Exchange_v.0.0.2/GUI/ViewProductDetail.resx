@@ -5157,7 +5157,7 @@ Giá sản phẩm trên Tiki đã bao gồm thuế theo luật hiện hành. Bê
         AAAAAAAAAAAAAAAAAAAAAAAALerXfu3/AanO2ZWYQQAyAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="rjCircularPictureBox2.ErrorImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="rjCircularPictureBox_shopComentImage.ErrorImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         DAAACwwBP0AiyAAAMotJREFUeF7t3QmYVOWZ6PFokpm5mfvMnWdmTDKZTGbmXmcJUlV96nT1vrDJvkOz
@@ -5379,7 +5379,7 @@ Giá sản phẩm trên Tiki đã bao gồm thuế theo luật hiện hành. Bê
         TgAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="rjCircularPictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="rjCircularPictureBox_shopComentImage.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         DAAACwwBP0AiyAAAMotJREFUeF7t3QmYVOWZ6PFokpm5mfvMnWdmTDKZTGbmXmcJUlV96nT1vrDJvkOz
@@ -5601,7 +5601,7 @@ Giá sản phẩm trên Tiki đã bao gồm thuế theo luật hiện hành. Bê
         TgAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="pictureBox32.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="pictureBox_commment_5.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAYAAABV7bNHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAh
         NQAAITUBTKZc8wAAArpJREFUeF7tW9tNAzEQdAmUQAmUQAkpgQ6gA9IBdAAdQAeRCAmfV0JKSAnHrLML
@@ -5619,7 +5619,7 @@ Giá sản phẩm trên Tiki đã bao gồm thuế theo luật hiện hành. Bê
         AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="pictureBox33.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="pictureBox_commment_4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAYAAABV7bNHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAh
         NQAAITUBTKZc8wAAArpJREFUeF7tW9tNAzEQdAmUQAmUQAkpgQ6gA9IBdAAdQAeRCAmfV0JKSAnHrLML
@@ -5637,7 +5637,7 @@ Giá sản phẩm trên Tiki đã bao gồm thuế theo luật hiện hành. Bê
         AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="pictureBox34.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="pictureBox_commment_3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAYAAABV7bNHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAh
         NQAAITUBTKZc8wAAArpJREFUeF7tW9tNAzEQdAmUQAmUQAkpgQ6gA9IBdAAdQAeRCAmfV0JKSAnHrLML
@@ -5655,7 +5655,7 @@ Giá sản phẩm trên Tiki đã bao gồm thuế theo luật hiện hành. Bê
         AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="pictureBox35.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="pictureBox_commment_2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAYAAABV7bNHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAh
         NQAAITUBTKZc8wAAArpJREFUeF7tW9tNAzEQdAmUQAmUQAkpgQ6gA9IBdAAdQAeRCAmfV0JKSAnHrLML
@@ -5673,7 +5673,7 @@ Giá sản phẩm trên Tiki đã bao gồm thuế theo luật hiện hành. Bê
         AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="pictureBox37.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="pictureBox_purchaseVerify.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABGdBTUEAALGPC/xhBQAACL9JREFUeF7t
         3etvHNUZBnBTSsH9EP4ApKqIBKFWrQhVL1GRkKiKALVqJYpK0oqoRb3MBBIVJBAK5RpKIAaKQpQ2jhNa
@@ -5716,7 +5716,7 @@ Giá sản phẩm trên Tiki đã bao gồm thuế theo luật hiện hành. Bê
         IpFIJBKJZPmkoeF/nn17XrBMYdgAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="pictureBox36.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="pictureBox_commment_1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAYAAABV7bNHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAh
         NQAAITUBTKZc8wAAArpJREFUeF7tW9tNAzEQdAmUQAmUQAkpgQ6gA9IBdAAdQAeRCAmfV0JKSAnHrLML
@@ -5734,7 +5734,7 @@ Giá sản phẩm trên Tiki đã bao gồm thuế theo luật hiện hành. Bê
         AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="label32.Text" xml:space="preserve">
+  <data name="label_comment.Text" xml:space="preserve">
     <value>First time using high-end Samsung products and also first time buying high-value items on Tiki. Everything is very good. I am very satisfied. Additional information for you is that the order does not come with a case, so you should buy it with you when buying the phone</value>
   </data>
   <data name="pictureBox31.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

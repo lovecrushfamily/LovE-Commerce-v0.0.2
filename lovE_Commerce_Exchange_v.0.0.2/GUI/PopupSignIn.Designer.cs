@@ -34,7 +34,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.flowLayoutPanel_rememberLoginAccounts = new System.Windows.Forms.FlowLayoutPanel();
             this.panel_rememberLogin = new System.Windows.Forms.Panel();
+            this.rjButton_removeRememberLogin = new CustomControls.RJControls.RJButton();
             this.pictureBox_customerImage = new System.Windows.Forms.PictureBox();
+            this.rjButton1 = new CustomControls.RJControls.RJButton();
             this.comboBox_role = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -43,8 +45,6 @@
             this.gradientLabel3 = new GUI.CustomControl.GradientLabel();
             this.gradientLabel2 = new GUI.CustomControl.GradientLabel();
             this.gradientLabel1 = new GUI.CustomControl.GradientLabel();
-            this.rjButton_removeRememberLogin = new CustomControls.RJControls.RJButton();
-            this.rjButton1 = new CustomControls.RJControls.RJButton();
             this.rjTextBox_password = new CustomControls.RJControls.RJTextBox();
             this.rjTextBox_username = new CustomControls.RJControls.RJTextBox();
             this.rjButton3 = new CustomControls.RJControls.RJButton();
@@ -112,6 +112,27 @@
             this.panel_rememberLogin.Size = new System.Drawing.Size(120, 120);
             this.panel_rememberLogin.TabIndex = 0;
             // 
+            // rjButton_removeRememberLogin
+            // 
+            this.rjButton_removeRememberLogin.BackColor = System.Drawing.SystemColors.Control;
+            this.rjButton_removeRememberLogin.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.rjButton_removeRememberLogin.BorderColor = System.Drawing.SystemColors.Control;
+            this.rjButton_removeRememberLogin.BorderRadius = 15;
+            this.rjButton_removeRememberLogin.BorderSize = 1;
+            this.rjButton_removeRememberLogin.FlatAppearance.BorderSize = 0;
+            this.rjButton_removeRememberLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton_removeRememberLogin.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjButton_removeRememberLogin.ForeColor = System.Drawing.Color.DimGray;
+            this.rjButton_removeRememberLogin.Location = new System.Drawing.Point(75, 5);
+            this.rjButton_removeRememberLogin.Margin = new System.Windows.Forms.Padding(5);
+            this.rjButton_removeRememberLogin.Name = "rjButton_removeRememberLogin";
+            this.rjButton_removeRememberLogin.Size = new System.Drawing.Size(40, 40);
+            this.rjButton_removeRememberLogin.TabIndex = 10;
+            this.rjButton_removeRememberLogin.Text = "x";
+            this.rjButton_removeRememberLogin.TextColor = System.Drawing.Color.DimGray;
+            this.rjButton_removeRememberLogin.UseVisualStyleBackColor = false;
+            this.rjButton_removeRememberLogin.Click += new System.EventHandler(this.RjButton_removeRememberLogin_Click);
+            // 
             // pictureBox_customerImage
             // 
             this.pictureBox_customerImage.BackColor = System.Drawing.SystemColors.Control;
@@ -123,6 +144,26 @@
             this.pictureBox_customerImage.TabIndex = 2;
             this.pictureBox_customerImage.TabStop = false;
             this.pictureBox_customerImage.Click += new System.EventHandler(this.PictureBox_customerImage_Click);
+            // 
+            // rjButton1
+            // 
+            this.rjButton1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.rjButton1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.rjButton1.BorderColor = System.Drawing.Color.LightPink;
+            this.rjButton1.BorderRadius = 15;
+            this.rjButton1.BorderSize = 1;
+            this.rjButton1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rjButton1.Enabled = false;
+            this.rjButton1.FlatAppearance.BorderSize = 0;
+            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton1.ForeColor = System.Drawing.Color.White;
+            this.rjButton1.Location = new System.Drawing.Point(0, 0);
+            this.rjButton1.Name = "rjButton1";
+            this.rjButton1.Size = new System.Drawing.Size(120, 120);
+            this.rjButton1.TabIndex = 0;
+            this.rjButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.rjButton1.TextColor = System.Drawing.Color.White;
+            this.rjButton1.UseVisualStyleBackColor = false;
             // 
             // comboBox_role
             // 
@@ -242,47 +283,6 @@
             this.gradientLabel1.TextColorBegin = System.Drawing.Color.SlateBlue;
             this.gradientLabel1.TextColorEnd = System.Drawing.Color.Fuchsia;
             // 
-            // rjButton_removeRememberLogin
-            // 
-            this.rjButton_removeRememberLogin.BackColor = System.Drawing.SystemColors.Control;
-            this.rjButton_removeRememberLogin.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.rjButton_removeRememberLogin.BorderColor = System.Drawing.SystemColors.Control;
-            this.rjButton_removeRememberLogin.BorderRadius = 15;
-            this.rjButton_removeRememberLogin.BorderSize = 1;
-            this.rjButton_removeRememberLogin.FlatAppearance.BorderSize = 0;
-            this.rjButton_removeRememberLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton_removeRememberLogin.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjButton_removeRememberLogin.ForeColor = System.Drawing.Color.DimGray;
-            this.rjButton_removeRememberLogin.Location = new System.Drawing.Point(75, 5);
-            this.rjButton_removeRememberLogin.Margin = new System.Windows.Forms.Padding(5);
-            this.rjButton_removeRememberLogin.Name = "rjButton_removeRememberLogin";
-            this.rjButton_removeRememberLogin.Size = new System.Drawing.Size(40, 40);
-            this.rjButton_removeRememberLogin.TabIndex = 10;
-            this.rjButton_removeRememberLogin.Text = "x";
-            this.rjButton_removeRememberLogin.TextColor = System.Drawing.Color.DimGray;
-            this.rjButton_removeRememberLogin.UseVisualStyleBackColor = false;
-            this.rjButton_removeRememberLogin.Click += new System.EventHandler(this.RjButton_removeRememberLogin_Click);
-            // 
-            // rjButton1
-            // 
-            this.rjButton1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.rjButton1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.rjButton1.BorderColor = System.Drawing.Color.LightPink;
-            this.rjButton1.BorderRadius = 15;
-            this.rjButton1.BorderSize = 1;
-            this.rjButton1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rjButton1.Enabled = false;
-            this.rjButton1.FlatAppearance.BorderSize = 0;
-            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.Location = new System.Drawing.Point(0, 0);
-            this.rjButton1.Name = "rjButton1";
-            this.rjButton1.Size = new System.Drawing.Size(120, 120);
-            this.rjButton1.TabIndex = 0;
-            this.rjButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.rjButton1.TextColor = System.Drawing.Color.White;
-            this.rjButton1.UseVisualStyleBackColor = false;
-            // 
             // rjTextBox_password
             // 
             this.rjTextBox_password.BackColor = System.Drawing.SystemColors.Control;
@@ -400,8 +400,8 @@
             // 
             // PopupSignIn
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(982, 583);
             this.Controls.Add(this.pictureBox1);

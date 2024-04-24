@@ -1,4 +1,5 @@
-﻿using FontAwesome.Sharp;
+﻿using BUS;
+using FontAwesome.Sharp;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -7,6 +8,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Security.Cryptography;
 using System.Text;
@@ -423,6 +425,47 @@ namespace GUI
             return Convert.ToSingle(Str);
 
         }
+        public static IEnumerable<char> ToDescription(this string Str)
+        {
+            string[] lines = Str.Split('\n');
+            int limitEachLine = 60;
+            //int count = 
+            foreach(string line in lines)
+            {
+                foreach(char cha in line)
+                {
+                    if(limitEachLine == 0)
+                    {
+                        yield return '\n';
+                        limitEachLine = 60;
+                    }
+                    limitEachLine--;
+                    yield return cha;
+                }
+            }
+        }
+        public static int CalculatedDiscount(this string original, Voucher voucher)
+        {
+            if(voucher.VoucherType == "1" && original.ToInt() > voucher.MinAmount.ToInt())
+            {
+                 return original.ToInt() - voucher.FixedAmount.ToInt();
+            }
+            else if(voucher.VoucherType == "2")
+            {
+                int discount = original.ToInt() / 100 * voucher.Percentage.ToInt() > voucher.MaxAmount.ToInt() ? voucher.MaxAmount.ToInt() : original.ToInt() / 100 * voucher.Percentage.ToInt();
+                return original.ToInt() - discount;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+        public static string TurnToPriceFormat(this string Str)
+        {
+            var info = System.Globalization.CultureInfo.GetCultureInfo("vi-VN");
+            return String.Format(info, "{0:c}", Str);
+
+        }
     }
 
     public static  class LevenshtienDistance
@@ -547,48 +590,6 @@ namespace GUI
     }
 
 
-    public static class AsposoImaging
-    {
-        //Aspose.Imaging.Image
-        public static string ConvertWebpToJpgn(this string OriginalFileName, string defaultProductDiretory)
-        {
-            //string templatesFolder = @"c:\Users\USER\Downloads\templates\";
-
-            // Load the webp file in an instance of Image
-            using (var image = Aspose.Imaging.Image.Load(Path.Combine(defaultProductDiretory, OriginalFileName)))
-            {
-                // Create an instance of JpegOptions
-                var exportOptions = new Aspose.Imaging.ImageOptions.JpegOptions();
-
-                // Save webp to jpg
-                string newPath = (Path.Combine(defaultProductDiretory, $"{OriginalFileName}.jpg"));
-                image.Save(newPath, exportOptions);
-                File.Delete(newPath);
-                return newPath;
-            }
-        }
-        public static string ConvertWebpToPng(this string OriginalFileName, string defaultProductDiretory)
-        {
-            //You can get all image templates from https://github.com/aspose-imaging/Aspose.Imaging-for-.NET/blob/master/Examples/Data/Templates.zip
-            //After download archive please unpack it and replace templatesFolder variable path with your path to unpacked archive folder
-            //string templatesFolder = @"c:\Users\USER\Downloads\templates\";
-            // Load the webp file in an instance of Image
-            using (var image = Aspose.Imaging.Image.Load(Path.Combine(OriginalFileName)))
-            {
-                // Create an instance of PngOptions
-                var exportOptions = new Aspose.Imaging.ImageOptions.PngOptions() { ColorType = Aspose.Imaging.FileFormats.Png.PngColorType.TruecolorWithAlpha };
-
-                // Save webp to png
-                string newPath = (Path.Combine(defaultProductDiretory, OriginalFileName.Substring(0,OriginalFileName.Length-8).Split('\\').Last()));
-                image.Save(newPath.Replace('\\','/') + ".png", exportOptions);
-                File.Delete(newPath);
-                return newPath;
-            }
-        }
-
-        
-
-    }
 
     #region GUI Control
     public static class ReadonytextBox

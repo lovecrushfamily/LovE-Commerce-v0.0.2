@@ -15,7 +15,7 @@ namespace DAO
                                                                 $"{orderDetail_.ProductId}," +
                                                                 $"{orderDetail_.Quantity}," +
                                                                 $"'{orderDetail_.UnitPrice}'," +
-                                                                $"'{orderDetail_.Discount}'" +
+                                                                $"'{orderDetail_.Discount}'," +
                                                                 $"{orderDetail_.VoucherID}");
 
         }

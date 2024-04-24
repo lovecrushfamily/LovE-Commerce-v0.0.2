@@ -22,7 +22,7 @@ namespace BUS
 
         public void RemoveProduct()
         {
-
+            DAO.ShoppingCart.Delete(this);
         }
 
         public static ShoppingCart[] GetShoppingCarts()

@@ -120,7 +120,11 @@ create table production.OrderDetail (OrderDetailID int identity(1,1) primary key
 									UnitPrice varchar(255) not null,	
 									OrderDetailConfirmState bit default 0 not null,
 									Discount varchar(255) not null,
-									VoucherID int references production.Voucher(VoucherID))
+									VoucherID int)
+
+									alter table production.OrderDetail drop constraint FK__OrderDeta__Vouch__5EBF139D
+									alter table 
+
 
 create table system_.Notification_ (NotificationID int identity(1,1) primary key,
 									ReceiverID int references user_.Customer(CustomerID) 

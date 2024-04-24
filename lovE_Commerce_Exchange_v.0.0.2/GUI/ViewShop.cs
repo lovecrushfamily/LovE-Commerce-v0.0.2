@@ -14,17 +14,7 @@ namespace GUI
     public partial class ViewShop : Form
     {
         Shop shop;
-        public ViewShop()
-        {
-            InitializeComponent();
-            label21.BringToFront();
-        }
-
-        public void SetExternalObject(Shop shop)
-        {
-            this.shop = shop;
-
-        }
+        
 
         #region Delegate
         // Defines a delegate. Sender is the object that is being returned to the other form.
@@ -38,6 +28,26 @@ namespace GUI
         public event EventHandler EventExternalLink;
         #endregion
 
+        public ViewShop()
+        {
+            InitializeComponent();
+            label21.BringToFront();
+            panel_optionContainer.BringToFront();
+        }
+
+        public void SetExternalObject(Shop shop)
+        {
+            this.shop = shop;
+            LoadedEverything();
+            //LoadCategory();
+
+
+        }
+
+        private void LoadedEverything()
+        {
+
+        }
         private void ViewShop_Load(object sender, EventArgs e)
         {
             label_shopName.Text = shop.ShopName;
@@ -46,6 +56,16 @@ namespace GUI
         private void PictureBox1_Click(object sender, EventArgs e)
         {
             objectExternalLink(new Product(new DLL.Product_() { }));
+        }
+
+        private void IconButton_chatShop_Click(object sender, EventArgs e)
+        {
+            objectExternalLink(new BUS.Message(new DLL.Message_() { ReceivedId = shop.ShopOwner}));
+        }
+
+        private void IconButton_search_Click(object sender, EventArgs e)
+        {
+            //search algprith, here
         }
     }
 }

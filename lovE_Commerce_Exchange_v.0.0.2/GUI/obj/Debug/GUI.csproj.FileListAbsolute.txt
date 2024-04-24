@@ -66,5 +66,3 @@ D:\Documents\project\lovE_Commerce_Exchange\lovE_Commerce_Exchange_v.0.0.2\GUI\o
 D:\Documents\project\lovE_Commerce_Exchange\lovE_Commerce_Exchange_v.0.0.2\GUI\obj\Debug\GUI.PopupForgetPassword.resources
 D:\Documents\project\lovE_Commerce_Exchange\lovE_Commerce_Exchange_v.0.0.2\GUI\obj\Debug\GUI.PopupShopRegister.resources
 D:\Documents\project\lovE_Commerce_Exchange\lovE_Commerce_Exchange_v.0.0.2\GUI\obj\Debug\GUI.SubViewShopInfor.resources
-D:\Documents\project\lovE_Commerce_Exchange\lovE_Commerce_Exchange_v.0.0.2\GUI\bin\Debug\Aspose.Imaging.dll
-D:\Documents\project\lovE_Commerce_Exchange\lovE_Commerce_Exchange_v.0.0.2\GUI\bin\Debug\Aspose.Imaging.xml
