@@ -17,10 +17,13 @@ namespace DAO
         }
         public static void Update(Order_ order_)
         {
+            int CustomerOrderState = order_.CustomerOrderState ? 1 : 0;
+            int OrderConfirmState = order_.OrderConfirmState ? 1 : 0;
+            int ReceivedState = order_.ReceivedState ? 1 : 0;
             MyConnection.ExecuteNonQuery($"sp_updateOrder {order_.OrderId}," +
-                                                            $"{order_.CustomerOrderState}," +
-                                                            $"{order_.OrderConfirmState}" +
-                                                            $"{order_.ReceivedState}");
+                                                            $"{CustomerOrderState}," +
+                                                            $"{OrderConfirmState}," +
+                                                            $"{ ReceivedState}");
         }
         public static void Delete(Order_ order_)
         {

@@ -2,6 +2,7 @@
 using CustomControls.RJControls;
 using System;
 using System.Data;
+using System.Diagnostics;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -231,6 +232,11 @@ namespace GUI
 
 
             return panel_rememberLogin;
+        }
+
+        private void RjButton_google_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://accounts.google.com/v3/signin/identifier?authuser=0&continue=https%3A%2F%2Fwww.google.com%2F&ec=GAlAmgQ&hl=vi&flowName=GlifWebSignIn&flowEntry=AddSession&dsh=S84514019%3A1714207066266077&theme=mn&ddm=0".ToString());
         }
     }
 }

@@ -36,11 +36,12 @@
             this.tabPage_staffs = new System.Windows.Forms.TabPage();
             this.panel_staff = new System.Windows.Forms.Panel();
             this.groupBox_staff = new System.Windows.Forms.GroupBox();
+            this.panel_staffMoreHolder = new System.Windows.Forms.Panel();
+            this.rjButton_staffMore = new CustomControls.RJControls.RJButton();
             this.pictureBox_staffImage = new System.Windows.Forms.PictureBox();
             this.checkBox_staffCheck = new System.Windows.Forms.CheckBox();
             this.label_staffId = new System.Windows.Forms.Label();
             this.label_staffName = new System.Windows.Forms.Label();
-            this.rjButton_staffMore = new CustomControls.RJControls.RJButton();
             this.rjButton_deleteProduct = new CustomControls.RJControls.RJButton();
             this.rjButton_addNewStaffNav = new CustomControls.RJControls.RJButton();
             this.iconButton_searchShopProducts = new FontAwesome.Sharp.IconButton();
@@ -86,12 +87,12 @@
             this.tabPage_shopOwnerInfor = new System.Windows.Forms.TabPage();
             this.gradientLabel2 = new GUI.CustomControl.GradientLabel();
             this.gradientLabel1 = new GUI.CustomControl.GradientLabel();
-            this.panel_staffMoreHolder = new System.Windows.Forms.Panel();
             this.panel_optionContainer.SuspendLayout();
             this.tabControl_users.SuspendLayout();
             this.tabPage_staffs.SuspendLayout();
             this.panel_staff.SuspendLayout();
             this.groupBox_staff.SuspendLayout();
+            this.panel_staffMoreHolder.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_staffImage)).BeginInit();
             this.tabPage_customers.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -99,7 +100,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_customerImage)).BeginInit();
             this.tabPage_addStaff.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_staffImageNew)).BeginInit();
-            this.panel_staffMoreHolder.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_optionContainer
@@ -250,6 +250,37 @@
             this.groupBox_staff.TabIndex = 0;
             this.groupBox_staff.TabStop = false;
             // 
+            // panel_staffMoreHolder
+            // 
+            this.panel_staffMoreHolder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel_staffMoreHolder.Controls.Add(this.rjButton_staffMore);
+            this.panel_staffMoreHolder.Location = new System.Drawing.Point(804, 25);
+            this.panel_staffMoreHolder.Name = "panel_staffMoreHolder";
+            this.panel_staffMoreHolder.Size = new System.Drawing.Size(165, 57);
+            this.panel_staffMoreHolder.TabIndex = 21;
+            // 
+            // rjButton_staffMore
+            // 
+            this.rjButton_staffMore.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.rjButton_staffMore.BackColor = System.Drawing.Color.LightGray;
+            this.rjButton_staffMore.BackgroundColor = System.Drawing.Color.LightGray;
+            this.rjButton_staffMore.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rjButton_staffMore.BorderRadius = 15;
+            this.rjButton_staffMore.BorderSize = 0;
+            this.rjButton_staffMore.FlatAppearance.BorderSize = 0;
+            this.rjButton_staffMore.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton_staffMore.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.rjButton_staffMore.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.rjButton_staffMore.Location = new System.Drawing.Point(19, 8);
+            this.rjButton_staffMore.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
+            this.rjButton_staffMore.Name = "rjButton_staffMore";
+            this.rjButton_staffMore.Size = new System.Drawing.Size(130, 38);
+            this.rjButton_staffMore.TabIndex = 17;
+            this.rjButton_staffMore.Text = "More";
+            this.rjButton_staffMore.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.rjButton_staffMore.UseVisualStyleBackColor = false;
+            this.rjButton_staffMore.Click += new System.EventHandler(this.RjButton_staffMore_Click);
+            // 
             // pictureBox_staffImage
             // 
             this.pictureBox_staffImage.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -292,28 +323,6 @@
             this.label_staffName.Size = new System.Drawing.Size(93, 24);
             this.label_staffName.TabIndex = 19;
             this.label_staffName.Text = "Staff Name";
-            // 
-            // rjButton_staffMore
-            // 
-            this.rjButton_staffMore.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.rjButton_staffMore.BackColor = System.Drawing.Color.LightGray;
-            this.rjButton_staffMore.BackgroundColor = System.Drawing.Color.LightGray;
-            this.rjButton_staffMore.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjButton_staffMore.BorderRadius = 15;
-            this.rjButton_staffMore.BorderSize = 0;
-            this.rjButton_staffMore.FlatAppearance.BorderSize = 0;
-            this.rjButton_staffMore.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton_staffMore.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.rjButton_staffMore.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjButton_staffMore.Location = new System.Drawing.Point(19, 8);
-            this.rjButton_staffMore.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
-            this.rjButton_staffMore.Name = "rjButton_staffMore";
-            this.rjButton_staffMore.Size = new System.Drawing.Size(130, 38);
-            this.rjButton_staffMore.TabIndex = 17;
-            this.rjButton_staffMore.Text = "More";
-            this.rjButton_staffMore.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjButton_staffMore.UseVisualStyleBackColor = false;
-            this.rjButton_staffMore.Click += new System.EventHandler(this.RjButton_staffMore_Click);
             // 
             // rjButton_deleteProduct
             // 
@@ -406,7 +415,7 @@
             this.tabPage_customers.Location = new System.Drawing.Point(4, 25);
             this.tabPage_customers.Name = "tabPage_customers";
             this.tabPage_customers.Padding = new System.Windows.Forms.Padding(10, 70, 10, 10);
-            this.tabPage_customers.Size = new System.Drawing.Size(990, 492);
+            this.tabPage_customers.Size = new System.Drawing.Size(1002, 456);
             this.tabPage_customers.TabIndex = 1;
             this.tabPage_customers.Text = "tabPage_customers";
             // 
@@ -455,7 +464,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(10, 70);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(970, 100);
+            this.panel1.Size = new System.Drawing.Size(982, 100);
             this.panel1.TabIndex = 22;
             // 
             // groupBox1
@@ -470,7 +479,7 @@
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(10, 10, 10, 15);
-            this.groupBox1.Size = new System.Drawing.Size(970, 100);
+            this.groupBox1.Size = new System.Drawing.Size(982, 100);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
@@ -529,7 +538,7 @@
             this.rjButton_customerMore.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton_customerMore.Font = new System.Drawing.Font("Tahoma", 10F);
             this.rjButton_customerMore.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjButton_customerMore.Location = new System.Drawing.Point(827, 35);
+            this.rjButton_customerMore.Location = new System.Drawing.Point(839, 35);
             this.rjButton_customerMore.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
             this.rjButton_customerMore.Name = "rjButton_customerMore";
             this.rjButton_customerMore.Size = new System.Drawing.Size(130, 38);
@@ -545,7 +554,7 @@
             this.tabPage_shopOwners.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage_shopOwners.Location = new System.Drawing.Point(4, 25);
             this.tabPage_shopOwners.Name = "tabPage_shopOwners";
-            this.tabPage_shopOwners.Size = new System.Drawing.Size(990, 492);
+            this.tabPage_shopOwners.Size = new System.Drawing.Size(1002, 456);
             this.tabPage_shopOwners.TabIndex = 2;
             this.tabPage_shopOwners.Text = "tabPage_shopOwners";
             // 
@@ -579,7 +588,7 @@
             this.tabPage_addStaff.Controls.Add(this.rjButton_addNewStaff);
             this.tabPage_addStaff.Location = new System.Drawing.Point(4, 25);
             this.tabPage_addStaff.Name = "tabPage_addStaff";
-            this.tabPage_addStaff.Size = new System.Drawing.Size(1235, 767);
+            this.tabPage_addStaff.Size = new System.Drawing.Size(1002, 456);
             this.tabPage_addStaff.TabIndex = 3;
             this.tabPage_addStaff.Text = "tabPage_addStaff";
             // 
@@ -993,7 +1002,7 @@
             this.tabPage_customerInfor.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage_customerInfor.Location = new System.Drawing.Point(4, 25);
             this.tabPage_customerInfor.Name = "tabPage_customerInfor";
-            this.tabPage_customerInfor.Size = new System.Drawing.Size(990, 492);
+            this.tabPage_customerInfor.Size = new System.Drawing.Size(1002, 456);
             this.tabPage_customerInfor.TabIndex = 4;
             this.tabPage_customerInfor.Text = "tabPage_customerInfor";
             // 
@@ -1002,7 +1011,7 @@
             this.tabPage_shopOwnerInfor.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage_shopOwnerInfor.Location = new System.Drawing.Point(4, 25);
             this.tabPage_shopOwnerInfor.Name = "tabPage_shopOwnerInfor";
-            this.tabPage_shopOwnerInfor.Size = new System.Drawing.Size(990, 492);
+            this.tabPage_shopOwnerInfor.Size = new System.Drawing.Size(1002, 456);
             this.tabPage_shopOwnerInfor.TabIndex = 5;
             this.tabPage_shopOwnerInfor.Text = "tabPage_shopOwnerInfor";
             // 
@@ -1038,19 +1047,10 @@
             this.gradientLabel1.TextColorBegin = System.Drawing.Color.DimGray;
             this.gradientLabel1.TextColorEnd = System.Drawing.Color.Purple;
             // 
-            // panel_staffMoreHolder
-            // 
-            this.panel_staffMoreHolder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel_staffMoreHolder.Controls.Add(this.rjButton_staffMore);
-            this.panel_staffMoreHolder.Location = new System.Drawing.Point(804, 25);
-            this.panel_staffMoreHolder.Name = "panel_staffMoreHolder";
-            this.panel_staffMoreHolder.Size = new System.Drawing.Size(165, 57);
-            this.panel_staffMoreHolder.TabIndex = 21;
-            // 
             // SubViewManageUser
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(1010, 585);
             this.Controls.Add(this.gradientLabel2);
             this.Controls.Add(this.gradientLabel1);
@@ -1065,6 +1065,7 @@
             this.panel_staff.ResumeLayout(false);
             this.groupBox_staff.ResumeLayout(false);
             this.groupBox_staff.PerformLayout();
+            this.panel_staffMoreHolder.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_staffImage)).EndInit();
             this.tabPage_customers.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
@@ -1074,7 +1075,6 @@
             this.tabPage_addStaff.ResumeLayout(false);
             this.tabPage_addStaff.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_staffImageNew)).EndInit();
-            this.panel_staffMoreHolder.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

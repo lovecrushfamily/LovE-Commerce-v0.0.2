@@ -104,49 +104,74 @@ namespace GUI
             panel_body.Controls.Add(currentChildForm);
             panel_body.Tag = currentChildForm;
             currentChildForm.BringToFront();
-            currentChildForm.Show();
+
+            if (currentChildForm.IsDisposed)
+            {
+                MessageBox.Show("disposed");
+            }
+            else
+            {
+
+                currentChildForm.Show();
+            }
+
 
         }
 
         private void IconButton_account_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            OpenChildForm(new SubViewShopOrders());
+            OpenChildForm(new SubViewShopOrders(shop));
         }
 
         private void IconButton_comment_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new SubViewShopComment());
+            ActivateButton(sender);
+
+            SubViewShopComment subViewShopComment = new SubViewShopComment(shop);
+            OpenChildForm(subViewShopComment);
         }
 
         private void IconButton_orders_Click(object sender, EventArgs e)
         {
+            ActivateButton(sender);
+
             OpenChildForm(new SubViewShopProducts(shop));
         }
 
         private void IconButton_notification_Click(object sender, EventArgs e)
         {
+            ActivateButton(sender);
+
             OpenChildForm(new SubViewShopVoucher());
         }
 
         private void IconButton_shop_Click(object sender, EventArgs e)
         {
             OpenChildForm(new SubViewShopChat());
+            ActivateButton(sender);
+
         }
 
         private void IconButton_messenger_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new SubViewNotifications());  
+            OpenChildForm(new SubViewNotifications());
+            ActivateButton(sender);
+
         }
 
         private void IconButton1_Click(object sender, EventArgs e)
         {
             OpenChildForm(new SubViewShopDashBoard());
+            ActivateButton(sender);
+
         }
 
         private void IconButton_shopInfor_Click(object sender, EventArgs e)
         {
             OpenChildForm(new SubViewShopInfor(shop));
+            ActivateButton(sender);
+
         }
     }
 }

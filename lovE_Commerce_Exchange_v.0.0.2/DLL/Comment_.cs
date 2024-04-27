@@ -9,12 +9,12 @@ namespace DLL
     public class Comment_
     {
         public string CommentId;
-        public string ProductId;
         public string CustomerId;
         public int Star;
         public string Content;
         public string Date;
         public bool ResponseComment;
+        public string OrderDetailID;
 
     }
 }

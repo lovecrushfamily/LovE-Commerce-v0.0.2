@@ -37,13 +37,13 @@ namespace GUI
         }
 
 
-        private void SetCurrentProduct(string productID)
+        private void SetCurrentProduct(Product product)
         {
             currentProduct = null;
             categoryUpdatable = false;
-            currentProduct = products.Single(pro => pro.ProductId == productID);
+            currentProduct = products.Single(pro => pro.ProductId == product.ProductId);
             rjTextBox_productName.Texts = currentProduct.ProductName;
-            rjTextBox_productName.Tag = productID;
+            rjTextBox_productName.Tag = product.ProductId;
             rjTextBox_productQuantity.Texts = currentProduct.Quantity.ToString();
             rjTextBox_productPrice.Texts = currentProduct.Price.ToString();
             rjTextBox_date.Texts = currentProduct.CreatedDate;
@@ -144,7 +144,7 @@ namespace GUI
                                           openFile.FileName);
                             }
                             picture.Image = openFile.FileName.TurnToProductImage();
-                            picture.Tag = openFile.FileName;
+                            picture.Tag = openFile.FileName.Split('\\').Last();
                         }
                     }
                     pictureBox_mainImage.Image = picture.Image;
@@ -173,13 +173,10 @@ namespace GUI
 
         private void RjButton_moreDetail_Click(object sender, EventArgs e)
         {
-            Panel parent = (sender as RJButton).Parent as Panel;
             rjButton_updateProduct.Enabled = true;
             rjButton_addNewProductNavigate.Enabled = false;
-            SetCurrentProduct((parent.Controls.Find("label_waitingProuductID", true)[0] as Label).Text.Split(' ').Last());
+            SetCurrentProduct((Product)(sender as RJButton).Tag);
             tabControl_Products.SelectedTab = tabPage_addNewProducts;
-            ////categories.ToList().ForEach(category => comboBox_category.Items.Add(category.CategoryName));
-            //,
         }
 
 
@@ -608,6 +605,7 @@ namespace GUI
             RjButton_moreDetail.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             RjButton_moreDetail.UseVisualStyleBackColor = false;
             RjButton_moreDetail.Click += RjButton_moreDetail_Click;
+            RjButton_moreDetail.Tag = product;
 
             panel_waitingProductSavior.BackColor = System.Drawing.SystemColors.ControlLightLight;
             panel_waitingProductSavior.Location = new System.Drawing.Point(21, 21);
@@ -715,6 +713,7 @@ namespace GUI
             rjButton_moreDetail.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             rjButton_moreDetail.UseVisualStyleBackColor = false;
             rjButton_moreDetail.Click += new System.EventHandler(RjButton_moreDetail_Click);
+            rjButton_moreDetail.Tag = product;
 
             checkBox_reviewedProductChecked.AutoSize = true;
             checkBox_reviewedProductChecked.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -779,6 +778,7 @@ namespace GUI
             pictureBox_reviewedProductImage.TabStop = false;
             pictureBox_reviewedProductImage.Image = product.MainImage.GetProductImagePath().TurnToProductImage();
             pictureBox_reviewedProductImage.Click += PictureBox_productImage_Click;
+            pictureBox_reviewedProductImage.SizeMode = PictureBoxSizeMode.Zoom;
 
             panel_reviewedProducts.Dock = System.Windows.Forms.DockStyle.Top;
             panel_reviewedProducts.Location = new System.Drawing.Point(3, 100);
@@ -1026,6 +1026,7 @@ namespace GUI
             rjButton_bannedMoredetail.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             rjButton_bannedMoredetail.UseVisualStyleBackColor = false;
             rjButton_bannedMoredetail.Click += RjButton_moreDetail_Click;
+            rjButton_bannedMoredetail.Tag = product;
 
 
             rjButton_bannedProduct.BackColor = System.Drawing.SystemColors.ControlLightLight;

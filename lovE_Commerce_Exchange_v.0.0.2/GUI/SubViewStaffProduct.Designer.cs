@@ -30,6 +30,7 @@
         {
             this.tabControl_products = new System.Windows.Forms.TabControl();
             this.tabPage_productDetail = new System.Windows.Forms.TabPage();
+            this.pictureBox_mainImage = new System.Windows.Forms.PictureBox();
             this.rjButton1 = new CustomControls.RJControls.RJButton();
             this.label10 = new System.Windows.Forms.Label();
             this.rjButton_addProduct = new CustomControls.RJControls.RJButton();
@@ -52,7 +53,6 @@
             this.rjTextBox_productPrice = new CustomControls.RJControls.RJTextBox();
             this.rjTextBox_productName = new CustomControls.RJControls.RJTextBox();
             this.panel_productImageHolder = new System.Windows.Forms.Panel();
-            this.pictureBox_mainImage = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
@@ -85,15 +85,18 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.rjButton8 = new CustomControls.RJControls.RJButton();
             this.tabPage_waitingProducts = new System.Windows.Forms.TabPage();
+            this.checkBox_allProducts = new System.Windows.Forms.CheckBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.rjTextBox2 = new CustomControls.RJControls.RJTextBox();
             this.panel_waitingProduct = new System.Windows.Forms.Panel();
+            this.panel_waitingPruductControlHolder = new System.Windows.Forms.Panel();
             this.rjButton_verifyWaitingProduct = new CustomControls.RJControls.RJButton();
-            this.rjButton_waitingProductDetail = new CustomControls.RJControls.RJButton();
+            this.pictureBox_waitingProductImage = new System.Windows.Forms.PictureBox();
+            this.checkBox_waitingProductCheck = new System.Windows.Forms.CheckBox();
             this.label_waitingDateCreatedProduct = new System.Windows.Forms.Label();
             this.label_waitingProductName = new System.Windows.Forms.Label();
-            this.pictureBox_waitingProductImage = new System.Windows.Forms.PictureBox();
+            this.rjButton_waitingProductDetail = new CustomControls.RJControls.RJButton();
             this.rjButton_waitingProductBorder = new CustomControls.RJControls.RJButton();
             this.gradientLabel2 = new GUI.CustomControl.GradientLabel();
             this.gradientLabel1 = new GUI.CustomControl.GradientLabel();
@@ -102,15 +105,12 @@
             this.iconButton_verifiedProduct = new FontAwesome.Sharp.IconButton();
             this.iconButton_waitingProducts = new FontAwesome.Sharp.IconButton();
             this.gradientLabel3 = new GUI.CustomControl.GradientLabel();
-            this.checkBox_waitingProductCheck = new System.Windows.Forms.CheckBox();
-            this.panel_waitingPruductControlHolder = new System.Windows.Forms.Panel();
-            this.checkBox_allProducts = new System.Windows.Forms.CheckBox();
             this.tabControl_products.SuspendLayout();
             this.tabPage_productDetail.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_mainImage)).BeginInit();
             this.panel_attributesHolder.SuspendLayout();
             this.panel_attribute.SuspendLayout();
             this.panel_productImageHolder.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_mainImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -128,9 +128,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.tabPage_waitingProducts.SuspendLayout();
             this.panel_waitingProduct.SuspendLayout();
+            this.panel_waitingPruductControlHolder.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_waitingProductImage)).BeginInit();
             this.panel_optionContainer.SuspendLayout();
-            this.panel_waitingPruductControlHolder.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl_products
@@ -174,6 +174,17 @@
             this.tabPage_productDetail.Size = new System.Drawing.Size(1002, 494);
             this.tabPage_productDetail.TabIndex = 0;
             this.tabPage_productDetail.Text = "tabPage_productDetail";
+            // 
+            // pictureBox_mainImage
+            // 
+            this.pictureBox_mainImage.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.pictureBox_mainImage.Location = new System.Drawing.Point(73, 100);
+            this.pictureBox_mainImage.Margin = new System.Windows.Forms.Padding(3, 3, 3, 20);
+            this.pictureBox_mainImage.Name = "pictureBox_mainImage";
+            this.pictureBox_mainImage.Size = new System.Drawing.Size(150, 150);
+            this.pictureBox_mainImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_mainImage.TabIndex = 0;
+            this.pictureBox_mainImage.TabStop = false;
             // 
             // rjButton1
             // 
@@ -529,17 +540,6 @@
             this.panel_productImageHolder.Size = new System.Drawing.Size(232, 189);
             this.panel_productImageHolder.TabIndex = 34;
             // 
-            // pictureBox_mainImage
-            // 
-            this.pictureBox_mainImage.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.pictureBox_mainImage.Location = new System.Drawing.Point(73, 100);
-            this.pictureBox_mainImage.Margin = new System.Windows.Forms.Padding(3, 3, 3, 20);
-            this.pictureBox_mainImage.Name = "pictureBox_mainImage";
-            this.pictureBox_mainImage.Size = new System.Drawing.Size(150, 150);
-            this.pictureBox_mainImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox_mainImage.TabIndex = 0;
-            this.pictureBox_mainImage.TabStop = false;
-            // 
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -649,7 +649,7 @@
             this.tabPage_verifyProduct.Location = new System.Drawing.Point(4, 25);
             this.tabPage_verifyProduct.Name = "tabPage_verifyProduct";
             this.tabPage_verifyProduct.Padding = new System.Windows.Forms.Padding(10, 60, 10, 50);
-            this.tabPage_verifyProduct.Size = new System.Drawing.Size(998, 458);
+            this.tabPage_verifyProduct.Size = new System.Drawing.Size(1002, 494);
             this.tabPage_verifyProduct.TabIndex = 1;
             this.tabPage_verifyProduct.Text = "tabPage_verifyProduct";
             // 
@@ -722,7 +722,7 @@
             this.panel2.Location = new System.Drawing.Point(10, 60);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.panel2.Size = new System.Drawing.Size(978, 117);
+            this.panel2.Size = new System.Drawing.Size(982, 117);
             this.panel2.TabIndex = 1;
             // 
             // rjButton9
@@ -737,7 +737,7 @@
             this.rjButton9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton9.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButton9.ForeColor = System.Drawing.Color.White;
-            this.rjButton9.Location = new System.Drawing.Point(686, 38);
+            this.rjButton9.Location = new System.Drawing.Point(690, 38);
             this.rjButton9.Name = "rjButton9";
             this.rjButton9.Size = new System.Drawing.Size(130, 38);
             this.rjButton9.TabIndex = 3;
@@ -757,7 +757,7 @@
             this.rjButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton4.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButton4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjButton4.Location = new System.Drawing.Point(822, 38);
+            this.rjButton4.Location = new System.Drawing.Point(826, 38);
             this.rjButton4.Name = "rjButton4";
             this.rjButton4.Size = new System.Drawing.Size(130, 38);
             this.rjButton4.TabIndex = 3;
@@ -810,7 +810,7 @@
             this.rjButton6.ForeColor = System.Drawing.Color.White;
             this.rjButton6.Location = new System.Drawing.Point(0, 0);
             this.rjButton6.Name = "rjButton6";
-            this.rjButton6.Size = new System.Drawing.Size(978, 112);
+            this.rjButton6.Size = new System.Drawing.Size(982, 112);
             this.rjButton6.TabIndex = 0;
             this.rjButton6.TextColor = System.Drawing.Color.White;
             this.rjButton6.UseVisualStyleBackColor = false;
@@ -1008,6 +1008,18 @@
             this.tabPage_waitingProducts.TabIndex = 3;
             this.tabPage_waitingProducts.Text = "tabPage_waitingProducts";
             // 
+            // checkBox_allProducts
+            // 
+            this.checkBox_allProducts.AutoSize = true;
+            this.checkBox_allProducts.Font = new System.Drawing.Font("Sans Serif Collection", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox_allProducts.Location = new System.Drawing.Point(24, 55);
+            this.checkBox_allProducts.Name = "checkBox_allProducts";
+            this.checkBox_allProducts.Size = new System.Drawing.Size(156, 28);
+            this.checkBox_allProducts.TabIndex = 22;
+            this.checkBox_allProducts.Text = "All waiting products";
+            this.checkBox_allProducts.UseVisualStyleBackColor = true;
+            this.checkBox_allProducts.CheckedChanged += new System.EventHandler(this.CheckBox_allProducts_CheckedChanged);
+            // 
             // comboBox2
             // 
             this.comboBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -1077,6 +1089,21 @@
             this.panel_waitingProduct.Size = new System.Drawing.Size(982, 117);
             this.panel_waitingProduct.TabIndex = 0;
             // 
+            // panel_waitingPruductControlHolder
+            // 
+            this.panel_waitingPruductControlHolder.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel_waitingPruductControlHolder.Controls.Add(this.rjButton_verifyWaitingProduct);
+            this.panel_waitingPruductControlHolder.Controls.Add(this.pictureBox_waitingProductImage);
+            this.panel_waitingPruductControlHolder.Controls.Add(this.checkBox_waitingProductCheck);
+            this.panel_waitingPruductControlHolder.Controls.Add(this.label_waitingDateCreatedProduct);
+            this.panel_waitingPruductControlHolder.Controls.Add(this.label_waitingProductName);
+            this.panel_waitingPruductControlHolder.Controls.Add(this.rjButton_waitingProductDetail);
+            this.panel_waitingPruductControlHolder.Location = new System.Drawing.Point(14, 3);
+            this.panel_waitingPruductControlHolder.Name = "panel_waitingPruductControlHolder";
+            this.panel_waitingPruductControlHolder.Padding = new System.Windows.Forms.Padding(0, 15, 15, 15);
+            this.panel_waitingPruductControlHolder.Size = new System.Drawing.Size(947, 106);
+            this.panel_waitingPruductControlHolder.TabIndex = 41;
+            // 
             // rjButton_verifyWaitingProduct
             // 
             this.rjButton_verifyWaitingProduct.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -1097,25 +1124,27 @@
             this.rjButton_verifyWaitingProduct.TextColor = System.Drawing.SystemColors.ControlLightLight;
             this.rjButton_verifyWaitingProduct.UseVisualStyleBackColor = false;
             // 
-            // rjButton_waitingProductDetail
+            // pictureBox_waitingProductImage
             // 
-            this.rjButton_waitingProductDetail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.rjButton_waitingProductDetail.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.rjButton_waitingProductDetail.BackgroundColor = System.Drawing.SystemColors.ControlLight;
-            this.rjButton_waitingProductDetail.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjButton_waitingProductDetail.BorderRadius = 15;
-            this.rjButton_waitingProductDetail.BorderSize = 0;
-            this.rjButton_waitingProductDetail.FlatAppearance.BorderSize = 0;
-            this.rjButton_waitingProductDetail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton_waitingProductDetail.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjButton_waitingProductDetail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjButton_waitingProductDetail.Location = new System.Drawing.Point(817, 37);
-            this.rjButton_waitingProductDetail.Name = "rjButton_waitingProductDetail";
-            this.rjButton_waitingProductDetail.Size = new System.Drawing.Size(130, 38);
-            this.rjButton_waitingProductDetail.TabIndex = 3;
-            this.rjButton_waitingProductDetail.Text = "Detail";
-            this.rjButton_waitingProductDetail.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjButton_waitingProductDetail.UseVisualStyleBackColor = false;
+            this.pictureBox_waitingProductImage.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.pictureBox_waitingProductImage.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox_waitingProductImage.Location = new System.Drawing.Point(33, 15);
+            this.pictureBox_waitingProductImage.Name = "pictureBox_waitingProductImage";
+            this.pictureBox_waitingProductImage.Size = new System.Drawing.Size(76, 76);
+            this.pictureBox_waitingProductImage.TabIndex = 1;
+            this.pictureBox_waitingProductImage.TabStop = false;
+            // 
+            // checkBox_waitingProductCheck
+            // 
+            this.checkBox_waitingProductCheck.AutoSize = true;
+            this.checkBox_waitingProductCheck.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.checkBox_waitingProductCheck.Dock = System.Windows.Forms.DockStyle.Left;
+            this.checkBox_waitingProductCheck.Location = new System.Drawing.Point(0, 15);
+            this.checkBox_waitingProductCheck.Name = "checkBox_waitingProductCheck";
+            this.checkBox_waitingProductCheck.Padding = new System.Windows.Forms.Padding(5, 0, 10, 0);
+            this.checkBox_waitingProductCheck.Size = new System.Drawing.Size(33, 76);
+            this.checkBox_waitingProductCheck.TabIndex = 40;
+            this.checkBox_waitingProductCheck.UseVisualStyleBackColor = false;
             // 
             // label_waitingDateCreatedProduct
             // 
@@ -1141,15 +1170,25 @@
             this.label_waitingProductName.TabIndex = 2;
             this.label_waitingProductName.Text = "lovecrush";
             // 
-            // pictureBox_waitingProductImage
+            // rjButton_waitingProductDetail
             // 
-            this.pictureBox_waitingProductImage.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.pictureBox_waitingProductImage.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox_waitingProductImage.Location = new System.Drawing.Point(33, 15);
-            this.pictureBox_waitingProductImage.Name = "pictureBox_waitingProductImage";
-            this.pictureBox_waitingProductImage.Size = new System.Drawing.Size(76, 76);
-            this.pictureBox_waitingProductImage.TabIndex = 1;
-            this.pictureBox_waitingProductImage.TabStop = false;
+            this.rjButton_waitingProductDetail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.rjButton_waitingProductDetail.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.rjButton_waitingProductDetail.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            this.rjButton_waitingProductDetail.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rjButton_waitingProductDetail.BorderRadius = 15;
+            this.rjButton_waitingProductDetail.BorderSize = 0;
+            this.rjButton_waitingProductDetail.FlatAppearance.BorderSize = 0;
+            this.rjButton_waitingProductDetail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton_waitingProductDetail.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjButton_waitingProductDetail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.rjButton_waitingProductDetail.Location = new System.Drawing.Point(817, 37);
+            this.rjButton_waitingProductDetail.Name = "rjButton_waitingProductDetail";
+            this.rjButton_waitingProductDetail.Size = new System.Drawing.Size(130, 38);
+            this.rjButton_waitingProductDetail.TabIndex = 3;
+            this.rjButton_waitingProductDetail.Text = "Detail";
+            this.rjButton_waitingProductDetail.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.rjButton_waitingProductDetail.UseVisualStyleBackColor = false;
             // 
             // rjButton_waitingProductBorder
             // 
@@ -1306,49 +1345,10 @@
             this.gradientLabel3.TextColorBegin = System.Drawing.SystemColors.Control;
             this.gradientLabel3.TextColorEnd = System.Drawing.SystemColors.Control;
             // 
-            // checkBox_waitingProductCheck
-            // 
-            this.checkBox_waitingProductCheck.AutoSize = true;
-            this.checkBox_waitingProductCheck.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.checkBox_waitingProductCheck.Dock = System.Windows.Forms.DockStyle.Left;
-            this.checkBox_waitingProductCheck.Location = new System.Drawing.Point(0, 15);
-            this.checkBox_waitingProductCheck.Name = "checkBox_waitingProductCheck";
-            this.checkBox_waitingProductCheck.Padding = new System.Windows.Forms.Padding(5, 0, 10, 0);
-            this.checkBox_waitingProductCheck.Size = new System.Drawing.Size(33, 76);
-            this.checkBox_waitingProductCheck.TabIndex = 40;
-            this.checkBox_waitingProductCheck.UseVisualStyleBackColor = false;
-            // 
-            // panel_waitingPruductControlHolder
-            // 
-            this.panel_waitingPruductControlHolder.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panel_waitingPruductControlHolder.Controls.Add(this.rjButton_verifyWaitingProduct);
-            this.panel_waitingPruductControlHolder.Controls.Add(this.pictureBox_waitingProductImage);
-            this.panel_waitingPruductControlHolder.Controls.Add(this.checkBox_waitingProductCheck);
-            this.panel_waitingPruductControlHolder.Controls.Add(this.label_waitingDateCreatedProduct);
-            this.panel_waitingPruductControlHolder.Controls.Add(this.label_waitingProductName);
-            this.panel_waitingPruductControlHolder.Controls.Add(this.rjButton_waitingProductDetail);
-            this.panel_waitingPruductControlHolder.Location = new System.Drawing.Point(14, 3);
-            this.panel_waitingPruductControlHolder.Name = "panel_waitingPruductControlHolder";
-            this.panel_waitingPruductControlHolder.Padding = new System.Windows.Forms.Padding(0, 15, 15, 15);
-            this.panel_waitingPruductControlHolder.Size = new System.Drawing.Size(947, 106);
-            this.panel_waitingPruductControlHolder.TabIndex = 41;
-            // 
-            // checkBox_allProducts
-            // 
-            this.checkBox_allProducts.AutoSize = true;
-            this.checkBox_allProducts.Font = new System.Drawing.Font("Sans Serif Collection", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox_allProducts.Location = new System.Drawing.Point(24, 55);
-            this.checkBox_allProducts.Name = "checkBox_allProducts";
-            this.checkBox_allProducts.Size = new System.Drawing.Size(156, 28);
-            this.checkBox_allProducts.TabIndex = 22;
-            this.checkBox_allProducts.Text = "All waiting products";
-            this.checkBox_allProducts.UseVisualStyleBackColor = true;
-            this.checkBox_allProducts.CheckedChanged += new System.EventHandler(this.CheckBox_allProducts_CheckedChanged);
-            // 
             // SubViewStaffProduct
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(1010, 613);
             this.Controls.Add(this.gradientLabel3);
             this.Controls.Add(this.gradientLabel2);
@@ -1362,11 +1362,11 @@
             this.tabControl_products.ResumeLayout(false);
             this.tabPage_productDetail.ResumeLayout(false);
             this.tabPage_productDetail.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_mainImage)).EndInit();
             this.panel_attributesHolder.ResumeLayout(false);
             this.panel_attribute.ResumeLayout(false);
             this.panel_attribute.PerformLayout();
             this.panel_productImageHolder.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_mainImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
@@ -1387,10 +1387,10 @@
             this.tabPage_waitingProducts.ResumeLayout(false);
             this.tabPage_waitingProducts.PerformLayout();
             this.panel_waitingProduct.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_waitingProductImage)).EndInit();
-            this.panel_optionContainer.ResumeLayout(false);
             this.panel_waitingPruductControlHolder.ResumeLayout(false);
             this.panel_waitingPruductControlHolder.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_waitingProductImage)).EndInit();
+            this.panel_optionContainer.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

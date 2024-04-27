@@ -122,11 +122,10 @@ namespace GUI
             vouchers = Voucher.GetVouchers().Join(products, vou => vou.ShopId, pro => pro.ShopID, (vou, pro) => vou).ToArray();
             foreach (var tuple in products.Zip(orderDetails, Tuple.Create))
             {
-                panel_productDetailContainer.Controls.Add(GenerateProductDetail(tuple.Item1,tuple.Item2.Quantity, vouchers.Where(vou => vou.ShopId == tuple.Item1.ShopID)));
+                panel_productDetailContainer.Controls.Add(GenerateProductDetail(tuple.Item1,tuple.Item2, vouchers.Where(vou => vou.ShopId == tuple.Item1.ShopID)));
             }
         }
-        private Panel GenerateProductDetail(Product product,string quantity, IEnumerable<Voucher> vouchers)
-        {
+        private Panel GenerateProductDetail(Product product,OrderDetail orderDetail, IEnumerable<Voucher> vouchers) { 
             Panel panel_productDetail = new Panel();
             RJButton rjButton_orderDetailbackground = new RJButton();
             Panel panel_productDetailHolder = new Panel();
@@ -182,11 +181,11 @@ namespace GUI
             label_productQuantity.BackColor = System.Drawing.SystemColors.ControlLightLight;
             label_productQuantity.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             label_productQuantity.ForeColor = System.Drawing.Color.Firebrick;
-            label_productQuantity.Location = new System.Drawing.Point(94 + label_originalPrice.Size.Width + 15, 42);
+            label_productQuantity.Location = new System.Drawing.Point(94 + label_originalPrice.Size.Width + 20, 42);
             label_productQuantity.Name = "label_productQuantity";
             label_productQuantity.Size = new System.Drawing.Size(36, 21);
             label_productQuantity.TabIndex = 0;
-            label_productQuantity.Text = "x" + quantity;
+            label_productQuantity.Text = "x" + orderDetail.Quantity;
 
             label_promotionShop.AutoSize = true;
             label_promotionShop.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -261,6 +260,8 @@ namespace GUI
             panel_productDetail.Name = "panel_productDetail";
             panel_productDetail.Size = new System.Drawing.Size(474, 155);
             panel_productDetail.TabIndex = 2;
+            panel_productDetail.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            panel_productDetail.Tag = orderDetail;
 
 
             return panel_productDetail;
@@ -294,6 +295,9 @@ namespace GUI
             if(MessageBox.Show("Are you sure","Purchase",MessageBoxButtons.OKCancel) == DialogResult.Cancel) { return; }
             //add Order Here
             order.Add();
+
+            //orderDetails = GetOrderDetailSelected().ToList();
+
             foreach (OrderDetail detail in orderDetails)
             {
                 //detail.OrderId = order.OrderId;
@@ -314,6 +318,14 @@ namespace GUI
             {
                 objectExternalLink(customer);
 
+            }
+        }
+
+        private IEnumerable<OrderDetail> GetOrderDetailSelected()
+        {
+            foreach (Panel orderdetail in panel_productDetailContainer.Controls.OfType<Panel>())
+            {
+                yield return (orderdetail.Tag as OrderDetail);
             }
         }
 

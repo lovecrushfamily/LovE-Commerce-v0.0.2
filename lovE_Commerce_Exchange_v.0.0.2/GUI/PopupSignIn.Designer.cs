@@ -47,7 +47,7 @@
             this.gradientLabel1 = new GUI.CustomControl.GradientLabel();
             this.rjTextBox_password = new CustomControls.RJControls.RJTextBox();
             this.rjTextBox_username = new CustomControls.RJControls.RJTextBox();
-            this.rjButton3 = new CustomControls.RJControls.RJButton();
+            this.rjButton_google = new CustomControls.RJControls.RJButton();
             this.rjButton_login = new CustomControls.RJControls.RJButton();
             this.rjTextBox_role = new CustomControls.RJControls.RJTextBox();
             this.flowLayoutPanel_rememberLoginAccounts.SuspendLayout();
@@ -87,9 +87,9 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label2.Location = new System.Drawing.Point(620, 498);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(269, 24);
+            this.label2.Size = new System.Drawing.Size(210, 24);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Can I have an currentAccount?";
+            this.label2.Text = "Can I have an Account?";
             // 
             // flowLayoutPanel_rememberLoginAccounts
             // 
@@ -327,32 +327,34 @@
             this.rjTextBox_username.Texts = "";
             this.rjTextBox_username.UnderlinedStyle = true;
             // 
-            // rjButton3
+            // rjButton_google
             // 
-            this.rjButton3.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rjButton3.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rjButton3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("rjButton3.BackgroundImage")));
-            this.rjButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.rjButton3.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjButton3.BorderRadius = 20;
-            this.rjButton3.BorderSize = 1;
-            this.rjButton3.Enabled = false;
-            this.rjButton3.FlatAppearance.BorderSize = 0;
-            this.rjButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton3.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjButton3.ForeColor = System.Drawing.Color.DimGray;
-            this.rjButton3.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.rjButton3.Location = new System.Drawing.Point(630, 397);
-            this.rjButton3.Name = "rjButton3";
-            this.rjButton3.Padding = new System.Windows.Forms.Padding(0, 0, 30, 0);
-            this.rjButton3.Size = new System.Drawing.Size(261, 42);
-            this.rjButton3.TabIndex = 1;
-            this.rjButton3.Text = "Continue with Google";
-            this.rjButton3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.rjButton3.TextColor = System.Drawing.Color.DimGray;
-            this.rjButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.rjButton3.UseVisualStyleBackColor = false;
-            this.rjButton3.Click += new System.EventHandler(this.RjButton_login_Click);
+            this.rjButton_google.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.rjButton_google.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.rjButton_google.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("rjButton_google.BackgroundImage")));
+            this.rjButton_google.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.rjButton_google.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.rjButton_google.BorderRadius = 20;
+            this.rjButton_google.BorderSize = 1;
+            this.rjButton_google.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLightLight;
+            this.rjButton_google.FlatAppearance.BorderSize = 0;
+            this.rjButton_google.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.rjButton_google.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.rjButton_google.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton_google.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjButton_google.ForeColor = System.Drawing.Color.DimGray;
+            this.rjButton_google.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.rjButton_google.Location = new System.Drawing.Point(630, 397);
+            this.rjButton_google.Name = "rjButton_google";
+            this.rjButton_google.Padding = new System.Windows.Forms.Padding(0, 0, 30, 0);
+            this.rjButton_google.Size = new System.Drawing.Size(261, 42);
+            this.rjButton_google.TabIndex = 1;
+            this.rjButton_google.Text = "Continue with Google";
+            this.rjButton_google.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.rjButton_google.TextColor = System.Drawing.Color.DimGray;
+            this.rjButton_google.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.rjButton_google.UseVisualStyleBackColor = false;
+            this.rjButton_google.Click += new System.EventHandler(this.RjButton_google_Click);
             // 
             // rjButton_login
             // 
@@ -417,7 +419,7 @@
             this.Controls.Add(this.label_reset_password);
             this.Controls.Add(this.rjTextBox_password);
             this.Controls.Add(this.rjTextBox_username);
-            this.Controls.Add(this.rjButton3);
+            this.Controls.Add(this.rjButton_google);
             this.Controls.Add(this.rjButton_login);
             this.Controls.Add(this.rjTextBox_role);
             this.Controls.Add(this.comboBox_role);
@@ -455,7 +457,7 @@
         private CustomControl.GradientLabel gradientLabel3;
         private CustomControls.RJControls.RJButton rjButton2;
         private System.Windows.Forms.Label label1;
-        private CustomControls.RJControls.RJButton rjButton3;
+        private CustomControls.RJControls.RJButton rjButton_google;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

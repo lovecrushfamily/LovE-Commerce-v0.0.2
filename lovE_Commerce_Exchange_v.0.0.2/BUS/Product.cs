@@ -1,4 +1,5 @@
-﻿using DLL;
+﻿using DAO;
+using DLL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -42,6 +43,11 @@ namespace BUS
             RatingStar = product_.RatingStar;
         }
 
+        public Product Purchase(int quaniy)
+        {
+            Quantity = (Quantity.ToInt() - quaniy).ToString();
+            return this;
+        }
         public void Add()
         {
             DAO.Product.Add(this);

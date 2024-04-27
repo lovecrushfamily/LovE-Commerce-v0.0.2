@@ -459,7 +459,7 @@
             this.rjTextBox_categoryId.Location = new System.Drawing.Point(340, 194);
             this.rjTextBox_categoryId.Margin = new System.Windows.Forms.Padding(4, 4, 10, 4);
             this.rjTextBox_categoryId.Multiline = false;
-            this.rjTextBox_categoryId.Name = "rjTextBox_categoryName";
+            this.rjTextBox_categoryId.Name = "rjTextBox_categoryId";
             this.rjTextBox_categoryId.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.rjTextBox_categoryId.PasswordChar = false;
             this.rjTextBox_categoryId.PlaceholderColor = System.Drawing.Color.DarkGray;
@@ -656,8 +656,8 @@
             // 
             // SubViewManageCategory
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(952, 586);
             this.Controls.Add(this.iconButton_refreshDataField);
             this.Controls.Add(this.label9);

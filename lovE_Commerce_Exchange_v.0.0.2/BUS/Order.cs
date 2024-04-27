@@ -27,16 +27,22 @@ namespace BUS
             OrderId =  DAO.Order.Add(this).ToString();            
         }
 
-        public void Remove()
+        public void Delete()
         {
+            DAO.Order.Delete(this);
 
         }
-
-        public void UpdateReceivedState()
+        public void Update()
         {
-
+            DAO.Order.Update(this);
         }
 
+        public Order UpdateReceivedState()
+        {
+            ReceivedState = true;
+            return this;
+        }
+      
         public void UpdateCustomerOrderState()
         {
 

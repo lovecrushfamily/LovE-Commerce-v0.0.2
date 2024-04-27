@@ -63,6 +63,16 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _0d540e678d0d639d4eba86c1cdd38556 {
+            get {
+                object obj = ResourceManager.GetObject("0d540e678d0d639d4eba86c1cdd38556", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _2246813_add_photo_add_plus_upload {
             get {
                 object obj = ResourceManager.GetObject("2246813_add photo_add_plus_upload", resourceCulture);

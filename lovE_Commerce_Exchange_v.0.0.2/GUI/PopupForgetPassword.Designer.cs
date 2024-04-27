@@ -136,6 +136,7 @@
             this.rjButton1.BorderRadius = 20;
             this.rjButton1.BorderSize = 0;
             this.rjButton1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rjButton1.Enabled = false;
             this.rjButton1.FlatAppearance.BorderSize = 0;
             this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton1.ForeColor = System.Drawing.Color.White;
@@ -143,14 +144,13 @@
             this.rjButton1.Name = "rjButton1";
             this.rjButton1.Size = new System.Drawing.Size(862, 463);
             this.rjButton1.TabIndex = 7;
-            this.rjButton1.Text = "rjButton1";
             this.rjButton1.TextColor = System.Drawing.Color.White;
             this.rjButton1.UseVisualStyleBackColor = false;
             // 
             // PopupForgetPassword
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(982, 583);
             this.Controls.Add(this.panel1);
             this.Name = "PopupForgetPassword";

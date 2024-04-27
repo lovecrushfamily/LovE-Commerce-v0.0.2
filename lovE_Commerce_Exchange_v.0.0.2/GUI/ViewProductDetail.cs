@@ -19,12 +19,10 @@ namespace GUI
     public partial class ViewProductDetail : Form
     {
         Product currentProduct;
-        Comment[] comments;
         Category category;
         Category[] categories;
-        Customer[] customers;
         Shop shop;
-        System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SubViewShopProducts));
+        System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewProductDetail));
 
 
         #region Delegate
@@ -58,7 +56,9 @@ namespace GUI
             categories = Category.GetCategories();
             category = categories.Single(ca => ca.CategoryId == product.CategoryID);
             shop = Shop.GetShops().Single(shop => shop.ShopId == product.ShopID);
-            comments = Comment.GetComments().Where(cm => cm.ProductId == product.ProductId).ToArray();
+
+            orderDetails = OrderDetail.GetOrderDetails().Where(orderdetail => orderdetail.ProductId == product.ProductId).ToArray();
+            comments = Comment.GetComments().Join(orderDetails, comment => comment.OrderDetailID, orderdetail => orderdetail.OrderDetailId, (comment, orderdetail) => comment).ToArray();
             FillEveryThing();
             LoadSubCategory();
             LoadComment();
@@ -77,7 +77,7 @@ namespace GUI
             textBox_description.Text = string.Join("",currentProduct.Description.ToDescription());
             rjCircularPictureBox_shopImage.Image = shop.Image.GetShopImagePath().TurnToShopImage();
             myNumericUpDown_quantity.Value = 1;
-            label_ratingStar.Text = currentProduct.RatingStar + ".0";
+            //label_ratingStar.Text = currentProduct.RatingStar + ".0";
 
             currentProduct.RatingStar.ToInt();
 
@@ -410,7 +410,6 @@ namespace GUI
 
 
 
-
         #region Categrory Navigator
 
         /// <summary>
@@ -547,42 +546,51 @@ namespace GUI
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         #region Comment process 
+        Comment[] comments;
+        OrderDetail[] orderDetails;
+        Order[] orders;
+        Customer[] customers;
         /// <summary>
         /// load all comment
         /// </summary>
         private void LoadComment()
         {
+            InitilaizeDataset();
+
             foreach(GroupBox group in groupBox_commentHolder.Controls.OfType<GroupBox>())
             {
+                group.BringToFront();
+                group.RecursivelyDispose();
                 group.Dispose();
+
             }
 
-            Comment[] custormerOnly = comments.Where(com => !com.ResponseComment).ToArray();
-            customers = Customer.GetCustomers().Join(comments, cus => cus.CustomerId, com => com.CustomerId, (cus, com) => cus).ToArray();
-            foreach (var tuple in custormerOnly.Zip(customers, Tuple.Create))
+
+
+            foreach (OrderDetail orderDetail in orderDetails)
             {
-                //find respond comment, null id not  existed, or be assign, already checked below
-                Comment respondComment = comments.SingleOrDefault(comment => comment.ProductId == tuple.Item1.ProductId && comment.ResponseComment);
-                groupBox_commentHolder.Controls.Add(GenerateComment(tuple.Item1,tuple.Item2,respondComment));
+                Comment CusComment = comments.SingleOrDefault(comment => comment.OrderDetailID == orderDetail.OrderDetailId && !comment.ResponseComment);
+                Comment respondComment = comments.SingleOrDefault(comment => comment.OrderDetailID == orderDetail.OrderDetailId && comment.ResponseComment);
+                Order order = orders.Single(orderVar => orderVar.OrderId == orderDetail.OrderId);
+                Customer cus = customers.SingleOrDefault(customer => customer.CustomerId == order.CustomerID);
+                //groupBox_commentHolder.Controls.Add(GenerateComment(  cus, CusComment, CusComment ));   //test
+                groupBox_commentHolder.Controls.Add(GenerateComment(  cus, CusComment, respondComment));
             }
+        }
+        private void InitilaizeDataset()
+        {
+            //get all order detail related to  this current product;
+            orderDetails = OrderDetail.GetOrderDetails().Where(orderdetail => orderdetail.ProductId == currentProduct.ProductId).ToArray();
+
+            //get all order related to these order detail
+            orders = Order.GetOrders().Where(order => orderDetails.Any(orderdetail => orderdetail.OrderId == order.OrderId)).ToArray();
+
+            customers = Customer.GetCustomers().Where(customer => orders.Any(order => order.CustomerID == customer.CustomerId)).ToArray();
+
+            comments = Comment.GetComments().Join(orderDetails, comment => comment.OrderDetailID, orderdetail => orderdetail.OrderDetailId, (comment, orderdetal) => comment).ToArray();
+
+
         }
 
         private void ResizeCommentArea()
@@ -598,9 +606,15 @@ namespace GUI
         }
 
 
-        private GroupBox GenerateComment(Comment comment , Customer customer, Comment respondComment = null)
+        private GroupBox GenerateComment(Customer customer,Comment comment = null, Comment respondComment = null)
         {
+            if(comment == null)
+            {
+                return null;
+            }
+
             GroupBox groupBox_comment = new GroupBox();
+            groupBox_comment.BringToFront();
             RJCircularPictureBox rjCircularPictureBox_customerImage = new RJCircularPictureBox();
             Label label_customerName = new Label();
             Label label_commentDate = new Label();
@@ -611,6 +625,27 @@ namespace GUI
 
             if(respondComment != null)
             {
+                int limit1 = 80;
+                int line1 = 1;
+                string newContent1 = "";
+                for (int i = 0; i < respondComment.Content.Length; i++)
+                {
+                    if (limit1 == 0)
+                    {
+                        newContent1 += respondComment.Content[i];
+                        newContent1 += "\n";
+                        limit1 = 80;
+                        line1++;
+                    }
+
+                    else
+                    {
+                        newContent1 += respondComment.Content[i];
+
+                        limit1--;
+                    }
+                }
+
                 RJButton rjButton_shopBackground = new RJButton();
                 RJCircularPictureBox rjCircularPictureBox_shopComentImage = new RJCircularPictureBox();
                 Label label_shopCommentName = new Label();
@@ -622,9 +657,9 @@ namespace GUI
                 label_shopRespond.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
                 label_shopRespond.Location = new System.Drawing.Point(325, 242);
                 label_shopRespond.Name = "label_shopRespond";
-                label_shopRespond.Size = new System.Drawing.Size(551, 64);
+                label_shopRespond.Size = new System.Drawing.Size(551, line1 * 26);
                 label_shopRespond.TabIndex = 9;
-                label_shopRespond.Text = respondComment.Content;
+                label_shopRespond.Text = newContent1;
                 label_shopRespond.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 
                 label_dateShopRespond.AutoSize = true;
@@ -664,8 +699,11 @@ namespace GUI
                 rjCircularPictureBox_shopComentImage.TabIndex = 8;
                 rjCircularPictureBox_shopComentImage.TabStop = false;
                 rjCircularPictureBox_shopComentImage.SizeMode = PictureBoxSizeMode.Zoom;
+                rjCircularPictureBox_shopComentImage.Tag = shop;
+                rjCircularPictureBox_shopComentImage.Click += RjCircularPictureBox_shopImage_Click;
 
-                rjButton_shopBackground.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)| System.Windows.Forms.AnchorStyles.Right)));
+
+                rjButton_shopBackground.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left))));
                 rjButton_shopBackground.BackColor = System.Drawing.SystemColors.ControlLight;
                 rjButton_shopBackground.BackgroundColor = System.Drawing.SystemColors.ControlLight;
                 rjButton_shopBackground.BorderColor = System.Drawing.Color.LavenderBlush;
@@ -677,7 +715,7 @@ namespace GUI
                 rjButton_shopBackground.ForeColor = System.Drawing.Color.White;
                 rjButton_shopBackground.Location = new System.Drawing.Point(259, 183);
                 rjButton_shopBackground.Name = "rjButton_shopBackground";
-                rjButton_shopBackground.Size = new System.Drawing.Size(644, 134);
+                rjButton_shopBackground.Size = new System.Drawing.Size(644, line1 * 26 + 60);
                 rjButton_shopBackground.TabIndex = 7;
                 rjButton_shopBackground.TextColor = System.Drawing.Color.White;
                 rjButton_shopBackground.UseVisualStyleBackColor = false;
@@ -690,17 +728,38 @@ namespace GUI
             }
 
 
-            label_comment.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)| System.Windows.Forms.AnchorStyles.Right)));
+            //
+            int limit = 100;
+            int line = 1;
+            string newContent = "";
+            for (int i = 0; i < comment.Content.Length; i++)
+            {
+                if (limit == 0)
+                {
+                    newContent += comment.Content[i];
+                    newContent += "\n";
+                    limit = 100;
+                    line++;
+                }
+
+                else
+                {
+                    newContent += comment.Content[i];
+
+                    limit--;
+                }
+            }
+            label_comment.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left))));
             label_comment.Font = new System.Drawing.Font("Sans Serif Collection", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             label_comment.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             label_comment.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             label_comment.ImageKey = "(none)";
             label_comment.Location = new System.Drawing.Point(256, 94);
             label_comment.Name = "label_comment";
-            label_comment.Size = new System.Drawing.Size(647, 86);
+            label_comment.Size = new System.Drawing.Size(650, line * 26);
             label_comment.TabIndex = 1;
-            label_comment.Text = comment.Content;
-            label_comment.Click += new System.EventHandler(Label30_Click);
+            label_comment.Text = newContent;// check this out.
+            //label_comment.BackColor = Color.Gray;
 
             label_puchase.AutoSize = true;
             label_puchase.Font = new System.Drawing.Font("Sans Serif Collection", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -713,9 +772,7 @@ namespace GUI
             label_puchase.TabIndex = 1;
             label_puchase.Text = "Purchased";
             label_puchase.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            label_puchase.Click += new System.EventHandler(Label30_Click);
 
-            pictureBox_purchaseVerify.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_purchaseVerify.Image")));
             pictureBox_purchaseVerify.Location = new System.Drawing.Point(259, 59);
             pictureBox_purchaseVerify.Margin = new System.Windows.Forms.Padding(5, 3, 5, 10);
             pictureBox_purchaseVerify.Name = "pictureBox_purchaseVerify";
@@ -723,6 +780,11 @@ namespace GUI
             pictureBox_purchaseVerify.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             pictureBox_purchaseVerify.TabIndex = 6;
             pictureBox_purchaseVerify.TabStop = false;
+            pictureBox_purchaseVerify.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_purchaseVerify.Image")));   // not display
+            //pictureBox_purchaseVerify.BackColor = Color.Gray;
+            pictureBox_purchaseVerify.SizeMode = PictureBoxSizeMode.Zoom;
+
+
 
             label_Fealing.AutoSize = true;
             label_Fealing.Font = new System.Drawing.Font("Sans Serif Collection", 6.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -732,20 +794,64 @@ namespace GUI
             label_Fealing.Size = new System.Drawing.Size(163, 27);
             label_Fealing.TabIndex = 1;
             //depend on star
-            label_Fealing.Text = "Extremely Satisfied";
-            label_Fealing.Click += new System.EventHandler(Label30_Click);
+            if(comment.Star == 5)
+            {
+                label_Fealing.Text = "Extremely Satisfied";
+            }
+            else if(comment.Star == 4)
+            {
+                label_Fealing.Text = "Satisfied";
+
+            }
+            else if (comment.Star == 3)
+            {
+                label_Fealing.Text = "Neutral";
+
+            }
+            else if (comment.Star == 2)
+            {
+                label_Fealing.Text = "Dissatisfied";
+
+            }
+            else if (comment.Star == 1)
+            {
+                label_Fealing.Text = "Disapointed";
+
+            }
 
 
             //dependon star ratin
-            PictureBox pictureBox_commment_1 =new PictureBox();
-            pictureBox_commment_1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_commment_1.Image")));
-            pictureBox_commment_1.Location = new System.Drawing.Point(259, 21);
-            pictureBox_commment_1.Margin = new System.Windows.Forms.Padding(5, 3, 5, 10);
-            pictureBox_commment_1.Name = "pictureBox_commment_1";
-            pictureBox_commment_1.Size = new System.Drawing.Size(25, 25);
-            pictureBox_commment_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            pictureBox_commment_1.TabIndex = 6;
-            pictureBox_commment_1.TabStop = false;
+            for(int  i = 0; i < 5; i++)
+            {
+                 if(i < comment.Star)
+                {
+                    PictureBox pictureBox_commment_1 =new PictureBox();
+                    pictureBox_commment_1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_commment_1.Image")));
+                    pictureBox_commment_1.Location = new System.Drawing.Point( 259 + (i * 35), 21);
+                    pictureBox_commment_1.Margin = new System.Windows.Forms.Padding(5, 3, 5, 10);
+                    pictureBox_commment_1.Name = "pictureBox_commment_1";
+                    pictureBox_commment_1.Size = new System.Drawing.Size(25, 25);
+                    pictureBox_commment_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+                    pictureBox_commment_1.TabIndex = 6;
+                    pictureBox_commment_1.TabStop = false;
+                    groupBox_comment.Controls.Add(pictureBox_commment_1);
+                }
+                else
+                {
+                    PictureBox pictureBox_commment_1 = new PictureBox();
+                    pictureBox_commment_1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox16.Image")));
+                    pictureBox_commment_1.Location = new System.Drawing.Point(259 + (i * 35), 21);
+                    pictureBox_commment_1.Margin = new System.Windows.Forms.Padding(5, 3, 5, 10);
+                    pictureBox_commment_1.Name = "pictureBox_commment_1";
+                    pictureBox_commment_1.Size = new System.Drawing.Size(25, 25);
+                    pictureBox_commment_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+                    pictureBox_commment_1.TabIndex = 6;
+                    pictureBox_commment_1.TabStop = false;
+                    groupBox_comment.Controls.Add(pictureBox_commment_1);
+
+                }
+            }
+
 
             label_commentDate.AutoSize = true;
             label_commentDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -754,10 +860,10 @@ namespace GUI
             label_commentDate.Name = "label_commentDate";
             label_commentDate.Size = new System.Drawing.Size(113, 20);
             label_commentDate.TabIndex = 1;
-            label_commentDate.Text = comment.Date;
+            label_commentDate.Text = comment.Date.Split(' ')[0];
             label_commentDate.Click += new System.EventHandler(Label30_Click);
 
-            label_customerName.Font = new System.Drawing.Font("Sans Serif Collection", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label_customerName.Font = new System.Drawing.Font("Sans Serif Collection", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             label_customerName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             label_customerName.Location = new System.Drawing.Point(95, 21);
             label_customerName.Name = "label_customerName";
@@ -781,20 +887,30 @@ namespace GUI
             rjCircularPictureBox_customerImage.Image = customer.Image.GetCustomerImagePath().TurnToCustomerImage();
 
             groupBox_comment.Controls.Add(pictureBox_purchaseVerify);
-            groupBox_comment.Controls.Add(pictureBox_commment_1);
             groupBox_comment.Controls.Add(label_comment);
             groupBox_comment.Controls.Add(label_puchase);
             groupBox_comment.Controls.Add(label_Fealing);
             groupBox_comment.Controls.Add(label_commentDate);
             groupBox_comment.Controls.Add(label_customerName);
             groupBox_comment.Controls.Add(rjCircularPictureBox_customerImage);
-            groupBox_comment.Dock = System.Windows.Forms.DockStyle.Top;
+            groupBox_comment.Dock = System.Windows.Forms.DockStyle.Bottom;
             groupBox_comment.Location = new System.Drawing.Point(15, 378);
             groupBox_comment.Name = "groupBox_comment";
-            groupBox_comment.Padding = new System.Windows.Forms.Padding(3, 3, 10, 10);
-            groupBox_comment.Size = new System.Drawing.Size(916, 330);
+            groupBox_comment.Padding = new System.Windows.Forms.Padding(3, 3, 30, 10);
+
+            if(respondComment == null)
+            {
+                groupBox_comment.Size = new System.Drawing.Size(916, 190);
+
+            }
+            else
+            {
+                groupBox_comment.Size = new System.Drawing.Size(916, 200 + rjButton_shopBackground.Size.Height + 30);
+
+            }
             groupBox_comment.TabIndex = 13;
             groupBox_comment.TabStop = false;
+            //groupBox_comment.BackColor = Color.Gray;
 
             return groupBox_comment;
         }

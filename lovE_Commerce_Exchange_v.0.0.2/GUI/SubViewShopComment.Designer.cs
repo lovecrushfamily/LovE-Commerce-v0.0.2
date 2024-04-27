@@ -34,10 +34,10 @@
             this.comboBox_searchWaitingOrderOption = new System.Windows.Forms.ComboBox();
             this.iconButton7 = new FontAwesome.Sharp.IconButton();
             this.rjTextBox_searchWaitingOrders = new CustomControls.RJControls.RJTextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rjButton1 = new CustomControls.RJControls.RJButton();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.groupBox_comment = new System.Windows.Forms.GroupBox();
+            this.rjButton_respondComment = new CustomControls.RJControls.RJButton();
+            this.panel_OrderDetailProductInfor = new System.Windows.Forms.Panel();
+            this.pictureBox_productImage = new System.Windows.Forms.PictureBox();
             this.label_productName = new System.Windows.Forms.Label();
             this.panel_starCustomerholder = new System.Windows.Forms.Panel();
             this.pictureBox31 = new System.Windows.Forms.PictureBox();
@@ -45,13 +45,12 @@
             this.pictureBox28 = new System.Windows.Forms.PictureBox();
             this.pictureBox29 = new System.Windows.Forms.PictureBox();
             this.pictureBox30 = new System.Windows.Forms.PictureBox();
-            this.iconButton_respondNow = new FontAwesome.Sharp.IconButton();
             this.rjTextBox_respondtext = new CustomControls.RJControls.RJTextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel_customerComment = new System.Windows.Forms.Panel();
             this.label_customerComment = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label_customerReview = new System.Windows.Forms.Label();
             this.label_customerName = new System.Windows.Forms.Label();
-            this.rjCircularPictureBox1 = new RJCircularPictureBox();
+            this.rjCircularPictureBox_custommerImage = new RJCircularPictureBox();
             this.tabPage_shopRespond = new System.Windows.Forms.TabPage();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
@@ -79,17 +78,17 @@
             this.gradientLabel1 = new GUI.CustomControl.GradientLabel();
             this.tabControl_shopComment.SuspendLayout();
             this.tabPage_customerComment.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.groupBox_comment.SuspendLayout();
+            this.panel_OrderDetailProductInfor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_productImage)).BeginInit();
             this.panel_starCustomerholder.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox31)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).BeginInit();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox1)).BeginInit();
+            this.panel_customerComment.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox_custommerImage)).BeginInit();
             this.tabPage_shopRespond.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -112,7 +111,7 @@
             this.tabControl_shopComment.Location = new System.Drawing.Point(0, 100);
             this.tabControl_shopComment.Name = "tabControl_shopComment";
             this.tabControl_shopComment.SelectedIndex = 0;
-            this.tabControl_shopComment.Size = new System.Drawing.Size(1000, 787);
+            this.tabControl_shopComment.Size = new System.Drawing.Size(1009, 520);
             this.tabControl_shopComment.TabIndex = 3;
             // 
             // tabPage_customerComment
@@ -122,11 +121,11 @@
             this.tabPage_customerComment.Controls.Add(this.comboBox_searchWaitingOrderOption);
             this.tabPage_customerComment.Controls.Add(this.iconButton7);
             this.tabPage_customerComment.Controls.Add(this.rjTextBox_searchWaitingOrders);
-            this.tabPage_customerComment.Controls.Add(this.groupBox1);
+            this.tabPage_customerComment.Controls.Add(this.groupBox_comment);
             this.tabPage_customerComment.Location = new System.Drawing.Point(4, 25);
             this.tabPage_customerComment.Name = "tabPage_customerComment";
             this.tabPage_customerComment.Padding = new System.Windows.Forms.Padding(10, 60, 10, 50);
-            this.tabPage_customerComment.Size = new System.Drawing.Size(992, 758);
+            this.tabPage_customerComment.Size = new System.Drawing.Size(1001, 491);
             this.tabPage_customerComment.TabIndex = 0;
             this.tabPage_customerComment.Text = "tabPage_customerComment";
             // 
@@ -183,72 +182,71 @@
             this.rjTextBox_searchWaitingOrders.Texts = "";
             this.rjTextBox_searchWaitingOrders.UnderlinedStyle = false;
             // 
-            // groupBox1
+            // groupBox_comment
             // 
-            this.groupBox1.AutoSize = true;
-            this.groupBox1.Controls.Add(this.rjButton1);
-            this.groupBox1.Controls.Add(this.panel2);
-            this.groupBox1.Controls.Add(this.panel_starCustomerholder);
-            this.groupBox1.Controls.Add(this.iconButton_respondNow);
-            this.groupBox1.Controls.Add(this.rjTextBox_respondtext);
-            this.groupBox1.Controls.Add(this.panel1);
-            this.groupBox1.Controls.Add(this.label_customerName);
-            this.groupBox1.Controls.Add(this.rjCircularPictureBox1);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox1.Location = new System.Drawing.Point(10, 60);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(20, 15, 20, 10);
-            this.groupBox1.Size = new System.Drawing.Size(972, 409);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
+            this.groupBox_comment.AutoSize = true;
+            this.groupBox_comment.Controls.Add(this.rjButton_respondComment);
+            this.groupBox_comment.Controls.Add(this.panel_OrderDetailProductInfor);
+            this.groupBox_comment.Controls.Add(this.panel_starCustomerholder);
+            this.groupBox_comment.Controls.Add(this.rjTextBox_respondtext);
+            this.groupBox_comment.Controls.Add(this.panel_customerComment);
+            this.groupBox_comment.Controls.Add(this.label_customerName);
+            this.groupBox_comment.Controls.Add(this.rjCircularPictureBox_custommerImage);
+            this.groupBox_comment.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox_comment.Location = new System.Drawing.Point(10, 60);
+            this.groupBox_comment.Name = "groupBox_comment";
+            this.groupBox_comment.Padding = new System.Windows.Forms.Padding(20, 15, 20, 0);
+            this.groupBox_comment.Size = new System.Drawing.Size(981, 378);
+            this.groupBox_comment.TabIndex = 0;
+            this.groupBox_comment.TabStop = false;
             // 
-            // rjButton1
+            // rjButton_respondComment
             // 
-            this.rjButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.rjButton1.BackColor = System.Drawing.Color.DodgerBlue;
-            this.rjButton1.BackgroundColor = System.Drawing.Color.DodgerBlue;
-            this.rjButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjButton1.BorderRadius = 15;
-            this.rjButton1.BorderSize = 0;
-            this.rjButton1.FlatAppearance.BorderSize = 0;
-            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton1.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.Location = new System.Drawing.Point(792, 330);
-            this.rjButton1.Name = "rjButton1";
-            this.rjButton1.Size = new System.Drawing.Size(150, 40);
-            this.rjButton1.TabIndex = 19;
-            this.rjButton1.Text = "Respond";
-            this.rjButton1.TextColor = System.Drawing.Color.White;
-            this.rjButton1.UseVisualStyleBackColor = false;
+            this.rjButton_respondComment.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.rjButton_respondComment.BackColor = System.Drawing.Color.DodgerBlue;
+            this.rjButton_respondComment.BackgroundColor = System.Drawing.Color.DodgerBlue;
+            this.rjButton_respondComment.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rjButton_respondComment.BorderRadius = 15;
+            this.rjButton_respondComment.BorderSize = 0;
+            this.rjButton_respondComment.FlatAppearance.BorderSize = 0;
+            this.rjButton_respondComment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton_respondComment.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.rjButton_respondComment.ForeColor = System.Drawing.Color.White;
+            this.rjButton_respondComment.Location = new System.Drawing.Point(814, 227);
+            this.rjButton_respondComment.Name = "rjButton_respondComment";
+            this.rjButton_respondComment.Size = new System.Drawing.Size(137, 40);
+            this.rjButton_respondComment.TabIndex = 19;
+            this.rjButton_respondComment.Text = "Respond";
+            this.rjButton_respondComment.TextColor = System.Drawing.Color.White;
+            this.rjButton_respondComment.UseVisualStyleBackColor = false;
             // 
-            // panel2
+            // panel_OrderDetailProductInfor
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.panel_OrderDetailProductInfor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.Controls.Add(this.pictureBox6);
-            this.panel2.Controls.Add(this.label_productName);
-            this.panel2.Location = new System.Drawing.Point(247, 217);
-            this.panel2.Name = "panel2";
-            this.panel2.Padding = new System.Windows.Forms.Padding(5);
-            this.panel2.Size = new System.Drawing.Size(705, 68);
-            this.panel2.TabIndex = 18;
+            this.panel_OrderDetailProductInfor.Controls.Add(this.pictureBox_productImage);
+            this.panel_OrderDetailProductInfor.Controls.Add(this.label_productName);
+            this.panel_OrderDetailProductInfor.Location = new System.Drawing.Point(247, 292);
+            this.panel_OrderDetailProductInfor.Name = "panel_OrderDetailProductInfor";
+            this.panel_OrderDetailProductInfor.Padding = new System.Windows.Forms.Padding(10, 5, 5, 5);
+            this.panel_OrderDetailProductInfor.Size = new System.Drawing.Size(714, 68);
+            this.panel_OrderDetailProductInfor.TabIndex = 18;
             // 
-            // pictureBox6
+            // pictureBox_productImage
             // 
-            this.pictureBox6.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox6.Location = new System.Drawing.Point(5, 5);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(58, 58);
-            this.pictureBox6.TabIndex = 0;
-            this.pictureBox6.TabStop = false;
+            this.pictureBox_productImage.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox_productImage.Location = new System.Drawing.Point(10, 5);
+            this.pictureBox_productImage.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
+            this.pictureBox_productImage.Name = "pictureBox_productImage";
+            this.pictureBox_productImage.Size = new System.Drawing.Size(58, 58);
+            this.pictureBox_productImage.TabIndex = 0;
+            this.pictureBox_productImage.TabStop = false;
             // 
             // label_productName
             // 
             this.label_productName.Font = new System.Drawing.Font("Sans Serif Collection", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_productName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label_productName.Location = new System.Drawing.Point(76, 15);
+            this.label_productName.Location = new System.Drawing.Point(81, 5);
             this.label_productName.Margin = new System.Windows.Forms.Padding(3, 10, 3, 0);
             this.label_productName.Name = "label_productName";
             this.label_productName.Size = new System.Drawing.Size(375, 30);
@@ -264,7 +262,7 @@
             this.panel_starCustomerholder.Controls.Add(this.pictureBox30);
             this.panel_starCustomerholder.Location = new System.Drawing.Point(84, 59);
             this.panel_starCustomerholder.Name = "panel_starCustomerholder";
-            this.panel_starCustomerholder.Size = new System.Drawing.Size(131, 32);
+            this.panel_starCustomerholder.Size = new System.Drawing.Size(104, 32);
             this.panel_starCustomerholder.TabIndex = 17;
             // 
             // pictureBox31
@@ -322,28 +320,6 @@
             this.pictureBox30.TabIndex = 3;
             this.pictureBox30.TabStop = false;
             // 
-            // iconButton_respondNow
-            // 
-            this.iconButton_respondNow.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconButton_respondNow.FlatAppearance.BorderSize = 0;
-            this.iconButton_respondNow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton_respondNow.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton_respondNow.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.iconButton_respondNow.IconChar = FontAwesome.Sharp.IconChar.AngleDown;
-            this.iconButton_respondNow.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.iconButton_respondNow.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton_respondNow.IconSize = 30;
-            this.iconButton_respondNow.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton_respondNow.Location = new System.Drawing.Point(246, 173);
-            this.iconButton_respondNow.Name = "iconButton_respondNow";
-            this.iconButton_respondNow.Size = new System.Drawing.Size(706, 38);
-            this.iconButton_respondNow.TabIndex = 4;
-            this.iconButton_respondNow.Text = "Respond now";
-            this.iconButton_respondNow.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton_respondNow.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton_respondNow.UseVisualStyleBackColor = true;
-            // 
             // rjTextBox_respondtext
             // 
             this.rjTextBox_respondtext.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -355,30 +331,30 @@
             this.rjTextBox_respondtext.BorderSize = 1;
             this.rjTextBox_respondtext.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjTextBox_respondtext.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox_respondtext.Location = new System.Drawing.Point(246, 292);
+            this.rjTextBox_respondtext.Location = new System.Drawing.Point(246, 174);
             this.rjTextBox_respondtext.Margin = new System.Windows.Forms.Padding(4);
             this.rjTextBox_respondtext.Multiline = true;
             this.rjTextBox_respondtext.Name = "rjTextBox_respondtext";
-            this.rjTextBox_respondtext.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.rjTextBox_respondtext.Padding = new System.Windows.Forms.Padding(18, 13, 10, 7);
             this.rjTextBox_respondtext.PasswordChar = false;
             this.rjTextBox_respondtext.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.rjTextBox_respondtext.PlaceholderText = "Your respond";
-            this.rjTextBox_respondtext.Size = new System.Drawing.Size(706, 88);
+            this.rjTextBox_respondtext.Size = new System.Drawing.Size(715, 107);
             this.rjTextBox_respondtext.TabIndex = 3;
             this.rjTextBox_respondtext.Texts = "";
             this.rjTextBox_respondtext.UnderlinedStyle = false;
             // 
-            // panel1
+            // panel_customerComment
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.panel_customerComment.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.label_customerComment);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(246, 30);
-            this.panel1.Name = "panel1";
-            this.panel1.Padding = new System.Windows.Forms.Padding(10);
-            this.panel1.Size = new System.Drawing.Size(706, 137);
-            this.panel1.TabIndex = 2;
+            this.panel_customerComment.Controls.Add(this.label_customerComment);
+            this.panel_customerComment.Controls.Add(this.label_customerReview);
+            this.panel_customerComment.Location = new System.Drawing.Point(246, 30);
+            this.panel_customerComment.Name = "panel_customerComment";
+            this.panel_customerComment.Padding = new System.Windows.Forms.Padding(10);
+            this.panel_customerComment.Size = new System.Drawing.Size(715, 137);
+            this.panel_customerComment.TabIndex = 2;
             // 
             // label_customerComment
             // 
@@ -387,20 +363,20 @@
             this.label_customerComment.Location = new System.Drawing.Point(10, 34);
             this.label_customerComment.Name = "label_customerComment";
             this.label_customerComment.Padding = new System.Windows.Forms.Padding(5, 10, 5, 5);
-            this.label_customerComment.Size = new System.Drawing.Size(686, 93);
+            this.label_customerComment.Size = new System.Drawing.Size(695, 93);
             this.label_customerComment.TabIndex = 1;
             this.label_customerComment.Text = resources.GetString("label_customerComment.Text");
             // 
-            // label2
+            // label_customerReview
             // 
-            this.label2.AutoSize = true;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label2.Font = new System.Drawing.Font("Sans Serif Collection", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(10, 10);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(127, 24);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Customer review :";
+            this.label_customerReview.AutoSize = true;
+            this.label_customerReview.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label_customerReview.Font = new System.Drawing.Font("Sans Serif Collection", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_customerReview.Location = new System.Drawing.Point(10, 10);
+            this.label_customerReview.Name = "label_customerReview";
+            this.label_customerReview.Size = new System.Drawing.Size(127, 24);
+            this.label_customerReview.TabIndex = 0;
+            this.label_customerReview.Text = "Customer review :";
             // 
             // label_customerName
             // 
@@ -412,20 +388,20 @@
             this.label_customerName.TabIndex = 1;
             this.label_customerName.Text = "LoveCrush";
             // 
-            // rjCircularPictureBox1
+            // rjCircularPictureBox_custommerImage
             // 
-            this.rjCircularPictureBox1.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
-            this.rjCircularPictureBox1.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.rjCircularPictureBox1.BorderColor2 = System.Drawing.Color.HotPink;
-            this.rjCircularPictureBox1.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            this.rjCircularPictureBox1.BorderSize = 2;
-            this.rjCircularPictureBox1.GradientAngle = 50F;
-            this.rjCircularPictureBox1.Location = new System.Drawing.Point(23, 33);
-            this.rjCircularPictureBox1.Name = "rjCircularPictureBox1";
-            this.rjCircularPictureBox1.Size = new System.Drawing.Size(50, 50);
-            this.rjCircularPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.rjCircularPictureBox1.TabIndex = 0;
-            this.rjCircularPictureBox1.TabStop = false;
+            this.rjCircularPictureBox_custommerImage.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            this.rjCircularPictureBox_custommerImage.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.rjCircularPictureBox_custommerImage.BorderColor2 = System.Drawing.Color.HotPink;
+            this.rjCircularPictureBox_custommerImage.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            this.rjCircularPictureBox_custommerImage.BorderSize = 2;
+            this.rjCircularPictureBox_custommerImage.GradientAngle = 50F;
+            this.rjCircularPictureBox_custommerImage.Location = new System.Drawing.Point(23, 33);
+            this.rjCircularPictureBox_custommerImage.Name = "rjCircularPictureBox_custommerImage";
+            this.rjCircularPictureBox_custommerImage.Size = new System.Drawing.Size(50, 50);
+            this.rjCircularPictureBox_custommerImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.rjCircularPictureBox_custommerImage.TabIndex = 0;
+            this.rjCircularPictureBox_custommerImage.TabStop = false;
             // 
             // tabPage_shopRespond
             // 
@@ -681,7 +657,7 @@
             this.panel_optionContainer.Margin = new System.Windows.Forms.Padding(3, 0, 3, 3);
             this.panel_optionContainer.Name = "panel_optionContainer";
             this.panel_optionContainer.Padding = new System.Windows.Forms.Padding(25, 10, 0, 0);
-            this.panel_optionContainer.Size = new System.Drawing.Size(992, 82);
+            this.panel_optionContainer.Size = new System.Drawing.Size(1001, 82);
             this.panel_optionContainer.TabIndex = 25;
             // 
             // iconButton_notCommentYet
@@ -741,7 +717,7 @@
             this.gradientLabel3.EndColor = System.Drawing.Color.MediumSlateBlue;
             this.gradientLabel3.Location = new System.Drawing.Point(4, 120);
             this.gradientLabel3.Name = "gradientLabel3";
-            this.gradientLabel3.Size = new System.Drawing.Size(988, 10);
+            this.gradientLabel3.Size = new System.Drawing.Size(997, 10);
             this.gradientLabel3.TabIndex = 26;
             this.gradientLabel3.TextColorBegin = System.Drawing.SystemColors.Control;
             this.gradientLabel3.TextColorEnd = System.Drawing.SystemColors.Control;
@@ -757,7 +733,7 @@
             this.gradientLabel2.Location = new System.Drawing.Point(202, 4);
             this.gradientLabel2.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.gradientLabel2.Name = "gradientLabel2";
-            this.gradientLabel2.Size = new System.Drawing.Size(794, 44);
+            this.gradientLabel2.Size = new System.Drawing.Size(803, 44);
             this.gradientLabel2.TabIndex = 27;
             this.gradientLabel2.TextColorBegin = System.Drawing.SystemColors.Control;
             this.gradientLabel2.TextColorEnd = System.Drawing.SystemColors.Control;
@@ -780,9 +756,9 @@
             // 
             // SubViewShopComment
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1000, 887);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.ClientSize = new System.Drawing.Size(1009, 620);
             this.Controls.Add(this.gradientLabel3);
             this.Controls.Add(this.gradientLabel2);
             this.Controls.Add(this.gradientLabel1);
@@ -795,18 +771,18 @@
             this.tabControl_shopComment.ResumeLayout(false);
             this.tabPage_customerComment.ResumeLayout(false);
             this.tabPage_customerComment.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            this.groupBox_comment.ResumeLayout(false);
+            this.panel_OrderDetailProductInfor.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_productImage)).EndInit();
             this.panel_starCustomerholder.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox31)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox1)).EndInit();
+            this.panel_customerComment.ResumeLayout(false);
+            this.panel_customerComment.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox_custommerImage)).EndInit();
             this.tabPage_shopRespond.ResumeLayout(false);
             this.tabPage_shopRespond.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -830,7 +806,7 @@
         private System.Windows.Forms.TabControl tabControl_shopComment;
         private System.Windows.Forms.TabPage tabPage_customerComment;
         private System.Windows.Forms.TabPage tabPage_shopRespond;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox_comment;
         private System.Windows.Forms.Panel panel_optionContainer;
         private FontAwesome.Sharp.IconButton iconButton_notCommentYet;
         private FontAwesome.Sharp.IconButton iconButton_reviewed;
@@ -841,11 +817,10 @@
         private CustomControl.GradientLabel gradientLabel2;
         private CustomControl.GradientLabel gradientLabel1;
         private System.Windows.Forms.Label label_customerName;
-        private RJCircularPictureBox rjCircularPictureBox1;
-        private System.Windows.Forms.Panel panel1;
+        private RJCircularPictureBox rjCircularPictureBox_custommerImage;
+        private System.Windows.Forms.Panel panel_customerComment;
         private System.Windows.Forms.Label label_customerComment;
-        private System.Windows.Forms.Label label2;
-        private FontAwesome.Sharp.IconButton iconButton_respondNow;
+        private System.Windows.Forms.Label label_customerReview;
         private CustomControls.RJControls.RJTextBox rjTextBox_respondtext;
         private System.Windows.Forms.Panel panel_starCustomerholder;
         private System.Windows.Forms.PictureBox pictureBox31;
@@ -871,9 +846,9 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Panel panel_OrderDetailProductInfor;
+        private System.Windows.Forms.PictureBox pictureBox_productImage;
         private System.Windows.Forms.Label label_productName;
-        private CustomControls.RJControls.RJButton rjButton1;
+        private CustomControls.RJControls.RJButton rjButton_respondComment;
     }
 }

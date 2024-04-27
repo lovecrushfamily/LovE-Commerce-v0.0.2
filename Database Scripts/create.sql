@@ -146,14 +146,13 @@ create table system_.Message_ (MessageID int identity(1,1) primary key,
 								
 
 create table system_.Comment (CommentID int identity(1,1) primary key,
-								ProductID int references production.Product(ProductID) 
-								on delete cascade on update cascade,
 								CustomerID int references user_.Customer(CustomerID),
 								-- handle event when delete customer, comment gone after that immediately
 								Star tinyint not null,
 								Content varchar(255) not null,
 								DateOfComment Date not null,
-								ResponseComment	bit not null);
+								ResponseComment	bit not null,
+								 OrderDetailID int references production.OrderDetail(OrderDetailID) on delete cascade);
 
 
 create table system_.ShopppingCart (CustomerID int references user_.Customer(CustomerID) 

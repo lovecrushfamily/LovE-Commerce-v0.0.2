@@ -42,6 +42,8 @@ namespace GUI
             NewShop.Add();
             //newShop.
             MessageBox.Show("Register sucessfully!");
+
+            shopOwner.SetShopOwnerOn().Update();
             Dispose();
         }
 

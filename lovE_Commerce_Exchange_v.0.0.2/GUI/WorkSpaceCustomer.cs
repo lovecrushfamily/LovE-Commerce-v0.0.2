@@ -35,20 +35,58 @@ namespace GUI
         public event EventHandler EventExternalLink;
         #endregion
 
+        SubViewCustormerOrders subViewCustormerOrders;
+        SubViewCustomerComment SubViewCustomerComment;
+        
+
         public WorkSpaceCustomer()
         {
             InitializeComponent();
             //SubViewNavigator();
+
+            subViewCustormerOrders = new SubViewCustormerOrders();
+            SubViewCustomerComment = new SubViewCustomerComment();
+            subViewCustormerOrders.objectExternalLink += OpenObjectExternalLinkSubCustomerOrders;
+            SubViewCustomerComment.objectExternalLink += OpenObjectExternalLinkComnent;
+
         }
+
+       
+
+        private void OpenObjectExternalLinkSubCustomerOrders(Entity entity)
+        {
+            if(entity is Product)
+            {
+                objectExternalLink((Product)entity);
+            }
+            else if(entity is OrderDetail)
+            {
+                SubViewCustomerComment.SetOrderDetail((OrderDetail)entity);
+                IconButton_comment_Click(null,null);
+            }
+        }
+        private void OpenObjectExternalLinkComnent(Entity entity)
+        {
+            //I dont know what's come up in my mind when i define it
+            if(entity is Product)
+            {
+                objectExternalLink((Product)entity);
+            }
+            if(entity is Order)
+            {
+                subViewCustormerOrders.HeadingToRecieveOrder();
+                IconButton_orders_Click(null,null);
+            }
+        }
+
         public void SetAccount(Account account)
         {
-            this.currentAccount = null;
             this.currentAccount = account;
         }
         internal void SetCustomer(Customer customer)
         {
-            this.currentCustomer = null;
             this.currentCustomer = customer;
+            SubViewCustomerComment.SetCustomer(currentCustomer);
 
         }
         public void HeadingtoMessage(BUS.Message message)
@@ -109,10 +147,10 @@ namespace GUI
         #region Open Sub Form 
         void OpenChildForm(Form childForm)
         {
-            if (currentChildForm != null)
-            {
-                currentChildForm.Close();
-            }
+            //if (currentChildForm != null)
+            //{
+            //    currentChildForm.Close();
+            //}
             currentChildForm = childForm;
             currentChildForm.TopLevel = false;
             currentChildForm.FormBorderStyle = FormBorderStyle.None;
@@ -137,10 +175,12 @@ namespace GUI
             OpenChildForm(new SubViewCustomerAccount(account: currentAccount, customer: currentCustomer));
         }
 
+        //subViewCustormerOrders
         private void IconButton_orders_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            OpenChildForm(new SubViewCustormerOrders());
+            subViewCustormerOrders.SetCustomer(currentCustomer);
+            OpenChildForm(subViewCustormerOrders);
 
 
         }
@@ -148,7 +188,7 @@ namespace GUI
         private void IconButton_comment_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            OpenChildForm(new SubViewCustomerComment());
+            OpenChildForm(SubViewCustomerComment);
 
 
         }
@@ -174,18 +214,14 @@ namespace GUI
                 MessageBox.Show("You do not have any shop currently,\nWould you like to create your owner shop?","Create your own shop", MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
                 new PopupShopRegister(currentCustomer).ShowDialog();
-                currentCustomer.SetShopOwnerOn().Update();
-                SetCustomer(Customer.GetCustomers().SingleOrDefault(cus => cus.CustomerId == currentCustomer.CustomerId));
             }
-            
+
         }
 
         private void IconButton_messenger_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
             OpenChildForm(new SubViewCustomerMessenger());
-
-
         }
 
 

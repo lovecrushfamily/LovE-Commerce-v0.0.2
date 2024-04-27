@@ -104,20 +104,20 @@
             this.panel_allfatherWaitingOrders = new System.Windows.Forms.Panel();
             this.groupBox_waitingOrder = new System.Windows.Forms.GroupBox();
             this.panel_OrderDetail = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.rjButton_cancelOrderDetailOne = new CustomControls.RJControls.RJButton();
-            this.label8 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.rjButton_cancelOrderDetailOne0 = new CustomControls.RJControls.RJButton();
+            this.label_statusWaiting = new System.Windows.Forms.Label();
             this.rjButton18 = new CustomControls.RJControls.RJButton();
             this.rjButton13 = new CustomControls.RJControls.RJButton();
             this.button_shopName = new System.Windows.Forms.Button();
-            this.iconButton6 = new FontAwesome.Sharp.IconButton();
+            this.rjButton_cancelOrderDetailOne = new CustomControls.RJControls.RJButton();
+            this.iconButton_shop = new FontAwesome.Sharp.IconButton();
             this.rjButton12 = new CustomControls.RJControls.RJButton();
             this.rjButton11 = new CustomControls.RJControls.RJButton();
             this.rjButton10 = new CustomControls.RJControls.RJButton();
             this.rjButton9 = new CustomControls.RJControls.RJButton();
             this.rjButton3 = new CustomControls.RJControls.RJButton();
             this.label3 = new System.Windows.Forms.Label();
-            this.rjButton_cancelWaitingOrderDetail = new CustomControls.RJControls.RJButton();
             this.rjButton_cancelOrderDetail = new CustomControls.RJControls.RJButton();
             this.pictureBox_orderDetailImage = new System.Windows.Forms.PictureBox();
             this.label_orderDetailQuantity = new System.Windows.Forms.Label();
@@ -192,7 +192,7 @@
             this.panel_allfatherWaitingOrders.SuspendLayout();
             this.groupBox_waitingOrder.SuspendLayout();
             this.panel_OrderDetail.SuspendLayout();
-            this.panel9.SuspendLayout();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_orderDetailImage)).BeginInit();
             this.panel_orderInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox_customerImage)).BeginInit();
@@ -217,7 +217,7 @@
             this.panel_optionContainer.Margin = new System.Windows.Forms.Padding(3, 0, 3, 3);
             this.panel_optionContainer.Name = "panel_optionContainer";
             this.panel_optionContainer.Padding = new System.Windows.Forms.Padding(25, 10, 0, 0);
-            this.panel_optionContainer.Size = new System.Drawing.Size(999, 72);
+            this.panel_optionContainer.Size = new System.Drawing.Size(994, 72);
             this.panel_optionContainer.TabIndex = 15;
             // 
             // iconButton_cancelledOrder
@@ -330,7 +330,7 @@
             this.TabControl_Orders.Location = new System.Drawing.Point(0, 80);
             this.TabControl_Orders.Name = "TabControl_Orders";
             this.TabControl_Orders.SelectedIndex = 0;
-            this.TabControl_Orders.Size = new System.Drawing.Size(1003, 475);
+            this.TabControl_Orders.Size = new System.Drawing.Size(998, 474);
             this.TabControl_Orders.TabIndex = 16;
             // 
             // tabPage_confirmedOrders
@@ -344,7 +344,7 @@
             this.tabPage_confirmedOrders.Location = new System.Drawing.Point(4, 25);
             this.tabPage_confirmedOrders.Name = "tabPage_confirmedOrders";
             this.tabPage_confirmedOrders.Padding = new System.Windows.Forms.Padding(0, 70, 0, 0);
-            this.tabPage_confirmedOrders.Size = new System.Drawing.Size(995, 446);
+            this.tabPage_confirmedOrders.Size = new System.Drawing.Size(990, 445);
             this.tabPage_confirmedOrders.TabIndex = 1;
             this.tabPage_confirmedOrders.Text = "tabPage_confirmOrder";
             // 
@@ -408,7 +408,7 @@
             this.panel_allFatherComfirmOrder.Location = new System.Drawing.Point(0, 70);
             this.panel_allFatherComfirmOrder.Name = "panel_allFatherComfirmOrder";
             this.panel_allFatherComfirmOrder.Padding = new System.Windows.Forms.Padding(10, 0, 20, 50);
-            this.panel_allFatherComfirmOrder.Size = new System.Drawing.Size(995, 376);
+            this.panel_allFatherComfirmOrder.Size = new System.Drawing.Size(990, 375);
             this.panel_allFatherComfirmOrder.TabIndex = 5;
             // 
             // groupBox_confirmedOrder1
@@ -423,7 +423,7 @@
             this.groupBox_confirmedOrder1.Location = new System.Drawing.Point(10, 0);
             this.groupBox_confirmedOrder1.Name = "groupBox_confirmedOrder1";
             this.groupBox_confirmedOrder1.Padding = new System.Windows.Forms.Padding(20, 3, 20, 10);
-            this.groupBox_confirmedOrder1.Size = new System.Drawing.Size(965, 291);
+            this.groupBox_confirmedOrder1.Size = new System.Drawing.Size(960, 291);
             this.groupBox_confirmedOrder1.TabIndex = 1;
             this.groupBox_confirmedOrder1.TabStop = false;
             // 
@@ -444,15 +444,15 @@
             this.panel_orderDetail1.Location = new System.Drawing.Point(20, 151);
             this.panel_orderDetail1.MaximumSize = new System.Drawing.Size(0, 130);
             this.panel_orderDetail1.Name = "panel_orderDetail1";
-            this.panel_orderDetail1.Size = new System.Drawing.Size(925, 130);
+            this.panel_orderDetail1.Size = new System.Drawing.Size(920, 130);
             this.panel_orderDetail1.TabIndex = 12;
             // 
             // panel2
             // 
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(770, 0);
+            this.panel2.Location = new System.Drawing.Point(739, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(155, 130);
+            this.panel2.Size = new System.Drawing.Size(181, 130);
             this.panel2.TabIndex = 8;
             // 
             // rjButton15
@@ -466,7 +466,7 @@
             this.rjButton15.FlatAppearance.BorderSize = 0;
             this.rjButton15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton15.ForeColor = System.Drawing.Color.White;
-            this.rjButton15.Location = new System.Drawing.Point(17580, 46);
+            this.rjButton15.Location = new System.Drawing.Point(32767, 46);
             this.rjButton15.Name = "rjButton15";
             this.rjButton15.Size = new System.Drawing.Size(150, 40);
             this.rjButton15.TabIndex = 7;
@@ -576,7 +576,7 @@
             this.iconButton_expandProductDetail1.Location = new System.Drawing.Point(20, 111);
             this.iconButton_expandProductDetail1.Name = "iconButton_expandProductDetail1";
             this.iconButton_expandProductDetail1.Padding = new System.Windows.Forms.Padding(0, 0, 25, 0);
-            this.iconButton_expandProductDetail1.Size = new System.Drawing.Size(925, 40);
+            this.iconButton_expandProductDetail1.Size = new System.Drawing.Size(920, 40);
             this.iconButton_expandProductDetail1.TabIndex = 11;
             this.iconButton_expandProductDetail1.Text = "Product Detail";
             this.iconButton_expandProductDetail1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -597,7 +597,7 @@
             this.panel_orderInfor1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_orderInfor1.Location = new System.Drawing.Point(20, 24);
             this.panel_orderInfor1.Name = "panel_orderInfor1";
-            this.panel_orderInfor1.Size = new System.Drawing.Size(925, 87);
+            this.panel_orderInfor1.Size = new System.Drawing.Size(920, 87);
             this.panel_orderInfor1.TabIndex = 10;
             // 
             // rjButton_receiveOrder
@@ -611,7 +611,7 @@
             this.rjButton_receiveOrder.FlatAppearance.BorderSize = 0;
             this.rjButton_receiveOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton_receiveOrder.ForeColor = System.Drawing.Color.GhostWhite;
-            this.rjButton_receiveOrder.Location = new System.Drawing.Point(769, 40);
+            this.rjButton_receiveOrder.Location = new System.Drawing.Point(764, 40);
             this.rjButton_receiveOrder.Name = "rjButton_receiveOrder";
             this.rjButton_receiveOrder.Size = new System.Drawing.Size(134, 35);
             this.rjButton_receiveOrder.TabIndex = 8;
@@ -644,7 +644,7 @@
             this.label29.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(794, 8);
+            this.label29.Location = new System.Drawing.Point(789, 8);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(85, 21);
             this.label29.TabIndex = 0;
@@ -737,7 +737,7 @@
             this.tabPage_RecievedOrder.Location = new System.Drawing.Point(4, 25);
             this.tabPage_RecievedOrder.Name = "tabPage_RecievedOrder";
             this.tabPage_RecievedOrder.Padding = new System.Windows.Forms.Padding(0, 70, 0, 0);
-            this.tabPage_RecievedOrder.Size = new System.Drawing.Size(995, 446);
+            this.tabPage_RecievedOrder.Size = new System.Drawing.Size(990, 445);
             this.tabPage_RecievedOrder.TabIndex = 2;
             this.tabPage_RecievedOrder.Text = "tabPage_receievedOrder";
             // 
@@ -781,7 +781,7 @@
             this.panel_allFatherReceivedOrder.Location = new System.Drawing.Point(0, 70);
             this.panel_allFatherReceivedOrder.Name = "panel_allFatherReceivedOrder";
             this.panel_allFatherReceivedOrder.Padding = new System.Windows.Forms.Padding(10, 0, 20, 50);
-            this.panel_allFatherReceivedOrder.Size = new System.Drawing.Size(995, 376);
+            this.panel_allFatherReceivedOrder.Size = new System.Drawing.Size(990, 375);
             this.panel_allFatherReceivedOrder.TabIndex = 5;
             // 
             // groupBox_waitingOrder2
@@ -796,7 +796,7 @@
             this.groupBox_waitingOrder2.Location = new System.Drawing.Point(10, 0);
             this.groupBox_waitingOrder2.Name = "groupBox_waitingOrder2";
             this.groupBox_waitingOrder2.Padding = new System.Windows.Forms.Padding(20, 3, 20, 10);
-            this.groupBox_waitingOrder2.Size = new System.Drawing.Size(965, 291);
+            this.groupBox_waitingOrder2.Size = new System.Drawing.Size(960, 291);
             this.groupBox_waitingOrder2.TabIndex = 1;
             this.groupBox_waitingOrder2.TabStop = false;
             // 
@@ -822,14 +822,14 @@
             this.panel_OrderDetail2.Location = new System.Drawing.Point(20, 151);
             this.panel_OrderDetail2.MaximumSize = new System.Drawing.Size(0, 130);
             this.panel_OrderDetail2.Name = "panel_OrderDetail2";
-            this.panel_OrderDetail2.Size = new System.Drawing.Size(925, 130);
+            this.panel_OrderDetail2.Size = new System.Drawing.Size(920, 130);
             this.panel_OrderDetail2.TabIndex = 13;
             // 
             // panel5
             // 
             this.panel5.Controls.Add(this.rjButton_commentOrderDetail);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel5.Location = new System.Drawing.Point(766, 0);
+            this.panel5.Location = new System.Drawing.Point(761, 0);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(159, 130);
             this.panel5.TabIndex = 16;
@@ -864,7 +864,7 @@
             this.rjButton17.FlatAppearance.BorderSize = 0;
             this.rjButton17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton17.ForeColor = System.Drawing.Color.White;
-            this.rjButton17.Location = new System.Drawing.Point(16348, 46);
+            this.rjButton17.Location = new System.Drawing.Point(32767, 46);
             this.rjButton17.Name = "rjButton17";
             this.rjButton17.Size = new System.Drawing.Size(150, 40);
             this.rjButton17.TabIndex = 15;
@@ -883,7 +883,7 @@
             this.rjButton14.FlatAppearance.BorderSize = 0;
             this.rjButton14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton14.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.rjButton14.Location = new System.Drawing.Point(21383, 46);
+            this.rjButton14.Location = new System.Drawing.Point(32767, 46);
             this.rjButton14.Name = "rjButton14";
             this.rjButton14.Size = new System.Drawing.Size(134, 35);
             this.rjButton14.TabIndex = 14;
@@ -902,7 +902,7 @@
             this.rjButton6.FlatAppearance.BorderSize = 0;
             this.rjButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton6.ForeColor = System.Drawing.Color.White;
-            this.rjButton6.Location = new System.Drawing.Point(27059, 46);
+            this.rjButton6.Location = new System.Drawing.Point(32767, 46);
             this.rjButton6.Name = "rjButton6";
             this.rjButton6.Size = new System.Drawing.Size(134, 35);
             this.rjButton6.TabIndex = 12;
@@ -921,7 +921,7 @@
             this.rjButton1.FlatAppearance.BorderSize = 0;
             this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.Location = new System.Drawing.Point(28951, 46);
+            this.rjButton1.Location = new System.Drawing.Point(32767, 46);
             this.rjButton1.Name = "rjButton1";
             this.rjButton1.Size = new System.Drawing.Size(134, 35);
             this.rjButton1.TabIndex = 12;
@@ -1071,7 +1071,7 @@
             this.iconButton_expandProductDetail2.Location = new System.Drawing.Point(20, 111);
             this.iconButton_expandProductDetail2.Name = "iconButton_expandProductDetail2";
             this.iconButton_expandProductDetail2.Padding = new System.Windows.Forms.Padding(0, 0, 25, 0);
-            this.iconButton_expandProductDetail2.Size = new System.Drawing.Size(925, 40);
+            this.iconButton_expandProductDetail2.Size = new System.Drawing.Size(920, 40);
             this.iconButton_expandProductDetail2.TabIndex = 12;
             this.iconButton_expandProductDetail2.Text = "Product Detail";
             this.iconButton_expandProductDetail2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1092,7 +1092,7 @@
             this.panel_orderInfo2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_orderInfo2.Location = new System.Drawing.Point(20, 24);
             this.panel_orderInfo2.Name = "panel_orderInfo2";
-            this.panel_orderInfo2.Size = new System.Drawing.Size(925, 87);
+            this.panel_orderInfo2.Size = new System.Drawing.Size(920, 87);
             this.panel_orderInfo2.TabIndex = 11;
             // 
             // rjButton_Repurchase1
@@ -1106,7 +1106,7 @@
             this.rjButton_Repurchase1.FlatAppearance.BorderSize = 0;
             this.rjButton_Repurchase1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton_Repurchase1.ForeColor = System.Drawing.Color.LightCoral;
-            this.rjButton_Repurchase1.Location = new System.Drawing.Point(766, 40);
+            this.rjButton_Repurchase1.Location = new System.Drawing.Point(761, 40);
             this.rjButton_Repurchase1.Name = "rjButton_Repurchase1";
             this.rjButton_Repurchase1.Size = new System.Drawing.Size(134, 35);
             this.rjButton_Repurchase1.TabIndex = 12;
@@ -1140,7 +1140,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.LightSlateGray;
-            this.label6.Location = new System.Drawing.Point(794, 15);
+            this.label6.Location = new System.Drawing.Point(789, 15);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(77, 21);
             this.label6.TabIndex = 11;
@@ -1234,7 +1234,7 @@
             this.tabPage_waitingOrders.Location = new System.Drawing.Point(4, 25);
             this.tabPage_waitingOrders.Name = "tabPage_waitingOrders";
             this.tabPage_waitingOrders.Padding = new System.Windows.Forms.Padding(0, 70, 0, 0);
-            this.tabPage_waitingOrders.Size = new System.Drawing.Size(995, 446);
+            this.tabPage_waitingOrders.Size = new System.Drawing.Size(990, 445);
             this.tabPage_waitingOrders.TabIndex = 3;
             this.tabPage_waitingOrders.Text = "tabPage_waitingOrder";
             // 
@@ -1278,12 +1278,11 @@
             this.panel_allfatherWaitingOrders.Location = new System.Drawing.Point(0, 70);
             this.panel_allfatherWaitingOrders.Name = "panel_allfatherWaitingOrders";
             this.panel_allfatherWaitingOrders.Padding = new System.Windows.Forms.Padding(10, 0, 20, 50);
-            this.panel_allfatherWaitingOrders.Size = new System.Drawing.Size(995, 376);
+            this.panel_allfatherWaitingOrders.Size = new System.Drawing.Size(990, 375);
             this.panel_allfatherWaitingOrders.TabIndex = 4;
             // 
             // groupBox_waitingOrder
             // 
-            this.groupBox_waitingOrder.AutoSize = true;
             this.groupBox_waitingOrder.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox_waitingOrder.Controls.Add(this.panel_OrderDetail);
             this.groupBox_waitingOrder.Controls.Add(this.iconButton_expandProductDetail);
@@ -1293,25 +1292,26 @@
             this.groupBox_waitingOrder.Location = new System.Drawing.Point(10, 0);
             this.groupBox_waitingOrder.Name = "groupBox_waitingOrder";
             this.groupBox_waitingOrder.Padding = new System.Windows.Forms.Padding(20, 3, 20, 10);
-            this.groupBox_waitingOrder.Size = new System.Drawing.Size(965, 291);
+            this.groupBox_waitingOrder.Size = new System.Drawing.Size(960, 346);
             this.groupBox_waitingOrder.TabIndex = 1;
             this.groupBox_waitingOrder.TabStop = false;
             // 
             // panel_OrderDetail
             // 
             this.panel_OrderDetail.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panel_OrderDetail.Controls.Add(this.panel9);
+            this.panel_OrderDetail.Controls.Add(this.panel3);
+            this.panel_OrderDetail.Controls.Add(this.label_statusWaiting);
             this.panel_OrderDetail.Controls.Add(this.rjButton18);
             this.panel_OrderDetail.Controls.Add(this.rjButton13);
             this.panel_OrderDetail.Controls.Add(this.button_shopName);
-            this.panel_OrderDetail.Controls.Add(this.iconButton6);
+            this.panel_OrderDetail.Controls.Add(this.rjButton_cancelOrderDetailOne);
+            this.panel_OrderDetail.Controls.Add(this.iconButton_shop);
             this.panel_OrderDetail.Controls.Add(this.rjButton12);
             this.panel_OrderDetail.Controls.Add(this.rjButton11);
             this.panel_OrderDetail.Controls.Add(this.rjButton10);
             this.panel_OrderDetail.Controls.Add(this.rjButton9);
             this.panel_OrderDetail.Controls.Add(this.rjButton3);
             this.panel_OrderDetail.Controls.Add(this.label3);
-            this.panel_OrderDetail.Controls.Add(this.rjButton_cancelWaitingOrderDetail);
             this.panel_OrderDetail.Controls.Add(this.rjButton_cancelOrderDetail);
             this.panel_OrderDetail.Controls.Add(this.pictureBox_orderDetailImage);
             this.panel_OrderDetail.Controls.Add(this.label_orderDetailQuantity);
@@ -1321,50 +1321,51 @@
             this.panel_OrderDetail.Controls.Add(this.label_orderDetailProductname);
             this.panel_OrderDetail.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_OrderDetail.Location = new System.Drawing.Point(20, 151);
+            this.panel_OrderDetail.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
             this.panel_OrderDetail.MaximumSize = new System.Drawing.Size(0, 130);
             this.panel_OrderDetail.Name = "panel_OrderDetail";
-            this.panel_OrderDetail.Size = new System.Drawing.Size(925, 130);
+            this.panel_OrderDetail.Size = new System.Drawing.Size(920, 130);
             this.panel_OrderDetail.TabIndex = 14;
             // 
-            // panel9
+            // panel3
             // 
-            this.panel9.Controls.Add(this.rjButton_cancelOrderDetailOne);
-            this.panel9.Controls.Add(this.label8);
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel9.Location = new System.Drawing.Point(770, 0);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(155, 130);
-            this.panel9.TabIndex = 10;
+            this.panel3.Controls.Add(this.rjButton_cancelOrderDetailOne0);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel3.Location = new System.Drawing.Point(739, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(181, 130);
+            this.panel3.TabIndex = 10;
             // 
-            // rjButton_cancelOrderDetailOne
+            // rjButton_cancelOrderDetailOne0
             // 
-            this.rjButton_cancelOrderDetailOne.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.rjButton_cancelOrderDetailOne.BackColor = System.Drawing.SystemColors.Control;
-            this.rjButton_cancelOrderDetailOne.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.rjButton_cancelOrderDetailOne.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjButton_cancelOrderDetailOne.BorderRadius = 15;
-            this.rjButton_cancelOrderDetailOne.BorderSize = 0;
-            this.rjButton_cancelOrderDetailOne.FlatAppearance.BorderSize = 0;
-            this.rjButton_cancelOrderDetailOne.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton_cancelOrderDetailOne.ForeColor = System.Drawing.Color.LightCoral;
-            this.rjButton_cancelOrderDetailOne.Location = new System.Drawing.Point(0, 59);
-            this.rjButton_cancelOrderDetailOne.Name = "rjButton_cancelOrderDetailOne";
-            this.rjButton_cancelOrderDetailOne.Size = new System.Drawing.Size(134, 35);
-            this.rjButton_cancelOrderDetailOne.TabIndex = 8;
-            this.rjButton_cancelOrderDetailOne.Text = "Cancel";
-            this.rjButton_cancelOrderDetailOne.TextColor = System.Drawing.Color.LightCoral;
-            this.rjButton_cancelOrderDetailOne.UseVisualStyleBackColor = false;
+            this.rjButton_cancelOrderDetailOne0.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.rjButton_cancelOrderDetailOne0.BackColor = System.Drawing.SystemColors.Control;
+            this.rjButton_cancelOrderDetailOne0.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.rjButton_cancelOrderDetailOne0.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rjButton_cancelOrderDetailOne0.BorderRadius = 15;
+            this.rjButton_cancelOrderDetailOne0.BorderSize = 0;
+            this.rjButton_cancelOrderDetailOne0.FlatAppearance.BorderSize = 0;
+            this.rjButton_cancelOrderDetailOne0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton_cancelOrderDetailOne0.ForeColor = System.Drawing.Color.LightCoral;
+            this.rjButton_cancelOrderDetailOne0.Location = new System.Drawing.Point(22, 46);
+            this.rjButton_cancelOrderDetailOne0.Name = "rjButton_cancelOrderDetailOne0";
+            this.rjButton_cancelOrderDetailOne0.Size = new System.Drawing.Size(134, 35);
+            this.rjButton_cancelOrderDetailOne0.TabIndex = 7;
+            this.rjButton_cancelOrderDetailOne0.Text = "Cancel";
+            this.rjButton_cancelOrderDetailOne0.TextColor = System.Drawing.Color.LightCoral;
+            this.rjButton_cancelOrderDetailOne0.UseVisualStyleBackColor = false;
             // 
-            // label8
+            // label_statusWaiting
             // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(27, 35);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(81, 21);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Waiting...";
+            this.label_statusWaiting.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label_statusWaiting.AutoSize = true;
+            this.label_statusWaiting.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_statusWaiting.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label_statusWaiting.Location = new System.Drawing.Point(22016, 31);
+            this.label_statusWaiting.Name = "label_statusWaiting";
+            this.label_statusWaiting.Size = new System.Drawing.Size(85, 21);
+            this.label_statusWaiting.TabIndex = 0;
+            this.label_statusWaiting.Text = "Confirmed";
             // 
             // rjButton18
             // 
@@ -1377,7 +1378,7 @@
             this.rjButton18.FlatAppearance.BorderSize = 0;
             this.rjButton18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton18.ForeColor = System.Drawing.Color.White;
-            this.rjButton18.Location = new System.Drawing.Point(18539, 46);
+            this.rjButton18.Location = new System.Drawing.Point(32767, 46);
             this.rjButton18.Name = "rjButton18";
             this.rjButton18.Size = new System.Drawing.Size(134, 35);
             this.rjButton18.TabIndex = 9;
@@ -1396,7 +1397,7 @@
             this.rjButton13.FlatAppearance.BorderSize = 0;
             this.rjButton13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton13.ForeColor = System.Drawing.Color.LightCoral;
-            this.rjButton13.Location = new System.Drawing.Point(21377, 46);
+            this.rjButton13.Location = new System.Drawing.Point(32767, 46);
             this.rjButton13.Name = "rjButton13";
             this.rjButton13.Size = new System.Drawing.Size(134, 35);
             this.rjButton13.TabIndex = 8;
@@ -1419,20 +1420,39 @@
             this.button_shopName.Text = "Shop name >";
             this.button_shopName.UseVisualStyleBackColor = true;
             // 
-            // iconButton6
+            // rjButton_cancelOrderDetailOne
             // 
-            this.iconButton6.Enabled = false;
-            this.iconButton6.FlatAppearance.BorderSize = 0;
-            this.iconButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton6.IconChar = FontAwesome.Sharp.IconChar.Shop;
-            this.iconButton6.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.iconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton6.IconSize = 35;
-            this.iconButton6.Location = new System.Drawing.Point(45, 7);
-            this.iconButton6.Name = "iconButton6";
-            this.iconButton6.Size = new System.Drawing.Size(30, 37);
-            this.iconButton6.TabIndex = 5;
-            this.iconButton6.UseVisualStyleBackColor = true;
+            this.rjButton_cancelOrderDetailOne.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.rjButton_cancelOrderDetailOne.BackColor = System.Drawing.SystemColors.Control;
+            this.rjButton_cancelOrderDetailOne.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.rjButton_cancelOrderDetailOne.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rjButton_cancelOrderDetailOne.BorderRadius = 15;
+            this.rjButton_cancelOrderDetailOne.BorderSize = 0;
+            this.rjButton_cancelOrderDetailOne.FlatAppearance.BorderSize = 0;
+            this.rjButton_cancelOrderDetailOne.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton_cancelOrderDetailOne.ForeColor = System.Drawing.Color.LightCoral;
+            this.rjButton_cancelOrderDetailOne.Location = new System.Drawing.Point(21989, 55);
+            this.rjButton_cancelOrderDetailOne.Name = "rjButton_cancelOrderDetailOne";
+            this.rjButton_cancelOrderDetailOne.Size = new System.Drawing.Size(134, 35);
+            this.rjButton_cancelOrderDetailOne.TabIndex = 8;
+            this.rjButton_cancelOrderDetailOne.Text = "Cancel";
+            this.rjButton_cancelOrderDetailOne.TextColor = System.Drawing.Color.LightCoral;
+            this.rjButton_cancelOrderDetailOne.UseVisualStyleBackColor = false;
+            // 
+            // iconButton_shop
+            // 
+            this.iconButton_shop.Enabled = false;
+            this.iconButton_shop.FlatAppearance.BorderSize = 0;
+            this.iconButton_shop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton_shop.IconChar = FontAwesome.Sharp.IconChar.Shop;
+            this.iconButton_shop.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.iconButton_shop.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton_shop.IconSize = 35;
+            this.iconButton_shop.Location = new System.Drawing.Point(45, 7);
+            this.iconButton_shop.Name = "iconButton_shop";
+            this.iconButton_shop.Size = new System.Drawing.Size(30, 37);
+            this.iconButton_shop.TabIndex = 5;
+            this.iconButton_shop.UseVisualStyleBackColor = true;
             // 
             // rjButton12
             // 
@@ -1445,7 +1465,7 @@
             this.rjButton12.FlatAppearance.BorderSize = 0;
             this.rjButton12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton12.ForeColor = System.Drawing.Color.LightCoral;
-            this.rjButton12.Location = new System.Drawing.Point(24215, 57);
+            this.rjButton12.Location = new System.Drawing.Point(32767, 57);
             this.rjButton12.Name = "rjButton12";
             this.rjButton12.Size = new System.Drawing.Size(134, 35);
             this.rjButton12.TabIndex = 7;
@@ -1464,7 +1484,7 @@
             this.rjButton11.FlatAppearance.BorderSize = 0;
             this.rjButton11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton11.ForeColor = System.Drawing.Color.White;
-            this.rjButton11.Location = new System.Drawing.Point(25166, 39);
+            this.rjButton11.Location = new System.Drawing.Point(32767, 39);
             this.rjButton11.Name = "rjButton11";
             this.rjButton11.Size = new System.Drawing.Size(134, 35);
             this.rjButton11.TabIndex = 7;
@@ -1483,7 +1503,7 @@
             this.rjButton10.FlatAppearance.BorderSize = 0;
             this.rjButton10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton10.ForeColor = System.Drawing.Color.White;
-            this.rjButton10.Location = new System.Drawing.Point(26107, 46);
+            this.rjButton10.Location = new System.Drawing.Point(32767, 46);
             this.rjButton10.Name = "rjButton10";
             this.rjButton10.Size = new System.Drawing.Size(134, 35);
             this.rjButton10.TabIndex = 7;
@@ -1502,7 +1522,7 @@
             this.rjButton9.FlatAppearance.BorderSize = 0;
             this.rjButton9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton9.ForeColor = System.Drawing.Color.LightCoral;
-            this.rjButton9.Location = new System.Drawing.Point(27053, 46);
+            this.rjButton9.Location = new System.Drawing.Point(32767, 46);
             this.rjButton9.Name = "rjButton9";
             this.rjButton9.Size = new System.Drawing.Size(134, 35);
             this.rjButton9.TabIndex = 7;
@@ -1521,7 +1541,7 @@
             this.rjButton3.FlatAppearance.BorderSize = 0;
             this.rjButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton3.ForeColor = System.Drawing.Color.LightCoral;
-            this.rjButton3.Location = new System.Drawing.Point(27999, 46);
+            this.rjButton3.Location = new System.Drawing.Point(32767, 46);
             this.rjButton3.Name = "rjButton3";
             this.rjButton3.Size = new System.Drawing.Size(134, 35);
             this.rjButton3.TabIndex = 7;
@@ -1534,30 +1554,11 @@
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(27080, 23);
+            this.label3.Location = new System.Drawing.Point(32767, 23);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(81, 21);
             this.label3.TabIndex = 0;
             this.label3.Text = "Waiting...";
-            // 
-            // rjButton_cancelWaitingOrderDetail
-            // 
-            this.rjButton_cancelWaitingOrderDetail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.rjButton_cancelWaitingOrderDetail.BackColor = System.Drawing.SystemColors.Control;
-            this.rjButton_cancelWaitingOrderDetail.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.rjButton_cancelWaitingOrderDetail.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjButton_cancelWaitingOrderDetail.BorderRadius = 15;
-            this.rjButton_cancelWaitingOrderDetail.BorderSize = 0;
-            this.rjButton_cancelWaitingOrderDetail.FlatAppearance.BorderSize = 0;
-            this.rjButton_cancelWaitingOrderDetail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton_cancelWaitingOrderDetail.ForeColor = System.Drawing.Color.LightCoral;
-            this.rjButton_cancelWaitingOrderDetail.Location = new System.Drawing.Point(32767, 46);
-            this.rjButton_cancelWaitingOrderDetail.Name = "rjButton_cancelWaitingOrderDetail";
-            this.rjButton_cancelWaitingOrderDetail.Size = new System.Drawing.Size(134, 35);
-            this.rjButton_cancelWaitingOrderDetail.TabIndex = 7;
-            this.rjButton_cancelWaitingOrderDetail.Text = "Cancel";
-            this.rjButton_cancelWaitingOrderDetail.TextColor = System.Drawing.Color.LightCoral;
-            this.rjButton_cancelWaitingOrderDetail.UseVisualStyleBackColor = false;
             // 
             // rjButton_cancelOrderDetail
             // 
@@ -1648,9 +1649,10 @@
             this.iconButton_expandProductDetail.IconSize = 30;
             this.iconButton_expandProductDetail.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.iconButton_expandProductDetail.Location = new System.Drawing.Point(20, 111);
+            this.iconButton_expandProductDetail.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
             this.iconButton_expandProductDetail.Name = "iconButton_expandProductDetail";
             this.iconButton_expandProductDetail.Padding = new System.Windows.Forms.Padding(0, 0, 25, 0);
-            this.iconButton_expandProductDetail.Size = new System.Drawing.Size(925, 40);
+            this.iconButton_expandProductDetail.Size = new System.Drawing.Size(920, 40);
             this.iconButton_expandProductDetail.TabIndex = 13;
             this.iconButton_expandProductDetail.Text = "Product Detail";
             this.iconButton_expandProductDetail.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1671,8 +1673,9 @@
             this.panel_orderInfo.Controls.Add(this.rjCircularPictureBox_customerImage);
             this.panel_orderInfo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_orderInfo.Location = new System.Drawing.Point(20, 24);
+            this.panel_orderInfo.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
             this.panel_orderInfo.Name = "panel_orderInfo";
-            this.panel_orderInfo.Size = new System.Drawing.Size(925, 87);
+            this.panel_orderInfo.Size = new System.Drawing.Size(920, 87);
             this.panel_orderInfo.TabIndex = 12;
             // 
             // label_totalCost
@@ -1706,7 +1709,7 @@
             this.rjButton_cancelWaitingOrder.FlatAppearance.BorderSize = 0;
             this.rjButton_cancelWaitingOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton_cancelWaitingOrder.ForeColor = System.Drawing.Color.White;
-            this.rjButton_cancelWaitingOrder.Location = new System.Drawing.Point(766, 40);
+            this.rjButton_cancelWaitingOrder.Location = new System.Drawing.Point(761, 40);
             this.rjButton_cancelWaitingOrder.Name = "rjButton_cancelWaitingOrder";
             this.rjButton_cancelWaitingOrder.Size = new System.Drawing.Size(134, 35);
             this.rjButton_cancelWaitingOrder.TabIndex = 7;
@@ -1729,7 +1732,7 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(793, 15);
+            this.label1.Location = new System.Drawing.Point(788, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(81, 21);
             this.label1.TabIndex = 0;
@@ -1814,7 +1817,7 @@
             this.rjButton_cancelAllWaitingOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton_cancelAllWaitingOrder.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButton_cancelAllWaitingOrder.ForeColor = System.Drawing.Color.White;
-            this.rjButton_cancelAllWaitingOrder.Location = new System.Drawing.Point(796, 34);
+            this.rjButton_cancelAllWaitingOrder.Location = new System.Drawing.Point(791, 34);
             this.rjButton_cancelAllWaitingOrder.Name = "rjButton_cancelAllWaitingOrder";
             this.rjButton_cancelAllWaitingOrder.Size = new System.Drawing.Size(139, 35);
             this.rjButton_cancelAllWaitingOrder.TabIndex = 7;
@@ -1832,7 +1835,7 @@
             this.tabPage_cancelledOrder.Location = new System.Drawing.Point(4, 25);
             this.tabPage_cancelledOrder.Name = "tabPage_cancelledOrder";
             this.tabPage_cancelledOrder.Padding = new System.Windows.Forms.Padding(0, 70, 0, 0);
-            this.tabPage_cancelledOrder.Size = new System.Drawing.Size(995, 446);
+            this.tabPage_cancelledOrder.Size = new System.Drawing.Size(990, 445);
             this.tabPage_cancelledOrder.TabIndex = 0;
             this.tabPage_cancelledOrder.Text = "tabPage_cancelledOrders";
             // 
@@ -1876,7 +1879,7 @@
             this.panel_allFatherCancelledOrders.Location = new System.Drawing.Point(0, 70);
             this.panel_allFatherCancelledOrders.Name = "panel_allFatherCancelledOrders";
             this.panel_allFatherCancelledOrders.Padding = new System.Windows.Forms.Padding(10, 0, 20, 50);
-            this.panel_allFatherCancelledOrders.Size = new System.Drawing.Size(995, 376);
+            this.panel_allFatherCancelledOrders.Size = new System.Drawing.Size(990, 375);
             this.panel_allFatherCancelledOrders.TabIndex = 5;
             // 
             // groupBox_waitingOrder3
@@ -1891,7 +1894,7 @@
             this.groupBox_waitingOrder3.Location = new System.Drawing.Point(10, 0);
             this.groupBox_waitingOrder3.Name = "groupBox_waitingOrder3";
             this.groupBox_waitingOrder3.Padding = new System.Windows.Forms.Padding(20, 3, 20, 20);
-            this.groupBox_waitingOrder3.Size = new System.Drawing.Size(965, 301);
+            this.groupBox_waitingOrder3.Size = new System.Drawing.Size(960, 301);
             this.groupBox_waitingOrder3.TabIndex = 1;
             this.groupBox_waitingOrder3.TabStop = false;
             // 
@@ -1913,13 +1916,13 @@
             this.panel_OrderDetail3.MaximumSize = new System.Drawing.Size(0, 130);
             this.panel_OrderDetail3.Name = "panel_OrderDetail3";
             this.panel_OrderDetail3.Padding = new System.Windows.Forms.Padding(10);
-            this.panel_OrderDetail3.Size = new System.Drawing.Size(925, 130);
+            this.panel_OrderDetail3.Size = new System.Drawing.Size(920, 130);
             this.panel_OrderDetail3.TabIndex = 10;
             // 
             // panel1
             // 
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(772, 10);
+            this.panel1.Location = new System.Drawing.Point(767, 10);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(143, 110);
             this.panel1.TabIndex = 9;
@@ -1935,7 +1938,7 @@
             this.rjButton16.FlatAppearance.BorderSize = 0;
             this.rjButton16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton16.ForeColor = System.Drawing.Color.White;
-            this.rjButton16.Location = new System.Drawing.Point(14703, 46);
+            this.rjButton16.Location = new System.Drawing.Point(32767, 46);
             this.rjButton16.Name = "rjButton16";
             this.rjButton16.Size = new System.Drawing.Size(150, 40);
             this.rjButton16.TabIndex = 8;
@@ -2047,7 +2050,7 @@
             this.iconButton_expandProductDetail3.Location = new System.Drawing.Point(20, 111);
             this.iconButton_expandProductDetail3.Name = "iconButton_expandProductDetail3";
             this.iconButton_expandProductDetail3.Padding = new System.Windows.Forms.Padding(0, 0, 25, 0);
-            this.iconButton_expandProductDetail3.Size = new System.Drawing.Size(925, 40);
+            this.iconButton_expandProductDetail3.Size = new System.Drawing.Size(920, 40);
             this.iconButton_expandProductDetail3.TabIndex = 0;
             this.iconButton_expandProductDetail3.Text = "Product Detail";
             this.iconButton_expandProductDetail3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -2068,7 +2071,7 @@
             this.panel_orderInfo3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_orderInfo3.Location = new System.Drawing.Point(20, 24);
             this.panel_orderInfo3.Name = "panel_orderInfo3";
-            this.panel_orderInfo3.Size = new System.Drawing.Size(925, 87);
+            this.panel_orderInfo3.Size = new System.Drawing.Size(920, 87);
             this.panel_orderInfo3.TabIndex = 9;
             // 
             // rjButton_Repurchase
@@ -2082,7 +2085,7 @@
             this.rjButton_Repurchase.FlatAppearance.BorderSize = 0;
             this.rjButton_Repurchase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton_Repurchase.ForeColor = System.Drawing.Color.LightCoral;
-            this.rjButton_Repurchase.Location = new System.Drawing.Point(768, 39);
+            this.rjButton_Repurchase.Location = new System.Drawing.Point(763, 39);
             this.rjButton_Repurchase.Name = "rjButton_Repurchase";
             this.rjButton_Repurchase.Size = new System.Drawing.Size(134, 35);
             this.rjButton_Repurchase.TabIndex = 8;
@@ -2115,7 +2118,7 @@
             this.label31.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label31.AutoSize = true;
             this.label31.ForeColor = System.Drawing.Color.Gray;
-            this.label31.Location = new System.Drawing.Point(796, 15);
+            this.label31.Location = new System.Drawing.Point(791, 15);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(81, 21);
             this.label31.TabIndex = 0;
@@ -2204,9 +2207,9 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.BackColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(979, 43);
+            this.label2.Location = new System.Drawing.Point(974, 43);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(25, 508);
+            this.label2.Size = new System.Drawing.Size(25, 507);
             this.label2.TabIndex = 4;
             // 
             // timer1
@@ -2223,7 +2226,7 @@
             this.gradientLabel3.EndColor = System.Drawing.Color.Plum;
             this.gradientLabel3.Location = new System.Drawing.Point(7, 121);
             this.gradientLabel3.Name = "gradientLabel3";
-            this.gradientLabel3.Size = new System.Drawing.Size(996, 10);
+            this.gradientLabel3.Size = new System.Drawing.Size(991, 10);
             this.gradientLabel3.TabIndex = 3;
             this.gradientLabel3.TextColorBegin = System.Drawing.SystemColors.Control;
             this.gradientLabel3.TextColorEnd = System.Drawing.SystemColors.Control;
@@ -2239,7 +2242,7 @@
             this.gradientLabel2.Location = new System.Drawing.Point(173, -1);
             this.gradientLabel2.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.gradientLabel2.Name = "gradientLabel2";
-            this.gradientLabel2.Size = new System.Drawing.Size(833, 44);
+            this.gradientLabel2.Size = new System.Drawing.Size(828, 44);
             this.gradientLabel2.TabIndex = 18;
             this.gradientLabel2.TextColorBegin = System.Drawing.SystemColors.Control;
             this.gradientLabel2.TextColorEnd = System.Drawing.SystemColors.Control;
@@ -2262,9 +2265,9 @@
             // 
             // SubViewCustormerOrders
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1003, 555);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.ClientSize = new System.Drawing.Size(998, 554);
             this.Controls.Add(this.gradientLabel3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.gradientLabel2);
@@ -2300,12 +2303,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox_customerImage2)).EndInit();
             this.tabPage_waitingOrders.ResumeLayout(false);
             this.panel_allfatherWaitingOrders.ResumeLayout(false);
-            this.panel_allfatherWaitingOrders.PerformLayout();
             this.groupBox_waitingOrder.ResumeLayout(false);
             this.panel_OrderDetail.ResumeLayout(false);
             this.panel_OrderDetail.PerformLayout();
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
+            this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_orderDetailImage)).EndInit();
             this.panel_orderInfo.ResumeLayout(false);
             this.panel_orderInfo.PerformLayout();
@@ -2341,7 +2342,6 @@
         private CustomControl.GradientLabel gradientLabel3;
         private System.Windows.Forms.Panel panel_allfatherWaitingOrders;
         private System.Windows.Forms.GroupBox groupBox_waitingOrder;
-        private System.Windows.Forms.Label label_waiting;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel_allFatherCancelledOrders;
         private System.Windows.Forms.GroupBox groupBox_waitingOrder3;
@@ -2360,7 +2360,6 @@
         private System.Windows.Forms.Panel panel_allFatherReceivedOrder;
         private System.Windows.Forms.GroupBox groupBox_waitingOrder2;
         private CustomControls.RJControls.RJButton rjButton_cancelWaitingOrder;
-        private CustomControls.RJControls.RJButton rjButton_cancelOrderDetail;
         private CustomControls.RJControls.RJButton rjButton_Repurchase;
         private CustomControls.RJControls.RJButton rjButton_receiveOrder;
         private FontAwesome.Sharp.IconButton iconButton8;
@@ -2424,14 +2423,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private RJCircularPictureBox rjCircularPictureBox_customerImage2;
-        private System.Windows.Forms.Panel panel_OrderDetail;
-        private System.Windows.Forms.Button button_shopName;
-        private FontAwesome.Sharp.IconButton iconButton6;
-        private System.Windows.Forms.PictureBox pictureBox_orderDetailImage;
-        private System.Windows.Forms.Label label_orderDetailQuantity;
-        private System.Windows.Forms.Label label_finalPrice;
-        private System.Windows.Forms.Label label_originalPrice;
-        private System.Windows.Forms.Label label_orderDetailProductname;
         private FontAwesome.Sharp.IconButton iconButton_expandProductDetail;
         private System.Windows.Forms.Panel panel_orderInfo;
         private System.Windows.Forms.Label label_totalCost;
@@ -2441,32 +2432,42 @@
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label34;
         private RJCircularPictureBox rjCircularPictureBox_customerImage;
-        private CustomControls.RJControls.RJButton rjButton_cancelWaitingOrderDetail;
         private CustomControls.RJControls.RJButton rjButton7;
         private CustomControls.RJControls.RJButton rjButton_Repurchase1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private CustomControls.RJControls.RJButton rjButton1;
-        private CustomControls.RJControls.RJButton rjButton3;
         private CustomControls.RJControls.RJButton rjButton6;
-        private CustomControls.RJControls.RJButton rjButton9;
-        private System.Windows.Forms.Label label3;
-        private CustomControls.RJControls.RJButton rjButton10;
-        private CustomControls.RJControls.RJButton rjButton11;
-        private CustomControls.RJControls.RJButton rjButton12;
-        private CustomControls.RJControls.RJButton rjButton13;
         private CustomControls.RJControls.RJButton rjButton14;
         private CustomControls.RJControls.RJButton rjButton15;
         private CustomControls.RJControls.RJButton rjButton17;
-        private CustomControls.RJControls.RJButton rjButton18;
         private CustomControls.RJControls.RJButton rjButton16;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel9;
-        private CustomControls.RJControls.RJButton rjButton_cancelOrderDetailOne;
         private CustomControls.RJControls.RJButton rjButton_commentOrderDetail;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Panel panel_OrderDetail;
+        private CustomControls.RJControls.RJButton rjButton_cancelOrderDetailOne;
+        private System.Windows.Forms.Label label_statusWaiting;
+        private CustomControls.RJControls.RJButton rjButton18;
+        private CustomControls.RJControls.RJButton rjButton13;
+        private System.Windows.Forms.Button button_shopName;
+        private FontAwesome.Sharp.IconButton iconButton_shop;
+        private CustomControls.RJControls.RJButton rjButton12;
+        private CustomControls.RJControls.RJButton rjButton11;
+        private CustomControls.RJControls.RJButton rjButton10;
+        private CustomControls.RJControls.RJButton rjButton9;
+        private CustomControls.RJControls.RJButton rjButton3;
+        private System.Windows.Forms.Label label3;
+        private CustomControls.RJControls.RJButton rjButton_cancelOrderDetail;
+        private System.Windows.Forms.PictureBox pictureBox_orderDetailImage;
+        private System.Windows.Forms.Label label_orderDetailQuantity;
+        private System.Windows.Forms.Label label_finalPrice;
+        private System.Windows.Forms.Label label_originalPrice;
+        private System.Windows.Forms.Label label_waiting;
+        private System.Windows.Forms.Label label_orderDetailProductname;
+        private System.Windows.Forms.Panel panel3;
+        private CustomControls.RJControls.RJButton rjButton_cancelOrderDetailOne0;
+        private System.Windows.Forms.Panel panel2;
     }
 }

@@ -38,6 +38,12 @@ namespace GUI
         public ViewHomePage()
         {
             InitializeComponent();
+
+            LoadedEverything();
+        }
+        public void LoadedEverything()
+        {
+
             InititalizeDatssets();
             FillCategories();
             FillLastestProducts(products.OrderBy(pro => DateTime.Parse(pro.CreatedDate.Split(' ')[0].Replace("/", "-").Trim())).ToArray());
@@ -51,6 +57,7 @@ namespace GUI
 
         private void FillCategories()
         {
+            flowLayoutPanel_categories.Controls.Clear();
             foreach (Category category in categories)
             {
                 if (category.AncestorId  == "0")
@@ -174,7 +181,7 @@ namespace GUI
             label_productPrice.Name = "label_productPrice";
             label_productPrice.Size = new System.Drawing.Size(145, 35);
             label_productPrice.TabIndex = 1;
-            label_productPrice.Text = "20.000.000 đ";
+            label_productPrice.Text = $"{product.Price} đ";
             label_productPrice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             label_productPrice.Click += new System.EventHandler(Label3_Click_1);
             label_productPrice.Tag = product;

@@ -222,6 +222,11 @@ namespace GUI
                 account = null;
                 OpenChildForm(viewHomePage);
             }
+            if(entity is Product)
+            {
+                viewProductDetail.SetExternalObject((Product)entity);
+                OpenChildForm(viewProductDetail);
+            }
 
         }
 
@@ -287,6 +292,32 @@ namespace GUI
                 OpenChildForm(workSpaceCustomer);
             }
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
        
 
@@ -410,6 +441,7 @@ namespace GUI
 
         private void IconButton_home_Click(object sender, EventArgs e)
         {
+            //viewHomePage.LoadedEverything();
             OpenChildForm(viewHomePage);
         }
         

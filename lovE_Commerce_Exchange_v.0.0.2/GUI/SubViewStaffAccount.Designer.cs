@@ -327,7 +327,7 @@
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label5.Location = new System.Drawing.Point(619, 63);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(149, 35);
+            this.label5.Size = new System.Drawing.Size(225, 35);
             this.label5.TabIndex = 4;
             this.label5.Text = "Staff currentAccount";
             // 
@@ -462,8 +462,8 @@
             // 
             // SubViewStaffAccount
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(974, 547);
             this.Controls.Add(this.comboBox_year);
             this.Controls.Add(this.comboBox_month);

@@ -28,10 +28,25 @@ namespace BUS
         {
 
         }
+        public void Update()
+        {
+            DAO.OrderDetail.Update(this);
+        }
+        public void Delete()
+        {
+            DAO.OrderDetail.Delete(this);
+        }
 
         public static OrderDetail[] GetOrderDetails()
         {
             return DAO.OrderDetail.Select().Select(c => new OrderDetail(c)).ToArray();
+        }
+
+        public OrderDetail SetConfirmStateOn()
+        {
+            OrderDetailConfirmState = true;
+            return this;
+
         }
 
     }

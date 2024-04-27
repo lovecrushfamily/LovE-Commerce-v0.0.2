@@ -12,12 +12,12 @@ namespace BUS
         public Comment(Comment_ comment_)
         {
             CommentId = comment_.CommentId;
-            ProductId = comment_.ProductId;
             CustomerId = comment_.CustomerId;
             Star = comment_.Star;
             Content = comment_.Content;
             Date = comment_.Date;
             ResponseComment = comment_.ResponseComment;
+            OrderDetailID = comment_.OrderDetailID;
         }
  
         public void Add()
