@@ -82,11 +82,11 @@
             this.rjButton_updateProduct = new CustomControls.RJControls.RJButton();
             this.rjButton_addProduct = new CustomControls.RJControls.RJButton();
             this.rjTextBox_categoryName = new CustomControls.RJControls.RJTextBox();
-            this.rjTextBox_description = new CustomControls.RJControls.RJTextBox();
             this.rjTextBox_date = new CustomControls.RJControls.RJTextBox();
             this.rjTextBox_productQuantity = new CustomControls.RJControls.RJTextBox();
             this.rjTextBox_productPrice = new CustomControls.RJControls.RJTextBox();
             this.rjTextBox_productName = new CustomControls.RJControls.RJTextBox();
+            this.rjTextBox_description = new CustomControls.RJControls.RJTextBox();
             this.tabPage_bannedProduct = new System.Windows.Forms.TabPage();
             this.panel_bannedPeoduct = new System.Windows.Forms.Panel();
             this.panel_bannedHolder = new System.Windows.Forms.Panel();
@@ -173,6 +173,7 @@
             // 
             // tabPage_shopProducts
             // 
+            this.tabPage_shopProducts.AutoScroll = true;
             this.tabPage_shopProducts.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage_shopProducts.Controls.Add(this.checkBox_allProducts);
             this.tabPage_shopProducts.Controls.Add(this.rjButton_addNewProductNavigate);
@@ -502,11 +503,11 @@
             this.tabPage_addNewProducts.Controls.Add(this.rjButton_updateProduct);
             this.tabPage_addNewProducts.Controls.Add(this.rjButton_addProduct);
             this.tabPage_addNewProducts.Controls.Add(this.rjTextBox_categoryName);
-            this.tabPage_addNewProducts.Controls.Add(this.rjTextBox_description);
             this.tabPage_addNewProducts.Controls.Add(this.rjTextBox_date);
             this.tabPage_addNewProducts.Controls.Add(this.rjTextBox_productQuantity);
             this.tabPage_addNewProducts.Controls.Add(this.rjTextBox_productPrice);
             this.tabPage_addNewProducts.Controls.Add(this.rjTextBox_productName);
+            this.tabPage_addNewProducts.Controls.Add(this.rjTextBox_description);
             this.tabPage_addNewProducts.Font = new System.Drawing.Font("Sans Serif Collection", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage_addNewProducts.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tabPage_addNewProducts.Location = new System.Drawing.Point(4, 25);
@@ -558,6 +559,9 @@
             // 
             // panel_attributesHolder
             // 
+            this.panel_attributesHolder.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel_attributesHolder.AutoScroll = true;
             this.panel_attributesHolder.Controls.Add(this.panel_attribute);
             this.panel_attributesHolder.Location = new System.Drawing.Point(653, 175);
             this.panel_attributesHolder.Name = "panel_attributesHolder";
@@ -891,8 +895,6 @@
             // 
             // rjTextBox_categoryName
             // 
-            this.rjTextBox_categoryName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.rjTextBox_categoryName.BackColor = System.Drawing.SystemColors.Window;
             this.rjTextBox_categoryName.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.rjTextBox_categoryName.BorderFocusColor = System.Drawing.Color.HotPink;
@@ -913,29 +915,6 @@
             this.rjTextBox_categoryName.Texts = "";
             this.rjTextBox_categoryName.UnderlinedStyle = false;
             this.rjTextBox_categoryName._TextChanged += new System.EventHandler(this.RjTextBox3__TextChanged);
-            // 
-            // rjTextBox_description
-            // 
-            this.rjTextBox_description.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox_description.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjTextBox_description.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.rjTextBox_description.BorderRadius = 10;
-            this.rjTextBox_description.BorderSize = 1;
-            this.rjTextBox_description.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.rjTextBox_description.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox_description.Location = new System.Drawing.Point(290, 380);
-            this.rjTextBox_description.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox_description.Multiline = true;
-            this.rjTextBox_description.Name = "rjTextBox_description";
-            this.rjTextBox_description.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox_description.PasswordChar = false;
-            this.rjTextBox_description.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox_description.PlaceholderText = "";
-            this.rjTextBox_description.Size = new System.Drawing.Size(340, 141);
-            this.rjTextBox_description.TabIndex = 1;
-            this.rjTextBox_description.Texts = "";
-            this.rjTextBox_description.UnderlinedStyle = false;
-            this.rjTextBox_description._TextChanged += new System.EventHandler(this.RjTextBox3__TextChanged);
             // 
             // rjTextBox_date
             // 
@@ -1026,6 +1005,29 @@
             this.rjTextBox_productName.TabIndex = 1;
             this.rjTextBox_productName.Texts = "";
             this.rjTextBox_productName.UnderlinedStyle = false;
+            // 
+            // rjTextBox_description
+            // 
+            this.rjTextBox_description.BackColor = System.Drawing.SystemColors.Window;
+            this.rjTextBox_description.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.rjTextBox_description.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.rjTextBox_description.BorderRadius = 10;
+            this.rjTextBox_description.BorderSize = 1;
+            this.rjTextBox_description.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.rjTextBox_description.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.rjTextBox_description.Location = new System.Drawing.Point(290, 380);
+            this.rjTextBox_description.Margin = new System.Windows.Forms.Padding(4);
+            this.rjTextBox_description.Multiline = true;
+            this.rjTextBox_description.Name = "rjTextBox_description";
+            this.rjTextBox_description.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.rjTextBox_description.PasswordChar = false;
+            this.rjTextBox_description.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.rjTextBox_description.PlaceholderText = "";
+            this.rjTextBox_description.Size = new System.Drawing.Size(340, 141);
+            this.rjTextBox_description.TabIndex = 1;
+            this.rjTextBox_description.Texts = "";
+            this.rjTextBox_description.UnderlinedStyle = false;
+            this.rjTextBox_description._TextChanged += new System.EventHandler(this.RjTextBox_description__TextChanged);
             // 
             // tabPage_bannedProduct
             // 
@@ -1220,6 +1222,7 @@
             // 
             // tabPage_waitingProducts
             // 
+            this.tabPage_waitingProducts.AutoScroll = true;
             this.tabPage_waitingProducts.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage_waitingProducts.Controls.Add(this.comboBox2);
             this.tabPage_waitingProducts.Controls.Add(this.iconButton2);

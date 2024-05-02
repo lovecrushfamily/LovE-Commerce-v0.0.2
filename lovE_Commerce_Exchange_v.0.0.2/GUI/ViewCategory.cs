@@ -30,7 +30,7 @@ namespace GUI
 
 
         }
-        private void InitializeDatset()
+        public void InitializeDatset()
         {
             products = Product.GetProducts();
             categories = Category.GetCategories();
@@ -55,39 +55,43 @@ namespace GUI
             IconButton_subCategorySample_Click(category, null);
         }
 
+        List<Category> SonAndNephewCategories;
         private void FilterCategory(string categoryID, string categoryName)
         {
             //find all child and nephew
-            Category[] SonAndNephewCategories = FindAllChildAndNephew(categoryID).ToArray();
+            SonAndNephewCategories = new List<Category> { };
+            FindAllChildAndNephew(categoryID);
             if (SonAndNephewCategories.Count() == 0)
             {
                 MessageBox.Show("Can not find any sub cateogory, you're in the last one!");
-                return;
+                objectExternalLink(new Shop(new DLL.Shop_() { }));
+                //Dispose();
             }
+            else
+            {
+
             AddSubCategory(categoryID, categoryName);
-            FillCategory(SonAndNephewCategories);
+            FillCategory(SonAndNephewCategories.ToArray());
             //filter all product belongs to these categories.
-            FillProductByCategory(products.Join(SonAndNephewCategories,                                   
-                                                pro => pro.CategoryID,
-                                                cate => cate.CategoryId,
-                                                (pro, cate) => pro).ToArray());
+            Product[] products  = this.products.Where(pro =>SonAndNephewCategories.Any(cate => cate.CategoryId == pro.CategoryID)).ToArray();
+
+                flowLayoutPanel_productsContainer.Controls.Clear();
+                foreach (Product product in products)
+                {
+                    flowLayoutPanel_productsContainer.Controls.Add(GenerateProduct(product));
+                }
+            }
 
         }
-        private void FillProductByCategory(Product[] products)
-        {
-            flowLayoutPanel_productsContainer.Controls.Clear();
-            foreach (Product product in products)
-            {
-                flowLayoutPanel_productsContainer.Controls.Add(GenerateProduct(product));
-            }
-        }
+
+
         /// <summary>
         ///find all category and return a sequcence of category by using IEnumerable an yeild return,
         ///which cannot be done with basic syntax and algorithms , using linQ, IEnumberable, Recursion
         /// </summary>
         /// <param name="categoryID"></param>
         /// <returns></returns>
-        private IEnumerable<Category> FindAllChildAndNephew(string categoryID)
+        private void FindAllChildAndNephew(string categoryID)
         {
             IEnumerable<Category> categories = FindChildCategory(categoryID);
             if (categories.Count() > 0)
@@ -95,7 +99,7 @@ namespace GUI
                 foreach(Category category in categories)
                 {
                     FindAllChildAndNephew(category.CategoryId);
-                    yield return category;
+                    SonAndNephewCategories.Add( category);
                 }
             }                    
 
@@ -454,7 +458,7 @@ namespace GUI
             gradientLabel_subCategory.Name = "gradientLabel_subCategory";
             gradientLabel_subCategory.Size = new System.Drawing.Size(244, 54);
             gradientLabel_subCategory.TabIndex = 1;
-            gradientLabel_subCategory.Text = "SubCategoryPanel";
+            gradientLabel_subCategory.Text = "Sub Category";
             gradientLabel_subCategory.TextColorBegin = System.Drawing.Color.Orchid;
             gradientLabel_subCategory.TextColorEnd = System.Drawing.Color.MediumSlateBlue;
 
@@ -471,6 +475,7 @@ namespace GUI
 
             return panel_subCategory;
         }
+        
 
         private IconButton GenerateCategory(Category category)
         {

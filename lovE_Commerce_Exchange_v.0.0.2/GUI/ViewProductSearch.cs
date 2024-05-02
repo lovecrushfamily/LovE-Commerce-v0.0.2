@@ -331,7 +331,8 @@ namespace GUI
             label_productPrice.Name = "label_productPrice";
             label_productPrice.Size = new System.Drawing.Size(145, 35);
             label_productPrice.TabIndex = 1;
-            label_productPrice.Text = "20.000.000 đ";
+            label_productPrice.Text = product.Price + " đ";
+
             label_productPrice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             label_productPrice.Click += new System.EventHandler(Label3_Click_1);
 
@@ -493,20 +494,20 @@ namespace GUI
         private void CheckBox_fiveStar_CheckedChanged_1(object sender, EventArgs e)
         {
             
-            CheckBox checker  = (CheckBox)sender;
-            if (!checker.Checked)
-            {
-                return;
-            }
-            foreach (CheckBox check in panel_raiting.Controls.OfType<CheckBox>())
-            {
-                check.Checked = false;
-            }
-            checker.Checked = true;
+            //CheckBox checker  = (CheckBox)sender;
+            //if (!checker.Checked)
+            //{
+            //    return;
+            //}
+            //foreach (CheckBox check in panel_raiting.Controls.OfType<CheckBox>())
+            //{
+            //    check.Checked = false;
+            //}
+            //checker.Checked = true;
 
-            int starExpected = checker.Text.Split('_').Last().ToInt();
-            currentProducts = currentProducts.Where(pro => pro.RatingStar.ToInt() >= starExpected).ToArray();
-            FillProduct(currentProducts, currentShops.Join(products, shop => shop.ShopId, pro => pro.ShopID, (shop, pro) => shop).ToArray());
+            //int starExpected = checker.Text.Split('_').Last().ToInt();
+            //currentProducts = currentProducts.Where(pro => pro.RatingStar.ToInt() >= starExpected).ToArray();
+            //FillProduct(currentProducts, currentShops.Join(products, shop => shop.ShopId, pro => pro.ShopID, (shop, pro) => shop).ToArray());
 
         }
 
@@ -537,6 +538,11 @@ namespace GUI
 
             //có 1 chút sai sót phần filter, nên filter tất cả 1 lượt luôn thì sẽ đạt được hiệu húng hoàn chỉnh, còn cái này not completed
             //mỗi lần lại gán mệt lắm
+
+        }
+
+        private void PictureBox7_Click(object sender, EventArgs e)
+        {
 
         }
     }

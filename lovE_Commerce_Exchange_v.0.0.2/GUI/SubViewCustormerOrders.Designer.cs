@@ -1361,7 +1361,7 @@
             this.label_statusWaiting.AutoSize = true;
             this.label_statusWaiting.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_statusWaiting.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label_statusWaiting.Location = new System.Drawing.Point(22016, 31);
+            this.label_statusWaiting.Location = new System.Drawing.Point(22936, 31);
             this.label_statusWaiting.Name = "label_statusWaiting";
             this.label_statusWaiting.Size = new System.Drawing.Size(85, 21);
             this.label_statusWaiting.TabIndex = 0;
@@ -1431,7 +1431,7 @@
             this.rjButton_cancelOrderDetailOne.FlatAppearance.BorderSize = 0;
             this.rjButton_cancelOrderDetailOne.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton_cancelOrderDetailOne.ForeColor = System.Drawing.Color.LightCoral;
-            this.rjButton_cancelOrderDetailOne.Location = new System.Drawing.Point(21989, 55);
+            this.rjButton_cancelOrderDetailOne.Location = new System.Drawing.Point(22909, 55);
             this.rjButton_cancelOrderDetailOne.Name = "rjButton_cancelOrderDetailOne";
             this.rjButton_cancelOrderDetailOne.Size = new System.Drawing.Size(134, 35);
             this.rjButton_cancelOrderDetailOne.TabIndex = 8;

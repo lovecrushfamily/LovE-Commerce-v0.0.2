@@ -57,6 +57,11 @@ namespace GUI
         public void SetAccount(Account account)
         {                                                                 
             this.account = account;
+            //SetCustomer();
+            
+        }
+        public void SetCustomer()
+        {
             customer = Customer.GetCustomers().Single(cus => cus.CustomerId == account.AccountID);
             shoppingCarts = ShoppingCart.GetShoppingCarts().Where(shop => shop.CustomerId == customer.CustomerId).ToArray();
             products = Product.GetProducts().Join(shoppingCarts, pro => pro.ProductId, shopping => shopping.ProducID, (pro, shopping) => pro).ToArray();
@@ -608,6 +613,11 @@ namespace GUI
         {
             //open ViewOrder 
             objectExternalLink(new ShoppingCart(new DLL.ShoppingCart_()));
+            if (GetSelectedOrderDetail().Count() == 0)
+            {
+                MessageBox.Show("You must select a product before order");
+                return;
+            }
             foreach (OrderDetail orderDetail in GetSelectedOrderDetail())
             {
                 objectExternalLink(orderDetail);

@@ -81,7 +81,7 @@
             this.gradientLabel1.Direction = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
             this.gradientLabel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.gradientLabel1.EndColor = System.Drawing.SystemColors.Control;
-            this.gradientLabel1.Font = new System.Drawing.Font("Sans Serif Collection", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gradientLabel1.Font = new System.Drawing.Font("Script MT Bold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gradientLabel1.Location = new System.Drawing.Point(50, 0);
             this.gradientLabel1.Name = "gradientLabel1";
             this.gradientLabel1.Size = new System.Drawing.Size(914, 67);
@@ -312,6 +312,7 @@
             this.panel_productDetailContainer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel_productDetailContainer.AutoScroll = true;
             this.panel_productDetailContainer.Controls.Add(this.panel_productDetail);
             this.panel_productDetailContainer.Location = new System.Drawing.Point(62, 70);
             this.panel_productDetailContainer.Name = "panel_productDetailContainer";

@@ -26,7 +26,7 @@ namespace GUI
             InitializeComponent();
         }
 
-        private void InitializeDataset()
+        public void InitializeDataset()
         {
             accounts = Account.GetAccounts();
             customers = Customer.GetCustomers();
@@ -96,6 +96,7 @@ namespace GUI
                 new DLL.Account_()
                 {
                     UserName = rjTextBox_username.Texts,
+                    //Password = rjTextBox_password.Texts.ToString(),
                     Password = rjTextBox_password.Texts.ToString().EncryptPassword(),
                     Role = rjTextBox_role.Texts
                 });
@@ -122,6 +123,7 @@ namespace GUI
                 }
                 objectExternalLink(customers.Single(cus => cus.CustomerId == verifiedAccount.AccountID));
             }
+            MessageBox.Show($"WelCome back, {verifiedAccount.UserName}");
             Close();
         }
 
@@ -142,12 +144,16 @@ namespace GUI
             Panel parrent = (sender as PictureBox).Parent as Panel;
             objectExternalLink(accounts.Single(acc => acc.AccountID == parrent.Tag.ToString()));
             objectExternalLink(customers.Single(cus => cus.CustomerId == parrent.Tag.ToString()));
-            MessageBox.Show("Welcome back, buddy");
+            MessageBox.Show("Welcome back");
             Close();
         }
 
         private void RjButton_removeRememberLogin_Click(object sender, EventArgs e)
         {
+            if(MessageBox.Show("Are you sure, this's account'll not be remmember for the next time!","Caution",MessageBoxButtons.OKCancel) == DialogResult.Cancel)
+            {
+                return;
+            }
             Panel parent = (sender as Button).Parent as Panel;
             accounts.Single(
                 account => account.AccountID == customers.Single(
@@ -237,6 +243,12 @@ namespace GUI
         private void RjButton_google_Click(object sender, EventArgs e)
         {
             Process.Start("https://accounts.google.com/v3/signin/identifier?authuser=0&continue=https%3A%2F%2Fwww.google.com%2F&ec=GAlAmgQ&hl=vi&flowName=GlifWebSignIn&flowEntry=AddSession&dsh=S84514019%3A1714207066266077&theme=mn&ddm=0".ToString());
+        }
+
+        private void RjTextBox_role__TextChanged(object sender, EventArgs e)
+        {
+            comboBox_role.Select();
+            SendKeys.Send("%{BACKSPACE}");
         }
     }
 }

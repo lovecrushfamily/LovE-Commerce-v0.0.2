@@ -52,6 +52,10 @@ namespace GUI
 
         public void SetExternalObject(Product product)
         {
+            if(product.ProductId is null)
+            {
+                return;
+            }
             currentProduct = product;
             categories = Category.GetCategories();
             category = categories.Single(ca => ca.CategoryId == product.CategoryID);
@@ -115,7 +119,7 @@ namespace GUI
             FillProductAttributeDetail();
 
             // hard code
-            groupBox_description.Size = new Size(groupBox_description.Size.Width, textBox_description.Lines.Count() * 27 + 75);
+            groupBox_description.Size = new Size(groupBox_description.Size.Width, textBox_description.Lines.Count() * 9 + 20);
             groupBox_description.Location = new Point(groupBox_description.Location.X, groupBox_productDetailData.Location.Y + groupBox_productDetailData.Size.Height + 5);
             panel_upbody.Size = new Size(panel_upbody.Size.Width, groupBox_productIntro.Size.Height + groupBox_productDetailData.Size.Height + groupBox_description.Size.Height + 15);
         }

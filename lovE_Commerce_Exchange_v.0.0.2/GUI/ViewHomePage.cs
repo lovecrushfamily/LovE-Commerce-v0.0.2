@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUS;
 using FontAwesome.Sharp;
+using GUI.CustomControl;
 using GUI.Properties;
 
 namespace GUI
@@ -58,6 +59,8 @@ namespace GUI
         private void FillCategories()
         {
             flowLayoutPanel_categories.Controls.Clear();
+            flowLayoutPanel_categories.Controls.Add(CategoryPanel());
+
             foreach (Category category in categories)
             {
                 if (category.AncestorId  == "0")
@@ -67,6 +70,39 @@ namespace GUI
             }
             iconButton_category_sample.Dispose();
 
+        }
+        private Control CategoryPanel()
+        {
+            Panel panel_subCategory = new Panel();
+            GradientLabel gradientLabel_subCategory = new GradientLabel();
+
+            gradientLabel_subCategory.AutoSize = true;
+            gradientLabel_subCategory.BackColor = System.Drawing.SystemColors.Control;
+            gradientLabel_subCategory.BeginColor = System.Drawing.SystemColors.Control;
+            gradientLabel_subCategory.Direction = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            gradientLabel_subCategory.Dock = System.Windows.Forms.DockStyle.Left;
+            gradientLabel_subCategory.EndColor = System.Drawing.SystemColors.Control;
+            gradientLabel_subCategory.Font = new System.Drawing.Font("Sans Serif Collection", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            gradientLabel_subCategory.Location = new System.Drawing.Point(0, 0);
+            gradientLabel_subCategory.Name = "gradientLabel_subCategory";
+            gradientLabel_subCategory.Size = new System.Drawing.Size(244, 54);
+            gradientLabel_subCategory.TabIndex = 1;
+            gradientLabel_subCategory.Text = "Category";
+            gradientLabel_subCategory.TextColorBegin = System.Drawing.Color.Orchid;
+            gradientLabel_subCategory.TextColorEnd = System.Drawing.Color.MediumSlateBlue;
+
+            panel_subCategory.BackColor = System.Drawing.SystemColors.Control;
+            panel_subCategory.Controls.Add(gradientLabel_subCategory);
+            panel_subCategory.Dock = System.Windows.Forms.DockStyle.Top;
+            panel_subCategory.Font = new System.Drawing.Font("Montserrat", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            panel_subCategory.ForeColor = System.Drawing.SystemColors.WindowText;
+            panel_subCategory.Location = new System.Drawing.Point(3, 3);
+            panel_subCategory.Name = "panel_subCategory";
+            panel_subCategory.Padding = new System.Windows.Forms.Padding(0, 0, 20, 20);
+            panel_subCategory.Size = new System.Drawing.Size(320, 60);
+            panel_subCategory.TabIndex = 1;
+
+            return panel_subCategory;
         }
 
         private void FillLastestProducts(Product[] products)
@@ -79,63 +115,6 @@ namespace GUI
             }
         }
 
-      
-        private void Label3_Click_1(object sender, EventArgs e)
-        {
-            // If the delegate was instantiated, then call it
-            if (objectExternalLink != null)
-                objectExternalLink((Entity)(sender as Control).Tag);
-            else
-                MessageBox.Show("Object currentProduct external null");
-
-        }
-
-        private void IconButton1_Click(object sender, EventArgs e)
-        {
-            if (objectExternalLink != null)
-                objectExternalLink((Entity)(sender as IconButton).Tag);
-            else
-                MessageBox.Show("Object currentProduct external null");
-
-        }
-       
-       
-
-          
-        
-
-
-
-
-
-        private IconButton GenerateCategory(Category category)
-        {
-            IconButton iconButton_category_sample = new FontAwesome.Sharp.IconButton();
-            iconButton_category_sample.Dock = System.Windows.Forms.DockStyle.Top;
-            iconButton_category_sample.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            iconButton_category_sample.FlatAppearance.BorderSize = 0;
-            iconButton_category_sample.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            iconButton_category_sample.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
-            iconButton_category_sample.Font = new System.Drawing.Font("Montserrat", 10F);
-            iconButton_category_sample.ForeColor = System.Drawing.SystemColors.WindowText;
-            iconButton_category_sample.IconChar = FontAwesome.Sharp.IconChar.None;
-            iconButton_category_sample.IconColor = System.Drawing.Color.IndianRed;
-            iconButton_category_sample.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton_category_sample.IconSize = 40;
-            iconButton_category_sample.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            iconButton_category_sample.Location = new System.Drawing.Point(3, 69);
-            iconButton_category_sample.Name = "iconButton_category_sample";
-            iconButton_category_sample.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            iconButton_category_sample.Size = new System.Drawing.Size(320, 60);
-            iconButton_category_sample.TabIndex = 0;
-            iconButton_category_sample.Text = category.CategoryName;
-            iconButton_category_sample.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            iconButton_category_sample.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            iconButton_category_sample.UseVisualStyleBackColor = true;
-            iconButton_category_sample.Click += IconButton1_Click;
-            iconButton_category_sample.Tag = category;
-            return iconButton_category_sample;
-        }
         private GroupBox GenerateProduct(Product product,string address)
         {
             GroupBox groupBox_product = new GroupBox();
@@ -290,6 +269,63 @@ namespace GUI
 
 
             return groupBox_product;
+        }
+      
+        private void Label3_Click_1(object sender, EventArgs e)
+        {
+            // If the delegate was instantiated, then call it
+            if (objectExternalLink != null)
+                objectExternalLink((Entity)(sender as Control).Tag);
+            else
+                MessageBox.Show("Object currentProduct external null");
+
+        }
+
+        private void IconButton1_Click(object sender, EventArgs e)
+        {
+            if (objectExternalLink != null)
+                objectExternalLink((Entity)(sender as IconButton).Tag);
+            else
+                MessageBox.Show("Object currentProduct external null");
+
+        }
+       
+       
+
+          
+        
+
+
+
+
+
+        private IconButton GenerateCategory(Category category)
+        {
+            IconButton iconButton_category_sample = new FontAwesome.Sharp.IconButton();
+            iconButton_category_sample.Dock = System.Windows.Forms.DockStyle.Top;
+            iconButton_category_sample.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            iconButton_category_sample.FlatAppearance.BorderSize = 0;
+            iconButton_category_sample.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            iconButton_category_sample.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
+            iconButton_category_sample.Font = new System.Drawing.Font("Montserrat", 10F);
+            iconButton_category_sample.ForeColor = System.Drawing.SystemColors.WindowText;
+            iconButton_category_sample.IconChar = FontAwesome.Sharp.IconChar.None;
+            iconButton_category_sample.IconColor = System.Drawing.Color.IndianRed;
+            iconButton_category_sample.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconButton_category_sample.IconSize = 40;
+            iconButton_category_sample.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            iconButton_category_sample.Location = new System.Drawing.Point(3, 69);
+            iconButton_category_sample.Name = "iconButton_category_sample";
+            iconButton_category_sample.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            iconButton_category_sample.Size = new System.Drawing.Size(320, 60);
+            iconButton_category_sample.TabIndex = 0;
+            iconButton_category_sample.Text = category.CategoryName;
+            iconButton_category_sample.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            iconButton_category_sample.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            iconButton_category_sample.UseVisualStyleBackColor = true;
+            iconButton_category_sample.Click += IconButton1_Click;
+            iconButton_category_sample.Tag = category;
+            return iconButton_category_sample;
         }
 
 

@@ -118,6 +118,7 @@ namespace GUI
             {
                 InitializeDatasets((Account)entity);
                 viewShoppingCart.SetAccount((Account)entity);
+                viewShoppingCart.SetCustomer();
             }
             if(entity is CensorStaff)
             {
@@ -166,10 +167,12 @@ namespace GUI
             else if( entity is Product)
             {
                 OpenChildForm(viewProductDetail);
-            }      else if(entity is Account)
+            }if(entity is Account)
             {
-                workSpaceCustomer.HeadingtoWaitingOrder();
-                OpenChildForm(workSpaceCustomer);
+                //workSpaceCustomer.HeadingtoWaitingOrder();
+                //OpenChildForm(workSpaceCustomer);
+                OpenChildForm(viewHomePage);
+                IconButton_home_Click(null, null);;
             }
                   
             else if(entity is Customer)
@@ -204,7 +207,14 @@ namespace GUI
 
         private void OpenExternalLinkShopOwnerWorkspace(Entity entity)
         {
-
+            if(entity is Account)
+            {
+                WindowState = FormWindowState.Maximized;
+            }
+            if(entity is Customer)
+            {
+                WindowState = FormWindowState.Normal;
+            }
         }
 
         private void OpenExternalLinkCustomerWorkspace(Entity entity)
@@ -243,6 +253,12 @@ namespace GUI
             }       else if( entity is ShoppingCart)
             {
                 OpenChildForm(viewHomePage);
+            }
+            else if(entity is Shop)
+            {
+                //IconButton_home_Click(null, null);
+                //OpenChildForm(viewHomePage);
+                
             }
             
 
@@ -290,6 +306,11 @@ namespace GUI
             {
                 workSpaceCustomer.HeadingtoMessage((BUS.Message)entity);
                 OpenChildForm(workSpaceCustomer);
+            }
+            else if (entity is Category)
+            {
+                viewCategory.SetExternalObject((Category)entity);
+                OpenChildForm(viewCategory);
             }
         }
 
@@ -423,6 +444,7 @@ namespace GUI
                 return;
             }
             viewShoppingCart.SetAccount(account);
+            viewShoppingCart.SetCustomer();
             OpenChildForm(viewShoppingCart);
         }
 
@@ -434,6 +456,7 @@ namespace GUI
                 OpenChildForm(workSpaceCustomer);
             }else
             {
+                SignIn.InitializeDataset();
                 SignIn.ShowDialog();
             }
 
@@ -442,6 +465,7 @@ namespace GUI
         private void IconButton_home_Click(object sender, EventArgs e)
         {
             //viewHomePage.LoadedEverything();
+            viewHomePage.LoadedEverything();
             OpenChildForm(viewHomePage);
         }
         

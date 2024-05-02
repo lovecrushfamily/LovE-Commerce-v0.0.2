@@ -434,7 +434,8 @@ namespace GUI
             {
                 foreach(char cha in line)
                 {
-                    if(limitEachLine == 0)
+                    
+                    if (limitEachLine == 0)
                     {
                         yield return '\n';
                         limitEachLine = 60;

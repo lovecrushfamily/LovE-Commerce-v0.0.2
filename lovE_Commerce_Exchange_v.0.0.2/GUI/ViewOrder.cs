@@ -198,17 +198,18 @@ namespace GUI
             label_promotionShop.TabIndex = 0;
             label_promotionShop.Text = "Promotion Shop";
 
-            label_productName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)| System.Windows.Forms.AnchorStyles.Right)));
+            label_productName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left))));
             label_productName.BackColor = System.Drawing.SystemColors.ControlLightLight;
             label_productName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             label_productName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             label_productName.Location = new System.Drawing.Point(94, 9);
             label_productName.Name = "label_productName";
-            label_productName.Size = new System.Drawing.Size(266, 27);
+            label_productName.Size = new System.Drawing.Size(450, 27);
             label_productName.TabIndex = 7;
             label_productName.Text = product.ProductName;
             label_productName.Click += new System.EventHandler(PictureBox_productImage_Click);
             label_productName.Tag = product;
+            label_productName.AutoEllipsis = true;
 
             pictureBox_productImage.BackColor = System.Drawing.SystemColors.ControlLightLight;
             pictureBox_productImage.Location = new System.Drawing.Point(3, 3);
@@ -309,16 +310,20 @@ namespace GUI
             order = null;
             vouchers = null;
             products = null;
-            account = null; 
-            if(MessageBox.Show("You order've forward to shop !, Do you want to see your waiting order now!","Notice",MessageBoxButtons.OKCancel) == DialogResult.OK)
-            {
-                objectExternalLink(account);
-            }
-            else
-            {
-                objectExternalLink(customer);
+            account = null;
+            MessageBox.Show("Thanks for your time, your order've been sending", "Notice");
+            //objectExternalLink(account);
+            Hide();
+            //objectExternalLink(customer);
+            //{
+            //    objectExternalLink(account);
+            //}
+            //else
+            //{
+            //    objectExternalLink(customer);
 
-            }
+            //}
+           
         }
 
         private IEnumerable<OrderDetail> GetOrderDetailSelected()

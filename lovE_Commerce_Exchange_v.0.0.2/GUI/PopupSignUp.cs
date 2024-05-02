@@ -22,8 +22,8 @@ namespace GUI
 
         {
             InitializeComponent();
-            accounts = Account.GetAccounts();
             //label_cover.BringToFront();
+            InitializeDataset();
         }
         #region Delegate
         // Defines a delegate. Sender is the object that is being returned to the other form.
@@ -32,6 +32,11 @@ namespace GUI
         public ObjectExternalLink objectExternalLink;
         #endregion
 
+        public void InitializeDataset()
+        {
+            accounts = Account.GetAccounts();
+
+        }
 
         private void RjRadioButton1_CheckedChanged(object sender, EventArgs e)
         {

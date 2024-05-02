@@ -101,8 +101,22 @@ namespace GUI
         }
         private void FillAncestorName()
         {
-            comboBox_ancestorName.DataSource = categories.Where(category => category.AncestorId == "0").Select(category => category.CategoryName).ToList(); ;
+            comboBox_ancestorName.DataSource = ReturnAllSecondChildCategory().Select(category => category.CategoryName).ToList();
+
         }
+        private IEnumerable<Category> ReturnAllSecondChildCategory()
+        {
+            foreach(Category category in categories.Where(category =>category.AncestorId == "0"))
+            {
+                yield return category;
+
+                foreach(Category category1 in FindChildCategory(category))
+                {
+                    yield return category1;
+                }
+            }
+        }
+
         #endregion
 
 
@@ -152,7 +166,11 @@ namespace GUI
         }
         private void RjButton_update_Click(object sender, EventArgs e)
         {
-            
+            if(rjTextBox_categoryId.Texts == string.Empty)
+            {
+                MessageBox.Show("This category doesn't existed yet!1");
+                return;
+            }
             if (WithoutAttributeCheck())
             {
                 MessageBox.Show("Category cannot be updated without attribute");
@@ -200,6 +218,7 @@ namespace GUI
             if(rjTextBox_categoryId.Texts != string.Empty)
             {
                 MessageBox.Show("Unable to add,This category Id has already existed!");
+                return;
             }
             if (!VerifyPrompt())
             {
@@ -271,6 +290,7 @@ namespace GUI
             Category category = categories.Single(ca => ca.CategoryName == comboBox_level1.SelectedItem.ToString());
             FillCategroryLevel2(FindChildCategory(category));
             FillCurrentCategory(category);
+            comboBox_level3.Items.Clear();
 
         }
         private void RjButton_category_Click(object sender, EventArgs e)

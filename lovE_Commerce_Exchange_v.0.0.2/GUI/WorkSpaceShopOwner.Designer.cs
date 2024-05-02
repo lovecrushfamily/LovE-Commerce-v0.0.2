@@ -61,7 +61,7 @@
             this.panel_body.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel_body.Location = new System.Drawing.Point(327, 50);
             this.panel_body.Name = "panel_body";
-            this.panel_body.Size = new System.Drawing.Size(665, 563);
+            this.panel_body.Size = new System.Drawing.Size(746, 631);
             this.panel_body.TabIndex = 8;
             // 
             // panel3
@@ -192,7 +192,7 @@
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Location = new System.Drawing.Point(0, 50);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(321, 563);
+            this.panel2.Size = new System.Drawing.Size(321, 631);
             this.panel2.TabIndex = 7;
             // 
             // iconButton_shopInfor
@@ -350,7 +350,7 @@
             this.iconButton_shopProducts.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.iconButton_shopProducts.Size = new System.Drawing.Size(321, 53);
             this.iconButton_shopProducts.TabIndex = 2;
-            this.iconButton_shopProducts.Text = "Shop currentProduct";
+            this.iconButton_shopProducts.Text = "Shop Product";
             this.iconButton_shopProducts.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton_shopProducts.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton_shopProducts.UseVisualStyleBackColor = true;
@@ -399,7 +399,7 @@
             this.gradientLabel3.EndColor = System.Drawing.Color.Thistle;
             this.gradientLabel3.Location = new System.Drawing.Point(318, 50);
             this.gradientLabel3.Name = "gradientLabel3";
-            this.gradientLabel3.Size = new System.Drawing.Size(10, 563);
+            this.gradientLabel3.Size = new System.Drawing.Size(10, 631);
             this.gradientLabel3.TabIndex = 5;
             this.gradientLabel3.TextColorBegin = System.Drawing.SystemColors.Control;
             this.gradientLabel3.TextColorEnd = System.Drawing.SystemColors.Control;
@@ -408,7 +408,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(992, 613);
+            this.BackColor = System.Drawing.Color.GhostWhite;
+            this.ClientSize = new System.Drawing.Size(1073, 681);
             this.Controls.Add(this.panel_body);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.gradientLabel3);

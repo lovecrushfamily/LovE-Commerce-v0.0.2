@@ -174,13 +174,16 @@
             // 
             // flowLayoutPanel_productsContainer
             // 
+            this.flowLayoutPanel_productsContainer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanel_productsContainer.AutoScroll = true;
             this.flowLayoutPanel_productsContainer.Controls.Add(this.groupBox1);
             this.flowLayoutPanel_productsContainer.Location = new System.Drawing.Point(342, 61);
             this.flowLayoutPanel_productsContainer.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
             this.flowLayoutPanel_productsContainer.Name = "flowLayoutPanel_productsContainer";
             this.flowLayoutPanel_productsContainer.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.flowLayoutPanel_productsContainer.Size = new System.Drawing.Size(709, 537);
+            this.flowLayoutPanel_productsContainer.Size = new System.Drawing.Size(820, 614);
             this.flowLayoutPanel_productsContainer.TabIndex = 1;
             // 
             // groupBox1
@@ -415,7 +418,7 @@
             this.panel1.Controls.Add(this.flowLayoutPanel_categoryFilterContainer);
             this.panel1.Location = new System.Drawing.Point(13, 104);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(324, 494);
+            this.panel1.Size = new System.Drawing.Size(324, 571);
             this.panel1.TabIndex = 6;
             // 
             // panel8
@@ -868,6 +871,7 @@
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 28;
             this.pictureBox7.TabStop = false;
+            this.pictureBox7.Click += new System.EventHandler(this.PictureBox7_Click);
             // 
             // label13
             // 
@@ -1293,7 +1297,7 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label12.Location = new System.Drawing.Point(312, 61);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(24, 537);
+            this.label12.Size = new System.Drawing.Size(24, 614);
             this.label12.TabIndex = 7;
             // 
             // gradientLabel_productSeachName
@@ -1315,7 +1319,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(1063, 610);
+            this.ClientSize = new System.Drawing.Size(1174, 687);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.iconButton1);
             this.Controls.Add(this.flowLayoutPanel_productsContainer);

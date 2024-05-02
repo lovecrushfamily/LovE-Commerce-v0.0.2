@@ -25,13 +25,13 @@ namespace GUI
         {
             InitializeComponent();
             panel_optionContainer.BringToFront();
-            InitializeDataset();
             this.shop = shop;
+            InitializeDataset();
 
         }
         private void InitializeDataset()
         {
-            products = Product.GetProducts();
+            products = Product.GetProducts().Where(pro => pro.ShopID == shop.ShopId).ToArray();
             categories = Category.GetCategories();
             //shop = 
         }
@@ -135,14 +135,14 @@ namespace GUI
                         openFile.Filter = "Files|*.jpg;*.jpeg;*.png;";
                         if (openFile.ShowDialog() == DialogResult.OK)
                         {
-                            // image duplicated handlder
-                            string fileName = openFile.FileName.Split('\\').Last();
-                            if (products.Any(pro => pro.MainImage == fileName  || pro.ExtraImageList.Contains(fileName)))
-                            {
-                                openFile.FileName = FilePathProcessing.GetProductImageDirectory() + fileName.Split('.')[0] + random.Next(1000, 9999);
-                                File.Copy(FilePathProcessing.GetProductImageDirectory() + fileName,
-                                          openFile.FileName);
-                            }
+                            //// image duplicated handlder
+                            //string fileName = openFile.FileName.Split('\\').Last();
+                            //if (products.Any(pro => pro.MainImage == fileName  || pro.ExtraImageList.Contains(fileName)))
+                            //{
+                            //    openFile.FileName = FilePathProcessing.GetProductImageDirectory() + fileName.Split('.')[0] + random.Next(1000, 9999);
+                            //    File.Copy(FilePathProcessing.GetProductImageDirectory() + fileName,
+                            //              openFile.FileName);
+                            //}
                             picture.Image = openFile.FileName.TurnToProductImage();
                             picture.Tag = openFile.FileName.Split('\\').Last();
                         }
@@ -206,7 +206,7 @@ namespace GUI
             //check product
             //check existed productName
             //check 5 image atleast
-            if(pictureBox_main.ImageLocation == null)
+            if(pictureBox_main.Tag == null)
             {
                 MessageBox.Show("Main image at least, please!");
                 return;
@@ -225,11 +225,11 @@ namespace GUI
                 Quantity = rjTextBox_productQuantity.Texts,
                 Price = rjTextBox_productPrice.Texts,
                 CreatedDate = rjTextBox_date.Texts,
-                Description = rjTextBox_description.Texts,
+                Description = rjTextBox_description.Texts.Replace('\'', '’'),
                 CategoryID = rjTextBox_categoryName.Tag.ToString(),
                 ShopID = shop.ShopId ,
 
-                MainImage = pictureBox_main.ImageLocation.Split('\\').Last(),
+                MainImage = pictureBox_main.Tag.ToString().Split('/').Last(),
                 ExtraImageList = ReGenerateExtraImageList().ToArray(),
                 AttributeList = RegenerateCategoryAttributeValue().ToArray(),
             });
@@ -263,7 +263,7 @@ namespace GUI
                 {
                     if (picture.Tag != null && picture.Name != "pictureBox_main")
                     {
-                        yield return picture.Tag.ToString().Split('\\').Last().Trim(); 
+                        yield return picture.Tag.ToString().Split('/').Last().Trim(); 
                     }
                 }
             }
@@ -329,7 +329,7 @@ namespace GUI
             currentProduct.Quantity = rjTextBox_productQuantity.Texts;
             currentProduct.ProductId = rjTextBox_productName.Tag.ToString();
             currentProduct.Description = rjTextBox_description.Texts;
-            currentProduct.MainImage = pictureBox_main.Tag.ToString().Split('\\').Last();
+            currentProduct.MainImage = pictureBox_main.Tag.ToString().Split('/').Last();
             currentProduct.ExtraImageList = ReGenerateExtraImageList().ToArray();
             currentProduct.CategoryID = rjTextBox_categoryName.Tag.ToString();
             currentProduct.AttributeList = RegenerateCategoryAttributeValue().ToArray();
@@ -454,7 +454,7 @@ namespace GUI
             panel_attribute.Dock = System.Windows.Forms.DockStyle.Top;
             panel_attribute.Location = new System.Drawing.Point(0, 0);
             panel_attribute.Name = "panel_attribute";
-            panel_attribute.Padding = new System.Windows.Forms.Padding(3, 0, 3, 5);
+            panel_attribute.Padding = new System.Windows.Forms.Padding(3, 0, 15, 5);
             panel_attribute.Size = new System.Drawing.Size(342, 53);
             panel_attribute.TabIndex = 0;
 
@@ -1091,7 +1091,6 @@ namespace GUI
         }
         private void RjTextBox3__TextChanged(object sender, EventArgs e)
         {
-
         }
         private void ComboBox_category_Click(object sender, EventArgs e)
         {
@@ -1102,7 +1101,12 @@ namespace GUI
 
         }
 
-        
+        private void RjTextBox_description__TextChanged(object sender, EventArgs e)
+        {
+            //
+            
+
+        }
     }
 
 }

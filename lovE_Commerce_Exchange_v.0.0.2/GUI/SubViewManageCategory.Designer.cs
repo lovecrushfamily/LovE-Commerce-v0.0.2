@@ -266,6 +266,7 @@
             // 
             // panel_firstClassCategory
             // 
+            this.panel_firstClassCategory.AutoScroll = true;
             this.panel_firstClassCategory.Controls.Add(this.panel_category);
             this.panel_firstClassCategory.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel_firstClassCategory.Location = new System.Drawing.Point(0, 0);

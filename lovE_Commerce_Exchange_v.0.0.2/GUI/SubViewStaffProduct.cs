@@ -164,6 +164,7 @@ namespace GUI
             pictureBox_waitingProductImage.TabIndex = 1;
             pictureBox_waitingProductImage.TabStop = false;
             pictureBox_waitingProductImage.Image = product.MainImage.GetProductImagePath().TurnToProductImage();
+            pictureBox_waitingProductImage.SizeMode = PictureBoxSizeMode.Zoom;
 
             checkBox_waitingProductCheck.AutoSize = true;
             checkBox_waitingProductCheck.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -175,7 +176,7 @@ namespace GUI
             checkBox_waitingProductCheck.TabIndex = 40;
             checkBox_waitingProductCheck.UseVisualStyleBackColor = false;
 
-            panel_waitingPruductControlHolder.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left ))));
+            panel_waitingPruductControlHolder.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right))));
             panel_waitingPruductControlHolder.BackColor = System.Drawing.SystemColors.ControlLightLight;
             panel_waitingPruductControlHolder.Controls.Add(rjButton_waitingProductDetail);
             panel_waitingPruductControlHolder.Controls.Add(rjButton_verifyWaitingProduct);
@@ -370,9 +371,13 @@ namespace GUI
         private void RjButton_verifyWaitingProduct_Click(object sender, EventArgs e)
         {
             products.SingleOrDefault(pro => pro.ProductId == (sender as RJButton).Tag.ToString()).Verify();
-            MessageBox.Show("Verify sucessfully!");
             InitialzeDataset();
             FillWaitingProduct();
+            if(e != null)
+            {
+                MessageBox.Show("Verify sucessfully!");
+
+            }
         }
         private void CheckBox_allProducts_CheckedChanged(object sender, EventArgs e)
         {
@@ -453,6 +458,17 @@ namespace GUI
         private void PictureBox12_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void RjButton_verifyAll_Click(object sender, EventArgs e)
+        {
+            foreach (RJButton rJButton in tabPage_waitingProducts.Controls.Find("rjButton_verifyWaitingProduct", true))
+            {
+                RjButton_verifyWaitingProduct_Click(rJButton, null);
+            }
+            InitialzeDataset();
+            FillWaitingProduct();
+            MessageBox.Show("Good choice man, I made it for you right!");
         }
     }
 }

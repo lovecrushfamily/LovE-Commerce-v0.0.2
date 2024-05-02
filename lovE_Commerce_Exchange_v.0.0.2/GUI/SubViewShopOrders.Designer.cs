@@ -160,7 +160,7 @@
             this.tabPage_waitingOrders.Location = new System.Drawing.Point(4, 25);
             this.tabPage_waitingOrders.Name = "tabPage_waitingOrders";
             this.tabPage_waitingOrders.Padding = new System.Windows.Forms.Padding(10, 70, 10, 10);
-            this.tabPage_waitingOrders.Size = new System.Drawing.Size(987, 435);
+            this.tabPage_waitingOrders.Size = new System.Drawing.Size(1000, 429);
             this.tabPage_waitingOrders.TabIndex = 0;
             this.tabPage_waitingOrders.Text = "tabPage_watingOrders";
             // 
@@ -227,7 +227,7 @@
             this.panel_allFatherWaitingOrders.Location = new System.Drawing.Point(10, 70);
             this.panel_allFatherWaitingOrders.Name = "panel_allFatherWaitingOrders";
             this.panel_allFatherWaitingOrders.Padding = new System.Windows.Forms.Padding(0, 0, 0, 50);
-            this.panel_allFatherWaitingOrders.Size = new System.Drawing.Size(967, 355);
+            this.panel_allFatherWaitingOrders.Size = new System.Drawing.Size(980, 349);
             this.panel_allFatherWaitingOrders.TabIndex = 0;
             // 
             // groupBox_waitingOrder
@@ -241,7 +241,7 @@
             this.groupBox_waitingOrder.Location = new System.Drawing.Point(0, 0);
             this.groupBox_waitingOrder.Name = "groupBox_waitingOrder";
             this.groupBox_waitingOrder.Padding = new System.Windows.Forms.Padding(15, 10, 30, 15);
-            this.groupBox_waitingOrder.Size = new System.Drawing.Size(967, 274);
+            this.groupBox_waitingOrder.Size = new System.Drawing.Size(980, 274);
             this.groupBox_waitingOrder.TabIndex = 0;
             this.groupBox_waitingOrder.TabStop = false;
             // 
@@ -257,7 +257,7 @@
             this.panel_customerInfor.Location = new System.Drawing.Point(15, 159);
             this.panel_customerInfor.MaximumSize = new System.Drawing.Size(0, 100);
             this.panel_customerInfor.Name = "panel_customerInfor";
-            this.panel_customerInfor.Size = new System.Drawing.Size(922, 100);
+            this.panel_customerInfor.Size = new System.Drawing.Size(935, 100);
             this.panel_customerInfor.TabIndex = 15;
             // 
             // label_date
@@ -275,7 +275,7 @@
             this.label1_totalAmount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1_totalAmount.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1_totalAmount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label1_totalAmount.Location = new System.Drawing.Point(12034, 41);
+            this.label1_totalAmount.Location = new System.Drawing.Point(12969, 41);
             this.label1_totalAmount.Name = "label1_totalAmount";
             this.label1_totalAmount.Size = new System.Drawing.Size(362, 21);
             this.label1_totalAmount.TabIndex = 11;
@@ -311,7 +311,7 @@
             // 
             this.panel1.Controls.Add(this.label_totalAmount0);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(584, 0);
+            this.panel1.Location = new System.Drawing.Point(597, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(338, 100);
             this.panel1.TabIndex = 12;
@@ -342,7 +342,7 @@
             this.iconButton_customerDetail.Location = new System.Drawing.Point(15, 114);
             this.iconButton_customerDetail.Name = "iconButton_customerDetail";
             this.iconButton_customerDetail.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            this.iconButton_customerDetail.Size = new System.Drawing.Size(922, 45);
+            this.iconButton_customerDetail.Size = new System.Drawing.Size(935, 45);
             this.iconButton_customerDetail.TabIndex = 13;
             this.iconButton_customerDetail.Text = "Customer detail";
             this.iconButton_customerDetail.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -363,7 +363,7 @@
             this.panel_productInfor.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_productInfor.Location = new System.Drawing.Point(15, 31);
             this.panel_productInfor.Name = "panel_productInfor";
-            this.panel_productInfor.Size = new System.Drawing.Size(922, 83);
+            this.panel_productInfor.Size = new System.Drawing.Size(935, 83);
             this.panel_productInfor.TabIndex = 14;
             // 
             // pictureBox_productImage
@@ -381,7 +381,7 @@
             this.label_productLeft.AutoSize = true;
             this.label_productLeft.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_productLeft.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label_productLeft.Location = new System.Drawing.Point(813, 55);
+            this.label_productLeft.Location = new System.Drawing.Point(826, 55);
             this.label_productLeft.Name = "label_productLeft";
             this.label_productLeft.Size = new System.Drawing.Size(66, 21);
             this.label_productLeft.TabIndex = 11;
@@ -408,7 +408,7 @@
             this.rjButton_confirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton_confirm.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButton_confirm.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.rjButton_confirm.Location = new System.Drawing.Point(774, 17);
+            this.rjButton_confirm.Location = new System.Drawing.Point(787, 17);
             this.rjButton_confirm.Name = "rjButton_confirm";
             this.rjButton_confirm.Size = new System.Drawing.Size(134, 35);
             this.rjButton_confirm.TabIndex = 9;
@@ -439,7 +439,7 @@
             this.rjButton_refer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton_refer.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjButton_refer.ForeColor = System.Drawing.Color.LightCoral;
-            this.rjButton_refer.Location = new System.Drawing.Point(634, 17);
+            this.rjButton_refer.Location = new System.Drawing.Point(647, 17);
             this.rjButton_refer.Name = "rjButton_refer";
             this.rjButton_refer.Size = new System.Drawing.Size(134, 35);
             this.rjButton_refer.TabIndex = 9;
@@ -556,6 +556,7 @@
             // 
             // panel_allFatherConfirmedOrders
             // 
+            this.panel_allFatherConfirmedOrders.AutoScroll = true;
             this.panel_allFatherConfirmedOrders.Controls.Add(this.groupBox_confirmedOrder);
             this.panel_allFatherConfirmedOrders.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_allFatherConfirmedOrders.Location = new System.Drawing.Point(10, 70);
@@ -641,7 +642,7 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label2.Location = new System.Drawing.Point(13179, 24);
+            this.label2.Location = new System.Drawing.Point(14114, 24);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(77, 21);
             this.label2.TabIndex = 11;
@@ -652,7 +653,7 @@
             this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label17.AutoSize = true;
             this.label17.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label17.Location = new System.Drawing.Point(14081, 38);
+            this.label17.Location = new System.Drawing.Point(15016, 38);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(77, 21);
             this.label17.TabIndex = 11;
@@ -809,7 +810,7 @@
             this.tabPage_cancelledOrders.Location = new System.Drawing.Point(4, 25);
             this.tabPage_cancelledOrders.Name = "tabPage_cancelledOrders";
             this.tabPage_cancelledOrders.Padding = new System.Windows.Forms.Padding(10, 70, 10, 10);
-            this.tabPage_cancelledOrders.Size = new System.Drawing.Size(987, 435);
+            this.tabPage_cancelledOrders.Size = new System.Drawing.Size(1000, 429);
             this.tabPage_cancelledOrders.TabIndex = 2;
             this.tabPage_cancelledOrders.Text = "tabPage_cancelledOrders";
             // 
@@ -851,7 +852,7 @@
             this.panel_allFatherCancelledOrders.Location = new System.Drawing.Point(10, 70);
             this.panel_allFatherCancelledOrders.Name = "panel_allFatherCancelledOrders";
             this.panel_allFatherCancelledOrders.Padding = new System.Windows.Forms.Padding(0, 0, 0, 50);
-            this.panel_allFatherCancelledOrders.Size = new System.Drawing.Size(967, 355);
+            this.panel_allFatherCancelledOrders.Size = new System.Drawing.Size(980, 349);
             this.panel_allFatherCancelledOrders.TabIndex = 0;
             // 
             // groupBox_cencelledOrder
@@ -865,7 +866,7 @@
             this.groupBox_cencelledOrder.Location = new System.Drawing.Point(0, 0);
             this.groupBox_cencelledOrder.Name = "groupBox_cencelledOrder";
             this.groupBox_cencelledOrder.Padding = new System.Windows.Forms.Padding(15, 10, 30, 15);
-            this.groupBox_cencelledOrder.Size = new System.Drawing.Size(967, 274);
+            this.groupBox_cencelledOrder.Size = new System.Drawing.Size(980, 274);
             this.groupBox_cencelledOrder.TabIndex = 1;
             this.groupBox_cencelledOrder.TabStop = false;
             // 
@@ -882,14 +883,14 @@
             this.panel_customerInfor2.Location = new System.Drawing.Point(15, 159);
             this.panel_customerInfor2.MaximumSize = new System.Drawing.Size(0, 100);
             this.panel_customerInfor2.Name = "panel_customerInfor2";
-            this.panel_customerInfor2.Size = new System.Drawing.Size(922, 100);
+            this.panel_customerInfor2.Size = new System.Drawing.Size(935, 100);
             this.panel_customerInfor2.TabIndex = 19;
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.label_totalAmount2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(554, 0);
+            this.panel3.Location = new System.Drawing.Point(567, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(368, 100);
             this.panel3.TabIndex = 12;
@@ -918,7 +919,7 @@
             // 
             this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(13103, 24);
+            this.label9.Location = new System.Drawing.Point(14038, 24);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(197, 21);
             this.label9.TabIndex = 11;
@@ -928,7 +929,7 @@
             // 
             this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(13993, 40);
+            this.label16.Location = new System.Drawing.Point(14928, 40);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(232, 21);
             this.label16.TabIndex = 11;
@@ -974,7 +975,7 @@
             this.iconButton_customerDetail2.Location = new System.Drawing.Point(15, 114);
             this.iconButton_customerDetail2.Name = "iconButton_customerDetail2";
             this.iconButton_customerDetail2.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            this.iconButton_customerDetail2.Size = new System.Drawing.Size(922, 45);
+            this.iconButton_customerDetail2.Size = new System.Drawing.Size(935, 45);
             this.iconButton_customerDetail2.TabIndex = 18;
             this.iconButton_customerDetail2.Text = "Customer detail";
             this.iconButton_customerDetail2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -993,7 +994,7 @@
             this.panel_productInfor2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_productInfor2.Location = new System.Drawing.Point(15, 31);
             this.panel_productInfor2.Name = "panel_productInfor2";
-            this.panel_productInfor2.Size = new System.Drawing.Size(922, 83);
+            this.panel_productInfor2.Size = new System.Drawing.Size(935, 83);
             this.panel_productInfor2.TabIndex = 17;
             // 
             // pictureBox_productImage2
@@ -1009,7 +1010,7 @@
             // 
             this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(797, 30);
+            this.label18.Location = new System.Drawing.Point(810, 30);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(81, 21);
             this.label18.TabIndex = 11;

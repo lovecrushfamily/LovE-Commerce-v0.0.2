@@ -22,13 +22,14 @@ namespace DAO
         }
         public static void Update(Customer_ customer_)
         {
+            string[] date = customer_.DateOfBirth.Split(' ')[0].Split('-');
             MyConnection.ExecuteNonQuery($"sp_updateCustomer {customer_.CustomerId}," +
                                                             $"'{customer_.CustomerName}'," +
                                                             $"{customer_.Gender}," +
                                                             $"'{customer_.PhoneNumber}'," +
                                                             $"'{customer_.Image}'," +
                                                             $"{customer_.ShopOwner}," +
-                                                            $"'{customer_.DateOfBirth}'," +
+                                                            $"'{date[0] + '/' + date[1] +'/' + date[2]}'," +
                                                             $"'{customer_.Address}'");
         }
 

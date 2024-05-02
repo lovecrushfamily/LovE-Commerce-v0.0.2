@@ -399,6 +399,7 @@
             this.rjTextBox_role.TabIndex = 2;
             this.rjTextBox_role.Texts = "Role";
             this.rjTextBox_role.UnderlinedStyle = true;
+            this.rjTextBox_role._TextChanged += new System.EventHandler(this.RjTextBox_role__TextChanged);
             // 
             // PopupSignIn
             // 

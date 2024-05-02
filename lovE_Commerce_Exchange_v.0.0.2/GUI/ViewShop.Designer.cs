@@ -557,7 +557,7 @@
             this.flowLayoutPanel_allFather.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.flowLayoutPanel_allFather.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel_allFather.Name = "flowLayoutPanel_allFather";
-            this.flowLayoutPanel_allFather.Padding = new System.Windows.Forms.Padding(10, 20, 10, 10);
+            this.flowLayoutPanel_allFather.Padding = new System.Windows.Forms.Padding(5, 20, 5, 10);
             this.flowLayoutPanel_allFather.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.flowLayoutPanel_allFather.Size = new System.Drawing.Size(679, 319);
             this.flowLayoutPanel_allFather.TabIndex = 8;
@@ -576,7 +576,7 @@
             this.groupBox1.Controls.Add(this.iconButton5);
             this.groupBox1.Controls.Add(this.iconButton6);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Location = new System.Drawing.Point(15, 25);
+            this.groupBox1.Location = new System.Drawing.Point(10, 25);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(15, 3, 15, 3);
@@ -758,7 +758,7 @@
             // 
             // hScrollBar1
             // 
-            this.hScrollBar1.Location = new System.Drawing.Point(265, 20);
+            this.hScrollBar1.Location = new System.Drawing.Point(260, 20);
             this.hScrollBar1.Name = "hScrollBar1";
             this.hScrollBar1.Size = new System.Drawing.Size(8, 8);
             this.hScrollBar1.TabIndex = 7;
@@ -886,7 +886,7 @@
             this.label21.BackColor = System.Drawing.SystemColors.Control;
             this.label21.Location = new System.Drawing.Point(995, 163);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(36, 413);
+            this.label21.Size = new System.Drawing.Size(46, 413);
             this.label21.TabIndex = 12;
             // 
             // ViewShop

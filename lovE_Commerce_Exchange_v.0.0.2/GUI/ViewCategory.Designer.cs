@@ -67,7 +67,7 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label12.Location = new System.Drawing.Point(310, 47);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(30, 551);
+            this.label12.Size = new System.Drawing.Size(30, 687);
             this.label12.TabIndex = 12;
             // 
             // label2
@@ -267,13 +267,16 @@
             // 
             // flowLayoutPanel_productsContainer
             // 
+            this.flowLayoutPanel_productsContainer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanel_productsContainer.AutoScroll = true;
             this.flowLayoutPanel_productsContainer.Controls.Add(this.groupBox_product);
             this.flowLayoutPanel_productsContainer.Location = new System.Drawing.Point(342, 44);
             this.flowLayoutPanel_productsContainer.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
             this.flowLayoutPanel_productsContainer.Name = "flowLayoutPanel_productsContainer";
             this.flowLayoutPanel_productsContainer.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.flowLayoutPanel_productsContainer.Size = new System.Drawing.Size(709, 554);
+            this.flowLayoutPanel_productsContainer.Size = new System.Drawing.Size(1011, 690);
             this.flowLayoutPanel_productsContainer.TabIndex = 9;
             // 
             // flowLayoutPanel_subCategories
@@ -288,7 +291,7 @@
             this.flowLayoutPanel_subCategories.Name = "flowLayoutPanel_subCategories";
             this.flowLayoutPanel_subCategories.Padding = new System.Windows.Forms.Padding(0, 0, 30, 0);
             this.flowLayoutPanel_subCategories.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.flowLayoutPanel_subCategories.Size = new System.Drawing.Size(319, 554);
+            this.flowLayoutPanel_subCategories.Size = new System.Drawing.Size(319, 690);
             this.flowLayoutPanel_subCategories.TabIndex = 11;
             // 
             // panel_subCategory
@@ -354,7 +357,7 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.Location = new System.Drawing.Point(12, 568);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(328, 30);
+            this.label1.Size = new System.Drawing.Size(328, 166);
             this.label1.TabIndex = 12;
             // 
             // flowLayoutPanel_subCategoryNav
@@ -428,7 +431,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(1028, 590);
+            this.ClientSize = new System.Drawing.Size(1365, 726);
             this.Controls.Add(this.flowLayoutPanel_subCategoryNav);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label12);

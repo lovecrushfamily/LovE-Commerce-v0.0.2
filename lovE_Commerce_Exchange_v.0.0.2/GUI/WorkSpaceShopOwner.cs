@@ -120,13 +120,15 @@ namespace GUI
 
         private void IconButton_account_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            ActivateButton(sender); objectExternalLink(new Customer(new DLL.Customer_() { }));
+
             OpenChildForm(new SubViewShopOrders(shop));
         }
 
         private void IconButton_comment_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            ActivateButton(sender); objectExternalLink(new Customer(new DLL.Customer_() { }));
+
 
             SubViewShopComment subViewShopComment = new SubViewShopComment(shop);
             OpenChildForm(subViewShopComment);
@@ -135,6 +137,7 @@ namespace GUI
         private void IconButton_orders_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
+            objectExternalLink(new Customer(new DLL.Customer_() { }));
 
             OpenChildForm(new SubViewShopProducts(shop));
         }
@@ -142,12 +145,15 @@ namespace GUI
         private void IconButton_notification_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
+            objectExternalLink(new Customer(new DLL.Customer_() { }));
 
             OpenChildForm(new SubViewShopVoucher());
         }
 
         private void IconButton_shop_Click(object sender, EventArgs e)
         {
+            objectExternalLink(new Customer(new DLL.Customer_() { }));
+
             OpenChildForm(new SubViewShopChat());
             ActivateButton(sender);
 
@@ -155,6 +161,7 @@ namespace GUI
 
         private void IconButton_messenger_Click(object sender, EventArgs e)
         {
+            objectExternalLink(new Customer(new DLL.Customer_() { }));
             OpenChildForm(new SubViewNotifications());
             ActivateButton(sender);
 
@@ -162,13 +169,15 @@ namespace GUI
 
         private void IconButton1_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new SubViewShopDashBoard());
+            objectExternalLink(new Account(new DLL.Account_() { }));
+            OpenChildForm(new SubViewShopDashBoard(shop));
             ActivateButton(sender);
 
         }
 
         private void IconButton_shopInfor_Click(object sender, EventArgs e)
         {
+            objectExternalLink(new Customer(new DLL.Customer_() { }));
             OpenChildForm(new SubViewShopInfor(shop));
             ActivateButton(sender);
 

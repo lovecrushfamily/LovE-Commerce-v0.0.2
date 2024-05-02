@@ -413,7 +413,7 @@
             this.tabPage_shopRespond.Location = new System.Drawing.Point(4, 25);
             this.tabPage_shopRespond.Name = "tabPage_shopRespond";
             this.tabPage_shopRespond.Padding = new System.Windows.Forms.Padding(10, 60, 10, 10);
-            this.tabPage_shopRespond.Size = new System.Drawing.Size(992, 758);
+            this.tabPage_shopRespond.Size = new System.Drawing.Size(1001, 491);
             this.tabPage_shopRespond.TabIndex = 1;
             this.tabPage_shopRespond.Text = "tabPage_shopRespond";
             // 
@@ -482,7 +482,7 @@
             this.groupBox2.Location = new System.Drawing.Point(10, 60);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(20, 15, 20, 10);
-            this.groupBox2.Size = new System.Drawing.Size(972, 321);
+            this.groupBox2.Size = new System.Drawing.Size(981, 321);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             // 
@@ -496,7 +496,7 @@
             this.panel4.Location = new System.Drawing.Point(257, 174);
             this.panel4.Name = "panel4";
             this.panel4.Padding = new System.Windows.Forms.Padding(10);
-            this.panel4.Size = new System.Drawing.Size(691, 119);
+            this.panel4.Size = new System.Drawing.Size(700, 119);
             this.panel4.TabIndex = 20;
             // 
             // label_shopRespond
@@ -506,7 +506,7 @@
             this.label_shopRespond.Location = new System.Drawing.Point(10, 34);
             this.label_shopRespond.Name = "label_shopRespond";
             this.label_shopRespond.Padding = new System.Windows.Forms.Padding(5, 10, 5, 5);
-            this.label_shopRespond.Size = new System.Drawing.Size(671, 65);
+            this.label_shopRespond.Size = new System.Drawing.Size(680, 65);
             this.label_shopRespond.TabIndex = 1;
             this.label_shopRespond.Text = resources.GetString("label_shopRespond.Text");
             // 
@@ -530,7 +530,7 @@
             this.panel3.Location = new System.Drawing.Point(243, 31);
             this.panel3.Name = "panel3";
             this.panel3.Padding = new System.Windows.Forms.Padding(10);
-            this.panel3.Size = new System.Drawing.Size(705, 137);
+            this.panel3.Size = new System.Drawing.Size(714, 137);
             this.panel3.TabIndex = 20;
             // 
             // label3
@@ -540,7 +540,7 @@
             this.label3.Location = new System.Drawing.Point(10, 34);
             this.label3.Name = "label3";
             this.label3.Padding = new System.Windows.Forms.Padding(5, 10, 5, 5);
-            this.label3.Size = new System.Drawing.Size(685, 93);
+            this.label3.Size = new System.Drawing.Size(694, 93);
             this.label3.TabIndex = 1;
             this.label3.Text = resources.GetString("label3.Text");
             // 

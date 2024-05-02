@@ -711,6 +711,7 @@
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.Controls.Add(this.textBox_address);
             this.panel2.Controls.Add(this.rjTextBox_dateOfRegistry);
             this.panel2.Controls.Add(this.rjTextBox_email);
             this.panel2.Controls.Add(this.rjButton_updatePhoneNumber);
@@ -719,7 +720,6 @@
             this.panel2.Controls.Add(this.rjTextBox_phoneNumber);
             this.panel2.Controls.Add(this.rjButton_updateEmail);
             this.panel2.Controls.Add(this.rjButton_changePassword);
-            this.panel2.Controls.Add(this.textBox_address);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label_password);
             this.panel2.Controls.Add(this.label7);

@@ -139,7 +139,7 @@
             this.rjTextBox_phoneNumber.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.rjTextBox_phoneNumber.PasswordChar = false;
             this.rjTextBox_phoneNumber.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox_phoneNumber.PlaceholderText = "Shop Phone";
+            this.rjTextBox_phoneNumber.PlaceholderText = "Shop phone number";
             this.rjTextBox_phoneNumber.Size = new System.Drawing.Size(284, 35);
             this.rjTextBox_phoneNumber.TabIndex = 11;
             this.rjTextBox_phoneNumber.Texts = "";
