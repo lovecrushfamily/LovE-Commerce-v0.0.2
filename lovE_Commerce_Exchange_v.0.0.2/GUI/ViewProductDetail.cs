@@ -415,25 +415,65 @@ namespace GUI
 
 
         #region Categrory Navigator
+        List<Category> categoryFamily = new List<Category>();
 
         /// <summary>
         /// take a category as the smallest, third category in category list
         /// </summary>
         /// <param name="category">the smallest category of product</param>
         /// <returns>return List of category from ancesstor category to category</returns>
-        private IEnumerable<Category> GetCategoryFamily(Category Smallcategory)
+        private void LoadSubCategory()
+        {
+            RemoveSubcategory("Home Page",false, 0);
+
+
+            categoryFamily.Clear();
+            categoryFamily.Add(category);
+            Category dad = FindDadCategory(category);
+            if(dad.AncestorId != "0")
+            {
+                categoryFamily.Add(dad);
+                 
+            }
+            Category supdad = FindDadCategory(dad);
+            if (supdad != null && supdad.AncestorId != "0")
+            {
+                categoryFamily.Add(supdad);
+
+            }
+            Category supsupdad = FindDadCategory(supdad);
+            if (supsupdad!= null && supsupdad.AncestorId != "0")
+            {
+                categoryFamily.Add(supsupdad);
+
+            }
+     
+
+            categoryFamily.Reverse();
+            //Category[] cates = 
+            foreach (Category category in categoryFamily)
+            {
+                AddSubCategory(category);
+            }
+            AddSubCategory(new Category(new DLL.Category_() {CategoryId = "not",CategoryName = currentProduct.ProductName}));
+        }
+        private void GetCategoryFamily(Category Smallcategory)
         {
             Category dad = FindDadCategory(Smallcategory);
-            yield return Smallcategory;
-            if(dad.AncestorId == "0")
+            categoryFamily.Add(Smallcategory);
+            if(Smallcategory.AncestorId != "0")
             {
-                yield return dad;
+                GetCategoryFamily(dad);
             }
-            GetCategoryFamily(dad);
+        
         }
         private Category FindDadCategory(Category Smallcategory)
         {
-            return categories.Single(category => category.CategoryId == Smallcategory.AncestorId);
+            if(Smallcategory == null)
+            {
+                return null;
+            }
+            return categories.SingleOrDefault(category => category.CategoryId == Smallcategory.AncestorId);
         }
 
         private void RjButton_homePageAhead_Click(object sender, EventArgs e)
@@ -493,15 +533,6 @@ namespace GUI
             objectExternalLink((Category)(sender as RJButton).Tag);
         }
 
-        private void LoadSubCategory()
-        {
-            RemoveSubcategory("Home Page",false, 0);
-            foreach (Category category in GetCategoryFamily(category).Reverse())
-            {
-                AddSubCategory(category);
-            }
-            AddSubCategory(new Category(new DLL.Category_() {CategoryId = "not",CategoryName = currentProduct.ProductName}));
-        }
         /// <summary>
         /// a superpower resursive algorithm help to remove all the category after the one was clicked;
         ///fantastic right, little headache; 

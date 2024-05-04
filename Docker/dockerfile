@@ -1,0 +1,14 @@
+# Sử dụng ảnh SQL Server từ Microsoft
+FROM mcr.microsoft.com/mssql/server:2019-latest
+
+# Mở cổng 1433
+EXPOSE 1433
+
+# Sao chép file backup vào thư mục backup trong container
+COPY LovE_Commerce_v2.bak /var/opt/mssql/backup/LovE_Commerce_v2.bak
+
+# WORKDIR /var/opt/mssql/backup/
+
+# Chuyển đến thư mục backup và thực hiện lệnh backup file
+RUN /opt/mssql-tools/bin/sqlcmd -S  -U sa -P lovecrush -Q "RESTORE DATABASE LovE_Commerce_v2 FROM DISK='/var/opt/mssql/backup/LovE_Commerce_v2.bak' "
+

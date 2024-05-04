@@ -153,7 +153,8 @@ namespace GUI
                 TopProductsList.Add(new KeyValuePair<string, int>(product.ProductName, orderDetails.Where(orderdetail => orderdetail.ProductId == product.ProductId).Sum(orderdetail => orderdetail.Quantity.ToInt())));
             }
             ;
-            chart_bestSellingProduct.DataSource = TopProductsList.OrderBy(x => x.Value).Take(4).ToList();
+            //TopProductsList = new List<KeyValuePair<string, int>>(new KeyValuePair<string, int>());
+            chart_bestSellingProduct.DataSource = TopProductsList.OrderBy(x => x.Value).Take(5).ToList();
             chart_bestSellingProduct.Series[0].XValueMember = "Key";
             chart_bestSellingProduct.Series[0].YValueMembers = "Value";
             //chart_bestSellingProduct.DataBind();

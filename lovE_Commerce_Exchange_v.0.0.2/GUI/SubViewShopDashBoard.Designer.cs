@@ -46,24 +46,37 @@
             this.dataGridView_underStock = new System.Windows.Forms.DataGridView();
             this.panel_orders = new System.Windows.Forms.Panel();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.rjCircularPictureBox1 = new RJCircularPictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label_orders = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.rjButton6 = new CustomControls.RJControls.RJButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
+            this.rjButton16 = new CustomControls.RJControls.RJButton();
             this.panel_totalRevenue = new System.Windows.Forms.Panel();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.rjCircularPictureBox2 = new RJCircularPictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label_totalRevenue = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.rjButton7 = new CustomControls.RJControls.RJButton();
             this.panel_totalProfit = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
+            this.rjCircularPictureBox3 = new RJCircularPictureBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label_totalProfit = new System.Windows.Forms.Label();
+            this.rjButton8 = new CustomControls.RJControls.RJButton();
             this.panel_OptionHolder = new System.Windows.Forms.Panel();
+            this.rjButton_today = new CustomControls.RJControls.RJButton();
+            this.rjButton_last30days = new CustomControls.RJControls.RJButton();
+            this.rjButton_last7Days = new CustomControls.RJControls.RJButton();
+            this.rjButton_custom = new CustomControls.RJControls.RJButton();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.rjButton14 = new CustomControls.RJControls.RJButton();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.rjButton15 = new CustomControls.RJControls.RJButton();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label_products = new System.Windows.Forms.Label();
@@ -78,31 +91,21 @@
             this.label14 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.rjButton17 = new CustomControls.RJControls.RJButton();
             this.label12 = new System.Windows.Forms.Label();
             this.label_startedDate = new System.Windows.Forms.Label();
             this.label_endedDate = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.rjCircularPictureBox3 = new RJCircularPictureBox();
-            this.rjButton8 = new CustomControls.RJControls.RJButton();
-            this.rjCircularPictureBox2 = new RJCircularPictureBox();
-            this.rjButton7 = new CustomControls.RJControls.RJButton();
-            this.rjCircularPictureBox1 = new RJCircularPictureBox();
-            this.rjButton6 = new CustomControls.RJControls.RJButton();
-            this.rjButton14 = new CustomControls.RJControls.RJButton();
-            this.rjButton15 = new CustomControls.RJControls.RJButton();
-            this.rjButton16 = new CustomControls.RJControls.RJButton();
-            this.rjButton17 = new CustomControls.RJControls.RJButton();
-            this.rjButton_today = new CustomControls.RJControls.RJButton();
-            this.rjButton_last30days = new CustomControls.RJControls.RJButton();
-            this.rjButton_last7Days = new CustomControls.RJControls.RJButton();
-            this.rjButton_custom = new CustomControls.RJControls.RJButton();
             ((System.ComponentModel.ISupportInitialize)(this.chart_grossRevenue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart_bestSellingProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_underStock)).BeginInit();
             this.panel_orders.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel_totalRevenue.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox2)).BeginInit();
             this.panel_totalProfit.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox3)).BeginInit();
             this.panel_OptionHolder.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -113,9 +116,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label_dashboard
@@ -323,6 +323,23 @@
             this.iconButton1.TabIndex = 10;
             this.iconButton1.UseVisualStyleBackColor = false;
             // 
+            // rjCircularPictureBox1
+            // 
+            this.rjCircularPictureBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.rjCircularPictureBox1.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            this.rjCircularPictureBox1.BorderColor = System.Drawing.Color.MediumTurquoise;
+            this.rjCircularPictureBox1.BorderColor2 = System.Drawing.Color.Turquoise;
+            this.rjCircularPictureBox1.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            this.rjCircularPictureBox1.BorderSize = 4;
+            this.rjCircularPictureBox1.GradientAngle = 50F;
+            this.rjCircularPictureBox1.Location = new System.Drawing.Point(11, 10);
+            this.rjCircularPictureBox1.Margin = new System.Windows.Forms.Padding(10);
+            this.rjCircularPictureBox1.Name = "rjCircularPictureBox1";
+            this.rjCircularPictureBox1.Size = new System.Drawing.Size(70, 70);
+            this.rjCircularPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.rjCircularPictureBox1.TabIndex = 11;
+            this.rjCircularPictureBox1.TabStop = false;
+            // 
             // label6
             // 
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -364,6 +381,27 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "Orders";
             this.label1.Click += new System.EventHandler(this.Label1_Click);
+            // 
+            // rjButton6
+            // 
+            this.rjButton6.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.rjButton6.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.rjButton6.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.rjButton6.BorderRadius = 10;
+            this.rjButton6.BorderSize = 0;
+            this.rjButton6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rjButton6.Enabled = false;
+            this.rjButton6.FlatAppearance.BorderSize = 0;
+            this.rjButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton6.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjButton6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.rjButton6.Location = new System.Drawing.Point(0, 0);
+            this.rjButton6.Margin = new System.Windows.Forms.Padding(0);
+            this.rjButton6.Name = "rjButton6";
+            this.rjButton6.Size = new System.Drawing.Size(437, 90);
+            this.rjButton6.TabIndex = 5;
+            this.rjButton6.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.rjButton6.UseVisualStyleBackColor = false;
             // 
             // panel2
             // 
@@ -412,6 +450,27 @@
             this.iconButton3.TabIndex = 11;
             this.iconButton3.UseVisualStyleBackColor = false;
             // 
+            // rjButton16
+            // 
+            this.rjButton16.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.rjButton16.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.rjButton16.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.rjButton16.BorderRadius = 10;
+            this.rjButton16.BorderSize = 0;
+            this.rjButton16.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rjButton16.Enabled = false;
+            this.rjButton16.FlatAppearance.BorderSize = 0;
+            this.rjButton16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton16.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjButton16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.rjButton16.Location = new System.Drawing.Point(0, 0);
+            this.rjButton16.Margin = new System.Windows.Forms.Padding(0);
+            this.rjButton16.Name = "rjButton16";
+            this.rjButton16.Size = new System.Drawing.Size(629, 263);
+            this.rjButton16.TabIndex = 10;
+            this.rjButton16.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.rjButton16.UseVisualStyleBackColor = false;
+            // 
             // panel_totalRevenue
             // 
             this.panel_totalRevenue.BackColor = System.Drawing.Color.Lavender;
@@ -445,6 +504,23 @@
             this.iconButton2.Size = new System.Drawing.Size(39, 39);
             this.iconButton2.TabIndex = 10;
             this.iconButton2.UseVisualStyleBackColor = false;
+            // 
+            // rjCircularPictureBox2
+            // 
+            this.rjCircularPictureBox2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.rjCircularPictureBox2.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            this.rjCircularPictureBox2.BorderColor = System.Drawing.Color.LightCoral;
+            this.rjCircularPictureBox2.BorderColor2 = System.Drawing.Color.OrangeRed;
+            this.rjCircularPictureBox2.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            this.rjCircularPictureBox2.BorderSize = 4;
+            this.rjCircularPictureBox2.GradientAngle = 50F;
+            this.rjCircularPictureBox2.Location = new System.Drawing.Point(10, 10);
+            this.rjCircularPictureBox2.Margin = new System.Windows.Forms.Padding(10);
+            this.rjCircularPictureBox2.Name = "rjCircularPictureBox2";
+            this.rjCircularPictureBox2.Size = new System.Drawing.Size(70, 70);
+            this.rjCircularPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.rjCircularPictureBox2.TabIndex = 11;
+            this.rjCircularPictureBox2.TabStop = false;
             // 
             // label7
             // 
@@ -487,6 +563,27 @@
             this.label3.Text = "Total Revenue";
             this.label3.Click += new System.EventHandler(this.Label1_Click);
             // 
+            // rjButton7
+            // 
+            this.rjButton7.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.rjButton7.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.rjButton7.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.rjButton7.BorderRadius = 10;
+            this.rjButton7.BorderSize = 0;
+            this.rjButton7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rjButton7.Enabled = false;
+            this.rjButton7.FlatAppearance.BorderSize = 0;
+            this.rjButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton7.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjButton7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.rjButton7.Location = new System.Drawing.Point(0, 0);
+            this.rjButton7.Margin = new System.Windows.Forms.Padding(0);
+            this.rjButton7.Name = "rjButton7";
+            this.rjButton7.Size = new System.Drawing.Size(437, 90);
+            this.rjButton7.TabIndex = 9;
+            this.rjButton7.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.rjButton7.UseVisualStyleBackColor = false;
+            // 
             // panel_totalProfit
             // 
             this.panel_totalProfit.BackColor = System.Drawing.Color.Lavender;
@@ -513,6 +610,24 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Total profit";
             this.label4.Click += new System.EventHandler(this.Label1_Click);
+            // 
+            // rjCircularPictureBox3
+            // 
+            this.rjCircularPictureBox3.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.rjCircularPictureBox3.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            this.rjCircularPictureBox3.BorderColor = System.Drawing.Color.MediumOrchid;
+            this.rjCircularPictureBox3.BorderColor2 = System.Drawing.Color.LightBlue;
+            this.rjCircularPictureBox3.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            this.rjCircularPictureBox3.BorderSize = 4;
+            this.rjCircularPictureBox3.GradientAngle = 50F;
+            this.rjCircularPictureBox3.Image = global::GUI.Properties.Resources.images;
+            this.rjCircularPictureBox3.Location = new System.Drawing.Point(10, 10);
+            this.rjCircularPictureBox3.Margin = new System.Windows.Forms.Padding(10);
+            this.rjCircularPictureBox3.Name = "rjCircularPictureBox3";
+            this.rjCircularPictureBox3.Size = new System.Drawing.Size(70, 70);
+            this.rjCircularPictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.rjCircularPictureBox3.TabIndex = 11;
+            this.rjCircularPictureBox3.TabStop = false;
             // 
             // label10
             // 
@@ -542,6 +657,27 @@
             this.label_totalProfit.Text = "$15";
             this.label_totalProfit.Click += new System.EventHandler(this.Label1_Click);
             // 
+            // rjButton8
+            // 
+            this.rjButton8.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.rjButton8.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.rjButton8.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.rjButton8.BorderRadius = 10;
+            this.rjButton8.BorderSize = 0;
+            this.rjButton8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rjButton8.Enabled = false;
+            this.rjButton8.FlatAppearance.BorderSize = 0;
+            this.rjButton8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton8.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjButton8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.rjButton8.Location = new System.Drawing.Point(0, 0);
+            this.rjButton8.Margin = new System.Windows.Forms.Padding(0);
+            this.rjButton8.Name = "rjButton8";
+            this.rjButton8.Size = new System.Drawing.Size(448, 90);
+            this.rjButton8.TabIndex = 9;
+            this.rjButton8.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.rjButton8.UseVisualStyleBackColor = false;
+            // 
             // panel_OptionHolder
             // 
             this.panel_OptionHolder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -553,6 +689,90 @@
             this.panel_OptionHolder.Name = "panel_OptionHolder";
             this.panel_OptionHolder.Size = new System.Drawing.Size(606, 55);
             this.panel_OptionHolder.TabIndex = 9;
+            // 
+            // rjButton_today
+            // 
+            this.rjButton_today.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.rjButton_today.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.rjButton_today.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.rjButton_today.BorderRadius = 10;
+            this.rjButton_today.BorderSize = 1;
+            this.rjButton_today.FlatAppearance.BorderSize = 0;
+            this.rjButton_today.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton_today.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjButton_today.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.rjButton_today.Location = new System.Drawing.Point(153, 4);
+            this.rjButton_today.Margin = new System.Windows.Forms.Padding(0);
+            this.rjButton_today.Name = "rjButton_today";
+            this.rjButton_today.Size = new System.Drawing.Size(150, 47);
+            this.rjButton_today.TabIndex = 5;
+            this.rjButton_today.Text = "Today";
+            this.rjButton_today.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.rjButton_today.UseVisualStyleBackColor = false;
+            this.rjButton_today.Click += new System.EventHandler(this.RjButton13_Click);
+            // 
+            // rjButton_last30days
+            // 
+            this.rjButton_last30days.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.rjButton_last30days.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.rjButton_last30days.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.rjButton_last30days.BorderRadius = 10;
+            this.rjButton_last30days.BorderSize = 1;
+            this.rjButton_last30days.FlatAppearance.BorderSize = 0;
+            this.rjButton_last30days.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton_last30days.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjButton_last30days.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.rjButton_last30days.Location = new System.Drawing.Point(453, 4);
+            this.rjButton_last30days.Margin = new System.Windows.Forms.Padding(0);
+            this.rjButton_last30days.Name = "rjButton_last30days";
+            this.rjButton_last30days.Size = new System.Drawing.Size(150, 47);
+            this.rjButton_last30days.TabIndex = 5;
+            this.rjButton_last30days.Text = "Last 30 days";
+            this.rjButton_last30days.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.rjButton_last30days.UseVisualStyleBackColor = false;
+            this.rjButton_last30days.Click += new System.EventHandler(this.RjButton11_Click);
+            // 
+            // rjButton_last7Days
+            // 
+            this.rjButton_last7Days.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.rjButton_last7Days.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.rjButton_last7Days.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.rjButton_last7Days.BorderRadius = 10;
+            this.rjButton_last7Days.BorderSize = 1;
+            this.rjButton_last7Days.FlatAppearance.BorderSize = 0;
+            this.rjButton_last7Days.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton_last7Days.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjButton_last7Days.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.rjButton_last7Days.Location = new System.Drawing.Point(303, 4);
+            this.rjButton_last7Days.Margin = new System.Windows.Forms.Padding(0);
+            this.rjButton_last7Days.Name = "rjButton_last7Days";
+            this.rjButton_last7Days.Size = new System.Drawing.Size(150, 47);
+            this.rjButton_last7Days.TabIndex = 5;
+            this.rjButton_last7Days.Text = "Last 7 days";
+            this.rjButton_last7Days.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.rjButton_last7Days.UseVisualStyleBackColor = false;
+            this.rjButton_last7Days.Click += new System.EventHandler(this.RjButton10_Click);
+            // 
+            // rjButton_custom
+            // 
+            this.rjButton_custom.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.rjButton_custom.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.rjButton_custom.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.rjButton_custom.BorderRadius = 10;
+            this.rjButton_custom.BorderSize = 1;
+            this.rjButton_custom.FlatAppearance.BorderSize = 0;
+            this.rjButton_custom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton_custom.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjButton_custom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.rjButton_custom.Location = new System.Drawing.Point(3, 4);
+            this.rjButton_custom.Margin = new System.Windows.Forms.Padding(0);
+            this.rjButton_custom.Name = "rjButton_custom";
+            this.rjButton_custom.Size = new System.Drawing.Size(150, 47);
+            this.rjButton_custom.TabIndex = 5;
+            this.rjButton_custom.Text = "Custom";
+            this.rjButton_custom.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.rjButton_custom.UseVisualStyleBackColor = false;
+            this.rjButton_custom.Click += new System.EventHandler(this.RjButton9_Click_1);
             // 
             // panel5
             // 
@@ -567,6 +787,28 @@
             this.panel5.Size = new System.Drawing.Size(895, 309);
             this.panel5.TabIndex = 10;
             // 
+            // rjButton14
+            // 
+            this.rjButton14.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.rjButton14.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.rjButton14.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.rjButton14.BorderRadius = 0;
+            this.rjButton14.BorderSize = 0;
+            this.rjButton14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rjButton14.Enabled = false;
+            this.rjButton14.FlatAppearance.BorderSize = 0;
+            this.rjButton14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton14.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjButton14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.rjButton14.Location = new System.Drawing.Point(0, 0);
+            this.rjButton14.Margin = new System.Windows.Forms.Padding(0);
+            this.rjButton14.Name = "rjButton14";
+            this.rjButton14.Size = new System.Drawing.Size(895, 309);
+            this.rjButton14.TabIndex = 5;
+            this.rjButton14.Text = "Custom";
+            this.rjButton14.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.rjButton14.UseVisualStyleBackColor = false;
+            // 
             // panel6
             // 
             this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -578,6 +820,27 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(365, 585);
             this.panel6.TabIndex = 11;
+            // 
+            // rjButton15
+            // 
+            this.rjButton15.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.rjButton15.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.rjButton15.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.rjButton15.BorderRadius = 10;
+            this.rjButton15.BorderSize = 0;
+            this.rjButton15.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rjButton15.Enabled = false;
+            this.rjButton15.FlatAppearance.BorderSize = 0;
+            this.rjButton15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton15.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjButton15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.rjButton15.Location = new System.Drawing.Point(0, 0);
+            this.rjButton15.Margin = new System.Windows.Forms.Padding(0);
+            this.rjButton15.Name = "rjButton15";
+            this.rjButton15.Size = new System.Drawing.Size(365, 585);
+            this.rjButton15.TabIndex = 10;
+            this.rjButton15.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.rjButton15.UseVisualStyleBackColor = false;
             // 
             // panel7
             // 
@@ -749,6 +1012,27 @@
             this.label11.TabIndex = 12;
             this.label11.Text = "Total counters";
             // 
+            // rjButton17
+            // 
+            this.rjButton17.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.rjButton17.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.rjButton17.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.rjButton17.BorderRadius = 10;
+            this.rjButton17.BorderSize = 0;
+            this.rjButton17.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rjButton17.Enabled = false;
+            this.rjButton17.FlatAppearance.BorderSize = 0;
+            this.rjButton17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton17.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjButton17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.rjButton17.Location = new System.Drawing.Point(0, 0);
+            this.rjButton17.Margin = new System.Windows.Forms.Padding(0);
+            this.rjButton17.Name = "rjButton17";
+            this.rjButton17.Size = new System.Drawing.Size(253, 263);
+            this.rjButton17.TabIndex = 11;
+            this.rjButton17.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.rjButton17.UseVisualStyleBackColor = false;
+            // 
             // label12
             // 
             this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -790,290 +1074,6 @@
             this.label13.Size = new System.Drawing.Size(188, 63);
             this.label13.TabIndex = 0;
             // 
-            // rjCircularPictureBox3
-            // 
-            this.rjCircularPictureBox3.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rjCircularPictureBox3.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
-            this.rjCircularPictureBox3.BorderColor = System.Drawing.Color.MediumOrchid;
-            this.rjCircularPictureBox3.BorderColor2 = System.Drawing.Color.LightBlue;
-            this.rjCircularPictureBox3.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            this.rjCircularPictureBox3.BorderSize = 4;
-            this.rjCircularPictureBox3.GradientAngle = 50F;
-            this.rjCircularPictureBox3.Image = global::GUI.Properties.Resources.images;
-            this.rjCircularPictureBox3.Location = new System.Drawing.Point(10, 10);
-            this.rjCircularPictureBox3.Margin = new System.Windows.Forms.Padding(10);
-            this.rjCircularPictureBox3.Name = "rjCircularPictureBox3";
-            this.rjCircularPictureBox3.Size = new System.Drawing.Size(70, 70);
-            this.rjCircularPictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.rjCircularPictureBox3.TabIndex = 11;
-            this.rjCircularPictureBox3.TabStop = false;
-            // 
-            // rjButton8
-            // 
-            this.rjButton8.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rjButton8.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rjButton8.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjButton8.BorderRadius = 10;
-            this.rjButton8.BorderSize = 0;
-            this.rjButton8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rjButton8.Enabled = false;
-            this.rjButton8.FlatAppearance.BorderSize = 0;
-            this.rjButton8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton8.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjButton8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjButton8.Location = new System.Drawing.Point(0, 0);
-            this.rjButton8.Margin = new System.Windows.Forms.Padding(0);
-            this.rjButton8.Name = "rjButton8";
-            this.rjButton8.Size = new System.Drawing.Size(448, 90);
-            this.rjButton8.TabIndex = 9;
-            this.rjButton8.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjButton8.UseVisualStyleBackColor = false;
-            // 
-            // rjCircularPictureBox2
-            // 
-            this.rjCircularPictureBox2.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rjCircularPictureBox2.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
-            this.rjCircularPictureBox2.BorderColor = System.Drawing.Color.LightCoral;
-            this.rjCircularPictureBox2.BorderColor2 = System.Drawing.Color.OrangeRed;
-            this.rjCircularPictureBox2.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            this.rjCircularPictureBox2.BorderSize = 4;
-            this.rjCircularPictureBox2.GradientAngle = 50F;
-            this.rjCircularPictureBox2.Location = new System.Drawing.Point(10, 10);
-            this.rjCircularPictureBox2.Margin = new System.Windows.Forms.Padding(10);
-            this.rjCircularPictureBox2.Name = "rjCircularPictureBox2";
-            this.rjCircularPictureBox2.Size = new System.Drawing.Size(70, 70);
-            this.rjCircularPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.rjCircularPictureBox2.TabIndex = 11;
-            this.rjCircularPictureBox2.TabStop = false;
-            // 
-            // rjButton7
-            // 
-            this.rjButton7.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rjButton7.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rjButton7.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjButton7.BorderRadius = 10;
-            this.rjButton7.BorderSize = 0;
-            this.rjButton7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rjButton7.Enabled = false;
-            this.rjButton7.FlatAppearance.BorderSize = 0;
-            this.rjButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton7.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjButton7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjButton7.Location = new System.Drawing.Point(0, 0);
-            this.rjButton7.Margin = new System.Windows.Forms.Padding(0);
-            this.rjButton7.Name = "rjButton7";
-            this.rjButton7.Size = new System.Drawing.Size(437, 90);
-            this.rjButton7.TabIndex = 9;
-            this.rjButton7.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjButton7.UseVisualStyleBackColor = false;
-            // 
-            // rjCircularPictureBox1
-            // 
-            this.rjCircularPictureBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rjCircularPictureBox1.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
-            this.rjCircularPictureBox1.BorderColor = System.Drawing.Color.MediumTurquoise;
-            this.rjCircularPictureBox1.BorderColor2 = System.Drawing.Color.Turquoise;
-            this.rjCircularPictureBox1.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            this.rjCircularPictureBox1.BorderSize = 4;
-            this.rjCircularPictureBox1.GradientAngle = 50F;
-            this.rjCircularPictureBox1.Location = new System.Drawing.Point(11, 10);
-            this.rjCircularPictureBox1.Margin = new System.Windows.Forms.Padding(10);
-            this.rjCircularPictureBox1.Name = "rjCircularPictureBox1";
-            this.rjCircularPictureBox1.Size = new System.Drawing.Size(70, 70);
-            this.rjCircularPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.rjCircularPictureBox1.TabIndex = 11;
-            this.rjCircularPictureBox1.TabStop = false;
-            // 
-            // rjButton6
-            // 
-            this.rjButton6.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rjButton6.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rjButton6.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjButton6.BorderRadius = 10;
-            this.rjButton6.BorderSize = 0;
-            this.rjButton6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rjButton6.Enabled = false;
-            this.rjButton6.FlatAppearance.BorderSize = 0;
-            this.rjButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton6.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjButton6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjButton6.Location = new System.Drawing.Point(0, 0);
-            this.rjButton6.Margin = new System.Windows.Forms.Padding(0);
-            this.rjButton6.Name = "rjButton6";
-            this.rjButton6.Size = new System.Drawing.Size(437, 90);
-            this.rjButton6.TabIndex = 5;
-            this.rjButton6.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjButton6.UseVisualStyleBackColor = false;
-            // 
-            // rjButton14
-            // 
-            this.rjButton14.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rjButton14.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rjButton14.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjButton14.BorderRadius = 0;
-            this.rjButton14.BorderSize = 0;
-            this.rjButton14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rjButton14.Enabled = false;
-            this.rjButton14.FlatAppearance.BorderSize = 0;
-            this.rjButton14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton14.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjButton14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjButton14.Location = new System.Drawing.Point(0, 0);
-            this.rjButton14.Margin = new System.Windows.Forms.Padding(0);
-            this.rjButton14.Name = "rjButton14";
-            this.rjButton14.Size = new System.Drawing.Size(895, 309);
-            this.rjButton14.TabIndex = 5;
-            this.rjButton14.Text = "Custom";
-            this.rjButton14.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjButton14.UseVisualStyleBackColor = false;
-            // 
-            // rjButton15
-            // 
-            this.rjButton15.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rjButton15.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rjButton15.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjButton15.BorderRadius = 10;
-            this.rjButton15.BorderSize = 0;
-            this.rjButton15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rjButton15.Enabled = false;
-            this.rjButton15.FlatAppearance.BorderSize = 0;
-            this.rjButton15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton15.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjButton15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjButton15.Location = new System.Drawing.Point(0, 0);
-            this.rjButton15.Margin = new System.Windows.Forms.Padding(0);
-            this.rjButton15.Name = "rjButton15";
-            this.rjButton15.Size = new System.Drawing.Size(365, 585);
-            this.rjButton15.TabIndex = 10;
-            this.rjButton15.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjButton15.UseVisualStyleBackColor = false;
-            // 
-            // rjButton16
-            // 
-            this.rjButton16.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rjButton16.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rjButton16.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjButton16.BorderRadius = 10;
-            this.rjButton16.BorderSize = 0;
-            this.rjButton16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rjButton16.Enabled = false;
-            this.rjButton16.FlatAppearance.BorderSize = 0;
-            this.rjButton16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton16.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjButton16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjButton16.Location = new System.Drawing.Point(0, 0);
-            this.rjButton16.Margin = new System.Windows.Forms.Padding(0);
-            this.rjButton16.Name = "rjButton16";
-            this.rjButton16.Size = new System.Drawing.Size(629, 263);
-            this.rjButton16.TabIndex = 10;
-            this.rjButton16.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjButton16.UseVisualStyleBackColor = false;
-            // 
-            // rjButton17
-            // 
-            this.rjButton17.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rjButton17.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rjButton17.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjButton17.BorderRadius = 10;
-            this.rjButton17.BorderSize = 0;
-            this.rjButton17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rjButton17.Enabled = false;
-            this.rjButton17.FlatAppearance.BorderSize = 0;
-            this.rjButton17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton17.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjButton17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjButton17.Location = new System.Drawing.Point(0, 0);
-            this.rjButton17.Margin = new System.Windows.Forms.Padding(0);
-            this.rjButton17.Name = "rjButton17";
-            this.rjButton17.Size = new System.Drawing.Size(253, 263);
-            this.rjButton17.TabIndex = 11;
-            this.rjButton17.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjButton17.UseVisualStyleBackColor = false;
-            // 
-            // rjButton_today
-            // 
-            this.rjButton_today.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rjButton_today.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rjButton_today.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjButton_today.BorderRadius = 10;
-            this.rjButton_today.BorderSize = 1;
-            this.rjButton_today.FlatAppearance.BorderSize = 0;
-            this.rjButton_today.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton_today.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjButton_today.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjButton_today.Location = new System.Drawing.Point(153, 4);
-            this.rjButton_today.Margin = new System.Windows.Forms.Padding(0);
-            this.rjButton_today.Name = "rjButton_today";
-            this.rjButton_today.Size = new System.Drawing.Size(150, 47);
-            this.rjButton_today.TabIndex = 5;
-            this.rjButton_today.Text = "Today";
-            this.rjButton_today.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjButton_today.UseVisualStyleBackColor = false;
-            this.rjButton_today.Click += new System.EventHandler(this.RjButton13_Click);
-            // 
-            // rjButton_last30days
-            // 
-            this.rjButton_last30days.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rjButton_last30days.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rjButton_last30days.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjButton_last30days.BorderRadius = 10;
-            this.rjButton_last30days.BorderSize = 1;
-            this.rjButton_last30days.FlatAppearance.BorderSize = 0;
-            this.rjButton_last30days.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton_last30days.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjButton_last30days.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjButton_last30days.Location = new System.Drawing.Point(453, 4);
-            this.rjButton_last30days.Margin = new System.Windows.Forms.Padding(0);
-            this.rjButton_last30days.Name = "rjButton_last30days";
-            this.rjButton_last30days.Size = new System.Drawing.Size(150, 47);
-            this.rjButton_last30days.TabIndex = 5;
-            this.rjButton_last30days.Text = "Last 30 days";
-            this.rjButton_last30days.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjButton_last30days.UseVisualStyleBackColor = false;
-            this.rjButton_last30days.Click += new System.EventHandler(this.RjButton11_Click);
-            // 
-            // rjButton_last7Days
-            // 
-            this.rjButton_last7Days.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rjButton_last7Days.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rjButton_last7Days.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjButton_last7Days.BorderRadius = 10;
-            this.rjButton_last7Days.BorderSize = 1;
-            this.rjButton_last7Days.FlatAppearance.BorderSize = 0;
-            this.rjButton_last7Days.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton_last7Days.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjButton_last7Days.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjButton_last7Days.Location = new System.Drawing.Point(303, 4);
-            this.rjButton_last7Days.Margin = new System.Windows.Forms.Padding(0);
-            this.rjButton_last7Days.Name = "rjButton_last7Days";
-            this.rjButton_last7Days.Size = new System.Drawing.Size(150, 47);
-            this.rjButton_last7Days.TabIndex = 5;
-            this.rjButton_last7Days.Text = "Last 7 days";
-            this.rjButton_last7Days.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjButton_last7Days.UseVisualStyleBackColor = false;
-            this.rjButton_last7Days.Click += new System.EventHandler(this.RjButton10_Click);
-            // 
-            // rjButton_custom
-            // 
-            this.rjButton_custom.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rjButton_custom.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rjButton_custom.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjButton_custom.BorderRadius = 10;
-            this.rjButton_custom.BorderSize = 1;
-            this.rjButton_custom.FlatAppearance.BorderSize = 0;
-            this.rjButton_custom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton_custom.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjButton_custom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjButton_custom.Location = new System.Drawing.Point(3, 4);
-            this.rjButton_custom.Margin = new System.Windows.Forms.Padding(0);
-            this.rjButton_custom.Name = "rjButton_custom";
-            this.rjButton_custom.Size = new System.Drawing.Size(150, 47);
-            this.rjButton_custom.TabIndex = 5;
-            this.rjButton_custom.Text = "Custom";
-            this.rjButton_custom.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjButton_custom.UseVisualStyleBackColor = false;
-            this.rjButton_custom.Click += new System.EventHandler(this.RjButton9_Click_1);
-            // 
             // SubViewShopDashBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -1105,12 +1105,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_underStock)).EndInit();
             this.panel_orders.ResumeLayout(false);
             this.panel_orders.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel_totalRevenue.ResumeLayout(false);
             this.panel_totalRevenue.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox2)).EndInit();
             this.panel_totalProfit.ResumeLayout(false);
             this.panel_totalProfit.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox3)).EndInit();
             this.panel_OptionHolder.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
@@ -1125,9 +1128,6 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
