@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:137.0) Gecko/20100101 Firefox/137.0" version="26.2.9" pages="8">
   <diagram name="usecase" id="AkrvAjtsgT3PUjKPflpT">
-    <mxGraphModel dx="3704" dy="3014" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="5907" dy="4223" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -433,6 +433,9 @@
         </mxCell>
         <mxCell id="tg8gF8wMsPoJyHTQ5Fwg-1" value="Nhớ là usecase A là cả 1 quá trình đấy nhé, usecase B chỉ&lt;div&gt;&amp;nbsp;là 1 bước, chức năng cần hoàn thiện trong usecase A thôi&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="-36" y="-926" width="329" height="41" as="geometry" />
+        </mxCell>
+        <mxCell id="8-Z-KHXljr98KIQwL2Jn-3" value="&lt;font face=&quot;Times New Roman&quot;&gt;LoveCrush&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;fontSize=50;" vertex="1" parent="1">
+          <mxGeometry x="-122" y="-121" width="562.75" height="281" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
