@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-04-29T08:17:08.449Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="TX-fLJbOwE34Zo9ahgfa" version="24.3.1" type="device" pages="8">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:137.0) Gecko/20100101 Firefox/137.0" version="26.2.9" pages="8">
   <diagram name="usecase" id="AkrvAjtsgT3PUjKPflpT">
-    <mxGraphModel dx="1450" dy="1769" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="3704" dy="3014" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -6083,7 +6083,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="j-xbK4rJ6htcP4swuT9O" name="LINQ">
-    <mxGraphModel dx="3425" dy="1823" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2452" dy="1307" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -6129,7 +6129,7 @@
           <mxGeometry x="215" y="295" width="184" height="298" as="geometry" />
         </mxCell>
         <mxCell id="NLxeujS13ajb4VCh-_2Y-4" value="Sorting&lt;div&gt;-Orderby() : sắp sếp object array dựa trên so sánh các trường dữ liệu&lt;/div&gt;&lt;div&gt;- OrderbyDescend() : ngược lại với cái trên&lt;/div&gt;&lt;div&gt;- ThenBy(): secondary Sorting:&lt;/div&gt;&lt;div&gt;- ThenByDecending(): secondary ngược lại&lt;/div&gt;&lt;div&gt;-Reverse() :&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;spacingLeft=15;align=left;verticalAlign=top;spacingBottom=15;spacingTop=15;spacing=15;" parent="1" vertex="1">
-          <mxGeometry x="439" y="291" width="277" height="188" as="geometry" />
+          <mxGeometry x="445" y="298" width="277" height="188" as="geometry" />
         </mxCell>
         <mxCell id="NLxeujS13ajb4VCh-_2Y-5" value="Join&lt;div&gt;-Join() cái này nhức đầu nhưng quan trọng,&amp;nbsp;&lt;/div&gt;&lt;div&gt;join sẽ lấy 2 cái bộ&amp;nbsp; dữ liệu như 2 mảng object hay 2 list object chẳng hạn, rồi sau đấy chọn 2 cái key selector, nó là cái foreignkey đấy, định nghĩa 2 cái key cho 2 bộ dữ liệu, rồi tiếp theo dựa vào 2 cái đấy định nghĩa bộ dữ liệu trả về, đơn giản lắm, idea như cái inner join á&lt;/div&gt;&lt;div&gt;- à mà cái result của nó phải bt cách duyệt nữa&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- groupJoin còn ảo ma hơn cơ, tức là về cơ bản là các cái parameter tương tự như Join nhưng mà sau khi join xong cái nó trả về ko phải là 1 cái set result ánh xạ đơn thuần như join thường mà là dựa trên cái dữ iệu trùng lặp của khóa chính á(khóa ngoại hay bị nhân bản dựa trên khóa chính đúng không) thì từ&amp;nbsp; cái khóa chính đấy, nó lại groupBy lại với nhau và trả về 1 cái &amp;lt;Key, group&amp;gt; ảo ma luôn.&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;spacingLeft=15;align=left;verticalAlign=top;spacingBottom=15;spacingTop=15;spacing=15;" parent="1" vertex="1">
           <mxGeometry x="763" y="254" width="324" height="391" as="geometry" />
